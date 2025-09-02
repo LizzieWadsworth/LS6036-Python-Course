@@ -1,0 +1,70 @@
+[
+  {
+    "objectID": "cheatsheet.html",
+    "href": "cheatsheet.html",
+    "title": "Cheatsheet",
+    "section": "",
+    "text": "Cheatsheet"
+  },
+  {
+    "objectID": "learn.html",
+    "href": "learn.html",
+    "title": "Hello World",
+    "section": "",
+    "text": "Hello World\nThe below python code takes the phrase “Hello World!” and prints it to the console. It’s a good way to check you are set up correctly!",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python basics",
+      "Hello World"
+    ]
+  },
+  {
+    "objectID": "help.html",
+    "href": "help.html",
+    "title": "Help",
+    "section": "",
+    "text": "Help"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "worksheets/Variables.html",
+    "href": "worksheets/Variables.html",
+    "title": "Variables",
+    "section": "",
+    "text": "Variables",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python basics",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "careers.html",
+    "href": "careers.html",
+    "title": "Careers",
+    "section": "",
+    "text": "Careers"
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Set up",
+    "section": "",
+    "text": "Set up"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LS6036 Python Course",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  }
+]

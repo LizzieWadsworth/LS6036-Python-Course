@@ -1,0 +1,12 @@
+{
+  "hash": "2d8e1e6ce9ad146f3ae660aabd6e04a1",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\nformat: live-html\nengine: jupyter\nlightbox: true\n---\n\n# Hello World\n\nThe below python code takes the phrase \"Hello World!\" and prints it to the console. It's a good way to check you are set up correctly! \n\n```{pyodide}\nprint(\"Hello World!\")\n```\n\n",
+    "supporting": [
+      "learn_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

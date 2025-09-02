@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "LS6036 Python programming"
+  page-navigation: true
+  bread-crumbs: false  
+  navbar:
+      left:
+        - text: "Why Python"
+          href: index.qmd
+        - text: "Set Up"
+          href: setup.qmd
+        - text: "Learn"
+          href: learn.qmd
+        - text: "Careers"
+          href: careers.qmd
+        - text: "CheatSheet"
+          href: cheatsheet.qmd
+        - text: "Help"
+          href: help.qmd
+  sidebar:
+    - title: "Learn"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - section: "**Python introduction: basics**"
+          contents:
+            - section: "Python basics"
+              contents:
+                - href: learn.qmd
+                - href: worksheets/Variables.qmd
+  favicon: /Logo/LS6036_no_text.png
+    
+
+format:
+  live-html:
+    theme:
+      light: lightly
+      dark: darkly
+    respect-user-color-scheme: true
+    css: styles.css
+
+margin-header: |
+  ![](/Logo/LS6036_with_text.png)
+
+filters:
+  - /Users/lizzie/Documents/Kingston/Year_2526/LS4003/Level 4 R course book/filters/tools_tabset.lua
+
+
+

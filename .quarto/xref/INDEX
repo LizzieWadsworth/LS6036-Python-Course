@@ -1,0 +1,26 @@
+{
+  "cheatsheet.qmd": {
+    "cheatsheet.html": "edd0c49a"
+  },
+  "worksheets/Variables.qmd": {
+    "Variables.html": "963ec7bd"
+  },
+  "about.qmd": {
+    "about.html": "e70cbfee"
+  },
+  "careers.qmd": {
+    "careers.html": "0a39cbaa"
+  },
+  "help.qmd": {
+    "help.html": "d9b50325"
+  },
+  "setup.qmd": {
+    "setup.html": "746845da"
+  },
+  "learn.qmd": {
+    "learn.html": "c1154355"
+  },
+  "index.qmd": {
+    "index.html": "61d6fe9e"
+  }
+}

@@ -1,0 +1,13 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Hello World
+
+The below python code takes the phrase "Hello World!" and prints it to the console. It's a good way to check you are set up correctly! 
+
+```{pyodide}
+print("Hello World!")
+```
