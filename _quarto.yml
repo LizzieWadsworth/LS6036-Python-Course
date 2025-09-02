@@ -32,7 +32,7 @@ website:
               contents:
                 - href: learn.qmd
                 - href: worksheets/Variables.qmd
-  favicon: /Logo/LS6036_no_text.png
+  favicon: /Logo/LS6036_face.png
     
 
 format:
