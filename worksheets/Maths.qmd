@@ -1,0 +1,85 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Maths
+
+We've looked at saving a numerical value (integer or float) as a variable. 
+Next we can look at doing mathematics in python. Table 2 contains example code for different mathematical operations and how we write them. 
+
+| Operator	| Name	| Example	| Example code | 
+| - | - | --- | --- |
+| +	| Addition	| 2 plus 5	| 2 + 5| 
+| -	| Subtraction	| 7 minus 3	| 7 - 3| 
+| *	| Multiplication	| 3 times 4	| 3 * 4| 
+| /	| Division	| 10 divided by 2	| 10 / 2| 
+| %	| Modulus	| Remainder from 10 divided by  3	| 10 % 3 |
+| **	| Exponentiation	| 3 to the power of 4	| 3 ** 4 |
+| //	| Floor division	| 10 divided by 3, rounded down to nearest integer	| 10 // 3| 
+
+: Python Mathematics {.striped .hover}
+
+Try the below code, and then change the mathematical operator as in the above Table. 
+Does the result that prints out match what you expect? 
+
+```{pyodide}
+# Mathematical operators
+a = 10 
+b = 3 
+
+result = a + b
+
+print(result)
+```
+## Order of operations 
+
+In python, arithmetic operations always occur in the following order: 
+
+1.  Exponential ```**``` 
+2.  Multiplication ```*``` or division ```(/ or // or % )```
+3.  Addition ```+``` or subtraction ```-```
+
+Where there is two operations of the same level (eg. one ```*``` and one ```/``` ) then the order depends on which comes first. 
+
+Just like in mathematics, we can use brackets ```( )``` to highlight which operations should be done first. 
+
+What would be the result of the following equations in python? Calculate them manually (without python) first. 
+
+1.  ```4 - 3 * 5 + 6``` 
+2.  ```4 - ( 3 * 5 ) + 6``` 
+3.  ```(4 - 3) * 5 + 6```  
+4.  ```4 - (3 * 5 + 6)``` 
+5.  ```4 - 3.0 * 5 + 6``` 
+6.  ```4. - ( 3 * 5 ) + 6``` 
+7.  ```(4 + 2) / 5 + 6 ```  
+8.  ```4 // (3 * 5 + 6.)```   
+
+Now try the above in python. You can do this using ```print()``` like in the example below. Were your predictions correct? 
+
+```{pyodide}
+# Mathematical operators
+print( 4 - 3 * 5 + 6 )
+```
+
+_Note: In Python, you can mix integers and floats in the same arithmetic expression. The type of the evaluation will be a float._
+
+::: {.callout-tip collapse="true" title="Side note: Rounding errors"}
+A float is any number with a decimal point, whereas an integer is a whole number (eg. 5.0 is a float and 5 is an integer)  
+
+In python, there's something a little unusual about mathematical calculations with floats... 
+
+Try: 
+
+```{pyodide}
+# Subtraction with floats
+print ( 0.2 - 0.1 )
+print ( 0.3 - 0.2 )
+```
+
+Did you get what you expected? What do you think is going on here?   
+
+Confused? This is to do with how the hardware stores numbers in binary - it isn't a bug with the python code. You can check out more in this [geeks for geeks article](https://www.geeksforgeeks.org/floating-point-error-in-python/).   
+
+:::

@@ -1,0 +1,32 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Comments
+
+One of the most important practices in programming is to use good comments.
+
+Comments help explain what the code is doing - to another programmer, to whoever is marking your assignments, to your future self (you will forget how your own code works!).
+
+Comments are sections of the code that are ignored by the compiler - they aren’t executed like the rest of your code. In python, you can comment by:
+
+-  ```# Starting with a '#' (this is the best way!)```
+-  ```"""Wrapping text in triple quotes"""```
+
+Try the below example: 
+
+```{pyodide}
+# Example of comments
+"""
+print("Hello")
+print("World")
+print("!")
+"""
+
+print("None of the lines above are executed.") # Another comment 
+```
+
+
+

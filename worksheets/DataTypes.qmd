@@ -1,0 +1,35 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Data Types
+
+In the previous examples, we’ve only been using strings. A string is a collection of characters - such as letters, numbers and punctuation.
+
+We can also use different data types. Below are some examples of different data types and how we define them in python.
+
+| Data Type | Shorthand | Description | Define With | Examples |
+| -- | -- | --- | --- | --- |
+| String	| str	| A collection of characters	| Quotes "" or ’’	| x = "5 jumping chimpanzees"| 
+| Integer	| int	| A whole number	| Digit without quotes or decimal point	| x = 5| 
+| Float	| float	| A floating point number	| Digit with a decimal point, no quotes	| x = 5.7| 
+| List	| list	| A collection of strings, integers, floats or lists	| Square brackets [ ]	| x = ["5 jumping chimpanzees", 5, 5.7]| 
+
+: Python Data types {.striped .hover}
+
+We can check what **type** our **variable** is using the function ```type()```.
+
+Try: 
+```{pyodide}
+# Find the type of a variable 
+
+x = 5.7 
+result = type(x)
+print(result)
+```
+
+Change the line ```x = 5.7``` to the other examples in Table 1 - what do you get each time?
+
+_This will be really useful when we have errors in our code - we might think we're using an integer when our variable is actually a string..._

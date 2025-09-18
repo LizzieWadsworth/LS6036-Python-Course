@@ -28,10 +28,19 @@ website:
       contents: 
         - section: "**Python introduction: basics**"
           contents:
-            - section: "Python basics"
+            - section: "Python essentials"
               contents:
                 - href: learn.qmd
+                - href: worksheets/Comments.qmd
                 - href: worksheets/Variables.qmd
+                - href: worksheets/FormatStrings.qmd
+                - href: worksheets/DataTypes.qmd
+                - href: worksheets/Maths.qmd
+                - href: worksheets/OxygenInBlood.qmd
+            -  section: "Inputs, ifs and elses"
+               contents:
+                 - href: worksheets/UserInput.qmd
+                 - href: worksheets/ifelse.qmd
   favicon: /Logo/LS6036_face.png
     
 

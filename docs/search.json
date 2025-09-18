@@ -11,7 +11,7 @@
     "href": "learn.html",
     "title": "Hello World",
     "section": "",
-    "text": "Hello World\nThe below python code takes the phrase “Hello World!” and prints it to the console. It’s a good way to check you are set up correctly!",
+    "text": "Hello World\nThe below python code takes the phrase “Hello World!” and prints it to the console. It’s a good way to check you are set up correctly!\n\n\n\n\n\n\nThis is using the in-build function called print(), which will output anything that we put inside the brackets.\nNow try the below variations. Which ones work? Which don’t work? When one doesn’t work, what error message do you get? Why?\n\nprint(Hello World!)\nprint('Hello',  'World!')\nprint(55)\nprint(Fifty five)\nprint('Fifty five')\nprint('Fifty five\nprint(55.5)\n\nAlso try:\n\nCan you use double quotes \" \" instead of single quotes? ' '\nCan you combine double and single quotes \"Like this'\nCan you print this exactly (with the quotes): I \"love\" Python.\nWhat happens if you put a # before print",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -38,7 +38,7 @@
     "href": "worksheets/Variables.html",
     "title": "Variables",
     "section": "",
-    "text": "Variables",
+    "text": "Variables\nVariables are containers for storing data values. We can then use it elsewhere in our program without having to manually type it in again which can be really handy.\nTry:\n\n\n\n\n\n\nThis is the same as our first example, but first we stored the information in a variable called x. We then told python to print whatever x is.\nNext, try:\n\n\n\n\n\n\nDid you get the output you expected?\nNext, try:\n\n\n\n\n\n\nWhat is different in this example? How does that change the output?",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -66,5 +66,187 @@
     "title": "LS6036 Python Course",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "worksheets/Comments.html",
+    "href": "worksheets/Comments.html",
+    "title": "Comments",
+    "section": "",
+    "text": "Comments\nOne of the most important practices in programming is to use good comments.\nComments help explain what the code is doing - to another programmer, to whoever is marking your assignments, to your future self (you will forget how your own code works!).\nComments are sections of the code that are ignored by the compiler - they aren’t executed like the rest of your code. In python, you can comment by:\n\n# Starting with a '#' (this is the best way!)\n\"\"\"Wrapping text in triple quotes\"\"\"\n\nTry the below example:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python basics",
+      "Comments"
+    ]
+  },
+  {
+    "objectID": "worksheets/DataTypes.html",
+    "href": "worksheets/DataTypes.html",
+    "title": "Data Types",
+    "section": "",
+    "text": "Data Types\nIn the previous examples, we’ve only been using strings. A string is a collection of characters - such as letters, numbers and punctuation.\nWe can also use different data types. Below are some examples of different data types and how we define them in python.\n\nPython Data types\n\n\n\n\n\n\n\n\n\nData Type\nShorthand\nDescription\nDefine With\nExamples\n\n\n\n\nString\nstr\nA collection of characters\nQuotes “” or ’’\nx = “5 jumping chimpanzees”\n\n\nInteger\nint\nA whole number\nDigit without quotes or decimal point\nx = 5\n\n\nFloat\nfloat\nA floating point number\nDigit with a decimal point, no quotes\nx = 5.7\n\n\nList\nlist\nA collection of strings, integers, floats or lists\nSquare brackets [ ]\nx = [“5 jumping chimpanzees”, 5, 5.7]\n\n\n\nWe can check what type our variable is using the function type().\nTry:\n\n\n\n\n\n\nChange the line x = 5.7 to the other examples in Table 1 - what do you get each time?\nThis will be really useful when we have errors in our code - we might think we’re using an integer when our variable is actually a string…",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python basics",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "worksheets/Maths.html",
+    "href": "worksheets/Maths.html",
+    "title": "Maths",
+    "section": "",
+    "text": "We’ve looked at saving a numerical value (integer or float) as a variable. Next we can look at doing mathematics in python. Table 2 contains example code for different mathematical operations and how we write them.\n\nPython Mathematics\n\n\n\n\n\n\n\n\nOperator\nName\nExample\nExample code\n\n\n\n\n+\nAddition\n2 plus 5\n2 + 5\n\n\n-\nSubtraction\n7 minus 3\n7 - 3\n\n\n*\nMultiplication\n3 times 4\n3 * 4\n\n\n/\nDivision\n10 divided by 2\n10 / 2\n\n\n%\nModulus\nRemainder from 10 divided by 3\n10 % 3\n\n\n**\nExponentiation\n3 to the power of 4\n3 ** 4\n\n\n//\nFloor division\n10 divided by 3, rounded down to nearest integer\n10 // 3\n\n\n\nTry the below code, and then change the mathematical operator as in the above Table. Does the result that prints out match what you expect?\n\n\n\n\n\n\n\n\nIn python, arithmetic operations always occur in the following order:\n\nExponential **\nMultiplication * or division (/ or // or % )\nAddition + or subtraction -\n\nWhere there is two operations of the same level (eg. one * and one / ) then the order depends on which comes first.\nJust like in mathematics, we can use brackets ( ) to highlight which operations should be done first.\nWhat would be the result of the following equations in python? Calculate them manually (without python) first.\n\n4 - 3 * 5 + 6\n4 - ( 3 * 5 ) + 6\n(4 - 3) * 5 + 6\n\n4 - (3 * 5 + 6)\n4 - 3.0 * 5 + 6\n4. - ( 3 * 5 ) + 6\n(4 + 2) / 5 + 6\n\n4 // (3 * 5 + 6.)\n\nNow try the above in python. You can do this using print() like in the example below. Were your predictions correct?\n\n\n\n\n\n\nNote: In Python, you can mix integers and floats in the same arithmetic expression. The type of the evaluation will be a float.\n\n\n\n\n\n\nSide note: Rounding errors\n\n\n\n\n\nA float is any number with a decimal point, whereas an integer is a whole number (eg. 5.0 is a float and 5 is an integer)\nIn python, there’s something a little unusual about mathematical calculations with floats…\nTry:\n\n\n\n\n\n\nDid you get what you expected? What do you think is going on here?\nConfused? This is to do with how the hardware stores numbers in binary - it isn’t a bug with the python code. You can check out more in this geeks for geeks article.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python basics",
+      "Maths"
+    ]
+  },
+  {
+    "objectID": "worksheets/Maths.html#order-of-operations",
+    "href": "worksheets/Maths.html#order-of-operations",
+    "title": "Maths",
+    "section": "",
+    "text": "In python, arithmetic operations always occur in the following order:\n\nExponential **\nMultiplication * or division (/ or // or % )\nAddition + or subtraction -\n\nWhere there is two operations of the same level (eg. one * and one / ) then the order depends on which comes first.\nJust like in mathematics, we can use brackets ( ) to highlight which operations should be done first.\nWhat would be the result of the following equations in python? Calculate them manually (without python) first.\n\n4 - 3 * 5 + 6\n4 - ( 3 * 5 ) + 6\n(4 - 3) * 5 + 6\n\n4 - (3 * 5 + 6)\n4 - 3.0 * 5 + 6\n4. - ( 3 * 5 ) + 6\n(4 + 2) / 5 + 6\n\n4 // (3 * 5 + 6.)\n\nNow try the above in python. You can do this using print() like in the example below. Were your predictions correct?\n\n\n\n\n\n\nNote: In Python, you can mix integers and floats in the same arithmetic expression. The type of the evaluation will be a float.\n\n\n\n\n\n\nSide note: Rounding errors\n\n\n\n\n\nA float is any number with a decimal point, whereas an integer is a whole number (eg. 5.0 is a float and 5 is an integer)\nIn python, there’s something a little unusual about mathematical calculations with floats…\nTry:\n\n\n\n\n\n\nDid you get what you expected? What do you think is going on here?\nConfused? This is to do with how the hardware stores numbers in binary - it isn’t a bug with the python code. You can check out more in this geeks for geeks article.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python basics",
+      "Maths"
+    ]
+  },
+  {
+    "objectID": "worksheets/FormatStrings.html",
+    "href": "worksheets/FormatStrings.html",
+    "title": "Format Strings",
+    "section": "",
+    "text": "We can also print our variables within a string using a format string.\nThis can be really useful when we want to print multiple pieces of information from our python program and need to know which is which.\nA format string is similar to a string but starts with an f: f\"Add string here\"\nAnd we can insert the value of one of our variables using curly brackets {}\nSee example below:\n\n\n\n\n\n\n\n\nSee if you can make a format string to print the following:\nEscherichia coli is a Gram negative bacteria\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nPut the variable names inside of curly brackets {}\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nspecies = \"Escherichia coli\"\ngramtype = \"Gram negative\"\n\nprint(f\"{species} is a {gramtype} bacteria\")\n\nEscherichia coli is a Gram negative bacteria",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python basics",
+      "Format Strings"
+    ]
+  },
+  {
+    "objectID": "worksheets/FormatStrings.html#give-it-a-go",
+    "href": "worksheets/FormatStrings.html#give-it-a-go",
+    "title": "Format Strings",
+    "section": "",
+    "text": "See if you can make a format string to print the following:\nEscherichia coli is a Gram negative bacteria\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nPut the variable names inside of curly brackets {}\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nspecies = \"Escherichia coli\"\ngramtype = \"Gram negative\"\n\nprint(f\"{species} is a {gramtype} bacteria\")\n\nEscherichia coli is a Gram negative bacteria",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python basics",
+      "Format Strings"
+    ]
+  },
+  {
+    "objectID": "worksheets/OxygenInBlood.html",
+    "href": "worksheets/OxygenInBlood.html",
+    "title": "Oxygen in blood exercise",
+    "section": "",
+    "text": "A patient has the following blood oxygen readings:\n\nPatient 1 haemoglobin measurements\n\n\nType\nMeasurement\nUnits\n\n\n\n\nHaemoglobin concentration\n15\ng / dL blood\n\n\nHaemoglobin saturation\n96\n%\n\n\nArterial oxygen tension\n89\nmmHg\n\n\n\n\n\nEvery gram of hemoglobin can maximally bind 1.34 mL of oxygen.\nThis mean we can calculate the maximum amount of oxygen bound to haemoglobin by multiplying the concentration of haemoglobin [Hb] (in g / dL blood) with this value 1.34 mL O_2 per g haemoglobin.\nHowever, not all haemoglobin in the blood is bound to oxygen. We can multiply the maximum amount of oxygen bound to haemoglobin by the haemoglobin saturation to calculate the amount of oxygen bound in the blood.\n\\[\n\\text{Bound oxygen} = [Hb] \\frac{\\text{g Hb}}{\\text{dL}} \\times 1.34 \\frac {\\text{mL } O_2}{\\text{g Hb}} \\times \\frac{\\text{Hb saturation}}{100}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\n1929.6000000000001\n\n\n\n\n\n\n\n\n\nThere is also a small amount of oxygen dissolved in the blood, not bound to haemoglobin.\nWe can calculate this by multiplying the arterial oxygen tension (in mmHg) and the solubility coefficient of oxygen.\nThe solubility coefficient of oxygen is \\(0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\\).\n\\[\n\\text{Dissolved oxygen} = \\text{arterial oxygen tension mmHg} \\times 0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\n0.2759\n\n\n\n\n\n\n\n\n\nNow to calculate the total oxygen, all you need to do is combine the two and add them together!\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\nTotal_oxygen = Bound_oxygen + Dissolved_oxygen \nprint(Total_oxygen)\n\n1929.6000000000001\n0.2759\n1929.8759000000002\n\n\n\n\n\nNow if we have a second patient with different readings - how quickly can you calculate the total blood oxygen?\n\nPatient 2 haemoglobin measurements\n\n\nType\nMeasurement\nUnits\n\n\n\n\nHaemoglobin concentration\n12\ng / dL blood\n\n\nHaemoglobin saturation\n94\n%\n\n\nArterial oxygen tension\n76\nmmHg",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Oxygen in blood exercise"
+    ]
+  },
+  {
+    "objectID": "worksheets/OxygenInBlood.html#calculate-bound-oxygen",
+    "href": "worksheets/OxygenInBlood.html#calculate-bound-oxygen",
+    "title": "Oxygen in blood exercise",
+    "section": "",
+    "text": "Every gram of hemoglobin can maximally bind 1.34 mL of oxygen.\nThis mean we can calculate the maximum amount of oxygen bound to haemoglobin by multiplying the concentration of haemoglobin [Hb] (in g / dL blood) with this value 1.34 mL O_2 per g haemoglobin.\nHowever, not all haemoglobin in the blood is bound to oxygen. We can multiply the maximum amount of oxygen bound to haemoglobin by the haemoglobin saturation to calculate the amount of oxygen bound in the blood.\n\\[\n\\text{Bound oxygen} = [Hb] \\frac{\\text{g Hb}}{\\text{dL}} \\times 1.34 \\frac {\\text{mL } O_2}{\\text{g Hb}} \\times \\frac{\\text{Hb saturation}}{100}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\n1929.6000000000001",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Oxygen in blood exercise"
+    ]
+  },
+  {
+    "objectID": "worksheets/OxygenInBlood.html#calculate-dissolved-oxygen",
+    "href": "worksheets/OxygenInBlood.html#calculate-dissolved-oxygen",
+    "title": "Oxygen in blood exercise",
+    "section": "",
+    "text": "There is also a small amount of oxygen dissolved in the blood, not bound to haemoglobin.\nWe can calculate this by multiplying the arterial oxygen tension (in mmHg) and the solubility coefficient of oxygen.\nThe solubility coefficient of oxygen is \\(0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\\).\n\\[\n\\text{Dissolved oxygen} = \\text{arterial oxygen tension mmHg} \\times 0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\n0.2759",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Oxygen in blood exercise"
+    ]
+  },
+  {
+    "objectID": "worksheets/OxygenInBlood.html#calculate-total-oxygen",
+    "href": "worksheets/OxygenInBlood.html#calculate-total-oxygen",
+    "title": "Oxygen in blood exercise",
+    "section": "",
+    "text": "Now to calculate the total oxygen, all you need to do is combine the two and add them together!\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\nTotal_oxygen = Bound_oxygen + Dissolved_oxygen \nprint(Total_oxygen)\n\n1929.6000000000001\n0.2759\n1929.8759000000002\n\n\n\n\n\nNow if we have a second patient with different readings - how quickly can you calculate the total blood oxygen?\n\nPatient 2 haemoglobin measurements\n\n\nType\nMeasurement\nUnits\n\n\n\n\nHaemoglobin concentration\n12\ng / dL blood\n\n\nHaemoglobin saturation\n94\n%\n\n\nArterial oxygen tension\n76\nmmHg",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Oxygen in blood exercise"
+    ]
+  },
+  {
+    "objectID": "worksheets/UserInput.html",
+    "href": "worksheets/UserInput.html",
+    "title": "User input",
+    "section": "",
+    "text": "Python allows for user input, using the function input().\nThis means we can write a program which asks the user (whoever is running the program) to input some data which we will then use in our code.\nLike with print(), anything we put inside the brackets () will be printed as a message in the output.\nHowever, the code will then stop running until the user has entered some data and pressed the enter key on their keyboard.\nThe data the user enters is then returned from the input function. This means we can save it in a variable.\nTry the below example:\n\n# Ask for user's name \nuser_name = input(\"What is your name? \")\nprint(\"Your name is\", user_name)\n\nYou type in your input in the output region:\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode User Input Screencast\n\n\n\n\n\n\n\nColab User Input Screencast\n\n\n\n\n\n\n\nThe returned result of the input() function will always be a string…\nTry the below example - it should give you an error!\n\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\n\nYou should get the error:\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\n\n\n\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))\n\n\n\n\nWrite a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "User input"
+    ]
+  },
+  {
+    "objectID": "worksheets/UserInput.html#changing-data-type",
+    "href": "worksheets/UserInput.html#changing-data-type",
+    "title": "User input",
+    "section": "",
+    "text": "The returned result of the input() function will always be a string…\nTry the below example - it should give you an error!\n\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\n\nYou should get the error:\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\n\n\n\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "User input"
+    ]
+  },
+  {
+    "objectID": "worksheets/UserInput.html#give-it-a-go",
+    "href": "worksheets/UserInput.html#give-it-a-go",
+    "title": "User input",
+    "section": "",
+    "text": "Write a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "User input"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse.html",
+    "href": "worksheets/ifelse.html",
+    "title": "If and else",
+    "section": "",
+    "text": "If and else\nSometimes we may want our code to act differently in different situations. For example, if we write a program to translate an mRNA sequence to an amino acid chain, we want the program to only start at the start codon and stop once we reach the stop codon.\nTo do this we can use python keywords if and else. This follows the following struture:\n\nif {condition} :\nindented code for if condition is True\nelse:\nindented code for if condition is False\nun-indented rest of code\n\nAn indent is either 4 spaces \"    \" or a tab at the start of a line. This signals that we want this code to be part of the if/else statement.\nTry the below example:\n\n\n\n\n\n\nThis code uses True which is a boolean data type. What happens if you change this to False or to false?\n\n\n\n\n\n\nAutomatic indenting\n\n\n\n\n\nWhen you write in Visual Studio Code or in Google Colab, it should automatically add the indentation for you as you write!\nThis should happen after you’ve written your if statement ending with : and then press enter.\nTo exit the indentation, you need to press backspace. You’ll need to do this when you want to add your else statement, or any code you don’t want in your if/else.\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode indentation screencase\n\n\n\n\n\n\n\nColab indentation Screencast",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else"
+    ]
   }
 ]

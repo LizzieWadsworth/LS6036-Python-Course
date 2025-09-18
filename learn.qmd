@@ -11,3 +11,25 @@ The below python code takes the phrase "Hello World!" and prints it to the conso
 ```{pyodide}
 print("Hello World!")
 ```
+
+This is using the in-build function called ```print()```, which will output anything that we put inside the brackets. 
+
+Now try the below variations. Which ones work? Which don’t work? When one doesn’t work, what error message do you get? Why?
+
+1.  ```print(Hello World!)```
+2.  ```print('Hello',  'World!')```
+3.  ```print(55)```
+4.  ```print(Fifty five)```
+5.  ```print('Fifty five')```
+6.  ```print('Fifty five```
+7.  ```print(55.5)```
+
+Also try:
+
+1.  Can you use double quotes ```" "``` instead of single quotes? ```' '```
+2.  Can you combine double and single quotes ```"Like this'```
+3.  Can you print this exactly (with the quotes): ```I "love" Python.```
+4.  What happens if you put a ```#``` before print
+
+
+

@@ -1,10 +1,10 @@
 {
-  "hash": "2d8e1e6ce9ad146f3ae660aabd6e04a1",
+  "hash": "eb2e68b1ce81ed52ee5202a92d247ad4",
   "result": {
     "engine": "jupyter",
-    "markdown": "---\nformat: live-html\nengine: jupyter\nlightbox: true\n---\n\n# Hello World\n\nThe below python code takes the phrase \"Hello World!\" and prints it to the console. It's a good way to check you are set up correctly! \n\n```{pyodide}\nprint(\"Hello World!\")\n```\n\n",
+    "markdown": "---\nformat: live-html\nengine: jupyter\nlightbox: true\n---\n\n# Hello World\n\nThe below python code takes the phrase \"Hello World!\" and prints it to the console. It's a good way to check you are set up correctly! \n\n```{pyodide}\nprint(\"Hello World!\")\n```\n\nThis is using the in-build function called ```print()```, which will output anything that we put inside the brackets. \n\nNow try the below variations. Which ones work? Which don’t work? When one doesn’t work, what error message do you get? Why?\n\n1.  ```print(Hello World!)```\n2.  ```print('Hello',  'World!')```\n3.  ```print(55)```\n4.  ```print(Fifty five)```\n5.  ```print('Fifty five')```\n6.  ```print('Fifty five```\n7.  ```print(55.5)```\n\nAlso try:\n\n1.  Can you use double quotes ```\" \"``` instead of single quotes? ```' '```\n2.  Can you combine double and single quotes ```\"Like this'```\n3.  Can you print this exactly (with the quotes): ```I \"love\" Python.```\n4.  What happens if you put a ```#``` before print\n\n",
     "supporting": [
-      "learn_files"
+      "learn_files/figure-html"
     ],
     "filters": [],
     "includes": {}

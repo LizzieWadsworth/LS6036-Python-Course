@@ -1,1 +1,46 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
 # Variables
+
+Variables are containers for storing data values. We can then use it elsewhere in our program without having to manually type it in again which can be really handy.
+
+Try:
+
+```{pyodide}
+# Printing a variable
+
+x = "There are water voles in the Hogsmill"
+
+print(x)
+```
+
+This is the same as our first example, but first we stored the information in a variable called x. We then told python to print whatever x is.
+
+Next, try:
+
+```{pyodide}
+# Printing a variable
+
+x = "There are water voles in the Hogsmill"
+x = "No there isn't"
+print(x)
+```
+
+Did you get the output you expected?
+
+Next, try:
+
+```{pyodide}
+# Printing a variable
+
+x = "There are water voles in the Hogsmill"
+y = "No there isn't"
+print(x)
+print(y)
+```
+
+What is different in this example? How does that change the output?

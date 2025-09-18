@@ -22,5 +22,26 @@
   },
   "index.qmd": {
     "index.html": "61d6fe9e"
+  },
+  "worksheets/Comments.qmd": {
+    "Comments.html": "9f3cad14"
+  },
+  "worksheets/DataTypes.qmd": {
+    "DataTypes.html": "dec4bb6f"
+  },
+  "worksheets/Maths.qmd": {
+    "Maths.html": "34619542"
+  },
+  "worksheets/FormatStrings.qmd": {
+    "FormatStrings.html": "3b570cf0"
+  },
+  "worksheets/OxygenInBlood.qmd": {
+    "OxygenInBlood.html": "0ffe5668"
+  },
+  "worksheets/UserInput.qmd": {
+    "UserInput.html": "cd6d8bdd"
+  },
+  "worksheets/ifelse.qmd": {
+    "ifelse.html": "26bb0897"
   }
 }

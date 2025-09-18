@@ -1,0 +1,58 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Format Strings
+
+We can also print our variables within a string using a format string. 
+
+This can be really useful when we want to print multiple pieces of information from our python program and need to know which is which. 
+
+A format string is similar to a string but starts with an f: ```f"Add string here"``` 
+
+And we can insert the value of one of our variables using _curly_ brackets ```{}``` 
+
+See example below: 
+
+```{pyodide}
+# Store name of cat owner and number of cats in variables
+name_of_cat_owner = "Eman"
+number_of_cats = 243
+
+# Print information using a format string
+print(f"{name_of_cat_owner} has {number_of_cats} cats")
+```
+
+## Give it a go
+
+See if you can make a format string to print the following:
+
+```Escherichia coli is a Gram negative bacteria```
+
+```{pyodide}
+#| exercise: ex_1
+species = "Escherichia coli"
+gramtype = "Gram negative"
+
+print(f"______")
+```
+
+::: { .hint exercise="ex_1"}
+::: { .callout-note collapse="false"}
+## Hint 1
+
+Put the variable names inside of curly brackets ```{}```
+
+:::
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+```{python}
+species = "Escherichia coli"
+gramtype = "Gram negative"
+
+print(f"{species} is a {gramtype} bacteria")
+```
+:::

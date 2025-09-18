@@ -1,0 +1,58 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# If and else
+
+Sometimes we may want our code to act differently in different situations. For example, if we write a program to translate an mRNA sequence to an amino acid chain, we want the program to only start at the start codon and stop once we reach the stop codon. 
+
+To do this we can use python keywords ```if``` and ```else```.
+This follows the following struture: 
+
+-  ```if {condition} :```
+-  _indented code for if condition is True_ 
+-  ```else:```
+-  _indented code for if condition is False_ 
+-  un-indented rest of code
+
+An __indent__ is either 4 spaces ```"    "``` or a tab at the start of a line. This signals that we want this code _to be part of the if/else statement._
+
+Try the below example: 
+
+```{pyodide}
+# eval: false
+# if statement 
+still_alive = True 
+
+if still_alive: 
+  print("I'm still alive")
+else: 
+  print("Oh no")
+```
+
+This code uses True which is a _boolean_ data type. _What happens if you change this to ```False``` or to ```false```?_
+
+::: { .callout-tip collapse="true" title="Automatic indenting"}
+When you write in Visual Studio Code or in Google Colab, it should automatically add the indentation for you as you write! 
+
+This should happen after you've written your if statement _ending with ```:```_ and then press enter. 
+
+To exit the indentation, you need to press backspace. You'll need to do this when you want to add your else statement, or any code you don't want in your if/else. 
+
+::: {.panel-tabset}
+
+## Visual Studio Code
+![VSCode indentation screencase](/GIFs/ifelse_VScode.gif)
+
+## Google Colab
+![Colab indentation Screencast](/GIFs/ifelse_colab.gif)
+
+:::
+
+
+:::
+
+
+
