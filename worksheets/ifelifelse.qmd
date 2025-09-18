@@ -1,0 +1,82 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# If, elif and else
+
+What do we do if we have three conditions? In the below example, there are two ```if``` statements but this doesn't work quite how we want it to. 
+
+```{python}
+dog_or_cat_person = "dog"
+if dog_or_cat_person == "dog": 
+  print("You are a dog person")
+if dog_or_cat_person == "cat": 
+  print("You are a cat person")
+else: 
+  print("You are not a dog or a cat person")
+```
+
+In the above example, *two* of our conditions printed out. Even though the user was a dog person, the line "You are not a dog or a cat person" printed out as well. 
+
+This is because the second time we have an ```if```, python has assumed this is **unrelated** to the first if. 
+The ```else``` will execute if the second ```if``` **only** is ```False```. 
+
+The below flow chart explains what has happened: 
+
+![If if flowchart](/images/mermaid_if_if.svg)
+
+## Using elif
+
+```elif```, short for else if, can be used instead so that many different conditions can be tried in sequence. 
+
+```{python}
+dog_or_cat_person = "dog"
+
+# first if statement
+if dog_or_cat_person == "dog": 
+  print("You are a dog person")
+  
+# elif - for if the first if statement is False and this elif is True
+elif dog_or_cat_person == "cat": 
+  print("You are a cat person")
+  
+# else - for if both if and elif are false
+else: 
+  print("You are not a dog or a cat person")
+```
+
+This then ties together both conditions: 
+
+![If elif else flowchart](/images/mermaid_if_elif_else.svg)
+
+You can add as many ```elif``` statements as you need. 
+
+See the below example with two elif statements: 
+
+```{python, eval = FALSE}
+dog_or_cat_or_bird_person = "bird"
+
+# first if statement
+if dog_or_cat_or_bird_person == "dog": 
+  print("You are a dog person")
+  
+# elif - for if the first if statement is False and this elif is True
+elif dog_or_cat_or_bird_person == "cat": 
+  print("You are a cat person")
+  
+# elif - for if the previous if and elif statements are False and this elif is True
+elif dog_or_cat_or_bird_person == "bird": 
+  print("You are a bird person")
+  
+# else - for if both if and elif are false
+else: 
+  print("You are not a dog or a cat person")
+```
+
+We can also visualise this with a flow chart. 
+
+![Flow chart of if elif elif else example](/images/Mermaid_ifelseelif.svg)
+
+

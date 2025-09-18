@@ -15,7 +15,7 @@
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python basics",
+      "Python essentials",
       "Hello World"
     ]
   },
@@ -42,7 +42,7 @@
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python basics",
+      "Python essentials",
       "Variables"
     ]
   },
@@ -76,7 +76,7 @@
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python basics",
+      "Python essentials",
       "Comments"
     ]
   },
@@ -89,7 +89,7 @@
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python basics",
+      "Python essentials",
       "Data Types"
     ]
   },
@@ -102,7 +102,7 @@
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python basics",
+      "Python essentials",
       "Maths"
     ]
   },
@@ -115,7 +115,7 @@
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python basics",
+      "Python essentials",
       "Maths"
     ]
   },
@@ -128,7 +128,7 @@
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python basics",
+      "Python essentials",
       "Format Strings"
     ]
   },
@@ -141,7 +141,7 @@
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python basics",
+      "Python essentials",
       "Format Strings"
     ]
   },
@@ -241,12 +241,103 @@
     "href": "worksheets/ifelse.html",
     "title": "If and else",
     "section": "",
-    "text": "If and else\nSometimes we may want our code to act differently in different situations. For example, if we write a program to translate an mRNA sequence to an amino acid chain, we want the program to only start at the start codon and stop once we reach the stop codon.\nTo do this we can use python keywords if and else. This follows the following struture:\n\nif {condition} :\nindented code for if condition is True\nelse:\nindented code for if condition is False\nun-indented rest of code\n\nAn indent is either 4 spaces \"    \" or a tab at the start of a line. This signals that we want this code to be part of the if/else statement.\nTry the below example:\n\n\n\n\n\n\nThis code uses True which is a boolean data type. What happens if you change this to False or to false?\n\n\n\n\n\n\nAutomatic indenting\n\n\n\n\n\nWhen you write in Visual Studio Code or in Google Colab, it should automatically add the indentation for you as you write!\nThis should happen after you’ve written your if statement ending with : and then press enter.\nTo exit the indentation, you need to press backspace. You’ll need to do this when you want to add your else statement, or any code you don’t want in your if/else.\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode indentation screencase\n\n\n\n\n\n\n\nColab indentation Screencast",
+    "text": "Sometimes we may want our code to act differently in different situations. For example, if we write a program to translate an mRNA sequence to an amino acid chain, we want the program to only start at the start codon and stop once we reach the stop codon.\nTo do this we can use python keywords if and else. This follows the following struture:\n\nif {condition} :\nindented code for if condition is True\nelse:\nindented code for if condition is False\nun-indented rest of code\n\nAn indent is either 4 spaces \"    \" or a tab at the start of a line. This signals that we want this code to be part of the if/else statement.\n\n\n\n\n\n\nAutomatic indenting\n\n\n\n\n\nWhen you write in Visual Studio Code or in Google Colab, it should automatically add the indentation for you as you write!\nThis should happen after you’ve written your if statement ending with : and then press enter.\nTo exit the indentation, you need to press backspace. You’ll need to do this when you want to add your else statement, or any code you don’t want in your if/else.\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode indentation screencase\n\n\n\n\n\n\n\nColab indentation Screencast\n\n\n\n\n\n\n\n\nTry the below example. This code uses True which is a boolean data type.\n\n\n\n\n\n\nWe can also visualise this with a flow chart:\n\n\n\nFlowchart of if statement\n\n\n\n\nTry: the above if statement, but changing…\n\nstill_alive = true\nstill_alive = TRUE\nstill_alive = False\nstill_alive = \"False\"\nstill_alive = 0\nstill_alive = 1\nstill_alive = 0.1\n\nDo you understand the above? Are there any that surprised you?\nBoolean True and False are their own data type (‘bool’), like strings or integers…\n\nprint ( type (True) )\n\n&lt;class 'bool'&gt;",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
       "Inputs, ifs and elses",
       "If and else"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_conditions.html",
+    "href": "worksheets/ifelse_conditions.html",
+    "title": "If and else conditions",
+    "section": "",
+    "text": "See below table for a list of conditions that you can use with an if statement.\nThe condition always goes between if and : and is evaluated to be True or False.\n\nIf else conditions\n\n\n\n\n\n\n\n\nCondition\nExample\nWhen True\nWhen False\n\n\n\n\nIntegers and floats\n7, 2.3, 0\nAny value except 0 or 0.0\n0 or 0.0\n\n\nString\n\"hello\"\nAt least one character in string h\nEmpty string \"\"\n\n\nGreater than &gt; or Less than &lt;\n5 &gt; 10\nIf correct (5 is greater than 10)\nIf incorrect (5 is not greater than 10)\n\n\nGreater than or equal to &gt;= or Less than or equal to &lt;=\n3 &lt;= 3\nIf correct (3 is less than or equal to 3)\nIf incorrect (3 is less than or equal to 3)\n\n\nIs equal to ==\n\"apple\" == \"banana\"\nIf two items are exactly the same\nIf two items are different\n\n\nIs not equal to !=\n\"apple\" != \"banana\"\nIf two items are different\nIf two items are exactly the same\n\n\nin\n\"p\" in apple\nIf item is in string, list or dictionary\nIf item is not in string, list or dictionary\n\n\nnot in\n\"p\" not in apple\nIf item is not in string, list or dictionary\nIf item is in string, list or dictionary",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else conditions"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_fixerrors.html",
+    "href": "worksheets/ifelse_fixerrors.html",
+    "title": "Fix the errors activity",
+    "section": "",
+    "text": "Fix the errors activity\nBelow are a set of if statements - they all have errors in. Can you fix them?\n\nFix the error 1:Fix the error 2:Fix the error 3:\n\n\n\nmy_value = 0.01 \nif my_value\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n\n  Cell In[7], line 2\n    if my_value\n               ^\nSyntaxError: expected ':'\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nmy_value = 0.01 \nif my_value: # : was missing at the end of if statement\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n0.01 is not 0\n\n\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\nprint(\"You are too young\")\nelse: \nprint(\"You are old enough\")\n\n\n  Cell In[9], line 5\n    print(\"You are too young\")\n    ^\nIndentationError: expected an indented block after 'if' statement on line 4\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\n    print(\"You are too young\") # indentation was missing (four spaces at start of line)\nelse: \n    print(\"You are old enough\") # indentation was missing (four spaces at start of line)\n\nYou are too young\n\n\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\nif Target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[11], line 5\n      2 target_genus = \"Trypanosoma\"\n      3 my_species = \"Trypanosoma brucei\"\n----&gt; 5 if Target_genus in my_species:\n      6   print(f\"{my_species} is part of {target_genus}\")\n      7 else: \n\nNameError: name 'Target_genus' is not defined\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\n# python is case sensenitive \n# if your variable is target_genus (with no capital letters) then you always need to refer to is as target_genus. \nif target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\nTrypanosoma brucei is part of Trypanosoma",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "Fix the errors activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_fixerrors.html#activity-fix-the-errors",
+    "href": "worksheets/ifelse_fixerrors.html#activity-fix-the-errors",
+    "title": "If and else fix the errors",
+    "section": "",
+    "text": "Below are a list of if statements - they all have errors in. Can you fix them?\nFix the error 1:\n\nmy_value = 0.01 \nif my_value\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n\n  Cell In[7], line 2\n    if my_value\n               ^\nSyntaxError: expected ':'\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nmy_value = 0.01 \nif my_value: # : was missing at the end of if statement\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n0.01 is not 0\n\n\n\n\n\nFix the error 2:\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\nprint(\"You are too young\")\nelse: \nprint(\"You are old enough\")\n\n\n  Cell In[9], line 5\n    print(\"You are too young\")\n    ^\nIndentationError: expected an indented block after 'if' statement on line 4\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\n    print(\"You are too young\") # indentation was missing (four spaces at start of line)\nelse: \n    print(\"You are old enough\") # indentation was missing (four spaces at start of line)\n\nYou are too young\n\n\n\n\n\nFix the error 3:\n\nday_of_travel = \"day 10\" \nmonth_of_travel = \"06\"\nyear_of_travel = \"2029\"\n\nif day_of_travel.isdigit:\n  day_of_travel = int(day_of_travel)\nelse: \n  print(\"Please change day_of_travel to a numerical value\")\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[11], line 6\n      3 year_of_travel = \"2029\"\n      5 if day_of_travel.isdigit:\n----&gt; 6   day_of_travel = int(day_of_travel)\n      7 else: \n      8   print(\"Please change day_of_travel to a numerical value\")\n\nValueError: invalid literal for int() with base 10: 'day 10'\n\n\n\nThis last one is a bit different - if the if statement was working correctly, would we get that error?\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nday_of_travel = \"day 10\" \nmonth_of_travel = \"06\"\nyear_of_travel = \"2029\"\n\nif day_of_travel.isdigit(): # brackets () were missing after .isdigit \n  # the brackets () are needed to run the function (to see if day_of_travel is made of only digits)\n  # without this, we would get true every time... \n  day_of_travel = int(day_of_travel)\nelse: \n  print(\"Please change day_of_travel to a numerical value\")\n\nPlease change day_of_travel to a numerical value",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else fix the errors"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelifelse.html",
+    "href": "worksheets/ifelifelse.html",
+    "title": "If, elif and else",
+    "section": "",
+    "text": "What do we do if we have three conditions? In the below example, there are two if statements but this doesn’t work quite how we want it to.\n\ndog_or_cat_person = \"dog\"\nif dog_or_cat_person == \"dog\": \n  print(\"You are a dog person\")\nif dog_or_cat_person == \"cat\": \n  print(\"You are a cat person\")\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a dog person\nYou are not a dog or a cat person\n\n\nIn the above example, two of our conditions printed out. Even though the user was a dog person, the line “You are not a dog or a cat person” printed out as well.\nThis is because the second time we have an if, python has assumed this is unrelated to the first if. The else will execute if the second if only is False.\nThe below flow chart explains what has happened:\n\n\n\nIf if flowchart\n\n\n\n\nelif, short for else if, can be used instead so that many different conditions can be tried in sequence.\n\ndog_or_cat_person = \"dog\"\n\n# first if statement\nif dog_or_cat_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a dog person\n\n\nThis then ties together both conditions:\n\n\n\nIf elif else flowchart\n\n\nYou can add as many elif statements as you need.\nSee the below example with two elif statements:\n\ndog_or_cat_or_bird_person = \"bird\"\n\n# first if statement\nif dog_or_cat_or_bird_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_or_bird_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# elif - for if the previous if and elif statements are False and this elif is True\nelif dog_or_cat_or_bird_person == \"bird\": \n  print(\"You are a bird person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a bird person\n\n\nWe can also visualise this with a flow chart.\n\n\n\nFlow chart of if elif elif else example",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If, elif and else"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelifelse.html#using-elif",
+    "href": "worksheets/ifelifelse.html#using-elif",
+    "title": "If, elif and else",
+    "section": "",
+    "text": "elif, short for else if, can be used instead so that many different conditions can be tried in sequence.\n\ndog_or_cat_person = \"dog\"\n\n# first if statement\nif dog_or_cat_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a dog person\n\n\nThis then ties together both conditions:\n\n\n\nIf elif else flowchart\n\n\nYou can add as many elif statements as you need.\nSee the below example with two elif statements:\n\ndog_or_cat_or_bird_person = \"bird\"\n\n# first if statement\nif dog_or_cat_or_bird_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_or_bird_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# elif - for if the previous if and elif statements are False and this elif is True\nelif dog_or_cat_or_bird_person == \"bird\": \n  print(\"You are a bird person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a bird person\n\n\nWe can also visualise this with a flow chart.\n\n\n\nFlow chart of if elif elif else example",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If, elif and else"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse.html#give-it-a-go",
+    "href": "worksheets/ifelse.html#give-it-a-go",
+    "title": "If and else",
+    "section": "",
+    "text": "Try: the above if statement, but changing…\n\nstill_alive = true\nstill_alive = TRUE\nstill_alive = False\nstill_alive = \"False\"\nstill_alive = 0\nstill_alive = 1\nstill_alive = 0.1\n\nDo you understand the above? Are there any that surprised you?\nBoolean True and False are their own data type (‘bool’), like strings or integers…\n\nprint ( type (True) )\n\n&lt;class 'bool'&gt;",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifmuseumdiscount.html",
+    "href": "worksheets/ifmuseumdiscount.html",
+    "title": "Museum discount activity",
+    "section": "",
+    "text": "Museum discount activity\nBuild this program one step at a time, checking part 1 works before moving onto part 2…\nA museum needs you to write a program to decide if a visitor is entitled to a reduction in the price of the ticket. The program should start by asking what the age of the visitor is.\nYour program should:\n\nAsk the user to input their age\nprint ‘Reduced’ if the visitor is under 26 years old\nAlso print ‘Reduced’ if the visitor is over 60 years old\nprint ‘Full price’ if the visitor is not eligible for a discount\n\n\n\n\n\n\n\nShow hint\n\n\n\n\n\nThe function input() will always give you a string. Make sure you convert this to an integer or a float before doing your if statements.\n\n\n\n © [SyedaAroosha] / Adobe Stock",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "Museum discount activity"
     ]
   }
 ]

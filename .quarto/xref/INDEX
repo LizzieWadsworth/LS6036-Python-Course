@@ -43,5 +43,17 @@
   },
   "worksheets/ifelse.qmd": {
     "ifelse.html": "26bb0897"
+  },
+  "worksheets/ifelse_conditions.qmd": {
+    "ifelse_conditions.html": "3ed66093"
+  },
+  "worksheets/ifelse_fixerrors.qmd": {
+    "ifelse_fixerrors.html": "f41b4acf"
+  },
+  "worksheets/ifelifelse.qmd": {
+    "ifelifelse.html": "6525671b"
+  },
+  "worksheets/ifmuseumdiscount.qmd": {
+    "ifmuseumdiscount.html": "d220275a"
   }
 }

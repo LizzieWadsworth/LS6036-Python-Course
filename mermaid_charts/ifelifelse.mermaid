@@ -1,0 +1,13 @@
+---
+config:
+  theme: mc
+  look: neo
+---
+flowchart TD
+    A["Dog or cat or bird person"] --> B{"Is a dog person?"}
+    B -- True --> C["Dog person"]
+    B -- False --> D{"Is a cat person?"}
+    D -- True --> E["Cat person"]
+    D -- False --> F{"Is a bird person?"}
+    F -- True --> G["Bird person"]
+    F -- False --> H["Not a dog or cat or bird person"]

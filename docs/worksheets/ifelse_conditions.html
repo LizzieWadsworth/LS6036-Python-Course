@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ifelse – LS6036 Python programming</title>
+<title>ifelse_conditions – LS6036 Python programming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../worksheets/ifelse_conditions.html" rel="next">
-<link href="../worksheets/UserInput.html" rel="prev">
+<link href="../worksheets/ifelse_fixerrors.html" rel="next">
+<link href="../worksheets/ifelse.html" rel="prev">
 <link href="..//Logo/LS6036_face.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -436,13 +401,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../worksheets/ifelse.html" class="sidebar-item-text sidebar-link active">
+  <a href="../worksheets/ifelse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">If and else</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../worksheets/ifelse_conditions.html" class="sidebar-item-text sidebar-link">
+  <a href="../worksheets/ifelse_conditions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">If and else conditions</span></a>
   </div>
 </li>
@@ -474,7 +439,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
+<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
 </div></div>
         
     </div>
@@ -485,92 +450,86 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="if-and-else" class="level1">
-<h1>If and else</h1>
-<p>Sometimes we may want our code to act differently in different situations. For example, if we write a program to translate an mRNA sequence to an amino acid chain, we want the program to only start at the start codon and stop once we reach the stop codon.</p>
-<p>To do this we can use python keywords <code>if</code> and <code>else</code>. This follows the following struture:</p>
-<ul>
-<li><code>if {condition} :</code></li>
-<li><em>indented code for if condition is True</em></li>
-<li><code>else:</code></li>
-<li><em>indented code for if condition is False</em></li>
-<li>un-indented rest of code</li>
-</ul>
-<p>An <strong>indent</strong> is either 4 spaces <code>"    "</code> or a tab at the start of a line. This signals that we want this code <em>to be part of the if/else statement.</em></p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Automatic indenting">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Automatic indenting
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>When you write in Visual Studio Code or in Google Colab, it should automatically add the indentation for you as you write!</p>
-<p>This should happen after you’ve written your if statement <em>ending with <code>:</code></em> and then press enter.</p>
-<p>To exit the indentation, you need to press backspace. You’ll need to do this when you want to add your else statement, or any code you don’t want in your if/else.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Visual Studio Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Google Colab</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../GIFs/ifelse_VScode.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="VSCode indentation screencase"><img src="../GIFs/ifelse_VScode.gif" class="img-fluid figure-img" alt="VSCode indentation screencase"></a></p>
-<figcaption>VSCode indentation screencase</figcaption>
-</figure>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../GIFs/ifelse_colab.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Colab indentation Screencast"><img src="../GIFs/ifelse_colab.gif" class="img-fluid figure-img" alt="Colab indentation Screencast"></a></p>
-<figcaption>Colab indentation Screencast</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p>Try the below example. This code uses <code>True</code> which is a <em>boolean</em> data type.</p>
+<section id="if-and-else-conditions" class="level1">
+<h1>If and else conditions</h1>
+<p>See below table for a list of conditions that you can use with an if statement.</p>
+<p>The condition always goes between <code>if</code> and <code>:</code> and is evaluated to be <code>True</code> or <code>False</code>.</p>
+<table class="table-striped table-hover caption-top table">
+<caption>If else conditions</caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 10%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th>Example</th>
+<th>When True</th>
+<th>When False</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Integers and floats</td>
+<td><code>7</code>, <code>2.3</code>, <code>0</code></td>
+<td>Any value except <code>0</code> or <code>0.0</code></td>
+<td><code>0</code> or <code>0.0</code></td>
+</tr>
+<tr class="even">
+<td>String</td>
+<td><code>"hello"</code></td>
+<td>At least one character in string <code>h</code></td>
+<td>Empty string <code>""</code></td>
+</tr>
+<tr class="odd">
+<td>Greater than <code>&gt;</code> or Less than <code>&lt;</code></td>
+<td><code>5 &gt; 10</code></td>
+<td>If correct (5 is greater than 10)</td>
+<td>If incorrect (5 is not greater than 10)</td>
+</tr>
+<tr class="even">
+<td>Greater than or equal to <code>&gt;=</code> or Less than or equal to <code>&lt;=</code></td>
+<td><code>3 &lt;= 3</code></td>
+<td>If correct (3 is less than or equal to 3)</td>
+<td>If incorrect (3 is less than or equal to 3)</td>
+</tr>
+<tr class="odd">
+<td>Is equal to <code>==</code></td>
+<td><code>"apple" == "banana"</code></td>
+<td>If two items are exactly the same</td>
+<td>If two items are different</td>
+</tr>
+<tr class="even">
+<td>Is not equal to <code>!=</code></td>
+<td><code>"apple" != "banana"</code></td>
+<td>If two items are different</td>
+<td>If two items are exactly the same</td>
+</tr>
+<tr class="odd">
+<td>in</td>
+<td><code>"p" in apple</code></td>
+<td>If item is in string, list or dictionary</td>
+<td>If item is not in string, list or dictionary</td>
+</tr>
+<tr class="even">
+<td>not in</td>
+<td><code>"p" not in apple</code></td>
+<td>If item is not in string, list or dictionary</td>
+<td>If item is in string, list or dictionary</td>
+</tr>
+</tbody>
+</table>
+<section id="give-it-a-go" class="level2">
+<h2 class="anchored" data-anchor-id="give-it-a-go">Give it a go:</h2>
 <div>
 <div id="pyodide-1" class="exercise-cell">
 
 </div>
 <script type="pyodide-1-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBldmFsOiBmYWxzZVxuIyBpZiBzdGF0ZW1lbnQgXG5zdGlsbF9hbGl2ZSA9IFRydWUgXG5cbmlmIHN0aWxsX2FsaXZlOiBcbiAgcHJpbnQoXCJJJ20gc3RpbGwgYWxpdmVcIilcbmVsc2U6IFxuICBwcmludChcIk9oIG5vXCIpIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBBZGQgdGhlIGlmIGNvbmRpdGlvbnMgZnJvbSBhYm92ZSBoZXJlIFxuXG4jIFRlc3QgaWYgdHJ1ZVxuaWYgXCJhcHBsZVwiICE9IFwiYmFuYW5hXCI6IFxuICAgIHByaW50KFwiU3RhdGVtZW50IGlzIHRydWVcIilcblxuI8KgRXZlcnl0aGluZyBlbHNlXG5lbHNlOlxuICAgIHByaW50KFwiU3RhdGVtZW50IGlzIGZhbHNlXCIpIn0=
 </script>
-</div>
-<p>We can also visualise this with a flow chart:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../images/mermaid_stillalive.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Flowchart of if statement"><img src="../images/mermaid_stillalive.svg" class="img-fluid figure-img" alt="Flowchart of if statement"></a></p>
-<figcaption>Flowchart of if statement</figcaption>
-</figure>
-</div>
-<section id="give-it-a-go" class="level2">
-<h2 class="anchored" data-anchor-id="give-it-a-go">Give it a go:</h2>
-<p><strong>Try: the above if statement, but changing…</strong></p>
-<ol type="1">
-<li><code>still_alive = true</code></li>
-<li><code>still_alive = TRUE</code></li>
-<li><code>still_alive = False</code></li>
-<li><code>still_alive = "False"</code></li>
-<li><code>still_alive = 0</code></li>
-<li><code>still_alive = 1</code></li>
-<li><code>still_alive = 0.1</code></li>
-</ol>
-<p><em>Do you understand the above? Are there any that surprised you?</em></p>
-<p>Boolean True and False are their own data type (‘bool’), like strings or integers…</p>
-<div id="80d73ed2" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> ( <span class="bu">type</span> (<span class="va">True</span>) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'bool'&gt;</code></pre>
-</div>
 </div>
 
 
@@ -1020,13 +979,13 @@ window._ojs.runtime.interpretFromScriptTags();
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../worksheets/UserInput.html" class="pagination-link" aria-label="User input">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">User input</span>
+      <a href="../worksheets/ifelse.html" class="pagination-link" aria-label="If and else">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">If and else</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../worksheets/ifelse_conditions.html" class="pagination-link" aria-label="If and else conditions">
-        <span class="nav-page-text">If and else conditions</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../worksheets/ifelse_fixerrors.html" class="pagination-link" aria-label="Fix the errors activity">
+        <span class="nav-page-text">Fix the errors activity</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

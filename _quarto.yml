@@ -41,6 +41,10 @@ website:
                contents:
                  - href: worksheets/UserInput.qmd
                  - href: worksheets/ifelse.qmd
+                 - href: worksheets/ifelse_conditions.qmd
+                 - href: worksheets/ifelse_fixerrors.qmd
+                 - href: worksheets/ifelifelse.qmd
+                 - href: worksheets/ifmuseumdiscount.qmd
   favicon: /Logo/LS6036_face.png
     
 

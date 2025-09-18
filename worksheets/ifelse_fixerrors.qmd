@@ -1,0 +1,85 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Fix the errors activity 
+
+Below are a set of if statements - they all have errors in. Can you fix them? 
+
+:::: {.panel-tabset}
+
+## Fix the error 1:
+```{python}
+#| error: true
+my_value = 0.01 
+if my_value
+  print(my_value, "is not 0")
+else: 
+  print(my_value, "is 0")
+```
+::: { .callout-tip collapse="true" title="Show answer"}
+```{python}
+my_value = 0.01 
+if my_value: # : was missing at the end of if statement
+  print(my_value, "is not 0")
+else: 
+  print(my_value, "is 0")
+```
+:::
+
+## Fix the error 2:
+```{python}
+#| error: true
+
+user_age = 14
+age_restriction = 18
+
+if user_age < age_restriction:
+print("You are too young")
+else: 
+print("You are old enough")
+```
+
+::: { .callout-tip collapse="true" title="Show answer"}
+```{python}
+user_age = 14
+age_restriction = 18
+
+if user_age < age_restriction:
+    print("You are too young") # indentation was missing (four spaces at start of line)
+else: 
+    print("You are old enough") # indentation was missing (four spaces at start of line)
+```
+:::
+
+## Fix the error 3:
+```{python}
+#| error: true
+# Check if species belongs to genus
+target_genus = "Trypanosoma"
+my_species = "Trypanosoma brucei"
+
+if Target_genus in my_species:
+  print(f"{my_species} is part of {target_genus}")
+else: 
+  print(f"{my_species} is not part of {target_genus}")
+```
+
+::: { .callout-tip collapse="true" title="Show answer"}
+```{python}
+# Check if species belongs to genus
+target_genus = "Trypanosoma"
+my_species = "Trypanosoma brucei"
+
+# python is case sensenitive 
+# if your variable is target_genus (with no capital letters) then you always need to refer to is as target_genus. 
+if target_genus in my_species:
+  print(f"{my_species} is part of {target_genus}")
+else: 
+  print(f"{my_species} is not part of {target_genus}")
+```
+:::
+
+::::

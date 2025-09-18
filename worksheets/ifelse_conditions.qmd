@@ -1,0 +1,43 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# If and else conditions 
+
+See below table for a list of conditions that you can use with an if statement. 
+
+The condition always goes between ```if``` and ```:``` and is evaluated to be ```True``` or ```False```. 
+
+| Condition | Example | When True | When False | 
+| --- | - | --- | --- | 
+| Integers and floats | ```7```, ```2.3```, ```0``` | Any value except ```0``` or ```0.0``` | ```0``` or ```0.0``` | 
+| String | ```"hello"``` | At least one character in string ```h``` | Empty string ```""``` | 
+| Greater than ```>``` or Less than ```<```	| ```5 > 10``` | If correct (5 is greater than 10) | If incorrect (5 is not greater than 10) | 
+| Greater than or equal to ```>=``` or Less than or equal to ```<=```	| ```3 <= 3``` | If correct (3 is less than or equal to 3) | If incorrect (3 is less than or equal to 3) | 
+| Is equal to ```==``` | ```"apple" == "banana"``` | If two items are exactly the same | If two items are different | 
+| Is not equal to ```!=``` | ```"apple" != "banana"``` | If two items are different | If two items are exactly the same | 
+| in | ```"p" in apple``` | If item is in string, list or dictionary | If item is not in string, list or dictionary | 
+| not in | ```"p" not in apple``` | If item is not in string, list or dictionary | If item is in string, list or dictionary | 
+
+: If else conditions {.striped .hover}
+
+## Give it a go: 
+
+```{pyodide}
+# Add the if conditions from above here 
+
+# Test if true
+if "apple" != "banana": 
+    print("Statement is true")
+
+# Everything else
+else:
+    print("Statement is false")
+```
+
+
+
+
+

@@ -1,0 +1,27 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Museum discount activity
+
+Build this program one step at a time, checking part 1 works before moving onto part 2...
+
+A museum needs you to write a program to decide if a visitor is entitled to a reduction in the price of the ticket. The program should start by asking what the age of the visitor is.
+
+Your program should:
+
+1.  Ask the user to input their age
+2.  print 'Reduced' if the visitor is under 26 years old
+3.  Also print 'Reduced' if the visitor is over 60 years old
+4.  print 'Full price' if the visitor is not eligible for a discount
+
+::: { .callout-note collapse="true" title="Show hint"}
+The function ```input()``` will always give you a string. 
+Make sure you convert this to an integer or a float before doing your if statements. 
+:::
+
+
+![Stock image of a museum ticket counter](/images/AdobeStock_museum.png)
+_© [SyedaAroosha] / Adobe Stock_

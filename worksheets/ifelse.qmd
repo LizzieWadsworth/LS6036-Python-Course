@@ -19,21 +19,6 @@ This follows the following struture:
 
 An __indent__ is either 4 spaces ```"    "``` or a tab at the start of a line. This signals that we want this code _to be part of the if/else statement._
 
-Try the below example: 
-
-```{pyodide}
-# eval: false
-# if statement 
-still_alive = True 
-
-if still_alive: 
-  print("I'm still alive")
-else: 
-  print("Oh no")
-```
-
-This code uses True which is a _boolean_ data type. _What happens if you change this to ```False``` or to ```false```?_
-
 ::: { .callout-tip collapse="true" title="Automatic indenting"}
 When you write in Visual Studio Code or in Google Colab, it should automatically add the indentation for you as you write! 
 
@@ -54,5 +39,42 @@ To exit the indentation, you need to press backspace. You'll need to do this whe
 
 :::
 
+Try the below example. This code uses ```True``` which is a _boolean_ data type.
+
+
+```{pyodide}
+# eval: false
+# if statement 
+still_alive = True 
+
+if still_alive: 
+  print("I'm still alive")
+else: 
+  print("Oh no")
+```
+
+We can also visualise this with a flow chart: 
+
+![Flowchart of if statement](/images/mermaid_stillalive.svg)
+
+## Give it a go:
+
+**Try: the above if statement, but changing...**
+
+1.  ```still_alive = true```
+2.  ```still_alive = TRUE```
+3.  ```still_alive = False```
+4.  ```still_alive = "False"``` 
+5.  ```still_alive = 0```
+6.  ```still_alive = 1``` 
+7.  ```still_alive = 0.1``` 
+
+_Do you understand the above? Are there any that surprised you?_
+
+Boolean True and False are their own data type ('bool'), like strings or integers...
+
+```{python}
+print ( type (True) )
+```
 
 
