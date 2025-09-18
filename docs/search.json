@@ -574,5 +574,44 @@
       "Lists and dictionaries",
       "Dictionaries"
     ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries_II.html",
+    "href": "worksheets/Dictionaries_II.html",
+    "title": "Dictionaries II",
+    "section": "",
+    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name\n\n# print the final dictionary\nprint(my_elements)\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name\n\n\n\n\n\n\n\nIn the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[13], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError, you’ll know the issue is with your dictionary.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries II"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries_II.html#adding-to-a-dictionary",
+    "href": "worksheets/Dictionaries_II.html#adding-to-a-dictionary",
+    "title": "Dictionaries II",
+    "section": "",
+    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name\n\n# print the final dictionary\nprint(my_elements)\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries II"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries_II.html#dictionary-errors",
+    "href": "worksheets/Dictionaries_II.html#dictionary-errors",
+    "title": "Dictionaries II",
+    "section": "",
+    "text": "In the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[13], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError, you’ll know the issue is with your dictionary.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries II"
+    ]
   }
 ]

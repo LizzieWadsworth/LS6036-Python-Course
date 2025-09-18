@@ -1,0 +1,66 @@
+---
+format: html
+lightbox: true
+---
+
+# Dictionaries II 
+
+## Adding to a dictionary 
+
+It's simple to add a new item to a dictionary. You used ```.append()``` to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format:
+```dictionary_name[key] = value```
+
+Here's a program that adds some chemicals and then invites you to add another three:
+
+```{python}
+#| eval: false
+my_elements = {}  # this is an empty dictionary... 
+
+# ...so let's add some key-value pairs
+
+my_elements["H"]  = "Hydrogen"
+my_elements["He"] = "Helium"
+my_elements["O"]  = "Oxygen"
+my_elements["C"]  = "Carbon"
+
+# Invite the user to enter a key value pair
+symbol = input("Enter a chemical symbol: ")
+name = input(f"And the name for {symbol}: ")
+my_elements[symbol] = name
+
+# print the final dictionary
+print(my_elements)
+```
+
+Can you use the ```input()``` function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary? 
+
+::: { .callout-tip collapse="true" title="Show answer"}
+```{python}
+#| eval: false
+# Invite the user to enter a key value pair
+symbol = input("Enter a chemical symbol: ")
+name = input(f"And the name for {symbol}: ")
+my_elements[symbol] = name
+```
+:::
+
+
+## Dictionary errors
+
+In the below example we ask for a key that isn't in the dictionary - what type of error do we get? 
+
+```{python}
+#| error: true
+my_elements = {}  # this is an empty dictionary... 
+
+# ...so let's add some key-value pairs
+
+my_elements["H"]  = "Hydrogen"
+my_elements["He"] = "Helium"
+my_elements["O"]  = "Oxygen"
+my_elements["C"]  = "Carbon"
+
+print(my_elements["N"])
+```
+
+Error messages are supposed to be helpful - so it's good to make a note of what types of errors you get. Next time you get a ```KeyError```, you'll know the issue is with your dictionary. 
