@@ -55,5 +55,26 @@
   },
   "worksheets/ifmuseumdiscount.qmd": {
     "ifmuseumdiscount.html": "d220275a"
+  },
+  "worksheets/Lists.qmd": {
+    "Lists.html": "fb454ffc"
+  },
+  "worksheets/List_index.qmd": {
+    "List_index.html": "a705379a"
+  },
+  "worksheets/UserInput_DataTypes.qmd": {
+    "UserInput_DataTypes.html": "cf3aaa66"
+  },
+  "worksheets/List_slicing.qmd": {
+    "List_slicing.html": "86ba0aea"
+  },
+  "worksheets/List_methods.qmd": {
+    "List_methods.html": "e6103b7c"
+  },
+  "worksheets/Range.qmd": {
+    "Range.html": "1f800b6b"
+  },
+  "worksheets/Dictionaries.qmd": {
+    "Dictionaries.html": "d187349b"
   }
 }

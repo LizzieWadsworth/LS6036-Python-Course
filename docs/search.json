@@ -202,7 +202,7 @@
     "href": "worksheets/UserInput.html",
     "title": "User input",
     "section": "",
-    "text": "Python allows for user input, using the function input().\nThis means we can write a program which asks the user (whoever is running the program) to input some data which we will then use in our code.\nLike with print(), anything we put inside the brackets () will be printed as a message in the output.\nHowever, the code will then stop running until the user has entered some data and pressed the enter key on their keyboard.\nThe data the user enters is then returned from the input function. This means we can save it in a variable.\nTry the below example:\n\n# Ask for user's name \nuser_name = input(\"What is your name? \")\nprint(\"Your name is\", user_name)\n\nYou type in your input in the output region:\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode User Input Screencast\n\n\n\n\n\n\n\nColab User Input Screencast\n\n\n\n\n\n\n\nThe returned result of the input() function will always be a string…\nTry the below example - it should give you an error!\n\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\n\nYou should get the error:\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\n\n\n\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))\n\n\n\n\nWrite a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)",
+    "text": "User input\nPython allows for user input, using the function input().\nThis means we can write a program which asks the user (whoever is running the program) to input some data which we will then use in our code.\nLike with print(), anything we put inside the brackets () will be printed as a message in the output.\nHowever, the code will then stop running until the user has entered some data and pressed the enter key on their keyboard.\nThe data the user enters is then returned from the input function. This means we can save it in a variable.\nTry the below example:\n\n# Ask for user's name \nuser_name = input(\"What is your name? \")\nprint(\"Your name is\", user_name)\n\nYou type in your input in the output region:\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode User Input Screencast\n\n\n\n\n\n\n\nColab User Input Screencast",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -338,6 +338,241 @@
       "**Python introduction: basics**",
       "Inputs, ifs and elses",
       "Museum discount activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/Lists.html",
+    "href": "worksheets/Lists.html",
+    "title": "Lists",
+    "section": "",
+    "text": "Lists are a data type used to store multiple variables. This is called a sequence type, and strings are also sequence types (as they store multiple characters).\n\n\n\nThis next exercise is interactive: Ask at least six of your peers for their name, and at least two of the question below and note down the answers.\n\nWhat is your favourite colour?\nWhere did you grow up?\nHow many siblings do you have, if any?\nAre you a morning or an evening person?\n\nYou can also come up with your own questions if you would like.\nNow you have some data - we can look at storing it.\nTry:\n\n\n\n\n\n\nHere we used:\n\nsquare brackets [] to define a list\ncommas , to separate items in the list\nquotes \"\" to define the start and end of each string in our list.\n\n\n\n\n\nDefine two lists for your questions; “names” (as above) and the other with a sensible name for the question you chose (e.g. “favourite_colour”)\nAdd the data you collected earlier to the two lists\nPrint out the two lists you created and check that they are as expected.\n\nNote: Variable names can’t contain spaces, or special characters such as &. Good practice is to use underscores '_' as in the above example!",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "worksheets/Lists.html#creating-a-list",
+    "href": "worksheets/Lists.html#creating-a-list",
+    "title": "Lists",
+    "section": "",
+    "text": "Lists are a data type used to store multiple variables. This is called a sequence type, and strings are also sequence types (as they store multiple characters).",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "worksheets/Lists.html#talk-to-your-peers",
+    "href": "worksheets/Lists.html#talk-to-your-peers",
+    "title": "Lists",
+    "section": "",
+    "text": "This next exercise is interactive: Ask at least six of your peers for their name, and at least two of the question below and note down the answers.\n\nWhat is your favourite colour?\nWhere did you grow up?\nHow many siblings do you have, if any?\nAre you a morning or an evening person?\n\nYou can also come up with your own questions if you would like.\nNow you have some data - we can look at storing it.\nTry:\n\n\n\n\n\n\nHere we used:\n\nsquare brackets [] to define a list\ncommas , to separate items in the list\nquotes \"\" to define the start and end of each string in our list.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "worksheets/Lists.html#give-it-a-go",
+    "href": "worksheets/Lists.html#give-it-a-go",
+    "title": "Lists",
+    "section": "",
+    "text": "Define two lists for your questions; “names” (as above) and the other with a sensible name for the question you chose (e.g. “favourite_colour”)\nAdd the data you collected earlier to the two lists\nPrint out the two lists you created and check that they are as expected.\n\nNote: Variable names can’t contain spaces, or special characters such as &. Good practice is to use underscores '_' as in the above example!",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_index.html",
+    "href": "worksheets/List_index.html",
+    "title": "List index",
+    "section": "",
+    "text": "List index\nYou can extract items from a list using the index - the numerical position of the item in the list. As lists have a defined order, you can extract, for example, the third item in the list.\nTry below, does this give you the result you’re expecting?\n\n\n\n\n\n\nPython starts counting at 0, so index 3 is the number ‘four’ in the above example.\nThis means the indexes for the above number are:\nnumbers[0] = the first number = ‘one’\nnumbers[1] = the second number = ‘two’\nnumbers[2] = the third number = ‘three’\nnumbers[3] = the forth number = ‘four’\nnumbers[4] = the fifth number = ‘five’\nnumbers[5] = out of range = IndexError\nOutput: \"The third number is four\"\n\n\n\nVisual representation of the list index",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List index"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_slicing.html",
+    "href": "worksheets/List_slicing.html",
+    "title": "List slicing",
+    "section": "",
+    "text": "We can also do list slicing, where we retrieve multiple elements from a list. We can give up to three values when retrieving information from a list:\nList_name [ start : stop : step ]\n\nstart: the index to start with (e.g. 2 for the third item)\nstop: the index to stop at (the stop item will not be included)\nstep: how gap between items (e.g. 2 would mean every second item from the list)\n\nFor example, the below code gives every third item from the 2nd to the 8th item in the list.\n\nnumbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']\n\n# Printing the 2nd and 11th items from the list using the index \nprint(f\"numbers[1] is {numbers[1]}\")\nprint(f\"numbers[10] is {numbers[10]}\")\n\n# Printing every third item from the 2nd to the 11th items in the list\nprint(f\"numbers [ 1 : 10 : 3 ] is {numbers [ 1 : 10 : 3 ]}\" )\n\nnumbers[1] is two\nnumbers[10] is eleven\nnumbers [ 1 : 10 : 3 ] is ['two', 'five', 'eight']\n\n\nWhy isn’t 'eleven' included on the final print statement?\n\n\nWith your list of names of your peers, try:\n\n#Try the following with your list of names: \n\n# replace with your list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\"]\n\n# try these one at a time\nprint(names[1])\nprint(names[-1])\nprint(names[4-2])\nprint(len(names))\nprint(names[1:5])\nprint(names[1:5:2])\nprint(names[:5:2])\nprint(names[3:])\nprint(names[:3])\nprint(names[::-1])\n\nDo you understand what each line is doing?",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List slicing"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_slicing.html#give-it-a-go",
+    "href": "worksheets/List_slicing.html#give-it-a-go",
+    "title": "List slicing",
+    "section": "",
+    "text": "With your list of names of your peers, try:\n\n#Try the following with your list of names: \n\n# replace with your list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\"]\n\n# try these one at a time\nprint(names[1])\nprint(names[-1])\nprint(names[4-2])\nprint(len(names))\nprint(names[1:5])\nprint(names[1:5:2])\nprint(names[:5:2])\nprint(names[3:])\nprint(names[:3])\nprint(names[::-1])\n\nDo you understand what each line is doing?",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List slicing"
+    ]
+  },
+  {
+    "objectID": "worksheets/UserInput_DataTypes.html",
+    "href": "worksheets/UserInput_DataTypes.html",
+    "title": "Input data types",
+    "section": "",
+    "text": "The returned result of input() will always be a string…\nTry the below example - it should give you an error!\n\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\n\nYou should get the error:\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\n\n\n\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))\n\n\n\nWrite a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)"
+  },
+  {
+    "objectID": "worksheets/UserInput_DataTypes.html#give-it-a-go",
+    "href": "worksheets/UserInput_DataTypes.html#give-it-a-go",
+    "title": "Input data types",
+    "section": "",
+    "text": "Write a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)"
+  },
+  {
+    "objectID": "worksheets/List_methods.html",
+    "href": "worksheets/List_methods.html",
+    "title": "List methods",
+    "section": "",
+    "text": "A list method is a function we can use on a list - such as to add a value or remove one.\n\n\nWe can add items to a list using the list method .append() like in the below example. This always follows the format:\nlist_name.append( item_to_append )\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\" ]\nprint(\"Before: \", names)\n\n# append a new string to the list of names\nnames.append(\"Usopp\")\n\n# print the updated list\nprint(\"After: \", names)\n\nBefore:  ['Luffy', 'Zoro', 'Nami', 'Sanji']\nAfter:  ['Luffy', 'Zoro', 'Nami', 'Sanji', 'Usopp']\n\n\nThe method .append() changes the list directly, and doesn’t return any useful information, so we don’t need to store this in a variable.\n\n\n\nHowever, other list methods such as .count() will return a value we can store in a variable and use later.\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Luffy\", \"Sanji\" ]\n\n# count the number of occurences of \"Luffy\"\nresult = names.count(\"Luffy\")\n\n# print the count of names\nprint(result)\n\n2\n\n\n\n\n\n\n\n\n\n\n\n\nList method\nDescription\n\n\n\n\n.append()\nAdd item to list\n\n\n.count()\nCount number of occurances of item in list\n\n\n.index()\nReturn the index of the first element of item in list\n\n\n.remove()\nRemove item from list\n\n\n.pop()\nRemove item from list at specified index\n\n\n.reverse()\nReverse order of list\n\n\n.sort()\nSort the list\n\n\n\n\n\n\nUsing the data you collected from your peers, and your knowledge of lists, indexing and list methods do the following:\n\nWrite the data you collected into a series of lists\nUse input() to ask the user the same questions you asked your peers\nUse .append() to add each of their answers to your lists\nPrint out the list of names and ask the user to select one to remove from the lists\nUse this answer to get the index for that person, and remove their information from all of your lists\nPrint your final lists.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List methods"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_methods.html#other-useful-methods",
+    "href": "worksheets/List_methods.html#other-useful-methods",
+    "title": "List methods",
+    "section": "",
+    "text": "List method\nDescription\n\n\n\n\n.append()\nAdd item to list\n\n\n.count()\nCount number of occurances of item in list\n\n\n.index()\nReturn the index of the first element of item in list\n\n\n.remove()\nRemove item from list\n\n\n.pop()\nRemove item from list at specified index\n\n\n.reverse()\nReverse order of list\n\n\n.sort()\nSort the list",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List methods"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_methods.html#append",
+    "href": "worksheets/List_methods.html#append",
+    "title": "List methods",
+    "section": "",
+    "text": "We can add items to a list using the list method .append() like in the below example. This always follows the format:\nlist_name.append( item_to_append )\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\" ]\nprint(\"Before: \", names)\n\n# append a new string to the list of names\nnames.append(\"Usopp\")\n\n# print the updated list\nprint(\"After: \", names)\n\nBefore:  ['Luffy', 'Zoro', 'Nami', 'Sanji']\nAfter:  ['Luffy', 'Zoro', 'Nami', 'Sanji', 'Usopp']\n\n\nThe method .append() changes the list directly, and doesn’t return any useful information, so we don’t need to store this in a variable.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List methods"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_methods.html#count",
+    "href": "worksheets/List_methods.html#count",
+    "title": "List methods",
+    "section": "",
+    "text": "However, other list methods such as .count() will return a value we can store in a variable and use later.\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Luffy\", \"Sanji\" ]\n\n# count the number of occurences of \"Luffy\"\nresult = names.count(\"Luffy\")\n\n# print the count of names\nprint(result)\n\n2",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List methods"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_methods.html#give-it-a-go",
+    "href": "worksheets/List_methods.html#give-it-a-go",
+    "title": "List methods",
+    "section": "",
+    "text": "Using the data you collected from your peers, and your knowledge of lists, indexing and list methods do the following:\n\nWrite the data you collected into a series of lists\nUse input() to ask the user the same questions you asked your peers\nUse .append() to add each of their answers to your lists\nPrint out the list of names and ask the user to select one to remove from the lists\nUse this answer to get the index for that person, and remove their information from all of your lists\nPrint your final lists.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List methods"
+    ]
+  },
+  {
+    "objectID": "worksheets/Range.html",
+    "href": "worksheets/Range.html",
+    "title": "Ranges",
+    "section": "",
+    "text": "Python has a useful built-in range() function for generating ranges of values.\nIt’s useful for generating ranges for definite iteration (that’s where you know when you start your loop how many iterations you’re going to do). In Python that means the for loop.\nThe range() function can take one, two, or three arguments:\n\nrange(stop) — generates numbers from 0 up to but not including stop, incrementing by 1 each step\nrange(start, stop) — generates numbers from start (inclusive) up to but not including stop, incrementing by 1 each step\nrange(start, stop, step) — generates numbers from start (inclusive) up to but not including stop, incrementing by step\n\nYou choose whichever version best fits the problem you’re solving. If you have a choice, use the simplest one.\nRun the code below. Can you see why these three all do the same thing?\n\n\n\n\n\n\nPython’s ranges are lazy (it’s a technical term): it means that Python is not printing out the values of those ranges because it knows you haven’t actually asked to look at any of them. It knows the range but won’t bother actually enumerating the values until it really needs to. This is heplful when you have big numbers; it can result in more efficient programs that don’t require so much memory. You can print the numbers out using a loop, or, force the range to be a list using list()… because, unlike ranges, lists are not lazy:\nRun this to see the difference from the example above:\n\n\n\n\n\n\nNote how list() returns its argument as a list data type… just like int() returned an integer, float() a floating-point number, and bool() a Boolean. Converting something into a specific data type like this is called casting it.\n\n\nWrite a program that asks for an integer n and, using range(), prints the following:\n\nthe sum of all integer from 1 to n\nthe sum of all even integers from 1 to n\nthe sum of all multiples of 3 from 1 to n\n\nHint: use a different range() for each one of those.\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_int = int( input(\"please input an integer: \"))\n\n# sum of all integers from 1 to n\nmy_sum = 0\nfor i in range(1, user_int+1, 1):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all even integers from 1 to n\nmy_sum = 0\nfor i in range(2, user_int+1, 2):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all multiples of 3 from 1 to n\nmy_sum = 0\nfor i in range(3, user_int+1, 3):\n  my_sum = my_sum + i\n\nprint(my_sum)",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Ranges"
+    ]
+  },
+  {
+    "objectID": "worksheets/Range.html#give-it-a-go",
+    "href": "worksheets/Range.html#give-it-a-go",
+    "title": "Ranges",
+    "section": "",
+    "text": "Write a program that asks for an integer n and, using range(), prints the following:\n\nthe sum of all integer from 1 to n\nthe sum of all even integers from 1 to n\nthe sum of all multiples of 3 from 1 to n\n\nHint: use a different range() for each one of those.\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_int = int( input(\"please input an integer: \"))\n\n# sum of all integers from 1 to n\nmy_sum = 0\nfor i in range(1, user_int+1, 1):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all even integers from 1 to n\nmy_sum = 0\nfor i in range(2, user_int+1, 2):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all multiples of 3 from 1 to n\nmy_sum = 0\nfor i in range(3, user_int+1, 3):\n  my_sum = my_sum + i\n\nprint(my_sum)",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Ranges"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries.html",
+    "href": "worksheets/Dictionaries.html",
+    "title": "Dictionaries",
+    "section": "",
+    "text": "The basic concept of a dictionary is a key-value pair. That means you have a value (like the definition “a large non-venomous snake that kills prey by constriction”) and a key you might use to look it up (like “python”).\n\npython: a large non-venomous snake that kills prey by constriction\n\nThe dictionary you know as a book is an example of lots of key-value pairs.\nPython’s dictionaries are similar to that, so it’s a useful metaphor (although there are some differences).\nThe main point is that you get the value of an item (the definition) by using “python” as the key for finding it.\nThis is different from lists where you found a the value of an item by its position in the list. In a dictionary (book), you really don’t care about the page number: all you care about is that you have the definition for the key. That is, you want the value (definition) for the key (word) and once you’ve got it it doesn’t matter where in the dictionary you found it (provided you found it).\n\n\n\nDictionaries uses curly brackets {} where lists use square brackets []\n\nIt might seem like a small distinction, but it’s very important! If you use curly brackets { }, you’re telling the Python interpreter that you are declaring a dictionary (just like square brackets indicated a list). But that also means Python expects a name-value pair for each entry… and that’s done with a colon.\nFor example:\nRun this and compare it with wht you would expect if you just printed out a list. Note how _buildings is the name of the variable that is the dictionary; you know that because it’s on the left-hand side of the assignment operator (=), so this is a variable declaration.\n\n\n\n\n\n\nThat’s not very exciting — it’s just printed back what you put in, more or less, right? But… note that Python prints a dictionary within those { } curly brackets, and shows colons in there. This is different to lists, and later it might help you to remember that they look different when you ask Python to print them out.\n\n\n\nAnd here is the magic of dictionaries: you get the module you want from that dictionary by using the module code as the key. Run the following and see that you get the right value, just by saying “LS6036”… without ever needing the index.\nNote that the key goes inside square brackets just like the index in a list.\n\nprint( module_codes[ \"LS6036\" ] )",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries.html#dictionaries-verses-lists",
+    "href": "worksheets/Dictionaries.html#dictionaries-verses-lists",
+    "title": "Dictionaries",
+    "section": "",
+    "text": "Dictionaries uses curly brackets {} where lists use square brackets []\n\nIt might seem like a small distinction, but it’s very important! If you use curly brackets { }, you’re telling the Python interpreter that you are declaring a dictionary (just like square brackets indicated a list). But that also means Python expects a name-value pair for each entry… and that’s done with a colon.\nFor example:\nRun this and compare it with wht you would expect if you just printed out a list. Note how _buildings is the name of the variable that is the dictionary; you know that because it’s on the left-hand side of the assignment operator (=), so this is a variable declaration.\n\n\n\n\n\n\nThat’s not very exciting — it’s just printed back what you put in, more or less, right? But… note that Python prints a dictionary within those { } curly brackets, and shows colons in there. This is different to lists, and later it might help you to remember that they look different when you ask Python to print them out.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries.html#dictionary-retrieval-use-key-instead-of-index",
+    "href": "worksheets/Dictionaries.html#dictionary-retrieval-use-key-instead-of-index",
+    "title": "Dictionaries",
+    "section": "",
+    "text": "And here is the magic of dictionaries: you get the module you want from that dictionary by using the module code as the key. Run the following and see that you get the right value, just by saying “LS6036”… without ever needing the index.\nNote that the key goes inside square brackets just like the index in a list.\n\nprint( module_codes[ \"LS6036\" ] )",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries"
     ]
   }
 ]

@@ -1,0 +1,40 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# List index
+
+You can extract items from a list using the **index** - the numerical position of the item in the list. 
+As lists have a defined order, you can extract, for example, the third item in the list.
+
+Try below, does this give you the result you're expecting?
+
+```{pyodide}
+# Extracting values from a list using indexing
+
+numbers = ['one', 'two', 'three', 'four', 'five']
+print("The third number is", numbers[3])
+```
+
+Python starts counting at 0, so index 3 is the number 'four' in the above example. 
+
+This means the indexes for the above number are:
+
+```numbers[0]``` = the first number = 'one'
+
+```numbers[1]``` = the second number = 'two' 
+
+```numbers[2]``` = the third number = 'three'
+
+```numbers[3]``` = the forth number = 'four' 
+
+```numbers[4]``` = the fifth number = 'five'
+
+```numbers[5]``` = out of range = IndexError
+
+Output: ```"The third number is four"```
+
+![Visual representation of the list index](/images/Listindex.svg)
+

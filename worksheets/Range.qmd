@@ -1,0 +1,86 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Ranges
+
+Python has a useful built-in ```range()``` function for generating ranges of values.
+
+It's useful for generating ranges for definite iteration (that's where you know when you start your loop how many iterations you're going to do). In Python that means the for loop.
+
+The ```range()``` function can take one, two, or three arguments:
+
+-  ```range(stop)``` — generates numbers from 0 up to but not including stop, incrementing by 1 each step
+
+-  ```range(start, stop)``` — generates numbers from start (inclusive) up to but not including stop, incrementing by 1 each step
+
+-  ```range(start, stop, step)``` — generates numbers from start (inclusive) up to but not including stop, incrementing by step
+
+You choose whichever version best fits the problem you're solving. If you have a choice, use the simplest one.
+
+Run the code below. Can you see why these three all do the same thing?
+
+```{pyodide}
+print( range(10) )
+print( range(0, 10) )
+print( range(0, 10, 1) )
+```
+
+Python's ranges are lazy (it's a technical term): it means that Python is not printing out the values of those ranges because it knows you haven't actually asked to look at any of them. It knows the range but won't bother actually enumerating the values until it really needs to. This is heplful when you have big numbers; it can result in more efficient programs that don't require so much memory. You can print the numbers out using a loop, or, force the range to be a list using ```list()```... because, unlike ranges, lists are not lazy:
+
+Run this to see the difference from the example above:
+
+```{pyodide}
+print( list( range(10) ) )
+print( list( range(0, 10) ) )
+print( list( range(0, 10, 1) ) )
+
+for i in range(10):
+    print(i, end=' ')
+```
+
+Note how ```list()``` returns its argument as a list data type... just like ```int()``` returned an integer, ```float()``` a floating-point number, and ```bool()``` a Boolean. Converting something into a specific data type like this is called casting it.
+
+## Give it a go: 
+
+Write a program that asks for an integer ```n``` and, using ```range()```, prints the following:
+
+1.  the sum of all integer from 1 to n
+
+2.  the sum of all even integers from 1 to n
+
+3.  the sum of all multiples of 3 from 1 to n
+
+_Hint: use a different ```range()``` for each one of those._
+
+::: { .callout-tip collapse="true" title="Show answer"}
+
+```{python}
+#| eval: false
+user_int = int( input("please input an integer: "))
+
+# sum of all integers from 1 to n
+my_sum = 0
+for i in range(1, user_int+1, 1):
+  my_sum = my_sum + i
+
+print(my_sum)
+
+# sum of all even integers from 1 to n
+my_sum = 0
+for i in range(2, user_int+1, 2):
+  my_sum = my_sum + i
+
+print(my_sum)
+
+# sum of all multiples of 3 from 1 to n
+my_sum = 0
+for i in range(3, user_int+1, 3):
+  my_sum = my_sum + i
+
+print(my_sum)
+```
+::: 
+

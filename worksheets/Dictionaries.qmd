@@ -1,0 +1,54 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Dictionaries
+
+The basic concept of a dictionary is a key-value pair. That means you have a value (like the definition "a large non-venomous snake that kills prey by constriction") and a key you might use to look it up (like "python").
+
+> python: a large non-venomous snake that kills prey by constriction
+
+The dictionary you know as a book is an example of lots of key-value pairs.
+
+Python's dictionaries are similar to that, so it's a useful metaphor (although there are some differences).
+
+The main point is that you get the value of an item (the definition) by using "python" as the key for finding it.
+
+This is different from lists where you found a the value of an item by its position in the list. In a dictionary (book), you really don't care about the page number: all you care about is that you have the definition for the key. That is, you want the value (definition) for the key (word) and once you've got it it doesn't matter where in the dictionary you found it (provided you found it).
+
+## Dictionaries verses lists
+
+-  Dictionaries uses _curly brackets_ ```{}``` where lists use square brackets ```[]```
+
+It might seem like a small distinction, but it's very important! If you use curly brackets ```{ }```, you're telling the Python interpreter that you are declaring a dictionary (just like square brackets indicated a list). But that also means Python expects a name-value pair for each entry... and that's done with a colon.
+
+For example:
+
+Run this and compare it with wht you would expect if you just printed out a list. Note how _buildings is the name of the variable that is the dictionary; you know that because it's on the left-hand side of the assignment operator (=), so this is a variable declaration.
+
+
+```{pyodide}
+module_codes = {
+    "LS6036": "Bioinformatics: Decoding Life's Data",
+    "LS6008": "Medical Parasitology",
+    "LS6014": "Project",
+    "LS6044": "Bioscience Innovation and Enterprise"
+}
+
+print(module_codes)
+```
+
+That's not very exciting — it's just printed back what you put in, more or less, right? But... note that Python prints a dictionary within those ```{ }``` curly brackets, and shows colons in there. This is different to lists, and later it might help you to remember that they look different when you ask Python to print them out.
+
+## Dictionary retrieval: use key instead of index
+
+And here is the magic of dictionaries: you get the module you want from that dictionary by using the module code as the key. Run the following and see that you get the right value, just by saying "LS6036"... without ever needing the index.
+
+Note that the key goes inside square brackets just like the index in a list.
+
+```{python}
+#| eval: false
+print( module_codes[ "LS6036" ] )
+```

@@ -45,6 +45,14 @@ website:
                  - href: worksheets/ifelse_fixerrors.qmd
                  - href: worksheets/ifelifelse.qmd
                  - href: worksheets/ifmuseumdiscount.qmd
+            -  section: "Lists and dictionaries"
+               contents:
+                 - href: worksheets/Lists.qmd
+                 - href: worksheets/List_index.qmd
+                 - href: worksheets/List_slicing.qmd
+                 - href: worksheets/List_methods.qmd
+                 - href: worksheets/Range.qmd
+                 - href: worksheets/Dictionaries.qmd
   favicon: /Logo/LS6036_face.png
     
 

@@ -1,0 +1,47 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# Lists
+
+## Creating a list
+
+Lists are a data type used to store multiple variables. This is called a _sequence type_, and strings are also sequence types (as they store multiple characters). 
+
+## Talk to your peers:
+
+This next exercise is interactive: Ask at least six of your peers for their name, and at least two of the question below and note down the answers.
+
+-  What is your favourite colour?
+-  Where did you grow up?
+-  How many siblings do you have, if any?
+-  Are you a morning or an evening person?
+
+You can also come up with your own questions if you would like. 
+
+Now you have some data - we can look at storing it. 
+
+Try:
+```{pyodide}
+# Defining a list 'names' to store the collected names.
+
+names = [ "Luffy" , "Zoro" , "Nami" , "Sanji"]
+
+print(f"Names is {names} and is of type {type(names)}")
+```
+
+ Here we used: 
+
+ -  **square brackets ```[]```** to define a list 
+ -  **commas ```,```** to separate items in the list 
+ -  **quotes ```""```** to define the start and end of each string in our list. 
+ 
+## Give it a go:
+
+1.  Define two lists for your questions; "names" (as above) and the other with a sensible name for the question you chose (e.g. "favourite_colour") 
+2.  Add the data you collected earlier to the two lists
+3.  Print out the two lists you created and check that they are as expected.
+
+_Note: Variable names can't contain spaces, or special characters such as ```&```. Good practice is to use underscores_ ```'_'``` _as in the above example!_

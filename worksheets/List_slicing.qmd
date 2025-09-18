@@ -1,0 +1,56 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# List slicing
+
+We can also do **list slicing**, where we retrieve **multiple elements** from a list. We can give up to three values when retrieving information from a list:
+
+List_name [ **start** : **stop** : **step** ]
+
+-  **start**: the index to start with (e.g. 2 for the third item)
+-  **stop**: the index to stop at (the stop item will _not_ be included)
+-  **step**: how gap between items (e.g. 2 would mean every _second_ item from the list)
+
+For example, the below code gives every _third_ item from the 2nd to the 8th item in the list. 
+
+```{python}
+numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']
+
+# Printing the 2nd and 11th items from the list using the index 
+print(f"numbers[1] is {numbers[1]}")
+print(f"numbers[10] is {numbers[10]}")
+
+# Printing every third item from the 2nd to the 11th items in the list
+print(f"numbers [ 1 : 10 : 3 ] is {numbers [ 1 : 10 : 3 ]}" )
+```
+
+_Why isn't ```'eleven'``` included on the final print statement?_
+
+## Give it a go:
+
+With your list of names of your peers, try:
+
+```{python}
+#| eval: false
+#Try the following with your list of names: 
+
+# replace with your list of names
+names = [ "Luffy" , "Zoro" , "Nami" , "Sanji"]
+
+# try these one at a time
+print(names[1])
+print(names[-1])
+print(names[4-2])
+print(len(names))
+print(names[1:5])
+print(names[1:5:2])
+print(names[:5:2])
+print(names[3:])
+print(names[:3])
+print(names[::-1])
+```
+
+_Do you understand what each line is doing?_

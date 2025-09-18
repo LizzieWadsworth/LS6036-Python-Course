@@ -1,0 +1,68 @@
+---
+format: live-html
+engine: jupyter
+lightbox: true
+---
+
+# List methods
+
+A **list method** is a function we can use on a list - such as to add a value or remove one. 
+
+## append()
+
+We can add items to a list using the list method ```.append()``` like in the below example. 
+This always follows the format: 
+
+list_name```.```append```(``` item_to_append ```)```
+
+```{python, results='hide', eval = FALSE}
+# create a list of names
+names = [ "Luffy" , "Zoro" , "Nami" , "Sanji" ]
+print("Before: ", names)
+
+# append a new string to the list of names
+names.append("Usopp")
+
+# print the updated list
+print("After: ", names)
+```
+
+The method ```.append()``` changes the list directly, and doesn't return any useful information, so we don't need to store this in a variable. 
+
+## count()
+
+However, other list methods such as ```.count()``` will return a value we can store in a variable and use later. 
+
+```{python}
+# create a list of names
+names = [ "Luffy" , "Zoro" , "Nami" , "Luffy", "Sanji" ]
+
+# count the number of occurences of "Luffy"
+result = names.count("Luffy")
+
+# print the count of names
+print(result)
+```
+
+## Other useful methods
+
+| List method | Description | 
+| --- | --- | 
+| ```.append()``` | Add item to list | 
+| ```.count()``` | Count number of occurances of item in list | 
+| ```.index()``` | Return the index of the first element of item in list | 
+| ```.remove()``` | Remove item from list | 
+| ```.pop()``` | Remove item from list at specified index | 
+| ```.reverse()``` | Reverse order of list | 
+| ```.sort()``` | Sort the list | 
+
+##  Give it a go
+
+Using the data you collected from your peers, and your knowledge of lists, indexing and list methods do the following: 
+
+1.  Write the data you collected into a series of lists 
+2.  Use ```input()``` to ask the user the same questions you asked your peers 
+3.  Use ```.append()``` to add each of their answers to your lists
+4.  Print out the list of names and ask the user to select one to remove from the lists
+5.  Use this answer to get the index for that person, and remove their information from all of your lists
+6.  Print your final lists.
