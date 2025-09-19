@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "cheatsheet.html",
-    "href": "cheatsheet.html",
-    "title": "Cheatsheet",
-    "section": "",
-    "text": "Cheatsheet"
-  },
-  {
     "objectID": "learn.html",
     "href": "learn.html",
     "title": "Hello World",
@@ -20,31 +13,11 @@
     ]
   },
   {
-    "objectID": "help.html",
-    "href": "help.html",
-    "title": "Help",
+    "objectID": "cheatsheet.html",
+    "href": "cheatsheet.html",
+    "title": "Cheatsheet",
     "section": "",
-    "text": "Help"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "worksheets/Variables.html",
-    "href": "worksheets/Variables.html",
-    "title": "Variables",
-    "section": "",
-    "text": "Variables\nVariables are containers for storing data values. We can then use it elsewhere in our program without having to manually type it in again which can be really handy.\nTry:\n\n\n\n\n\n\nThis is the same as our first example, but first we stored the information in a variable called x. We then told python to print whatever x is.\nNext, try:\n\n\n\n\n\n\nDid you get the output you expected?\nNext, try:\n\n\n\n\n\n\nWhat is different in this example? How does that change the output?",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Variables"
-    ]
+    "text": "Cheatsheet"
   },
   {
     "objectID": "careers.html",
@@ -54,13 +27,6 @@
     "text": "Careers"
   },
   {
-    "objectID": "setup.html",
-    "href": "setup.html",
-    "title": "Set up",
-    "section": "",
-    "text": "We are going to use Python for this course. You can do this on campus from a University Computer, online using a free Google Colab account that you can access from any web browser, or by downloading Python and Visual Studio Code onto your own device.\nClick below to see the set up instructions for each:\n\nUniversity ComputerOnline CloudOwn Device\n\n\nTo get set up, follow the below steps. Click each step for detailed instructions.\n\n\n\n\n\n\nStep 1: Launch Visual Studio Code from AppsAnywhere\n\n\n\n\n\n\nType in AppsAnywhere to the windows bar. This will open in a web browser\nOpen the following two applications by typing the name in and clicking launch:\n\nPython\nVisual Studio Code\n\n\n\n\n\nGIF of Opening VSCode\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Navigate to your OneDrive folder\n\n\n\n\n\n\nClick “Open Folder” on the loading screen\nFind your OneDrive folder. You should be able to recognise the files and folders listed, from what you have saved here in your other classes.\nCreate a new folder for this python course, and open this folder.\n\n\n\n\nGIF of Opening OneDrive folder\n\n\n\n\n\n\n\n\n\n\n\nStep 3: Install the python extension\n\n\n\n\n\n\nClick the extensions tab\nSearch and install python\n\n\n\n\nGIF of Making a Folder\n\n\n\n\n\n\n\n\n\n\n\nStep 4: Create and run a Python file\n\n\n\n\n\nYou’re now ready to run some Python code!\n\nGo back to your folder\nClick the “New file” button\nGive your file a name ending .py (e.g. “Test.py” )\nAdd the following line to your file\n\n\nprint(\"Hello World\")\n\n\nPress the run button\n\nAnd that’s it - you’re all set up!\n\n\n\nGIF of making a python File\n\n\n\n\n\n\n\n\nWarning\n\n\n\n\n\nMake sure you can find your file in file explorer. Always back up your work such as saving in OneDrive or emailing to yourself so that you don’t lose your progress.\n\n\n\n\n\n\n\n\nGoogle Colab is a free tool for running python on a browser - from a file saved in your Google Drive.\n\n\n\n\n\n\nCaution\n\n\n\n\n\nYou shouldn’t need a paid account for this course. If your work becomes too large, then I suggest downloading and running Python and Visual Studio Code on your device.\n\n\n\nTo get set up, follow the instructions below:\n\n\n\n\n\n\nSet up Google Colab notebook\n\n\n\n\n\n\nSign into Google with any Google account\nGo to Google Colab\nClick file -&gt; New Notebook in Drive\nName your file (e.g “Test.ipynb”) The file is an Ipython Notebook so ends with .ipynb instead of .py\nAdd and run the following code:\n\n\nprint(\"Hello World\")\n\n\n\n\nGIF of creating a Google Colab notebook\n\n\n\n\n\nAnd that’s it for setting up with Google Colab!\n\n\nIf you’re working on your own laptop or computer it’s also possible to download and run Python and Visual Studio Code. These are both free, open-source programs.\n\n\n\n\n\n\nNote\n\n\n\n\n\nIf you’re working on a tablet, chromebook or your device is typically slow, I recommend looking at the Google Colab option instead\n\n\n\nInstalling Python and VSCode can be a bit fiddley - let the teaching team know if you’d like any support.\nWhy two programs? Python is the programming language, that takes our data and does our analyses. Visual Studio Code is a program we use to edit and run our python files. It’s a text editor that is specialised for coding projects.\n\n\n\n\n\n\nStep 1: Install Python\n\n\n\n\n\nYou can Install Python from this website. It should automatically detect whether you are on a Windows or a Mac PC and suggest which version to download. Click download and then follow the installation instructions.\n\n\n\nScreenshot of Python website\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Install Visual Studio Code\n\n\n\n\n\nOnce Python is installed, you can install Visual Studio Code from this website.\nIt should also automatically detect what type of PC you are on.\n\n\n\nScreenshot of Visual Studio Code website\n\n\n\n\n\n\n\n\n\n\n\nStep 3: Create or move to a folder for LS6036\n\n\n\n\n\n\nClick “Open Folder” on the loading screen\nBrowse files until you can find your documents - wherever you keep your university files.\nCreate a new folder for this python course, and open this folder.\n\n\n\n\nGIF of Opening OneDrive folder\n\n\n\n\n\n\n\n\n\n\n\nStep 4: Install the python extension\n\n\n\n\n\nNow we need to set up Visual Studio Code to recognise and use your version of python.\n\nClick the extensions tab\nSearch and install python\n\n\n\n\nGIF of Making a Folder\n\n\n\n\n\n\n\n\n\n\n\nStep 5: Write and run a python file\n\n\n\n\n\nYou’re now ready to run some Python code!\n\nGo back to your folder\nClick the “New file” button\nGive your file a name ending .py (e.g. “Test.py” )\nAdd the following line to your file\n\n\nprint(\"Hello World\")\n\n\nPress the run button\n\nAnd that’s it - you’re all set up!\n\n\n\nGIF of making a python File"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "LS6036 Python Course",
@@ -68,24 +34,11 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "worksheets/Comments.html",
-    "href": "worksheets/Comments.html",
-    "title": "Comments",
-    "section": "",
-    "text": "Comments\nOne of the most important practices in programming is to use good comments.\nComments help explain what the code is doing - to another programmer, to whoever is marking your assignments, to your future self (you will forget how your own code works!).\nComments are sections of the code that are ignored by the compiler - they aren’t executed like the rest of your code. In python, you can comment by:\n\n# Starting with a '#' (this is the best way!)\n\"\"\"Wrapping text in triple quotes\"\"\"\n\nTry the below example:",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Comments"
-    ]
-  },
-  {
     "objectID": "worksheets/DataTypes.html",
     "href": "worksheets/DataTypes.html",
     "title": "Data Types",
     "section": "",
-    "text": "Data Types\nIn the previous examples, we’ve only been using strings. A string is a collection of characters - such as letters, numbers and punctuation.\nWe can also use different data types. Below are some examples of different data types and how we define them in python.\n\nPython Data types\n\n\n\n\n\n\n\n\n\nData Type\nShorthand\nDescription\nDefine With\nExamples\n\n\n\n\nString\nstr\nA collection of characters\nQuotes “” or ’’\nx = “5 jumping chimpanzees”\n\n\nInteger\nint\nA whole number\nDigit without quotes or decimal point\nx = 5\n\n\nFloat\nfloat\nA floating point number\nDigit with a decimal point, no quotes\nx = 5.7\n\n\nList\nlist\nA collection of strings, integers, floats or lists\nSquare brackets [ ]\nx = [“5 jumping chimpanzees”, 5, 5.7]\n\n\n\nWe can check what type our variable is using the function type().\nTry:\n\n\n\n\n\n\nChange the line x = 5.7 to the other examples in Table 1 - what do you get each time?\nThis will be really useful when we have errors in our code - we might think we’re using an integer when our variable is actually a string…",
+    "text": "In the previous examples, we’ve only been using strings. A string is a collection of characters - such as letters, numbers and punctuation.\nWe can also use different data types. Below are some examples of different data types and how we define them in python.\n\nPython Data types\n\n\n\n\n\n\n\n\n\nData Type\nShorthand\nDescription\nDefine With\nExamples\n\n\n\n\nString\nstr\nA collection of characters\nQuotes “” or ’’\nx = “5 jumping chimpanzees”\n\n\nInteger\nint\nA whole number\nDigit without quotes or decimal point\nx = 5\n\n\nFloat\nfloat\nA floating point number\nDigit with a decimal point, no quotes\nx = 5.7\n\n\nList\nlist\nA collection of strings, integers, floats or lists\nSquare brackets [ ]\nx = [“5 jumping chimpanzees”, 5, 5.7]\n\n\n\nWe can check what type our variable is using the function type().\nTry:\n\n\n\n\n\n\nChange the line x = 5.7 to the other examples in Table 1 - what do you get each time?\nThis will be really useful when we have errors in our code - we might think we’re using an integer when our variable is actually a string…",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -94,376 +47,11 @@
     ]
   },
   {
-    "objectID": "worksheets/Maths.html",
-    "href": "worksheets/Maths.html",
-    "title": "Maths",
-    "section": "",
-    "text": "We’ve looked at saving a numerical value (integer or float) as a variable. Next we can look at doing mathematics in python. Table 2 contains example code for different mathematical operations and how we write them.\n\nPython Mathematics\n\n\n\n\n\n\n\n\nOperator\nName\nExample\nExample code\n\n\n\n\n+\nAddition\n2 plus 5\n2 + 5\n\n\n-\nSubtraction\n7 minus 3\n7 - 3\n\n\n*\nMultiplication\n3 times 4\n3 * 4\n\n\n/\nDivision\n10 divided by 2\n10 / 2\n\n\n%\nModulus\nRemainder from 10 divided by 3\n10 % 3\n\n\n**\nExponentiation\n3 to the power of 4\n3 ** 4\n\n\n//\nFloor division\n10 divided by 3, rounded down to nearest integer\n10 // 3\n\n\n\nTry the below code, and then change the mathematical operator as in the above Table. Does the result that prints out match what you expect?\n\n\n\n\n\n\n\n\nIn python, arithmetic operations always occur in the following order:\n\nExponential **\nMultiplication * or division (/ or // or % )\nAddition + or subtraction -\n\nWhere there is two operations of the same level (eg. one * and one / ) then the order depends on which comes first.\nJust like in mathematics, we can use brackets ( ) to highlight which operations should be done first.\nWhat would be the result of the following equations in python? Calculate them manually (without python) first.\n\n4 - 3 * 5 + 6\n4 - ( 3 * 5 ) + 6\n(4 - 3) * 5 + 6\n\n4 - (3 * 5 + 6)\n4 - 3.0 * 5 + 6\n4. - ( 3 * 5 ) + 6\n(4 + 2) / 5 + 6\n\n4 // (3 * 5 + 6.)\n\nNow try the above in python. You can do this using print() like in the example below. Were your predictions correct?\n\n\n\n\n\n\nNote: In Python, you can mix integers and floats in the same arithmetic expression. The type of the evaluation will be a float.\n\n\n\n\n\n\nSide note: Rounding errors\n\n\n\n\n\nA float is any number with a decimal point, whereas an integer is a whole number (eg. 5.0 is a float and 5 is an integer)\nIn python, there’s something a little unusual about mathematical calculations with floats…\nTry:\n\n\n\n\n\n\nDid you get what you expected? What do you think is going on here?\nConfused? This is to do with how the hardware stores numbers in binary - it isn’t a bug with the python code. You can check out more in this geeks for geeks article.",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Maths"
-    ]
-  },
-  {
-    "objectID": "worksheets/Maths.html#order-of-operations",
-    "href": "worksheets/Maths.html#order-of-operations",
-    "title": "Maths",
-    "section": "",
-    "text": "In python, arithmetic operations always occur in the following order:\n\nExponential **\nMultiplication * or division (/ or // or % )\nAddition + or subtraction -\n\nWhere there is two operations of the same level (eg. one * and one / ) then the order depends on which comes first.\nJust like in mathematics, we can use brackets ( ) to highlight which operations should be done first.\nWhat would be the result of the following equations in python? Calculate them manually (without python) first.\n\n4 - 3 * 5 + 6\n4 - ( 3 * 5 ) + 6\n(4 - 3) * 5 + 6\n\n4 - (3 * 5 + 6)\n4 - 3.0 * 5 + 6\n4. - ( 3 * 5 ) + 6\n(4 + 2) / 5 + 6\n\n4 // (3 * 5 + 6.)\n\nNow try the above in python. You can do this using print() like in the example below. Were your predictions correct?\n\n\n\n\n\n\nNote: In Python, you can mix integers and floats in the same arithmetic expression. The type of the evaluation will be a float.\n\n\n\n\n\n\nSide note: Rounding errors\n\n\n\n\n\nA float is any number with a decimal point, whereas an integer is a whole number (eg. 5.0 is a float and 5 is an integer)\nIn python, there’s something a little unusual about mathematical calculations with floats…\nTry:\n\n\n\n\n\n\nDid you get what you expected? What do you think is going on here?\nConfused? This is to do with how the hardware stores numbers in binary - it isn’t a bug with the python code. You can check out more in this geeks for geeks article.",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Maths"
-    ]
-  },
-  {
-    "objectID": "worksheets/FormatStrings.html",
-    "href": "worksheets/FormatStrings.html",
-    "title": "Format Strings",
-    "section": "",
-    "text": "We can also print our variables within a string using a format string.\nThis can be really useful when we want to print multiple pieces of information from our python program and need to know which is which.\nA format string is similar to a string but starts with an f: f\"Add string here\"\nAnd we can insert the value of one of our variables using curly brackets {}\nSee example below:\n\n\n\n\n\n\n\n\nSee if you can make a format string to print the following:\nEscherichia coli is a Gram negative bacteria\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nPut the variable names inside of curly brackets {}\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nspecies = \"Escherichia coli\"\ngramtype = \"Gram negative\"\n\nprint(f\"{species} is a {gramtype} bacteria\")\n\nEscherichia coli is a Gram negative bacteria",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Format Strings"
-    ]
-  },
-  {
-    "objectID": "worksheets/FormatStrings.html#give-it-a-go",
-    "href": "worksheets/FormatStrings.html#give-it-a-go",
-    "title": "Format Strings",
-    "section": "",
-    "text": "See if you can make a format string to print the following:\nEscherichia coli is a Gram negative bacteria\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nPut the variable names inside of curly brackets {}\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nspecies = \"Escherichia coli\"\ngramtype = \"Gram negative\"\n\nprint(f\"{species} is a {gramtype} bacteria\")\n\nEscherichia coli is a Gram negative bacteria",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Format Strings"
-    ]
-  },
-  {
-    "objectID": "worksheets/OxygenInBlood.html",
-    "href": "worksheets/OxygenInBlood.html",
-    "title": "Oxygen in blood exercise",
-    "section": "",
-    "text": "A patient has the following blood oxygen readings:\n\nPatient 1 haemoglobin measurements\n\n\nType\nMeasurement\nUnits\n\n\n\n\nHaemoglobin concentration\n15\ng / dL blood\n\n\nHaemoglobin saturation\n96\n%\n\n\nArterial oxygen tension\n89\nmmHg\n\n\n\n\n\nEvery gram of hemoglobin can maximally bind 1.34 mL of oxygen.\nThis mean we can calculate the maximum amount of oxygen bound to haemoglobin by multiplying the concentration of haemoglobin [Hb] (in g / dL blood) with this value 1.34 mL O_2 per g haemoglobin.\nHowever, not all haemoglobin in the blood is bound to oxygen. We can multiply the maximum amount of oxygen bound to haemoglobin by the haemoglobin saturation to calculate the amount of oxygen bound in the blood.\n\\[\n\\text{Bound oxygen} = [Hb] \\frac{\\text{g Hb}}{\\text{dL}} \\times 1.34 \\frac {\\text{mL } O_2}{\\text{g Hb}} \\times \\frac{\\text{Hb saturation}}{100}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\n1929.6000000000001\n\n\n\n\n\n\n\n\n\nThere is also a small amount of oxygen dissolved in the blood, not bound to haemoglobin.\nWe can calculate this by multiplying the arterial oxygen tension (in mmHg) and the solubility coefficient of oxygen.\nThe solubility coefficient of oxygen is \\(0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\\).\n\\[\n\\text{Dissolved oxygen} = \\text{arterial oxygen tension mmHg} \\times 0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\n0.2759\n\n\n\n\n\n\n\n\n\nNow to calculate the total oxygen, all you need to do is combine the two and add them together!\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\nTotal_oxygen = Bound_oxygen + Dissolved_oxygen \nprint(Total_oxygen)\n\n1929.6000000000001\n0.2759\n1929.8759000000002\n\n\n\n\n\nNow if we have a second patient with different readings - how quickly can you calculate the total blood oxygen?\n\nPatient 2 haemoglobin measurements\n\n\nType\nMeasurement\nUnits\n\n\n\n\nHaemoglobin concentration\n12\ng / dL blood\n\n\nHaemoglobin saturation\n94\n%\n\n\nArterial oxygen tension\n76\nmmHg",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Oxygen in blood exercise"
-    ]
-  },
-  {
-    "objectID": "worksheets/OxygenInBlood.html#calculate-bound-oxygen",
-    "href": "worksheets/OxygenInBlood.html#calculate-bound-oxygen",
-    "title": "Oxygen in blood exercise",
-    "section": "",
-    "text": "Every gram of hemoglobin can maximally bind 1.34 mL of oxygen.\nThis mean we can calculate the maximum amount of oxygen bound to haemoglobin by multiplying the concentration of haemoglobin [Hb] (in g / dL blood) with this value 1.34 mL O_2 per g haemoglobin.\nHowever, not all haemoglobin in the blood is bound to oxygen. We can multiply the maximum amount of oxygen bound to haemoglobin by the haemoglobin saturation to calculate the amount of oxygen bound in the blood.\n\\[\n\\text{Bound oxygen} = [Hb] \\frac{\\text{g Hb}}{\\text{dL}} \\times 1.34 \\frac {\\text{mL } O_2}{\\text{g Hb}} \\times \\frac{\\text{Hb saturation}}{100}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\n1929.6000000000001",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Oxygen in blood exercise"
-    ]
-  },
-  {
-    "objectID": "worksheets/OxygenInBlood.html#calculate-dissolved-oxygen",
-    "href": "worksheets/OxygenInBlood.html#calculate-dissolved-oxygen",
-    "title": "Oxygen in blood exercise",
-    "section": "",
-    "text": "There is also a small amount of oxygen dissolved in the blood, not bound to haemoglobin.\nWe can calculate this by multiplying the arterial oxygen tension (in mmHg) and the solubility coefficient of oxygen.\nThe solubility coefficient of oxygen is \\(0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\\).\n\\[\n\\text{Dissolved oxygen} = \\text{arterial oxygen tension mmHg} \\times 0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\n0.2759",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Oxygen in blood exercise"
-    ]
-  },
-  {
-    "objectID": "worksheets/OxygenInBlood.html#calculate-total-oxygen",
-    "href": "worksheets/OxygenInBlood.html#calculate-total-oxygen",
-    "title": "Oxygen in blood exercise",
-    "section": "",
-    "text": "Now to calculate the total oxygen, all you need to do is combine the two and add them together!\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\nTotal_oxygen = Bound_oxygen + Dissolved_oxygen \nprint(Total_oxygen)\n\n1929.6000000000001\n0.2759\n1929.8759000000002\n\n\n\n\n\nNow if we have a second patient with different readings - how quickly can you calculate the total blood oxygen?\n\nPatient 2 haemoglobin measurements\n\n\nType\nMeasurement\nUnits\n\n\n\n\nHaemoglobin concentration\n12\ng / dL blood\n\n\nHaemoglobin saturation\n94\n%\n\n\nArterial oxygen tension\n76\nmmHg",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Oxygen in blood exercise"
-    ]
-  },
-  {
-    "objectID": "worksheets/UserInput.html",
-    "href": "worksheets/UserInput.html",
-    "title": "User input",
-    "section": "",
-    "text": "User input\nPython allows for user input, using the function input().\nThis means we can write a program which asks the user (whoever is running the program) to input some data which we will then use in our code.\nLike with print(), anything we put inside the brackets () will be printed as a message in the output.\nHowever, the code will then stop running until the user has entered some data and pressed the enter key on their keyboard.\nThe data the user enters is then returned from the input function. This means we can save it in a variable.\nTry the below example:\n\n# Ask for user's name \nuser_name = input(\"What is your name? \")\nprint(\"Your name is\", user_name)\n\nYou type in your input in the output region:\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode User Input Screencast\n\n\n\n\n\n\n\nColab User Input Screencast",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "User input"
-    ]
-  },
-  {
-    "objectID": "worksheets/UserInput.html#changing-data-type",
-    "href": "worksheets/UserInput.html#changing-data-type",
-    "title": "User input",
-    "section": "",
-    "text": "The returned result of the input() function will always be a string…\nTry the below example - it should give you an error!\n\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\n\nYou should get the error:\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\n\n\n\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "User input"
-    ]
-  },
-  {
-    "objectID": "worksheets/UserInput.html#give-it-a-go",
-    "href": "worksheets/UserInput.html#give-it-a-go",
-    "title": "User input",
-    "section": "",
-    "text": "Write a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "User input"
-    ]
-  },
-  {
-    "objectID": "worksheets/ifelse.html",
-    "href": "worksheets/ifelse.html",
-    "title": "If and else",
-    "section": "",
-    "text": "Sometimes we may want our code to act differently in different situations. For example, if we write a program to translate an mRNA sequence to an amino acid chain, we want the program to only start at the start codon and stop once we reach the stop codon.\nTo do this we can use python keywords if and else. This follows the following struture:\n\nif {condition} :\nindented code for if condition is True\nelse:\nindented code for if condition is False\nun-indented rest of code\n\nAn indent is either 4 spaces \"    \" or a tab at the start of a line. This signals that we want this code to be part of the if/else statement.\n\n\n\n\n\n\nAutomatic indenting\n\n\n\n\n\nWhen you write in Visual Studio Code or in Google Colab, it should automatically add the indentation for you as you write!\nThis should happen after you’ve written your if statement ending with : and then press enter.\nTo exit the indentation, you need to press backspace. You’ll need to do this when you want to add your else statement, or any code you don’t want in your if/else.\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode indentation screencase\n\n\n\n\n\n\n\nColab indentation Screencast\n\n\n\n\n\n\n\n\nTry the below example. This code uses True which is a boolean data type.\n\n\n\n\n\n\nWe can also visualise this with a flow chart:\n\n\n\nFlowchart of if statement\n\n\n\n\nTry: the above if statement, but changing…\n\nstill_alive = true\nstill_alive = TRUE\nstill_alive = False\nstill_alive = \"False\"\nstill_alive = 0\nstill_alive = 1\nstill_alive = 0.1\n\nDo you understand the above? Are there any that surprised you?\nBoolean True and False are their own data type (‘bool’), like strings or integers…\n\nprint ( type (True) )\n\n&lt;class 'bool'&gt;",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "If and else"
-    ]
-  },
-  {
-    "objectID": "worksheets/ifelse_conditions.html",
-    "href": "worksheets/ifelse_conditions.html",
-    "title": "If and else conditions",
-    "section": "",
-    "text": "See below table for a list of conditions that you can use with an if statement.\nThe condition always goes between if and : and is evaluated to be True or False.\n\nIf else conditions\n\n\n\n\n\n\n\n\nCondition\nExample\nWhen True\nWhen False\n\n\n\n\nIntegers and floats\n7, 2.3, 0\nAny value except 0 or 0.0\n0 or 0.0\n\n\nString\n\"hello\"\nAt least one character in string h\nEmpty string \"\"\n\n\nGreater than &gt; or Less than &lt;\n5 &gt; 10\nIf correct (5 is greater than 10)\nIf incorrect (5 is not greater than 10)\n\n\nGreater than or equal to &gt;= or Less than or equal to &lt;=\n3 &lt;= 3\nIf correct (3 is less than or equal to 3)\nIf incorrect (3 is less than or equal to 3)\n\n\nIs equal to ==\n\"apple\" == \"banana\"\nIf two items are exactly the same\nIf two items are different\n\n\nIs not equal to !=\n\"apple\" != \"banana\"\nIf two items are different\nIf two items are exactly the same\n\n\nin\n\"p\" in apple\nIf item is in string, list or dictionary\nIf item is not in string, list or dictionary\n\n\nnot in\n\"p\" not in apple\nIf item is not in string, list or dictionary\nIf item is in string, list or dictionary",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "If and else conditions"
-    ]
-  },
-  {
-    "objectID": "worksheets/ifelse_fixerrors.html",
-    "href": "worksheets/ifelse_fixerrors.html",
-    "title": "Fix the errors activity",
-    "section": "",
-    "text": "Fix the errors activity\nBelow are a set of if statements - they all have errors in. Can you fix them?\n\nFix the error 1:Fix the error 2:Fix the error 3:\n\n\n\nmy_value = 0.01 \nif my_value\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n\n  Cell In[7], line 2\n    if my_value\n               ^\nSyntaxError: expected ':'\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nmy_value = 0.01 \nif my_value: # : was missing at the end of if statement\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n0.01 is not 0\n\n\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\nprint(\"You are too young\")\nelse: \nprint(\"You are old enough\")\n\n\n  Cell In[9], line 5\n    print(\"You are too young\")\n    ^\nIndentationError: expected an indented block after 'if' statement on line 4\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\n    print(\"You are too young\") # indentation was missing (four spaces at start of line)\nelse: \n    print(\"You are old enough\") # indentation was missing (four spaces at start of line)\n\nYou are too young\n\n\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\nif Target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[11], line 5\n      2 target_genus = \"Trypanosoma\"\n      3 my_species = \"Trypanosoma brucei\"\n----&gt; 5 if Target_genus in my_species:\n      6   print(f\"{my_species} is part of {target_genus}\")\n      7 else: \n\nNameError: name 'Target_genus' is not defined\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\n# python is case sensenitive \n# if your variable is target_genus (with no capital letters) then you always need to refer to is as target_genus. \nif target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\nTrypanosoma brucei is part of Trypanosoma",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "Fix the errors activity"
-    ]
-  },
-  {
-    "objectID": "worksheets/ifelse_fixerrors.html#activity-fix-the-errors",
-    "href": "worksheets/ifelse_fixerrors.html#activity-fix-the-errors",
-    "title": "If and else fix the errors",
-    "section": "",
-    "text": "Below are a list of if statements - they all have errors in. Can you fix them?\nFix the error 1:\n\nmy_value = 0.01 \nif my_value\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n\n  Cell In[7], line 2\n    if my_value\n               ^\nSyntaxError: expected ':'\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nmy_value = 0.01 \nif my_value: # : was missing at the end of if statement\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n0.01 is not 0\n\n\n\n\n\nFix the error 2:\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\nprint(\"You are too young\")\nelse: \nprint(\"You are old enough\")\n\n\n  Cell In[9], line 5\n    print(\"You are too young\")\n    ^\nIndentationError: expected an indented block after 'if' statement on line 4\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\n    print(\"You are too young\") # indentation was missing (four spaces at start of line)\nelse: \n    print(\"You are old enough\") # indentation was missing (four spaces at start of line)\n\nYou are too young\n\n\n\n\n\nFix the error 3:\n\nday_of_travel = \"day 10\" \nmonth_of_travel = \"06\"\nyear_of_travel = \"2029\"\n\nif day_of_travel.isdigit:\n  day_of_travel = int(day_of_travel)\nelse: \n  print(\"Please change day_of_travel to a numerical value\")\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[11], line 6\n      3 year_of_travel = \"2029\"\n      5 if day_of_travel.isdigit:\n----&gt; 6   day_of_travel = int(day_of_travel)\n      7 else: \n      8   print(\"Please change day_of_travel to a numerical value\")\n\nValueError: invalid literal for int() with base 10: 'day 10'\n\n\n\nThis last one is a bit different - if the if statement was working correctly, would we get that error?\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nday_of_travel = \"day 10\" \nmonth_of_travel = \"06\"\nyear_of_travel = \"2029\"\n\nif day_of_travel.isdigit(): # brackets () were missing after .isdigit \n  # the brackets () are needed to run the function (to see if day_of_travel is made of only digits)\n  # without this, we would get true every time... \n  day_of_travel = int(day_of_travel)\nelse: \n  print(\"Please change day_of_travel to a numerical value\")\n\nPlease change day_of_travel to a numerical value",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "If and else fix the errors"
-    ]
-  },
-  {
-    "objectID": "worksheets/ifelifelse.html",
-    "href": "worksheets/ifelifelse.html",
-    "title": "If, elif and else",
-    "section": "",
-    "text": "What do we do if we have three conditions? In the below example, there are two if statements but this doesn’t work quite how we want it to.\n\ndog_or_cat_person = \"dog\"\nif dog_or_cat_person == \"dog\": \n  print(\"You are a dog person\")\nif dog_or_cat_person == \"cat\": \n  print(\"You are a cat person\")\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a dog person\nYou are not a dog or a cat person\n\n\nIn the above example, two of our conditions printed out. Even though the user was a dog person, the line “You are not a dog or a cat person” printed out as well.\nThis is because the second time we have an if, python has assumed this is unrelated to the first if. The else will execute if the second if only is False.\nThe below flow chart explains what has happened:\n\n\n\nIf if flowchart\n\n\n\n\nelif, short for else if, can be used instead so that many different conditions can be tried in sequence.\n\ndog_or_cat_person = \"dog\"\n\n# first if statement\nif dog_or_cat_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a dog person\n\n\nThis then ties together both conditions:\n\n\n\nIf elif else flowchart\n\n\nYou can add as many elif statements as you need.\nSee the below example with two elif statements:\n\ndog_or_cat_or_bird_person = \"bird\"\n\n# first if statement\nif dog_or_cat_or_bird_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_or_bird_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# elif - for if the previous if and elif statements are False and this elif is True\nelif dog_or_cat_or_bird_person == \"bird\": \n  print(\"You are a bird person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a bird person\n\n\nWe can also visualise this with a flow chart.\n\n\n\nFlow chart of if elif elif else example",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "If, elif and else"
-    ]
-  },
-  {
-    "objectID": "worksheets/ifelifelse.html#using-elif",
-    "href": "worksheets/ifelifelse.html#using-elif",
-    "title": "If, elif and else",
-    "section": "",
-    "text": "elif, short for else if, can be used instead so that many different conditions can be tried in sequence.\n\ndog_or_cat_person = \"dog\"\n\n# first if statement\nif dog_or_cat_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a dog person\n\n\nThis then ties together both conditions:\n\n\n\nIf elif else flowchart\n\n\nYou can add as many elif statements as you need.\nSee the below example with two elif statements:\n\ndog_or_cat_or_bird_person = \"bird\"\n\n# first if statement\nif dog_or_cat_or_bird_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_or_bird_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# elif - for if the previous if and elif statements are False and this elif is True\nelif dog_or_cat_or_bird_person == \"bird\": \n  print(\"You are a bird person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a bird person\n\n\nWe can also visualise this with a flow chart.\n\n\n\nFlow chart of if elif elif else example",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "If, elif and else"
-    ]
-  },
-  {
-    "objectID": "worksheets/ifelse.html#give-it-a-go",
-    "href": "worksheets/ifelse.html#give-it-a-go",
-    "title": "If and else",
-    "section": "",
-    "text": "Try: the above if statement, but changing…\n\nstill_alive = true\nstill_alive = TRUE\nstill_alive = False\nstill_alive = \"False\"\nstill_alive = 0\nstill_alive = 1\nstill_alive = 0.1\n\nDo you understand the above? Are there any that surprised you?\nBoolean True and False are their own data type (‘bool’), like strings or integers…\n\nprint ( type (True) )\n\n&lt;class 'bool'&gt;",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "If and else"
-    ]
-  },
-  {
-    "objectID": "worksheets/ifmuseumdiscount.html",
-    "href": "worksheets/ifmuseumdiscount.html",
-    "title": "Museum discount activity",
-    "section": "",
-    "text": "Museum discount activity\nBuild this program one step at a time, checking part 1 works before moving onto part 2…\nA museum needs you to write a program to decide if a visitor is entitled to a reduction in the price of the ticket. The program should start by asking what the age of the visitor is.\nYour program should:\n\nAsk the user to input their age\nprint ‘Reduced’ if the visitor is under 26 years old\nAlso print ‘Reduced’ if the visitor is over 60 years old\nprint ‘Full price’ if the visitor is not eligible for a discount\n\n\n\n\n\n\n\nShow hint\n\n\n\n\n\nThe function input() will always give you a string. Make sure you convert this to an integer or a float before doing your if statements.\n\n\n\n © [SyedaAroosha] / Adobe Stock",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "Museum discount activity"
-    ]
-  },
-  {
-    "objectID": "worksheets/Lists.html",
-    "href": "worksheets/Lists.html",
-    "title": "Lists",
-    "section": "",
-    "text": "Lists are a data type used to store multiple variables. This is called a sequence type, and strings are also sequence types (as they store multiple characters).\n\n\n\nThis next exercise is interactive: Ask at least six of your peers for their name, and at least two of the question below and note down the answers.\n\nWhat is your favourite colour?\nWhere did you grow up?\nHow many siblings do you have, if any?\nAre you a morning or an evening person?\n\nYou can also come up with your own questions if you would like.\nNow you have some data - we can look at storing it.\nTry:\n\n\n\n\n\n\nHere we used:\n\nsquare brackets [] to define a list\ncommas , to separate items in the list\nquotes \"\" to define the start and end of each string in our list.\n\n\n\n\n\nDefine two lists for your questions; “names” (as above) and the other with a sensible name for the question you chose (e.g. “favourite_colour”)\nAdd the data you collected earlier to the two lists\nPrint out the two lists you created and check that they are as expected.\n\nNote: Variable names can’t contain spaces, or special characters such as &. Good practice is to use underscores '_' as in the above example!",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Lists"
-    ]
-  },
-  {
-    "objectID": "worksheets/Lists.html#creating-a-list",
-    "href": "worksheets/Lists.html#creating-a-list",
-    "title": "Lists",
-    "section": "",
-    "text": "Lists are a data type used to store multiple variables. This is called a sequence type, and strings are also sequence types (as they store multiple characters).",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Lists"
-    ]
-  },
-  {
-    "objectID": "worksheets/Lists.html#talk-to-your-peers",
-    "href": "worksheets/Lists.html#talk-to-your-peers",
-    "title": "Lists",
-    "section": "",
-    "text": "This next exercise is interactive: Ask at least six of your peers for their name, and at least two of the question below and note down the answers.\n\nWhat is your favourite colour?\nWhere did you grow up?\nHow many siblings do you have, if any?\nAre you a morning or an evening person?\n\nYou can also come up with your own questions if you would like.\nNow you have some data - we can look at storing it.\nTry:\n\n\n\n\n\n\nHere we used:\n\nsquare brackets [] to define a list\ncommas , to separate items in the list\nquotes \"\" to define the start and end of each string in our list.",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Lists"
-    ]
-  },
-  {
-    "objectID": "worksheets/Lists.html#give-it-a-go",
-    "href": "worksheets/Lists.html#give-it-a-go",
-    "title": "Lists",
-    "section": "",
-    "text": "Define two lists for your questions; “names” (as above) and the other with a sensible name for the question you chose (e.g. “favourite_colour”)\nAdd the data you collected earlier to the two lists\nPrint out the two lists you created and check that they are as expected.\n\nNote: Variable names can’t contain spaces, or special characters such as &. Good practice is to use underscores '_' as in the above example!",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Lists"
-    ]
-  },
-  {
-    "objectID": "worksheets/List_index.html",
-    "href": "worksheets/List_index.html",
-    "title": "List index",
-    "section": "",
-    "text": "List index\nYou can extract items from a list using the index - the numerical position of the item in the list. As lists have a defined order, you can extract, for example, the third item in the list.\nTry below, does this give you the result you’re expecting?\n\n\n\n\n\n\nPython starts counting at 0, so index 3 is the number ‘four’ in the above example.\nThis means the indexes for the above number are:\nnumbers[0] = the first number = ‘one’\nnumbers[1] = the second number = ‘two’\nnumbers[2] = the third number = ‘three’\nnumbers[3] = the forth number = ‘four’\nnumbers[4] = the fifth number = ‘five’\nnumbers[5] = out of range = IndexError\nOutput: \"The third number is four\"\n\n\n\nVisual representation of the list index",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "List index"
-    ]
-  },
-  {
-    "objectID": "worksheets/List_slicing.html",
-    "href": "worksheets/List_slicing.html",
-    "title": "List slicing",
-    "section": "",
-    "text": "We can also do list slicing, where we retrieve multiple elements from a list. We can give up to three values when retrieving information from a list:\nList_name [ start : stop : step ]\n\nstart: the index to start with (e.g. 2 for the third item)\nstop: the index to stop at (the stop item will not be included)\nstep: how gap between items (e.g. 2 would mean every second item from the list)\n\nFor example, the below code gives every third item from the 2nd to the 8th item in the list.\n\nnumbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']\n\n# Printing the 2nd and 11th items from the list using the index \nprint(f\"numbers[1] is {numbers[1]}\")\nprint(f\"numbers[10] is {numbers[10]}\")\n\n# Printing every third item from the 2nd to the 11th items in the list\nprint(f\"numbers [ 1 : 10 : 3 ] is {numbers [ 1 : 10 : 3 ]}\" )\n\nnumbers[1] is two\nnumbers[10] is eleven\nnumbers [ 1 : 10 : 3 ] is ['two', 'five', 'eight']\n\n\nWhy isn’t 'eleven' included on the final print statement?\n\n\nWith your list of names of your peers, try:\n\n#Try the following with your list of names: \n\n# replace with your list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\"]\n\n# try these one at a time\nprint(names[1])\nprint(names[-1])\nprint(names[4-2])\nprint(len(names))\nprint(names[1:5])\nprint(names[1:5:2])\nprint(names[:5:2])\nprint(names[3:])\nprint(names[:3])\nprint(names[::-1])\n\nDo you understand what each line is doing?",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "List slicing"
-    ]
-  },
-  {
-    "objectID": "worksheets/List_slicing.html#give-it-a-go",
-    "href": "worksheets/List_slicing.html#give-it-a-go",
-    "title": "List slicing",
-    "section": "",
-    "text": "With your list of names of your peers, try:\n\n#Try the following with your list of names: \n\n# replace with your list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\"]\n\n# try these one at a time\nprint(names[1])\nprint(names[-1])\nprint(names[4-2])\nprint(len(names))\nprint(names[1:5])\nprint(names[1:5:2])\nprint(names[:5:2])\nprint(names[3:])\nprint(names[:3])\nprint(names[::-1])\n\nDo you understand what each line is doing?",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "List slicing"
-    ]
-  },
-  {
-    "objectID": "worksheets/UserInput_DataTypes.html",
-    "href": "worksheets/UserInput_DataTypes.html",
-    "title": "Input data types",
-    "section": "",
-    "text": "The returned result of input() will always be a string…\nTry the below example - it should give you an error!\n\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\n\nYou should get the error:\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\n\n\n\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))\n\n\n\nWrite a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)"
-  },
-  {
-    "objectID": "worksheets/UserInput_DataTypes.html#give-it-a-go",
-    "href": "worksheets/UserInput_DataTypes.html#give-it-a-go",
-    "title": "Input data types",
-    "section": "",
-    "text": "Write a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)"
-  },
-  {
     "objectID": "worksheets/List_methods.html",
     "href": "worksheets/List_methods.html",
     "title": "List methods",
     "section": "",
-    "text": "A list method is a function we can use on a list - such as to add a value or remove one.\n\n\nWe can add items to a list using the list method .append() like in the below example. This always follows the format:\nlist_name.append( item_to_append )\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\" ]\nprint(\"Before: \", names)\n\n# append a new string to the list of names\nnames.append(\"Usopp\")\n\n# print the updated list\nprint(\"After: \", names)\n\nBefore:  ['Luffy', 'Zoro', 'Nami', 'Sanji']\nAfter:  ['Luffy', 'Zoro', 'Nami', 'Sanji', 'Usopp']\n\n\nThe method .append() changes the list directly, and doesn’t return any useful information, so we don’t need to store this in a variable.\n\n\n\nHowever, other list methods such as .count() will return a value we can store in a variable and use later.\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Luffy\", \"Sanji\" ]\n\n# count the number of occurences of \"Luffy\"\nresult = names.count(\"Luffy\")\n\n# print the count of names\nprint(result)\n\n2\n\n\n\n\n\n\n\n\n\n\n\n\nList method\nDescription\n\n\n\n\n.append()\nAdd item to list\n\n\n.count()\nCount number of occurances of item in list\n\n\n.index()\nReturn the index of the first element of item in list\n\n\n.remove()\nRemove item from list\n\n\n.pop()\nRemove item from list at specified index\n\n\n.reverse()\nReverse order of list\n\n\n.sort()\nSort the list\n\n\n\n\n\n\nUsing the data you collected from your peers, and your knowledge of lists, indexing and list methods do the following:\n\nWrite the data you collected into a series of lists\nUse input() to ask the user the same questions you asked your peers\nUse .append() to add each of their answers to your lists\nPrint out the list of names and ask the user to select one to remove from the lists\nUse this answer to get the index for that person, and remove their information from all of your lists\nPrint your final lists.",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "List methods"
-    ]
-  },
-  {
-    "objectID": "worksheets/List_methods.html#other-useful-methods",
-    "href": "worksheets/List_methods.html#other-useful-methods",
-    "title": "List methods",
-    "section": "",
-    "text": "List method\nDescription\n\n\n\n\n.append()\nAdd item to list\n\n\n.count()\nCount number of occurances of item in list\n\n\n.index()\nReturn the index of the first element of item in list\n\n\n.remove()\nRemove item from list\n\n\n.pop()\nRemove item from list at specified index\n\n\n.reverse()\nReverse order of list\n\n\n.sort()\nSort the list",
+    "text": "A list method is a function we can use on a list - such as to add a value or remove one.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -475,8 +63,8 @@
     "objectID": "worksheets/List_methods.html#append",
     "href": "worksheets/List_methods.html#append",
     "title": "List methods",
-    "section": "",
-    "text": "We can add items to a list using the list method .append() like in the below example. This always follows the format:\nlist_name.append( item_to_append )\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\" ]\nprint(\"Before: \", names)\n\n# append a new string to the list of names\nnames.append(\"Usopp\")\n\n# print the updated list\nprint(\"After: \", names)\n\nBefore:  ['Luffy', 'Zoro', 'Nami', 'Sanji']\nAfter:  ['Luffy', 'Zoro', 'Nami', 'Sanji', 'Usopp']\n\n\nThe method .append() changes the list directly, and doesn’t return any useful information, so we don’t need to store this in a variable.",
+    "section": "append()",
+    "text": "append()\nWe can add items to a list using the list method .append() like in the below example. This always follows the format:\nlist_name.append( item_to_append )\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\" ]\nprint(\"Before: \", names)\n\n# append a new string to the list of names\nnames.append(\"Usopp\")\n\n# print the updated list\nprint(\"After: \", names)\n\nBefore:  ['Luffy', 'Zoro', 'Nami', 'Sanji']\nAfter:  ['Luffy', 'Zoro', 'Nami', 'Sanji', 'Usopp']\n\n\nThe method .append() changes the list directly, and doesn’t return any useful information, so we don’t need to store this in a variable.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -488,8 +76,21 @@
     "objectID": "worksheets/List_methods.html#count",
     "href": "worksheets/List_methods.html#count",
     "title": "List methods",
-    "section": "",
-    "text": "However, other list methods such as .count() will return a value we can store in a variable and use later.\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Luffy\", \"Sanji\" ]\n\n# count the number of occurences of \"Luffy\"\nresult = names.count(\"Luffy\")\n\n# print the count of names\nprint(result)\n\n2",
+    "section": "count()",
+    "text": "count()\nHowever, other list methods such as .count() will return a value we can store in a variable and use later.\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Luffy\", \"Sanji\" ]\n\n# count the number of occurences of \"Luffy\"\nresult = names.count(\"Luffy\")\n\n# print the count of names\nprint(result)\n\n2",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List methods"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_methods.html#other-useful-methods",
+    "href": "worksheets/List_methods.html#other-useful-methods",
+    "title": "List methods",
+    "section": "Other useful methods",
+    "text": "Other useful methods\n\n\n\n\n\n\n\nList method\nDescription\n\n\n\n\n.append()\nAdd item to list\n\n\n.count()\nCount number of occurances of item in list\n\n\n.index()\nReturn the index of the first element of item in list\n\n\n.remove()\nRemove item from list\n\n\n.pop()\nRemove item from list at specified index\n\n\n.reverse()\nReverse order of list\n\n\n.sort()\nSort the list",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -501,8 +102,8 @@
     "objectID": "worksheets/List_methods.html#give-it-a-go",
     "href": "worksheets/List_methods.html#give-it-a-go",
     "title": "List methods",
-    "section": "",
-    "text": "Using the data you collected from your peers, and your knowledge of lists, indexing and list methods do the following:\n\nWrite the data you collected into a series of lists\nUse input() to ask the user the same questions you asked your peers\nUse .append() to add each of their answers to your lists\nPrint out the list of names and ask the user to select one to remove from the lists\nUse this answer to get the index for that person, and remove their information from all of your lists\nPrint your final lists.",
+    "section": "Give it a go",
+    "text": "Give it a go\nUsing the data you collected from your peers, and your knowledge of lists, indexing and list methods do the following:\n\nWrite the data you collected into a series of lists\nUse input() to ask the user the same questions you asked your peers\nUse .append() to add each of their answers to your lists\nPrint out the list of names and ask the user to select one to remove from the lists\nUse this answer to get the index for that person, and remove their information from all of your lists\nPrint your final lists.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -511,11 +112,77 @@
     ]
   },
   {
+    "objectID": "worksheets/ifelse.html",
+    "href": "worksheets/ifelse.html",
+    "title": "If and else",
+    "section": "",
+    "text": "Sometimes we may want our code to act differently in different situations. For example, if we write a program to translate an mRNA sequence to an amino acid chain, we want the program to only start at the start codon and stop once we reach the stop codon.\nTo do this we can use python keywords if and else. This follows the following struture:\nAn indent is either 4 spaces \"    \" or a tab at the start of a line. This signals that we want this code to be part of the if/else statement.\nTry the below example. This code uses True which is a boolean data type.\nWe can also visualise this with a flow chart:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse.html#give-it-a-go",
+    "href": "worksheets/ifelse.html#give-it-a-go",
+    "title": "If and else",
+    "section": "Give it a go:",
+    "text": "Give it a go:\nTry: the above if statement, but changing…\n\nstill_alive = true\nstill_alive = TRUE\nstill_alive = False\nstill_alive = \"False\"\nstill_alive = 0\nstill_alive = 1\nstill_alive = 0.1\n\nDo you understand the above? Are there any that surprised you?\nBoolean True and False are their own data type (‘bool’), like strings or integers…\n\nprint ( type (True) )\n\n&lt;class 'bool'&gt;",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else"
+    ]
+  },
+  {
+    "objectID": "worksheets/List_index.html",
+    "href": "worksheets/List_index.html",
+    "title": "List index",
+    "section": "",
+    "text": "You can extract items from a list using the index - the numerical position of the item in the list. As lists have a defined order, you can extract, for example, the third item in the list.\nTry below, does this give you the result you’re expecting?\n\n\n\n\n\n\nPython starts counting at 0, so index 3 is the number ‘four’ in the above example.\nThis means the indexes for the above number are:\nnumbers[0] = the first number = ‘one’\nnumbers[1] = the second number = ‘two’\nnumbers[2] = the third number = ‘three’\nnumbers[3] = the forth number = ‘four’\nnumbers[4] = the fifth number = ‘five’\nnumbers[5] = out of range = IndexError\nOutput: \"The third number is four\"\n\n\n\nVisual representation of the list index",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List index"
+    ]
+  },
+  {
+    "objectID": "worksheets/Logic.html",
+    "href": "worksheets/Logic.html",
+    "title": "Logic",
+    "section": "",
+    "text": "Logic\n… and or not …",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "Logic"
+    ]
+  },
+  {
+    "objectID": "worksheets/UserInput_DataTypes.html",
+    "href": "worksheets/UserInput_DataTypes.html",
+    "title": "Input data types",
+    "section": "",
+    "text": "The returned result of input() will always be a string…\nTry the below example - it should give you an error!\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\nYou should get the error:\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))"
+  },
+  {
+    "objectID": "worksheets/UserInput_DataTypes.html#give-it-a-go",
+    "href": "worksheets/UserInput_DataTypes.html#give-it-a-go",
+    "title": "Input data types",
+    "section": "Give it a go:",
+    "text": "Give it a go:\nWrite a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)"
+  },
+  {
     "objectID": "worksheets/Range.html",
     "href": "worksheets/Range.html",
     "title": "Ranges",
     "section": "",
-    "text": "Python has a useful built-in range() function for generating ranges of values.\nIt’s useful for generating ranges for definite iteration (that’s where you know when you start your loop how many iterations you’re going to do). In Python that means the for loop.\nThe range() function can take one, two, or three arguments:\n\nrange(stop) — generates numbers from 0 up to but not including stop, incrementing by 1 each step\nrange(start, stop) — generates numbers from start (inclusive) up to but not including stop, incrementing by 1 each step\nrange(start, stop, step) — generates numbers from start (inclusive) up to but not including stop, incrementing by step\n\nYou choose whichever version best fits the problem you’re solving. If you have a choice, use the simplest one.\nRun the code below. Can you see why these three all do the same thing?\n\n\n\n\n\n\nPython’s ranges are lazy (it’s a technical term): it means that Python is not printing out the values of those ranges because it knows you haven’t actually asked to look at any of them. It knows the range but won’t bother actually enumerating the values until it really needs to. This is heplful when you have big numbers; it can result in more efficient programs that don’t require so much memory. You can print the numbers out using a loop, or, force the range to be a list using list()… because, unlike ranges, lists are not lazy:\nRun this to see the difference from the example above:\n\n\n\n\n\n\nNote how list() returns its argument as a list data type… just like int() returned an integer, float() a floating-point number, and bool() a Boolean. Converting something into a specific data type like this is called casting it.\n\n\nWrite a program that asks for an integer n and, using range(), prints the following:\n\nthe sum of all integer from 1 to n\nthe sum of all even integers from 1 to n\nthe sum of all multiples of 3 from 1 to n\n\nHint: use a different range() for each one of those.\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_int = int( input(\"please input an integer: \"))\n\n# sum of all integers from 1 to n\nmy_sum = 0\nfor i in range(1, user_int+1, 1):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all even integers from 1 to n\nmy_sum = 0\nfor i in range(2, user_int+1, 2):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all multiples of 3 from 1 to n\nmy_sum = 0\nfor i in range(3, user_int+1, 3):\n  my_sum = my_sum + i\n\nprint(my_sum)",
+    "text": "Python has a useful built-in range() function for generating ranges of values.\nIt’s useful for generating ranges for definite iteration (that’s where you know when you start your loop how many iterations you’re going to do). In Python that means the for loop.\nThe range() function can take one, two, or three arguments:\nYou choose whichever version best fits the problem you’re solving. If you have a choice, use the simplest one.\nRun the code below. Can you see why these three all do the same thing?\nPython’s ranges are lazy (it’s a technical term): it means that Python is not printing out the values of those ranges because it knows you haven’t actually asked to look at any of them. It knows the range but won’t bother actually enumerating the values until it really needs to. This is heplful when you have big numbers; it can result in more efficient programs that don’t require so much memory. You can print the numbers out using a loop, or, force the range to be a list using list()… because, unlike ranges, lists are not lazy:\nRun this to see the difference from the example above:\nNote how list() returns its argument as a list data type… just like int() returned an integer, float() a floating-point number, and bool() a Boolean. Converting something into a specific data type like this is called casting it.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -527,8 +194,8 @@
     "objectID": "worksheets/Range.html#give-it-a-go",
     "href": "worksheets/Range.html#give-it-a-go",
     "title": "Ranges",
-    "section": "",
-    "text": "Write a program that asks for an integer n and, using range(), prints the following:\n\nthe sum of all integer from 1 to n\nthe sum of all even integers from 1 to n\nthe sum of all multiples of 3 from 1 to n\n\nHint: use a different range() for each one of those.\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_int = int( input(\"please input an integer: \"))\n\n# sum of all integers from 1 to n\nmy_sum = 0\nfor i in range(1, user_int+1, 1):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all even integers from 1 to n\nmy_sum = 0\nfor i in range(2, user_int+1, 2):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all multiples of 3 from 1 to n\nmy_sum = 0\nfor i in range(3, user_int+1, 3):\n  my_sum = my_sum + i\n\nprint(my_sum)",
+    "section": "Give it a go:",
+    "text": "Give it a go:\nWrite a program that asks for an integer n and, using range(), prints the following:\n\nthe sum of all integer from 1 to n\nthe sum of all even integers from 1 to n\nthe sum of all multiples of 3 from 1 to n\n\nHint: use a different range() for each one of those.\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_int = int( input(\"please input an integer: \"))\n\n# sum of all integers from 1 to n\nmy_sum = 0\nfor i in range(1, user_int+1, 1):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all even integers from 1 to n\nmy_sum = 0\nfor i in range(2, user_int+1, 2):\n  my_sum = my_sum + i\n\nprint(my_sum)\n\n# sum of all multiples of 3 from 1 to n\nmy_sum = 0\nfor i in range(3, user_int+1, 3):\n  my_sum = my_sum + i\n\nprint(my_sum)",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -537,11 +204,193 @@
     ]
   },
   {
+    "objectID": "worksheets/String_methods.html",
+    "href": "worksheets/String_methods.html",
+    "title": "String methods",
+    "section": "",
+    "text": "String methods\n…",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "String methods"
+    ]
+  },
+  {
+    "objectID": "worksheets/Maths.html",
+    "href": "worksheets/Maths.html",
+    "title": "Maths",
+    "section": "",
+    "text": "We’ve looked at saving a numerical value (integer or float) as a variable. Next we can look at doing mathematics in python. Table 2 contains example code for different mathematical operations and how we write them.\nTry the below code, and then change the mathematical operator as in the above Table. Does the result that prints out match what you expect?",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Maths"
+    ]
+  },
+  {
+    "objectID": "worksheets/Maths.html#order-of-operations",
+    "href": "worksheets/Maths.html#order-of-operations",
+    "title": "Maths",
+    "section": "Order of operations",
+    "text": "Order of operations\nIn python, arithmetic operations always occur in the following order:\n\nExponential **\nMultiplication * or division (/ or // or % )\nAddition + or subtraction -\n\nWhere there is two operations of the same level (eg. one * and one / ) then the order depends on which comes first.\nJust like in mathematics, we can use brackets ( ) to highlight which operations should be done first.\nWhat would be the result of the following equations in python? Calculate them manually (without python) first.\n\n4 - 3 * 5 + 6\n4 - ( 3 * 5 ) + 6\n(4 - 3) * 5 + 6\n\n4 - (3 * 5 + 6)\n4 - 3.0 * 5 + 6\n4. - ( 3 * 5 ) + 6\n(4 + 2) / 5 + 6\n\n4 // (3 * 5 + 6.)\n\nNow try the above in python. You can do this using print() like in the example below. Were your predictions correct?\n\n\n\n\n\n\nNote: In Python, you can mix integers and floats in the same arithmetic expression. The type of the evaluation will be a float.\n\n\n\n\n\n\nSide note: Rounding errors\n\n\n\n\n\nA float is any number with a decimal point, whereas an integer is a whole number (eg. 5.0 is a float and 5 is an integer)\nIn python, there’s something a little unusual about mathematical calculations with floats…\nTry:\n\n\n\n\n\n\nDid you get what you expected? What do you think is going on here?\nConfused? This is to do with how the hardware stores numbers in binary - it isn’t a bug with the python code. You can check out more in this geeks for geeks article.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Maths"
+    ]
+  },
+  {
+    "objectID": "worksheets/UserInput.html",
+    "href": "worksheets/UserInput.html",
+    "title": "User input",
+    "section": "",
+    "text": "Python allows for user input, using the function input().\nThis means we can write a program which asks the user (whoever is running the program) to input some data which we will then use in our code.\nLike with print(), anything we put inside the brackets () will be printed as a message in the output.\nHowever, the code will then stop running until the user has entered some data and pressed the enter key on their keyboard.\nThe data the user enters is then returned from the input function. This means we can save it in a variable.\nTry the below example:\n\n# Ask for user's name \nuser_name = input(\"What is your name? \")\nprint(\"Your name is\", user_name)\n\nYou type in your input in the output region:\n\nVisual Studio CodeGoogle Colab\n\n\n\n\n\nVSCode User Input Screencast\n\n\n\n\n\n\n\nColab User Input Screencast",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "User input"
+    ]
+  },
+  {
+    "objectID": "worksheets/Variables.html",
+    "href": "worksheets/Variables.html",
+    "title": "Variables",
+    "section": "",
+    "text": "Variables are containers for storing data values. We can then use it elsewhere in our program without having to manually type it in again which can be really handy.\nTry:\n\n\n\n\n\n\nThis is the same as our first example, but first we stored the information in a variable called x. We then told python to print whatever x is.\nNext, try:\n\n\n\n\n\n\nDid you get the output you expected?\nNext, try:\n\n\n\n\n\n\nWhat is different in this example? How does that change the output?",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelifelse.html",
+    "href": "worksheets/ifelifelse.html",
+    "title": "If, elif and else",
+    "section": "",
+    "text": "What do we do if we have three conditions? In the below example, there are two if statements but this doesn’t work quite how we want it to.\ndog_or_cat_person = \"dog\"\nif dog_or_cat_person == \"dog\": \n  print(\"You are a dog person\")\nif dog_or_cat_person == \"cat\": \n  print(\"You are a cat person\")\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a dog person\nYou are not a dog or a cat person\nIn the above example, two of our conditions printed out. Even though the user was a dog person, the line “You are not a dog or a cat person” printed out as well.\nThis is because the second time we have an if, python has assumed this is unrelated to the first if. The else will execute if the second if only is False.\nThe below flow chart explains what has happened:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If, elif and else"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelifelse.html#using-elif",
+    "href": "worksheets/ifelifelse.html#using-elif",
+    "title": "If, elif and else",
+    "section": "Using elif",
+    "text": "Using elif\nelif, short for else if, can be used instead so that many different conditions can be tried in sequence.\n\ndog_or_cat_person = \"dog\"\n\n# first if statement\nif dog_or_cat_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a dog person\n\n\nThis then ties together both conditions:\n\n\n\nIf elif else flowchart\n\n\nYou can add as many elif statements as you need.\nSee the below example with two elif statements:\n\ndog_or_cat_or_bird_person = \"bird\"\n\n# first if statement\nif dog_or_cat_or_bird_person == \"dog\": \n  print(\"You are a dog person\")\n  \n# elif - for if the first if statement is False and this elif is True\nelif dog_or_cat_or_bird_person == \"cat\": \n  print(\"You are a cat person\")\n  \n# elif - for if the previous if and elif statements are False and this elif is True\nelif dog_or_cat_or_bird_person == \"bird\": \n  print(\"You are a bird person\")\n  \n# else - for if both if and elif are false\nelse: \n  print(\"You are not a dog or a cat person\")\n\nYou are a bird person\n\n\nWe can also visualise this with a flow chart.\n\n\n\nFlow chart of if elif elif else example",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If, elif and else"
+    ]
+  },
+  {
+    "objectID": "worksheets/Comments.html",
+    "href": "worksheets/Comments.html",
+    "title": "Comments",
+    "section": "",
+    "text": "One of the most important practices in programming is to use good comments.\nComments help explain what the code is doing - to another programmer, to whoever is marking your assignments, to your future self (you will forget how your own code works!).\nComments are sections of the code that are ignored by the compiler - they aren’t executed like the rest of your code. In python, you can comment by:\n\n# Starting with a '#' (this is the best way!)\n\"\"\"Wrapping text in triple quotes\"\"\"\n\nTry the below example:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Comments"
+    ]
+  },
+  {
+    "objectID": "worksheets/Species_ages.html",
+    "href": "worksheets/Species_ages.html",
+    "title": "Lifespan activity",
+    "section": "",
+    "text": "Lifespan activity\n… Add an activity with species, average lifespan, and average gestational periods etc. Print a list of species User input species of choice Compare values to humans …",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lifespan activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/FormatStrings.html",
+    "href": "worksheets/FormatStrings.html",
+    "title": "Format Strings",
+    "section": "",
+    "text": "We can also print our variables within a string using a format string.\nThis can be really useful when we want to print multiple pieces of information from our python program and need to know which is which.\nA format string is similar to a string but starts with an f: f\"Add string here\"\nAnd we can insert the value of one of our variables using curly brackets {}\nSee example below:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Format Strings"
+    ]
+  },
+  {
+    "objectID": "worksheets/FormatStrings.html#give-it-a-go",
+    "href": "worksheets/FormatStrings.html#give-it-a-go",
+    "title": "Format Strings",
+    "section": "Give it a go",
+    "text": "Give it a go\nSee if you can make a format string to print the following:\nEscherichia coli is a Gram negative bacteria\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nPut the variable names inside of curly brackets {}\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nspecies = \"Escherichia coli\"\ngramtype = \"Gram negative\"\n\nprint(f\"{species} is a {gramtype} bacteria\")\n\nEscherichia coli is a Gram negative bacteria",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Format Strings"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_fixerrors.html",
+    "href": "worksheets/ifelse_fixerrors.html",
+    "title": "Fix the errors activity",
+    "section": "",
+    "text": "Below are a set of if statements - they all have errors in. Can you fix them?\n\nFix the error 1:Fix the error 2:Fix the error 3:\n\n\n\nmy_value = 0.01 \nif my_value\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n\n  Cell In[1], line 2\n    if my_value\n               ^\nSyntaxError: expected ':'\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nmy_value = 0.01 \nif my_value: # : was missing at the end of if statement\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n0.01 is not 0\n\n\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\nprint(\"You are too young\")\nelse: \nprint(\"You are old enough\")\n\n\n  Cell In[3], line 5\n    print(\"You are too young\")\n    ^\nIndentationError: expected an indented block after 'if' statement on line 4\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\n    print(\"You are too young\") # indentation was missing (four spaces at start of line)\nelse: \n    print(\"You are old enough\") # indentation was missing (four spaces at start of line)\n\nYou are too young\n\n\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\nif Target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[5], line 5\n      2 target_genus = \"Trypanosoma\"\n      3 my_species = \"Trypanosoma brucei\"\n----&gt; 5 if Target_genus in my_species:\n      6   print(f\"{my_species} is part of {target_genus}\")\n      7 else: \n\nNameError: name 'Target_genus' is not defined\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\n# python is case sensenitive \n# if your variable is target_genus (with no capital letters) then you always need to refer to is as target_genus. \nif target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\nTrypanosoma brucei is part of Trypanosoma",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "Fix the errors activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_conditions.html",
+    "href": "worksheets/ifelse_conditions.html",
+    "title": "If and else conditions",
+    "section": "",
+    "text": "See below table for a list of conditions that you can use with an if statement.\nThe condition always goes between if and : and is evaluated to be True or False.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else conditions"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_conditions.html#give-it-a-go",
+    "href": "worksheets/ifelse_conditions.html#give-it-a-go",
+    "title": "If and else conditions",
+    "section": "Give it a go:",
+    "text": "Give it a go:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else conditions"
+    ]
+  },
+  {
     "objectID": "worksheets/Dictionaries.html",
     "href": "worksheets/Dictionaries.html",
     "title": "Dictionaries",
     "section": "",
-    "text": "The basic concept of a dictionary is a key-value pair. That means you have a value (like the definition “a large non-venomous snake that kills prey by constriction”) and a key you might use to look it up (like “python”).\n\npython: a large non-venomous snake that kills prey by constriction\n\nThe dictionary you know as a book is an example of lots of key-value pairs.\nPython’s dictionaries are similar to that, so it’s a useful metaphor (although there are some differences).\nThe main point is that you get the value of an item (the definition) by using “python” as the key for finding it.\nThis is different from lists where you found a the value of an item by its position in the list. In a dictionary (book), you really don’t care about the page number: all you care about is that you have the definition for the key. That is, you want the value (definition) for the key (word) and once you’ve got it it doesn’t matter where in the dictionary you found it (provided you found it).\n\n\n\nDictionaries uses curly brackets {} where lists use square brackets []\n\nIt might seem like a small distinction, but it’s very important! If you use curly brackets { }, you’re telling the Python interpreter that you are declaring a dictionary (just like square brackets indicated a list). But that also means Python expects a name-value pair for each entry… and that’s done with a colon.\nFor example:\nRun this and compare it with wht you would expect if you just printed out a list. Note how _buildings is the name of the variable that is the dictionary; you know that because it’s on the left-hand side of the assignment operator (=), so this is a variable declaration.\n\n\n\n\n\n\nThat’s not very exciting — it’s just printed back what you put in, more or less, right? But… note that Python prints a dictionary within those { } curly brackets, and shows colons in there. This is different to lists, and later it might help you to remember that they look different when you ask Python to print them out.\n\n\n\nAnd here is the magic of dictionaries: you get the module you want from that dictionary by using the module code as the key. Run the following and see that you get the right value, just by saying “LS6036”… without ever needing the index.\nNote that the key goes inside square brackets just like the index in a list.\n\nprint( module_codes[ \"LS6036\" ] )",
+    "text": "The basic concept of a dictionary is a key-value pair. That means you have a value (like the definition “a large non-venomous snake that kills prey by constriction”) and a key you might use to look it up (like “python”).\nThe dictionary you know as a book is an example of lots of key-value pairs.\nPython’s dictionaries are similar to that, so it’s a useful metaphor (although there are some differences).\nThe main point is that you get the value of an item (the definition) by using “python” as the key for finding it.\nThis is different from lists where you found a the value of an item by its position in the list. In a dictionary (book), you really don’t care about the page number: all you care about is that you have the definition for the key. That is, you want the value (definition) for the key (word) and once you’ve got it it doesn’t matter where in the dictionary you found it (provided you found it).",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -553,8 +402,8 @@
     "objectID": "worksheets/Dictionaries.html#dictionaries-verses-lists",
     "href": "worksheets/Dictionaries.html#dictionaries-verses-lists",
     "title": "Dictionaries",
-    "section": "",
-    "text": "Dictionaries uses curly brackets {} where lists use square brackets []\n\nIt might seem like a small distinction, but it’s very important! If you use curly brackets { }, you’re telling the Python interpreter that you are declaring a dictionary (just like square brackets indicated a list). But that also means Python expects a name-value pair for each entry… and that’s done with a colon.\nFor example:\nRun this and compare it with wht you would expect if you just printed out a list. Note how _buildings is the name of the variable that is the dictionary; you know that because it’s on the left-hand side of the assignment operator (=), so this is a variable declaration.\n\n\n\n\n\n\nThat’s not very exciting — it’s just printed back what you put in, more or less, right? But… note that Python prints a dictionary within those { } curly brackets, and shows colons in there. This is different to lists, and later it might help you to remember that they look different when you ask Python to print them out.",
+    "section": "Dictionaries verses lists",
+    "text": "Dictionaries verses lists\n\nDictionaries uses curly brackets {} where lists use square brackets []\n\nIt might seem like a small distinction, but it’s very important! If you use curly brackets { }, you’re telling the Python interpreter that you are declaring a dictionary (just like square brackets indicated a list). But that also means Python expects a name-value pair for each entry… and that’s done with a colon.\nFor example:\nRun this and compare it with wht you would expect if you just printed out a list. Note how _buildings is the name of the variable that is the dictionary; you know that because it’s on the left-hand side of the assignment operator (=), so this is a variable declaration.\n\n\n\n\n\n\nThat’s not very exciting — it’s just printed back what you put in, more or less, right? But… note that Python prints a dictionary within those { } curly brackets, and shows colons in there. This is different to lists, and later it might help you to remember that they look different when you ask Python to print them out.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -566,13 +415,52 @@
     "objectID": "worksheets/Dictionaries.html#dictionary-retrieval-use-key-instead-of-index",
     "href": "worksheets/Dictionaries.html#dictionary-retrieval-use-key-instead-of-index",
     "title": "Dictionaries",
-    "section": "",
-    "text": "And here is the magic of dictionaries: you get the module you want from that dictionary by using the module code as the key. Run the following and see that you get the right value, just by saying “LS6036”… without ever needing the index.\nNote that the key goes inside square brackets just like the index in a list.\n\nprint( module_codes[ \"LS6036\" ] )",
+    "section": "Dictionary retrieval: use key instead of index",
+    "text": "Dictionary retrieval: use key instead of index\nAnd here is the magic of dictionaries: you get the module you want from that dictionary by using the module code as the key. Run the following and see that you get the right value, just by saying “LS6036”… without ever needing the index.\nNote that the key goes inside square brackets just like the index in a list.\n\nprint( module_codes[ \"LS6036\" ] )",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
       "Lists and dictionaries",
       "Dictionaries"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloops.html",
+    "href": "worksheets/forloops.html",
+    "title": "The for loop",
+    "section": "",
+    "text": "One of the benefits of programming is automation. For example, imagine we have a list of DNA sequences, and we want to see which ones contain a start codon “ATG”. If we had 10 sequences we could manually search for them - but it would be a lot harder if we had 10,000 sequences!\nWe can use a for loop to test every item in our list for if it contains “ATG”.",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Loops",
+      "The for loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloops.html#python-code",
+    "href": "worksheets/forloops.html#python-code",
+    "title": "The for loop",
+    "section": "Python code",
+    "text": "Python code\n\n# Put sequences in a list\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\n# loop through every sequence\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\nThe way this is working is by using a temporary variable dna. We then go through every item in the list Sequences, and replace this temporary variable with each item.\nOnce we reach the end of the loop (when there is no more indentation), the code repeats with the next item in the list.",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Loops",
+      "The for loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloops.html#animation-of-the-for-loop",
+    "href": "worksheets/forloops.html#animation-of-the-for-loop",
+    "title": "The for loop",
+    "section": "Animation of the for loop",
+    "text": "Animation of the for loop\n\n\n  Play\n  Pause\n  Restart\n  idle\n\n\n\n\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\n\n\n\n  Console\n  \n\n\n\n\n\nAnimation generated by ChatGPT",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Loops",
+      "The for loop"
     ]
   },
   {
@@ -615,81 +503,167 @@
     ]
   },
   {
-    "objectID": "worksheets/forloops.html",
-    "href": "worksheets/forloops.html",
-    "title": "The for loop",
+    "objectID": "worksheets/ifmuseumdiscount.html",
+    "href": "worksheets/ifmuseumdiscount.html",
+    "title": "Museum discount activity",
     "section": "",
-    "text": "One of the benefits of programming is automation. For example, imagine we have a list of DNA sequences, and we want to see which ones contain a start codon “ATG”. If we had 10 sequences we could manually search for them - but it would be a lot harder if we had 10,000 sequences!\nWe can use a for loop to test every item in our list for if it contains “ATG”.",
+    "text": "Museum discount activity\nBuild this program one step at a time, checking part 1 works before moving onto part 2…\nA museum needs you to write a program to decide if a visitor is entitled to a reduction in the price of the ticket. The program should start by asking what the age of the visitor is.\nYour program should:\n\nAsk the user to input their age\nprint ‘Reduced’ if the visitor is under 26 years old\nAlso print ‘Reduced’ if the visitor is over 60 years old\nprint ‘Full price’ if the visitor is not eligible for a discount\n\n\n\n\n\n\n\nShow hint\n\n\n\n\n\nThe function input() will always give you a string. Make sure you convert this to an integer or a float before doing your if statements.\n\n\n\n © [SyedaAroosha] / Adobe Stock",
     "crumbs": [
       "Learn",
-      "**Python Logic and Loops**",
-      "Loops",
-      "The for loop"
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "Museum discount activity"
     ]
   },
   {
-    "objectID": "worksheets/Logic.html",
-    "href": "worksheets/Logic.html",
-    "title": "Logic",
+    "objectID": "worksheets/List_slicing.html",
+    "href": "worksheets/List_slicing.html",
+    "title": "List slicing",
     "section": "",
-    "text": "Logic\n… and or not …",
-    "crumbs": [
-      "Learn",
-      "**Python Logic and Loops**",
-      "Logic",
-      "Logic"
-    ]
-  },
-  {
-    "objectID": "worksheets/Species_ages.html",
-    "href": "worksheets/Species_ages.html",
-    "title": "Lifespan activity",
-    "section": "",
-    "text": "Lifespan activity\n… Add an activity with species, average lifespan, and average gestational periods etc. Print a list of species User input species of choice Compare values to humans …",
+    "text": "We can also do list slicing, where we retrieve multiple elements from a list. We can give up to three values when retrieving information from a list:\nList_name [ start : stop : step ]\nFor example, the below code gives every third item from the 2nd to the 8th item in the list.\nnumbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven']\n\n# Printing the 2nd and 11th items from the list using the index \nprint(f\"numbers[1] is {numbers[1]}\")\nprint(f\"numbers[10] is {numbers[10]}\")\n\n# Printing every third item from the 2nd to the 11th items in the list\nprint(f\"numbers [ 1 : 10 : 3 ] is {numbers [ 1 : 10 : 3 ]}\" )\n\nnumbers[1] is two\nnumbers[10] is eleven\nnumbers [ 1 : 10 : 3 ] is ['two', 'five', 'eight']\nWhy isn’t 'eleven' included on the final print statement?",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
       "Lists and dictionaries",
-      "Lifespan activity"
+      "List slicing"
     ]
   },
   {
-    "objectID": "worksheets/String_methods.html",
-    "href": "worksheets/String_methods.html",
-    "title": "String methods",
+    "objectID": "worksheets/List_slicing.html#give-it-a-go",
+    "href": "worksheets/List_slicing.html#give-it-a-go",
+    "title": "List slicing",
+    "section": "Give it a go:",
+    "text": "Give it a go:\nWith your list of names of your peers, try:\n\n#Try the following with your list of names: \n\n# replace with your list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\"]\n\n# try these one at a time\nprint(names[1])\nprint(names[-1])\nprint(names[4-2])\nprint(len(names))\nprint(names[1:5])\nprint(names[1:5:2])\nprint(names[:5:2])\nprint(names[3:])\nprint(names[:3])\nprint(names[::-1])\n\nDo you understand what each line is doing?",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "List slicing"
+    ]
+  },
+  {
+    "objectID": "worksheets/OxygenInBlood.html",
+    "href": "worksheets/OxygenInBlood.html",
+    "title": "Oxygen in blood exercise",
     "section": "",
-    "text": "String methods\n…",
+    "text": "A patient has the following blood oxygen readings:",
     "crumbs": [
       "Learn",
-      "**Python Logic and Loops**",
-      "Logic",
-      "String methods"
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Oxygen in blood exercise"
     ]
   },
   {
-    "objectID": "worksheets/forloops.html#python-code",
-    "href": "worksheets/forloops.html#python-code",
-    "title": "The for loop",
-    "section": "Python code",
-    "text": "Python code\n\n# Put sequences in a list\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\n# loop through every sequence\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\nThe way this is working is by using a temporary variable dna. We then go through every item in the list Sequences, and replace this temporary variable with each item.\nOnce we reach the end of the loop (when there is no more indentation), the code repeats with the next item in the list.",
+    "objectID": "worksheets/OxygenInBlood.html#calculate-bound-oxygen",
+    "href": "worksheets/OxygenInBlood.html#calculate-bound-oxygen",
+    "title": "Oxygen in blood exercise",
+    "section": "Calculate bound oxygen",
+    "text": "Calculate bound oxygen\nEvery gram of hemoglobin can maximally bind 1.34 mL of oxygen.\nThis mean we can calculate the maximum amount of oxygen bound to haemoglobin by multiplying the concentration of haemoglobin [Hb] (in g / dL blood) with this value 1.34 mL O_2 per g haemoglobin.\nHowever, not all haemoglobin in the blood is bound to oxygen. We can multiply the maximum amount of oxygen bound to haemoglobin by the haemoglobin saturation to calculate the amount of oxygen bound in the blood.\n\\[\n\\text{Bound oxygen} = [Hb] \\frac{\\text{g Hb}}{\\text{dL}} \\times 1.34 \\frac {\\text{mL } O_2}{\\text{g Hb}} \\times \\frac{\\text{Hb saturation}}{100}\n\\]\n\nGive it a go:\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\n1929.6000000000001",
     "crumbs": [
       "Learn",
-      "**Python Logic and Loops**",
-      "Loops",
-      "The for loop"
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Oxygen in blood exercise"
     ]
   },
   {
-    "objectID": "worksheets/forloops.html#animation-of-the-for-loop",
-    "href": "worksheets/forloops.html#animation-of-the-for-loop",
-    "title": "The for loop",
-    "section": "Animation of the for loop",
-    "text": "Animation of the for loop\n\n\n  Play\n  Pause\n  Restart\n  idle\n\n\n\n\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\n\n\n\n  Console\n  \n\n\n\n\n\nAnimation generated by ChatGPT",
+    "objectID": "worksheets/OxygenInBlood.html#calculate-dissolved-oxygen",
+    "href": "worksheets/OxygenInBlood.html#calculate-dissolved-oxygen",
+    "title": "Oxygen in blood exercise",
+    "section": "Calculate dissolved oxygen",
+    "text": "Calculate dissolved oxygen\nThere is also a small amount of oxygen dissolved in the blood, not bound to haemoglobin.\nWe can calculate this by multiplying the arterial oxygen tension (in mmHg) and the solubility coefficient of oxygen.\nThe solubility coefficient of oxygen is \\(0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\\).\n\\[\n\\text{Dissolved oxygen} = \\text{arterial oxygen tension mmHg} \\times 0.0031 \\text{mL} \\frac{\\frac{O_2}{\\text{dL blood}}}{\\text{mmHg}}\n\\]\n\nGive it a go\n\n\n\n\n\n\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\n0.2759",
     "crumbs": [
       "Learn",
-      "**Python Logic and Loops**",
-      "Loops",
-      "The for loop"
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Oxygen in blood exercise"
     ]
+  },
+  {
+    "objectID": "worksheets/OxygenInBlood.html#calculate-total-oxygen",
+    "href": "worksheets/OxygenInBlood.html#calculate-total-oxygen",
+    "title": "Oxygen in blood exercise",
+    "section": "Calculate total oxygen",
+    "text": "Calculate total oxygen\nNow to calculate the total oxygen, all you need to do is combine the two and add them together!\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\nHb_concentration = 15\nHb_saturation = 96\nMax_oxygen_per_Hb = 1.34 \n\nBound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb\nprint(Bound_oxygen)\n\narterial_tension = 89\nsolubility_coefficient = 0.0031\n\nDissolved_oxygen = arterial_tension * solubility_coefficient\nprint(Dissolved_oxygen)\n\nTotal_oxygen = Bound_oxygen + Dissolved_oxygen \nprint(Total_oxygen)\n\n1929.6000000000001\n0.2759\n1929.8759000000002\n\n\n\n\n\nNow if we have a second patient with different readings - how quickly can you calculate the total blood oxygen?\n\nPatient 2 haemoglobin measurements\n\n\nType\nMeasurement\nUnits\n\n\n\n\nHaemoglobin concentration\n12\ng / dL blood\n\n\nHaemoglobin saturation\n94\n%\n\n\nArterial oxygen tension\n76\nmmHg",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Oxygen in blood exercise"
+    ]
+  },
+  {
+    "objectID": "worksheets/Lists.html",
+    "href": "worksheets/Lists.html",
+    "title": "Lists",
+    "section": "",
+    "text": "Lists are a data type used to store multiple variables. This is called a sequence type, and strings are also sequence types (as they store multiple characters).",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "worksheets/Lists.html#creating-a-list",
+    "href": "worksheets/Lists.html#creating-a-list",
+    "title": "Lists",
+    "section": "",
+    "text": "Lists are a data type used to store multiple variables. This is called a sequence type, and strings are also sequence types (as they store multiple characters).",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "worksheets/Lists.html#talk-to-your-peers",
+    "href": "worksheets/Lists.html#talk-to-your-peers",
+    "title": "Lists",
+    "section": "Talk to your peers:",
+    "text": "Talk to your peers:\nThis next exercise is interactive: Ask at least six of your peers for their name, and at least two of the question below and note down the answers.\n\nWhat is your favourite colour?\nWhere did you grow up?\nHow many siblings do you have, if any?\nAre you a morning or an evening person?\n\nYou can also come up with your own questions if you would like.\nNow you have some data - we can look at storing it.\nTry:\n\n\n\n\n\n\nHere we used:\n\nsquare brackets [] to define a list\ncommas , to separate items in the list\nquotes \"\" to define the start and end of each string in our list.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "worksheets/Lists.html#give-it-a-go",
+    "href": "worksheets/Lists.html#give-it-a-go",
+    "title": "Lists",
+    "section": "Give it a go:",
+    "text": "Give it a go:\n\nDefine two lists for your questions; “names” (as above) and the other with a sensible name for the question you chose (e.g. “favourite_colour”)\nAdd the data you collected earlier to the two lists\nPrint out the two lists you created and check that they are as expected.\n\nNote: Variable names can’t contain spaces, or special characters such as &. Good practice is to use underscores '_' as in the above example!",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lists"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "help.html",
+    "href": "help.html",
+    "title": "Help",
+    "section": "",
+    "text": "Help"
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Set up",
+    "section": "",
+    "text": "We are going to use Python for this course. You can do this on campus from a University Computer, online using a free Google Colab account that you can access from any web browser, or by downloading Python and Visual Studio Code onto your own device.\nClick below to see the set up instructions for each:\n\nUniversity ComputerOnline CloudOwn Device\n\n\nTo get set up, follow the below steps. Click each step for detailed instructions.\n\n\n\n\n\n\nStep 1: Launch Visual Studio Code from AppsAnywhere\n\n\n\n\n\n\nType in AppsAnywhere to the windows bar. This will open in a web browser\nOpen the following two applications by typing the name in and clicking launch:\n\nPython\nVisual Studio Code\n\n\n\n\n\nGIF of Opening VSCode\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Navigate to your OneDrive folder\n\n\n\n\n\n\nClick “Open Folder” on the loading screen\nFind your OneDrive folder. You should be able to recognise the files and folders listed, from what you have saved here in your other classes.\nCreate a new folder for this python course, and open this folder.\n\n\n\n\nGIF of Opening OneDrive folder\n\n\n\n\n\n\n\n\n\n\n\nStep 3: Install the python extension\n\n\n\n\n\n\nClick the extensions tab\nSearch and install python\n\n\n\n\nGIF of Making a Folder\n\n\n\n\n\n\n\n\n\n\n\nStep 4: Create and run a Python file\n\n\n\n\n\nYou’re now ready to run some Python code!\n\nGo back to your folder\nClick the “New file” button\nGive your file a name ending .py (e.g. “Test.py” )\nAdd the following line to your file\n\n\nprint(\"Hello World\")\n\n\nPress the run button\n\nAnd that’s it - you’re all set up!\n\n\n\nGIF of making a python File\n\n\n\n\n\n\n\n\nWarning\n\n\n\n\n\nMake sure you can find your file in file explorer. Always back up your work such as saving in OneDrive or emailing to yourself so that you don’t lose your progress.\n\n\n\n\n\n\n\n\nGoogle Colab is a free tool for running python on a browser - from a file saved in your Google Drive.\n\n\n\n\n\n\nCaution\n\n\n\n\n\nYou shouldn’t need a paid account for this course. If your work becomes too large, then I suggest downloading and running Python and Visual Studio Code on your device.\n\n\n\nTo get set up, follow the instructions below:\n\n\n\n\n\n\nSet up Google Colab notebook\n\n\n\n\n\n\nSign into Google with any Google account\nGo to Google Colab\nClick file -&gt; New Notebook in Drive\nName your file (e.g “Test.ipynb”) The file is an Ipython Notebook so ends with .ipynb instead of .py\nAdd and run the following code:\n\n\nprint(\"Hello World\")\n\n\n\n\nGIF of creating a Google Colab notebook\n\n\n\n\n\nAnd that’s it for setting up with Google Colab!\n\n\nIf you’re working on your own laptop or computer it’s also possible to download and run Python and Visual Studio Code. These are both free, open-source programs.\n\n\n\n\n\n\nNote\n\n\n\n\n\nIf you’re working on a tablet, chromebook or your device is typically slow, I recommend looking at the Google Colab option instead\n\n\n\nInstalling Python and VSCode can be a bit fiddley - let the teaching team know if you’d like any support.\nWhy two programs? Python is the programming language, that takes our data and does our analyses. Visual Studio Code is a program we use to edit and run our python files. It’s a text editor that is specialised for coding projects.\n\n\n\n\n\n\nStep 1: Install Python\n\n\n\n\n\nYou can Install Python from this website. It should automatically detect whether you are on a Windows or a Mac PC and suggest which version to download. Click download and then follow the installation instructions.\n\n\n\nScreenshot of Python website\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Install Visual Studio Code\n\n\n\n\n\nOnce Python is installed, you can install Visual Studio Code from this website.\nIt should also automatically detect what type of PC you are on.\n\n\n\nScreenshot of Visual Studio Code website\n\n\n\n\n\n\n\n\n\n\n\nStep 3: Create or move to a folder for LS6036\n\n\n\n\n\n\nClick “Open Folder” on the loading screen\nBrowse files until you can find your documents - wherever you keep your university files.\nCreate a new folder for this python course, and open this folder.\n\n\n\n\nGIF of Opening OneDrive folder\n\n\n\n\n\n\n\n\n\n\n\nStep 4: Install the python extension\n\n\n\n\n\nNow we need to set up Visual Studio Code to recognise and use your version of python.\n\nClick the extensions tab\nSearch and install python\n\n\n\n\nGIF of Making a Folder\n\n\n\n\n\n\n\n\n\n\n\nStep 5: Write and run a python file\n\n\n\n\n\nYou’re now ready to run some Python code!\n\nGo back to your folder\nClick the “New file” button\nGive your file a name ending .py (e.g. “Test.py” )\nAdd the following line to your file\n\n\nprint(\"Hello World\")\n\n\nPress the run button\n\nAnd that’s it - you’re all set up!\n\n\n\nGIF of making a python File"
   }
 ]
