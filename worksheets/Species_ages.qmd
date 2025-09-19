@@ -1,0 +1,8 @@
+# Lifespan activity 
+
+... 
+Add an activity with species, average lifespan, and average gestational periods etc. 
+Print a list of species 
+User input species of choice 
+Compare values to humans 
+... 

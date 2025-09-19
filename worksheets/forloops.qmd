@@ -1,0 +1,259 @@
+# The for loop
+
+One of the benefits of programming is _automation_. For example, imagine we have a list of DNA sequences, and we want to see which ones contain a start codon "ATG". If we had 10 sequences we could manually search for them - but it would be a lot harder if we had 10,000 sequences!
+
+We can use a **for** loop to test every item in our list for if it contains "ATG".
+
+## Python code 
+```{python}
+#| eval: false
+# Put sequences in a list
+Sequences = [
+  "AAGATGGGCCAT", 
+  "GGGCTATGCAC", 
+  "TTTTACCGTAATAG"
+]
+
+# loop through every sequence
+for dna in Sequences:
+    if "ATG" in dna:
+        print(f"{dna} contains a start codon")
+    else:
+        print(f"{dna} does not contain a start codon")
+```
+
+The way this is working is by using a _temporary variable_ ```dna```. We then go through every item in the list ```Sequences```, and replace this temporary variable with each item. 
+
+Once we reach the end of the loop (when there is no more _indentation_), the code repeats with the next item in the list. 
+
+## Animation of the for loop
+
+```{=html}
+<!-- Controls -->
+<div class="d-flex align-items-center gap-2 mb-3">
+  <button id="play"  class="btn btn-primary btn-sm">Play</button>
+  <button id="pause" class="btn btn-outline-secondary btn-sm">Pause</button>
+  <button id="reset" class="btn btn-outline-secondary btn-sm">Restart</button>
+  <span id="status" class="ms-auto small font-monospace">idle</span>
+</div>
+
+<!-- Code block -->
+<pre class="small lh-sm font-monospace"><code id="code-block">
+<span id="line-1" class="code-line">Sequences = [
+  <span id="seq-0" class="seq-item">"AAGATGGGCCAT"</span>, 
+  <span id="seq-1" class="seq-item">"GGGCTATGCAC"</span>, 
+  <span id="seq-2" class="seq-item">"TTTTACCGTAATAG"</span>
+]</span>
+
+<span id="line-2" class="code-line">for <span class="dna-token">dna</span> in Sequences:</span>
+<span id="line-3" class="code-line">    if "ATG" in <span class="dna-token">dna</span>:</span>
+<span id="line-4" class="code-line">        print(f"{<span class="dna-token">dna</span>} contains a start codon")</span>
+<span id="line-5" class="code-line">    else:</span>
+<span id="line-6" class="code-line">        print(f"{<span class="dna-token">dna</span>} does not contain a start codon")</span>
+</code></pre>
+
+<!-- Console -->
+<section>
+  <h2 class="h6 fw-semibold mb-2">Console</h2>
+  <div id="console" class="font-monospace small border rounded p-3" style="min-height:3rem;"></div>
+</section>
+
+<style>
+  /* --- Base (works in Lightly) --- */
+  .fade-in { opacity: 0; transform: translateY(4px); animation: fadeInUp .3s forwards }
+  @keyframes fadeInUp { to { opacity: 1; transform: translateY(0) } }
+
+  .code-line { display: block; padding: .125rem .375rem; border-radius: .25rem; }
+  .code-line.active {
+    background: var(--bs-info-bg-subtle);
+    outline: 1px solid var(--bs-info-border-subtle);
+  }
+
+  .seq-item { padding: .05rem .25rem; border-radius: .25rem; }
+  .seq-item.active {
+    background: var(--bs-warning-bg-subtle);
+    color: var(--bs-body-color);
+    font-weight: 600;
+  }
+
+  .dna-token {
+    display: inline-block;
+    padding: 0 .2rem;
+    border-radius: .25rem;
+    background: var(--bs-warning-bg-subtle);
+    color: var(--bs-body-color);
+    font-weight: 600;
+    will-change: opacity, transform;
+  }
+  .swap-hide { opacity: 0; transform: translateY(-4px); transition: opacity .18s ease, transform .18s ease; }
+  .swap-show { opacity: 1; transform: translateY(0);    transition: opacity .18s ease, transform .18s ease; }
+
+  /* --- Dark mode overrides (Quarto marks dark mode in two ways) --- */
+  /* Target both: body[data-bs-theme="dark"] and .quarto-dark */
+  body[data-bs-theme="dark"] .code-line.active,
+  .quarto-dark .code-line.active {
+    background: #0e3f66 !important;   /* deep info blue */
+    outline: 1px solid #3fa9f5 !important;
+    color: #ffffff !important;
+  }
+
+  body[data-bs-theme="dark"] .seq-item.active,
+  .quarto-dark .seq-item.active {
+    background: #7a5d00 !important;    /* rich amber */
+    color: #ffffff !important;
+  }
+
+  body[data-bs-theme="dark"] .dna-token,
+  body[data-bs-theme="dark"] .dna-token,
+  .quarto-dark .dna-token {
+    background: #7a5d00 !important;    /* match seq-item for consistency */
+    color: #ffffff !important;
+    font-weight: 700;
+  }
+
+  /* Optional: stronger console border in dark mode for clarity */
+  body[data-bs-theme="dark"] #console,
+  .quarto-dark #console {
+    border-color: rgba(255,255,255,.25) !important;
+  }
+
+/* Strong dark-mode override for dna tokens (wins on specificity + order) */
+body[data-bs-theme="dark"] .dna-token,
+.quarto-dark  .dna-token {
+  background: #7a5d00 !important; /* rich amber with high contrast */
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* (Optional) make the swap animation visible against darker bg */
+body[data-bs-theme="dark"] .dna-token.swap-hide { 
+  opacity: 0; transform: translateY(-4px);
+}
+body[data-bs-theme="dark"] .dna-token.swap-show { 
+  opacity: 1; transform: translateY(0);
+}
+</style>
+
+<script>
+  const sequences = ["AAGATGGGCCAT", "GGGCTATGCAC", "TTTTACCGTAATAG"];
+  const consoleBox = document.getElementById("console");
+  const status = document.getElementById("status");
+  const codeLines = [...document.querySelectorAll(".code-line")];
+  const seqItems  = sequences.map((_, idx) => document.getElementById(`seq-${idx}`));
+
+  function clearCodeHighlights(){ codeLines.forEach(l => l.classList.remove("active")); }
+  function highlightLines(...ids){ clearCodeHighlights(); ids.forEach(id => document.getElementById(id)?.classList.add("active")); }
+  function setActiveSeqItem(idx){ seqItems.forEach((el,j)=>el.classList.toggle("active", j===idx)); }
+  function tokensInLine(lineId){ return [...document.querySelectorAll(`#${lineId} .dna-token`)]; }
+
+  function resetAllTokens(){
+    document.querySelectorAll('.dna-token').forEach(tok=>{
+      tok.textContent = "dna";
+      tok.classList.remove("swap-hide","swap-show");
+      tok.style.opacity = "1";
+      tok.style.transform = "translateY(0)";
+    });
+  }
+
+  function animateLineTokens(lineId, value){
+    const tokens = tokensInLine(lineId);
+    tokens.forEach(tok=>{
+      tok.classList.remove("swap-show");
+      tok.classList.add("swap-hide");
+      requestAnimationFrame(()=>{
+        tok.textContent = value ?? "dna";
+        requestAnimationFrame(()=>{
+          tok.classList.remove("swap-hide");
+          tok.classList.add("swap-show");
+        });
+      });
+    });
+  }
+
+  let i = 0, phase = 0, running = false, timer = null;
+  function setStatus(t){ status.textContent = t; }
+
+  function step(){
+    if(i >= sequences.length){
+      i = 0; phase = 0;
+      setStatus("looping…");
+      setTimeout(()=>{
+        if(running){
+          consoleBox.innerHTML = "";
+          resetAllTokens();
+          step();
+        }
+      }, 2000);
+      return;
+    }
+    const dna = sequences[i];
+
+    if(phase === 0){
+      setStatus(`for-loop → index ${i}`);
+      resetAllTokens();
+      setActiveSeqItem(i);
+      highlightLines("line-2");
+      animateLineTokens("line-2", dna);
+      phase = 1;
+      timer = setTimeout(()=>running && step(), 700);
+      return;
+    }
+    if(phase === 1){
+      highlightLines("line-3");
+      animateLineTokens("line-3", dna);
+      phase = 2;
+      timer = setTimeout(()=>running && step(), 700);
+      return;
+    }
+    if(phase === 2){
+      const hasATG = dna.includes("ATG");
+      const targetLine = hasATG ? "line-4" : "line-6";
+      highlightLines(targetLine);
+      animateLineTokens(targetLine, dna);
+      const out = hasATG
+        ? `✅ ${dna} contains a start codon`
+        : `❌ ${dna} does not contain a start codon`;
+      const p = document.createElement("div");
+      p.className = "fade-in";
+      p.textContent = out;
+      consoleBox.appendChild(p);
+      i++; phase = 0;
+      timer = setTimeout(()=>running && step(), 900);
+      return;
+    }
+  }
+
+  document.getElementById("play").addEventListener("click", ()=>{
+    if (running) return;
+    running = true;
+    setStatus(i===0 && phase===0 ? "starting…" : "resuming…");
+    if(i===0 && phase===0){
+      setActiveSeqItem(0);
+      highlightLines("line-2");
+      resetAllTokens();
+      animateLineTokens("line-2", sequences[0]);
+    }
+    timer = setTimeout(step, 220);
+  });
+  document.getElementById("pause").addEventListener("click", ()=>{
+    if(!running) return;
+    running = false;
+    setStatus("paused");
+    clearTimeout(timer);
+  });
+  document.getElementById("reset").addEventListener("click", ()=>{
+    running = false;
+    clearTimeout(timer);
+    i = 0; phase = 0;
+    setStatus("idle");
+    consoleBox.innerHTML = "";
+    clearCodeHighlights();
+    seqItems.forEach(el=>el.classList.remove("active"));
+    resetAllTokens();
+  });
+  // Auto-start
+  document.getElementById("play").click();
+</script>
+```
+
+_Animation generated by ChatGPT_

@@ -580,7 +580,7 @@
     "href": "worksheets/Dictionaries_II.html",
     "title": "Dictionaries II",
     "section": "",
-    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name\n\n# print the final dictionary\nprint(my_elements)\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name\n\n\n\n\n\n\n\nIn the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[13], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError, you’ll know the issue is with your dictionary.",
+    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name\n\n# print the final dictionary\nprint(my_elements)\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -605,13 +605,91 @@
     "objectID": "worksheets/Dictionaries_II.html#dictionary-errors",
     "href": "worksheets/Dictionaries_II.html#dictionary-errors",
     "title": "Dictionaries II",
-    "section": "",
-    "text": "In the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[13], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError, you’ll know the issue is with your dictionary.",
+    "section": "Dictionary errors",
+    "text": "Dictionary errors\nIn the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[1], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError, you’ll know the issue is with your dictionary.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
       "Lists and dictionaries",
       "Dictionaries II"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloops.html",
+    "href": "worksheets/forloops.html",
+    "title": "The for loop",
+    "section": "",
+    "text": "One of the benefits of programming is automation. For example, imagine we have a list of DNA sequences, and we want to see which ones contain a start codon “ATG”. If we had 10 sequences we could manually search for them - but it would be a lot harder if we had 10,000 sequences!\nWe can use a for loop to test every item in our list for if it contains “ATG”.",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Loops",
+      "The for loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/Logic.html",
+    "href": "worksheets/Logic.html",
+    "title": "Logic",
+    "section": "",
+    "text": "Logic\n… and or not …",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "Logic"
+    ]
+  },
+  {
+    "objectID": "worksheets/Species_ages.html",
+    "href": "worksheets/Species_ages.html",
+    "title": "Lifespan activity",
+    "section": "",
+    "text": "Lifespan activity\n… Add an activity with species, average lifespan, and average gestational periods etc. Print a list of species User input species of choice Compare values to humans …",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lifespan activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/String_methods.html",
+    "href": "worksheets/String_methods.html",
+    "title": "String methods",
+    "section": "",
+    "text": "String methods\n…",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "String methods"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloops.html#python-code",
+    "href": "worksheets/forloops.html#python-code",
+    "title": "The for loop",
+    "section": "Python code",
+    "text": "Python code\n\n# Put sequences in a list\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\n# loop through every sequence\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\nThe way this is working is by using a temporary variable dna. We then go through every item in the list Sequences, and replace this temporary variable with each item.\nOnce we reach the end of the loop (when there is no more indentation), the code repeats with the next item in the list.",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Loops",
+      "The for loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloops.html#animation-of-the-for-loop",
+    "href": "worksheets/forloops.html#animation-of-the-for-loop",
+    "title": "The for loop",
+    "section": "Animation of the for loop",
+    "text": "Animation of the for loop\n\n\n  Play\n  Pause\n  Restart\n  idle\n\n\n\n\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\n\n\n\n  Console\n  \n\n\n\n\n\nAnimation generated by ChatGPT",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Loops",
+      "The for loop"
     ]
   }
 ]

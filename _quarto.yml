@@ -54,6 +54,16 @@ website:
                  - href: worksheets/Range.qmd
                  - href: worksheets/Dictionaries.qmd
                  - href: worksheets/Dictionaries_II.qmd
+                 - href: worksheets/Species_ages.qmd
+        - section: "**Python Logic and Loops**"
+          contents:
+            - section: "Logic"
+              contents: 
+                - href: worksheets/Logic.qmd
+                - href: worksheets/String_methods.qmd 
+            - section: "Loops"
+              contents:
+                 - href: worksheets/forloops.qmd
   favicon: /Logo/LS6036_face.png
     
 

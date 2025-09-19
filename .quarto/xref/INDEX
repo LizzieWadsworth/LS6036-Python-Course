@@ -79,5 +79,17 @@
   },
   "worksheets/Dictionaries_II.qmd": {
     "Dictionaries_II.html": "c50ac059"
+  },
+  "worksheets/forloops.qmd": {
+    "forloops.html": "34fda636"
+  },
+  "worksheets/Species_ages.qmd": {
+    "Species_ages.html": "f6bf1719"
+  },
+  "worksheets/String_methods.qmd": {
+    "String_methods.html": "12dced8d"
+  },
+  "worksheets/Logic.qmd": {
+    "Logic.html": "c693db32"
   }
 }
