@@ -74,6 +74,8 @@ format:
       dark: darkly
     respect-user-color-scheme: true
     css: styles.css
+engine: jupyter
+lightbox: true
 
 margin-header: |
   ![](/Logo/LS6036_with_text.png)

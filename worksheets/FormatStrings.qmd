@@ -1,9 +1,3 @@
----
-format: live-html
-engine: jupyter
-lightbox: true
----
-
 # Format Strings
 
 We can also print our variables within a string using a format string. 
