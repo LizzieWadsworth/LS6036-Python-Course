@@ -70,4 +70,45 @@ body.quarto-dark .quarto-color-scheme-toggle > .bi::before {
   margin-bottom: 2px;
 }
 
+/* ======================
+   Mermaid Forest Theme
+   ====================== */
+
+/* ---------- Light mode ---------- */
+:root,
+.quarto-light {
+  --mermaid-bg-color: #eaf4e6;
+  --mermaid-edge-color: #2f4f4f;
+  --mermaid-node-bg-color: #89b413;
+  --mermaid-node-fg-color: #1c2e1c;
+  --mermaid-fg-color: #1c2e1c;
+  --mermaid-fg-color--lighter: #3f5f3f;
+  --mermaid-fg-color--lightest: #6f8f6f;
+  --mermaid-label-bg-color: #e2f0d9;
+  --mermaid-label-fg-color: #1c2e1c;
+  --mermaid-edge-label-bg-color: #e2f0d9;
+  --mermaid-edge-label-fg-color: #1c2e1c;
+  --mermaid-font-family: ui-sans-serif,system-ui,-apple-system,"Segoe UI",
+    Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* ---------- Dark mode ---------- */
+.quarto-dark {
+  --mermaid-bg-color: #0e1a12;
+  --mermaid-edge-color: #7ecb6b;
+  --mermaid-node-bg-color: #89b413;
+  --mermaid-node-fg-color: #e8f5e9;
+  --mermaid-fg-color: #0e1a12;
+  --mermaid-fg-color--lighter: #e3f4ea;
+  --mermaid-fg-color--lightest: #f1fbf6;
+  --mermaid-label-bg-color: #10221a;
+  --mermaid-label-fg-color: #0e1a12;
+
+  /* Your requested edge label colors in dark mode */
+  --mermaid-edge-label-bg-color: #1e1e1e; /* dark grey box */
+  --mermaid-edge-label-fg-color: #14532d; /* dark forest green text */
+  --mermaid-font-family: ui-sans-serif,system-ui,-apple-system,"Segoe UI",
+    Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";
+}
+
 

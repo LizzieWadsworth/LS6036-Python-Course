@@ -1,6 +1,6 @@
 # If, elif and else
 
-What do we do if we have three conditions? In the below example, there are two ```if``` statements but this doesn't work quite how we want it to. 
+What do we do if we have three conditions? In the below example, there are two `if` statements but this doesn't work quite how we want it to. 
 
 ```{python}
 dog_or_cat_person = "dog"
@@ -12,18 +12,28 @@ else:
   print("You are not a dog or a cat person")
 ```
 
+
 In the above example, *two* of our conditions printed out. Even though the user was a dog person, the line "You are not a dog or a cat person" printed out as well. 
 
-This is because the second time we have an ```if```, python has assumed this is **unrelated** to the first if. 
-The ```else``` will execute if the second ```if``` **only** is ```False```. 
+This is because the second time we have an `if`, python has assumed this is **unrelated** to the first if. 
+The `else` will execute if the second `if` **only** is `False`. 
 
 The below flow chart explains what has happened: 
 
-![If if flowchart](/images/mermaid_if_if.svg)
+```{mermaid}
+%%| fig-cap: "Flow chart of two consective if statements followed by an else statement" 
+flowchart TD
+    B{"Is a dog person?"}
+    B -- True --> C["Dog person"]
+    D{"Is a cat person?"}
+    D -- True --> E["Cat person"]
+    D -- False --> H["Not a dog or cat or bird person"]
+```
+
 
 ## Using elif
 
-```elif```, short for else if, can be used instead so that many different conditions can be tried in sequence. 
+`elif`, short for else if, can be used instead so that many different conditions can be tried in sequence. 
 
 ```{python}
 dog_or_cat_person = "dog"
@@ -41,11 +51,20 @@ else:
   print("You are not a dog or a cat person")
 ```
 
+
 This then ties together both conditions: 
 
-![If elif else flowchart](/images/mermaid_if_elif_else.svg)
+```{mermaid}
+%%| fig-cap: "Flow chart of an if, then elif, then else statement" 
+flowchart TD
+    B{"Is a dog person?"}
+    B -- True --> C["Dog person"]
+    B -- False --> D{"Is a cat person?"}
+    D -- True --> E["Cat person"]
+    D -- False --> H["Not a dog or cat or bird person"]
+```
 
-You can add as many ```elif``` statements as you need. 
+You can add as many `elif` statements as you need. 
 
 See the below example with two elif statements: 
 
@@ -71,6 +90,17 @@ else:
 
 We can also visualise this with a flow chart. 
 
-![Flow chart of if elif elif else example](/images/Mermaid_ifelseelif.svg)
+```{mermaid}
+%%| fig-cap: "Flow chart of an if statement, followed by two elif statements, followed by an else statement" 
+flowchart TD
+    A["Dog or cat or bird person"] --> B{"Is a dog person?"}
+    B -- True --> C["Dog person"]
+    B -- False --> D{"Is a cat person?"}
+    D -- True --> E["Cat person"]
+    D -- False --> F{"Is a bird person?"}
+    F -- True --> G["Bird person"]
+    F -- False --> H["Not a dog or cat or bird person"]
+```
+
 
 

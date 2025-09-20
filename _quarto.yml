@@ -70,10 +70,13 @@ website:
 format:
   live-html:
     theme:
-      light: lightly
-      dark: darkly
+      light: 
+        - lightly
+      dark: 
+        - darkly
     respect-user-color-scheme: true
     css: styles.css
+
 engine: jupyter
 lightbox: true
 

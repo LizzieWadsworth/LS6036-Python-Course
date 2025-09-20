@@ -54,7 +54,7 @@ Once we reach the end of the loop (when there is no more _indentation_), the cod
 
 <!-- Console -->
 <section>
-  <h2 class="h6 fw-semibold mb-2">Console</h2>
+  <h2 class="h6 fw-semibold mb-2">Output</h2>
   <div id="console" class="font-monospace small border rounded p-3" style="min-height:3rem;"></div>
 </section>
 
