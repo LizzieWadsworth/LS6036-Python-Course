@@ -111,4 +111,7 @@ body.quarto-dark .quarto-color-scheme-toggle > .bi::before {
     Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";
 }
 
-
+.navbar {
+    background-color: #14532d;
+    color: rgb(253.26, 253.63, 253.98);
+}

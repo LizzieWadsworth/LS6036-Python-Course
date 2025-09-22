@@ -31,7 +31,35 @@
     "href": "index.html",
     "title": "LS6036 Python Course",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Throughout Teaching Block 1 you will be learning programming using the Python language.\nAdvances in Life Sciences has let to the creation of terrabytes of Big Data. We can now sequence millions of bases of DNA, calculate expression levels of thousands of proteins and track the movements of whales around the world. In order to be able to make sense of these large datasets, we use programming languages. It would be quite difficult to calculate a statistically significant result if your dataset has more than 1000 values!\nYou will have already done some programming using R - python is similar is several ways, but is much more flexible.\n\n\nR is a very specialised language used within Life Sciences. It is excellent for some speicific tasks - primarily using statistical tests, making very nicely styled graphs, and making geographical maps.\nPython is much more flexible - it has much wider uses and is in fact the most popular programming language. Learning python also helps you learn the programming fundamentals, which make it much easier to learn other languages in the future (such as Javascript and HTML for web development).\nThere’s a huge amount of tools written in python, which also means you don’t need to rewrite everything from scratch. There are python libraries for almost anything, from scientific calculations to plotting to machine learning.\n\n\n\nBelow is a table of a recent publication for each subject which used python in the analysis - quite varied!\n\nLife Science Python Programming Examples. Images from Google and Adobe Stock\n\n\n\n\n\n\n\nDegree\nPaper title\nIcon\n\n\n\n\nBiochemistry\nAutomatic Identification of Potential Cellular Metabolites for Untargeted NMR Metabolomics\n\n\n\nGenetics and Molecular Biology\nScreening of MYB1R1 interaction with LDOX promoter to regulate anthocyanin biosynthesis in peaches\n\n\n\nPharmacology\nDevelopment of an Artificial Intelligence Powered Medication Risk Score Calculator Application\n\n\n\n\n\n\n\nIn Teaching Block 2 you’ll be doing a bioinformatics project. It is up to you whether or not to use python, or to use the online bioinformatics tools you’ll be shown in TB2.\nYou may also end up using python for your LS6014 project if you need to do some data analysis!\n\n\n\nFirst get yourself set up with Python and VSCode or Google Colab - click the “Set Up” tab for instructions.\nNext start the classes under the “Learn” tab. The material for the first few weeks is already available - you can work through them at your own pace.\nEach page will cover a new concept, or have an activity on for you to try. As you work through, try to experiment - change parts of the code examples and see if it will still work. This is how you figure out how it works.\nIf you have any other questions, grab a member of teaching staff in the session or email Dr Lizzie Wadsworth at L.Wadsworth@kingston.ac.uk\n\n\n\nGIF from TV show that says “Is that some sort of code”"
+  },
+  {
+    "objectID": "index.html#why-python-and-not-r",
+    "href": "index.html#why-python-and-not-r",
+    "title": "LS6036 Python Course",
+    "section": "",
+    "text": "R is a very specialised language used within Life Sciences. It is excellent for some speicific tasks - primarily using statistical tests, making very nicely styled graphs, and making geographical maps.\nPython is much more flexible - it has much wider uses and is in fact the most popular programming language. Learning python also helps you learn the programming fundamentals, which make it much easier to learn other languages in the future (such as Javascript and HTML for web development).\nThere’s a huge amount of tools written in python, which also means you don’t need to rewrite everything from scratch. There are python libraries for almost anything, from scientific calculations to plotting to machine learning."
+  },
+  {
+    "objectID": "index.html#how-is-this-used-in-biochemistry-genetics-molecular-biology-and-pharmacology",
+    "href": "index.html#how-is-this-used-in-biochemistry-genetics-molecular-biology-and-pharmacology",
+    "title": "LS6036 Python Course",
+    "section": "",
+    "text": "Below is a table of a recent publication for each subject which used python in the analysis - quite varied!\n\nLife Science Python Programming Examples. Images from Google and Adobe Stock\n\n\n\n\n\n\n\nDegree\nPaper title\nIcon\n\n\n\n\nBiochemistry\nAutomatic Identification of Potential Cellular Metabolites for Untargeted NMR Metabolomics\n\n\n\nGenetics and Molecular Biology\nScreening of MYB1R1 interaction with LDOX promoter to regulate anthocyanin biosynthesis in peaches\n\n\n\nPharmacology\nDevelopment of an Artificial Intelligence Powered Medication Risk Score Calculator Application"
+  },
+  {
+    "objectID": "index.html#will-i-need-to-use-python-in-my-project",
+    "href": "index.html#will-i-need-to-use-python-in-my-project",
+    "title": "LS6036 Python Course",
+    "section": "",
+    "text": "In Teaching Block 2 you’ll be doing a bioinformatics project. It is up to you whether or not to use python, or to use the online bioinformatics tools you’ll be shown in TB2.\nYou may also end up using python for your LS6014 project if you need to do some data analysis!"
+  },
+  {
+    "objectID": "index.html#what-should-i-be-doing",
+    "href": "index.html#what-should-i-be-doing",
+    "title": "LS6036 Python Course",
+    "section": "",
+    "text": "First get yourself set up with Python and VSCode or Google Colab - click the “Set Up” tab for instructions.\nNext start the classes under the “Learn” tab. The material for the first few weeks is already available - you can work through them at your own pace.\nEach page will cover a new concept, or have an activity on for you to try. As you work through, try to experiment - change parts of the code examples and see if it will still work. This is how you figure out how it works.\nIf you have any other questions, grab a member of teaching staff in the session or email Dr Lizzie Wadsworth at L.Wadsworth@kingston.ac.uk\n\n\n\nGIF from TV show that says “Is that some sort of code”"
   },
   {
     "objectID": "worksheets/DataTypes.html",
