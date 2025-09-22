@@ -1,3 +1,64 @@
 # String methods
 
-... 
+So far we've only been using strings exactly as they are - including when we compare them. But python is case senstive; so `"atg"` is not the same as `"ATG"`. 
+
+We can use the following methods with an if statement - they will return a `True` or `False` 
+
+-  `.isupper()`: check if string is upper case 
+-  `.islower()`: check if string is lower case 
+-  `.isdigit()`: check if string is numerical digits 
+
+```{python}
+my_sequence = "atg"
+
+if my_sequence.islower():
+    print(f"my sequence is {my_sequence} and it is lower case")
+else:
+    print(f"my sequence is {my_sequence} and it is upper case")
+```
+
+We can also use built in functions to convert strings between upper, lower and sentence case. 
+
+-  `.upper()`: converts string to upper case 
+-  `.lower()`: converts string to lower case 
+
+```{python}
+my_sequence = "atg"
+
+if my_sequence.islower():
+    my_sequence = my_sequence.upper()
+
+print(f"My sequence {my_sequence} is upper case")
+```
+
+::: { .callout-warning collapse="true" title="Will this work on Sentence Case?"}
+Will this still work if we change the first line to the following? 
+```{python}
+my_sequence = "Atg"
+```
+
+What do you think is happening? Can you rewrite the code so that this works?
+:::
+
+We can also convert strings to integers using `int()` and floats using `float()`. 
+
+```{python}
+my_sequence = "15"
+
+if my_sequence.isdigit():
+    my_sequence = float(my_sequence)
+
+print(f"My sequence {my_sequence} is of type {type(my_sequence)}")
+```
+
+::: { .callout-note collapse="true" title="Why have we used an if statement?"}
+We didn't need to use an if statement here - but it's a good way of checking if the variable you want to convert to a float is infact a number. 
+
+If you try to convert a string that isn't a number - e.g. `"hello"` - to a float, then you'll get an error. 
+
+```{python}
+#| error: true
+my_sequence = "hello"
+my_sequence = float(my_sequence)
+```
+:::

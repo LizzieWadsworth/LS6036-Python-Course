@@ -12,13 +12,13 @@ list_name```.```append```(``` item_to_append ```)```
 ```{python, results='hide', eval = FALSE}
 # create a list of names
 names = [ "Luffy" , "Zoro" , "Nami" , "Sanji" ]
-print("Before: ", names)
+print(f"Before: {names}")
 
 # append a new string to the list of names
 names.append("Usopp")
 
 # print the updated list
-print("After: ", names)
+print(f"After: {names}")
 ```
 
 The method ```.append()``` changes the list directly, and doesn't return any useful information, so we don't need to store this in a variable. 

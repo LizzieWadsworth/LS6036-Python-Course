@@ -64,7 +64,7 @@
     "href": "worksheets/List_methods.html#append",
     "title": "List methods",
     "section": "append()",
-    "text": "append()\nWe can add items to a list using the list method .append() like in the below example. This always follows the format:\nlist_name.append( item_to_append )\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\" ]\nprint(\"Before: \", names)\n\n# append a new string to the list of names\nnames.append(\"Usopp\")\n\n# print the updated list\nprint(\"After: \", names)\n\nBefore:  ['Luffy', 'Zoro', 'Nami', 'Sanji']\nAfter:  ['Luffy', 'Zoro', 'Nami', 'Sanji', 'Usopp']\n\n\nThe method .append() changes the list directly, and doesn’t return any useful information, so we don’t need to store this in a variable.",
+    "text": "append()\nWe can add items to a list using the list method .append() like in the below example. This always follows the format:\nlist_name.append( item_to_append )\n\n# create a list of names\nnames = [ \"Luffy\" , \"Zoro\" , \"Nami\" , \"Sanji\" ]\nprint(f\"Before: {names}\")\n\n# append a new string to the list of names\nnames.append(\"Usopp\")\n\n# print the updated list\nprint(f\"After: {names}\")\n\nBefore: ['Luffy', 'Zoro', 'Nami', 'Sanji']\nAfter: ['Luffy', 'Zoro', 'Nami', 'Sanji', 'Usopp']\n\n\nThe method .append() changes the list directly, and doesn’t return any useful information, so we don’t need to store this in a variable.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -155,7 +155,20 @@
     "href": "worksheets/Logic.html",
     "title": "Logic",
     "section": "",
-    "text": "Logic\n… and or not …",
+    "text": "There are three logical operators we can use with booleans:\nLet’s test it on the example - do you buy ice cream if it’s sunny and (or) if you’re hungry?\nWhat will the below code give you?",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "Logic"
+    ]
+  },
+  {
+    "objectID": "worksheets/Logic.html#be-careful---sneaky-errors",
+    "href": "worksheets/Logic.html#be-careful---sneaky-errors",
+    "title": "Logic",
+    "section": "Be careful - sneaky errors!",
+    "text": "Be careful - sneaky errors!\nDoes this print out what you expect?\n\n# Testing if letters \"z\" and \"f\" in string\nmy_string = \"find the One Piece\" \n\nif \"z\" and \"f\" in my_string: \n  print(f\"both z and f are in string {my_string}\")\nelse:\n  print(f\"z and f are not both in string {my_string}\")\n\nboth z and f are in string find the One Piece\n\n\n\n\n\n\n\n\nTipShow explanation\n\n\n\n\n\nThe issue is with if \"z\" and - this is True if \"z\" is a non empty string!\nTo test whether both z and f are in the string, you need to type it out explicitly\nif \"z\" in my_string (search for “z” in my_string) and if \"f\" in my_string (search for “f” in my_string)\n\nif \"z\" in my_string and \"f\" in my_string: \n  print(f\"both z and f are in string {my_string}\")\nelse:\n  print(f\"z and f are not both in string {my_string}\")",
     "crumbs": [
       "Learn",
       "**Python Logic and Loops**",
@@ -208,7 +221,7 @@
     "href": "worksheets/String_methods.html",
     "title": "String methods",
     "section": "",
-    "text": "String methods\n…",
+    "text": "So far we’ve only been using strings exactly as they are - including when we compare them. But python is case senstive; so \"atg\" is not the same as \"ATG\".\nWe can use the following methods with an if statement - they will return a True or False\n\n.isupper(): check if string is upper case\n.islower(): check if string is lower case\n.isdigit(): check if string is numerical digits\n\n\nmy_sequence = \"atg\"\n\nif my_sequence.islower():\n    print(f\"my sequence is {my_sequence} and it is lower case\")\nelse:\n    print(f\"my sequence is {my_sequence} and it is upper case\")\n\nmy sequence is atg and it is lower case\n\n\nWe can also use built in functions to convert strings between upper, lower and sentence case.\n\n.upper(): converts string to upper case\n.lower(): converts string to lower case\n\n\nmy_sequence = \"atg\"\n\nif my_sequence.islower():\n    my_sequence = my_sequence.upper()\n\nprint(f\"My sequence {my_sequence} is upper case\")\n\nMy sequence ATG is upper case\n\n\n\n\n\n\n\n\nWarningWill this work on Sentence Case?\n\n\n\n\n\nWill this still work if we change the first line to the following?\n\nmy_sequence = \"Atg\"\n\nWhat do you think is happening? Can you rewrite the code so that this works?\n\n\n\nWe can also convert strings to integers using int() and floats using float().\n\nmy_sequence = \"15\"\n\nif my_sequence.isdigit():\n    my_sequence = float(my_sequence)\n\nprint(f\"My sequence {my_sequence} is of type {type(my_sequence)}\")\n\nMy sequence 15.0 is of type &lt;class 'float'&gt;\n\n\n\n\n\n\n\n\nNoteWhy have we used an if statement?\n\n\n\n\n\nWe didn’t need to use an if statement here - but it’s a good way of checking if the variable you want to convert to a float is infact a number.\nIf you try to convert a string that isn’t a number - e.g. \"hello\" - to a float, then you’ll get an error.\n\nmy_sequence = \"hello\"\nmy_sequence = float(my_sequence)\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[5], line 2\n      1 my_sequence = \"hello\"\n----&gt; 2 my_sequence = float(my_sequence)\n\nValueError: could not convert string to float: 'hello'",
     "crumbs": [
       "Learn",
       "**Python Logic and Loops**",
@@ -312,7 +325,33 @@
     "href": "worksheets/Species_ages.html",
     "title": "Lifespan activity",
     "section": "",
-    "text": "Lifespan activity\n… Add an activity with species, average lifespan, and average gestational periods etc. Print a list of species User input species of choice Compare values to humans …",
+    "text": "The below table contains information of maximum lifespans, length of gestation periods and adult weight for a range of different species. This information comes from the AnAge database.\nOnce you have your dictionaries and/or lists, try to write a program which does the following:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lifespan activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/Species_ages.html#task-1",
+    "href": "worksheets/Species_ages.html#task-1",
+    "title": "Lifespan activity",
+    "section": "Task 1:",
+    "text": "Task 1:\n\nPrint a list of all the species\nAsk the user to choose a species\nPrint the information for that species\n\nYour program should extract the information from your dictionaries and lists\n\n\n\n\n\n\nNoteHint\n\n\n\n\n\nYou can have a dictionary with the common name as each key and a list of the remaining information as the value\n\n\n\n\n\n\n\n\n\nNoteExample output\n\n\n\n\n\n\n\nThe Brazilian tapir has a lifespan of 39.6 years,\n gestation or egg incubation time of 398 days\n and adult weight of 250000",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Lifespan activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/Species_ages.html#task-2",
+    "href": "worksheets/Species_ages.html#task-2",
+    "title": "Lifespan activity",
+    "section": "Task 2:",
+    "text": "Task 2:\n\nAsk the user to enter two species\nFor each value (lifespan/gestation/weight), compare the two species and print which species has the larger value.\n\n\n\n\n\n\n\nNoteExample output\n\n\n\n\n\n\n\nComparing Brazilian tapir and Human\nHuman has a longer lifespan\nBrazilian tapir has a longer gestation or egg incubation period\nBrazilian tapir has a heavier adult weight",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -468,7 +507,7 @@
     "href": "worksheets/Dictionaries_II.html",
     "title": "Dictionaries II",
     "section": "",
-    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name\n\n# print the final dictionary\nprint(my_elements)\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
+    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# print the final dictionary\nprint(my_elements)\n\n{'H': 'Hydrogen', 'He': 'Helium', 'O': 'Oxygen', 'C': 'Carbon'}\n\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -481,7 +520,7 @@
     "href": "worksheets/Dictionaries_II.html#adding-to-a-dictionary",
     "title": "Dictionaries II",
     "section": "",
-    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name\n\n# print the final dictionary\nprint(my_elements)\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
+    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# print the final dictionary\nprint(my_elements)\n\n{'H': 'Hydrogen', 'He': 'Helium', 'O': 'Oxygen', 'C': 'Carbon'}\n\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
@@ -494,7 +533,7 @@
     "href": "worksheets/Dictionaries_II.html#dictionary-errors",
     "title": "Dictionaries II",
     "section": "Dictionary errors",
-    "text": "Dictionary errors\nIn the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[1], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError, you’ll know the issue is with your dictionary.",
+    "text": "Dictionary errors\nIn the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[2], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError, you’ll know the issue is with your dictionary.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",

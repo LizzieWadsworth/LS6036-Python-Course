@@ -622,7 +622,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="adding-to-a-dictionary">Adding to a dictionary</h2>
 <p>It’s simple to add a new item to a dictionary. You used <code>.append()</code> to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: <code>dictionary_name[key] = value</code></p>
 <p>Here’s a program that adds some chemicals and then invites you to add another three:</p>
-<div id="9036563b" class="cell" data-execution_count="1">
+<div id="ee4c12b0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_elements <span class="op">=</span> {}  <span class="co"># this is an empty dictionary... </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ...so let's add some key-value pairs</span></span>
@@ -632,13 +632,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"O"</span>]  <span class="op">=</span> <span class="st">"Oxygen"</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"C"</span>]  <span class="op">=</span> <span class="st">"Carbon"</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Invite the user to enter a key value pair</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>symbol <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter a chemical symbol: "</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="ss">f"And the name for </span><span class="sc">{</span>symbol<span class="sc">}</span><span class="ss">: "</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>my_elements[symbol] <span class="op">=</span> name</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># print the final dictionary</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_elements)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># print the final dictionary</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_elements)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{'H': 'Hydrogen', 'He': 'Helium', 'O': 'Oxygen', 'C': 'Carbon'}</code></pre>
+</div>
 </div>
 <p>Can you use the <code>input()</code> function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Show answer">
@@ -653,11 +651,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="0eefc736" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Invite the user to enter a key value pair</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>symbol <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter a chemical symbol: "</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="ss">f"And the name for </span><span class="sc">{</span>symbol<span class="sc">}</span><span class="ss">: "</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>my_elements[symbol] <span class="op">=</span> name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="b58fec59" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Invite the user to enter a key value pair</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>symbol <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter a chemical symbol: "</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="ss">f"And the name for </span><span class="sc">{</span>symbol<span class="sc">}</span><span class="ss">: "</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>my_elements[symbol] <span class="op">=</span> name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -666,25 +664,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="dictionary-errors" class="level2">
 <h2 class="anchored" data-anchor-id="dictionary-errors">Dictionary errors</h2>
 <p>In the below example we ask for a key that isn’t in the dictionary - what type of error do we get?</p>
-<div id="a7054822" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_elements <span class="op">=</span> {}  <span class="co"># this is an empty dictionary... </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ...so let's add some key-value pairs</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"H"</span>]  <span class="op">=</span> <span class="st">"Hydrogen"</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"He"</span>] <span class="op">=</span> <span class="st">"Helium"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"O"</span>]  <span class="op">=</span> <span class="st">"Oxygen"</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"C"</span>]  <span class="op">=</span> <span class="st">"Carbon"</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_elements[<span class="st">"N"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="833562f3" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_elements <span class="op">=</span> {}  <span class="co"># this is an empty dictionary... </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ...so let's add some key-value pairs</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"H"</span>]  <span class="op">=</span> <span class="st">"Hydrogen"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"He"</span>] <span class="op">=</span> <span class="st">"Helium"</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"O"</span>]  <span class="op">=</span> <span class="st">"Oxygen"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>my_elements[<span class="st">"C"</span>]  <span class="op">=</span> <span class="st">"Carbon"</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_elements[<span class="st">"N"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[1]</span><span class="ansi-green-fg">, line 10</span>
-<span class="ansi-green-fg">      7</span> my_elements[<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">O</span><span class="ansi-yellow-fg">"</span>]  = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Oxygen</span><span class="ansi-yellow-fg">"</span>
-<span class="ansi-green-fg">      8</span> my_elements[<span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">"</span>]  = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">Carbon</span><span class="ansi-yellow-fg">"</span>
-<span class="ansi-green-fg">---&gt; </span><span class="ansi-green-fg">10</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">my_elements</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-fg ansi-yellow-bg">N</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-bg">]</span>)
+Cell <span class="ansi-green-fg">In[2], line 10</span>
+<span class="ansi-green-fg ansi-bold">      7</span> my_elements[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">O</span><span style="color:rgb(175,0,0)">"</span>]  <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Oxygen</span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg ansi-bold">      8</span> my_elements[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">C</span><span style="color:rgb(175,0,0)">"</span>]  <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Carbon</span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">---&gt; 10</span> <span style="color:rgb(0,135,0)">print</span>(my_elements[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">N</span><span style="color:rgb(175,0,0)">"</span>])
 
 <span class="ansi-red-fg">KeyError</span>: 'N'</pre>
 </div>

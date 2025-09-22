@@ -1,8 +1,97 @@
 # Lifespan activity 
 
-... 
-Add an activity with species, average lifespan, and average gestational periods etc. 
-Print a list of species 
-User input species of choice 
-Compare values to humans 
-... 
+The below table contains information of maximum lifespans, length of gestation periods and adult weight for a range of different species. This information comes from the [AnAge database](https://genomics.senescence.info/species/index.html).
+
+| Common name | Species name | Maximum lifespan (years) | Gestation/egg incubation length (days) | Adult weight (g) | 
+| --- | --- | --- | --- | --- | --- |
+| Human | _Homo sapiens_ | 112.5 | 280 | 62035 | 
+| House mouse | _Mus musculus_ | 4 | 19 | 20.5 |
+| Bowhead whale | _Balaena mysticetus_ | 211 | 396 | 100000000 |
+| Blue-footed booby | _Sula nebouxii_ | 18 | 41 | 1530 |
+| Brazilian tapir | _Tapirus terrestris_ | 39.6 | 398 | 250000 | 
+
+::: {layout-ncol="5"}
+
+![Human](/images/Henrietta_Lacks.jpg){group="my-gallery"}
+
+![House mouse](/images/musmusculus.jpeg){group="my-gallery"}
+
+![Bowhead whale](/images/bowhead.jpg){group="my-gallery"}
+
+![Blue-footed booby](/images/booby.jpg){group="my-gallery"}
+
+![Brazilian tapir](/images/tapir.jpeg){group="my-gallery"}
+:::
+
+Once you have your dictionaries and/or lists, try to write a program which does the following: 
+
+## Task 1:
+
+1.  Print a list of all the species 
+2.  Ask the user to choose a species 
+3.  Print the information for that species 
+
+_Your program should extract the information from your dictionaries and lists_
+
+
+::: { .callout-note collapse="true" title="Hint"}
+You can have a dictionary with the common name as each `key` and a **list** of the remaining information as the `value`
+:::
+
+
+::: { .callout-note collapse="true" title="Example output"}
+```{python}
+#| echo: false
+species_dictionary = {
+    "Human" : ["Homo sapiens", 112.5, 280, 62035],
+    "House mouse" : ["Mus musculus", 4, 19, 20.5],
+    "Bowhead whale" : ["Balaena mysticetus", 211, 396, 100000000],
+    "Blue-footed booby" : ["Sula nebouxii", 18, 41, 1530],
+    "Brazilian tapir" : ["Tapirus terrestris", 39.6, 398, 250000]
+}
+
+user_choice = "Brazilian tapir"
+
+print(f"The {user_choice} has a lifespan of {species_dictionary[user_choice][1]} years,\n gestation or egg incubation time of {species_dictionary[user_choice][2]} days\n and adult weight of {species_dictionary[user_choice][3]}")
+```
+:::
+
+## Task 2:
+
+1.  Ask the user to enter two species 
+2.  For each value (lifespan/gestation/weight), compare the two species and print which species has the larger value. 
+
+::: { .callout-note collapse="true" title="Example output"}
+```{python}
+#| echo: false
+species_dictionary = {
+    "Human" : ["Homo sapiens", 112.5, 280, 62035],
+    "House mouse" : ["Mus musculus", 4, 19, 20.5],
+    "Bowhead whale" : ["Balaena mysticetus", 211, 396, 100000000],
+    "Blue-footed booby" : ["Sula nebouxii", 18, 41, 1530],
+    "Brazilian tapir" : ["Tapirus terrestris", 39.6, 398, 250000]
+}
+
+user_choice_1 = "Brazilian tapir"
+user_choice_2 = "Human"
+
+print(f"Comparing {user_choice_1} and {user_choice_2}")
+
+# lifespan 
+if species_dictionary[user_choice_1][1] > species_dictionary[user_choice_2][1]:
+    print(f"{user_choice_1} has a longer lifespan")
+else:
+    print(f"{user_choice_2} has a longer lifespan")
+
+if species_dictionary[user_choice_1][2] > species_dictionary[user_choice_2][2]:
+    print(f"{user_choice_1} has a longer gestation or egg incubation period")
+else:
+    print(f"{user_choice_2} has a longer gestation or egg incubation period")
+
+if species_dictionary[user_choice_1][3] > species_dictionary[user_choice_2][3]:
+    print(f"{user_choice_1} has a heavier adult weight")
+else:
+    print(f"{user_choice_2} has a heavier adult weight")
+```
+:::
+

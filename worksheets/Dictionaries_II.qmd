@@ -8,7 +8,7 @@ It's simple to add a new item to a dictionary. You used ```.append()``` to add t
 Here's a program that adds some chemicals and then invites you to add another three:
 
 ```{python}
-#| eval: false
+#| eval: true
 my_elements = {}  # this is an empty dictionary... 
 
 # ...so let's add some key-value pairs
@@ -17,11 +17,6 @@ my_elements["H"]  = "Hydrogen"
 my_elements["He"] = "Helium"
 my_elements["O"]  = "Oxygen"
 my_elements["C"]  = "Carbon"
-
-# Invite the user to enter a key value pair
-symbol = input("Enter a chemical symbol: ")
-name = input(f"And the name for {symbol}: ")
-my_elements[symbol] = name
 
 # print the final dictionary
 print(my_elements)

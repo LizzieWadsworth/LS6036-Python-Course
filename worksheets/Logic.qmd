@@ -1,3 +1,96 @@
 # Logic 
 
-... and or not ... 
+There are three logical operators we can use with booleans: 
+
+-  **not**: turns a ```True``` to a ```False``` (or ```False``` to ```True```)
+-  **and**: two conditions both need to be True
+-  **or**: one of two conditions need to be True
+
+Let's test it on the example - do you buy ice cream if it's sunny and (or) if you're hungry? 
+
+![Ice cream in the sun. © [Elisabeth] / Adobe Stock ](/images/icecream.png)
+
+What will the below code give you?
+
+::: {.panel-tabset}
+
+## not
+
+```{python}
+#| eval: false
+# Use of not in if statement
+# Buy ice cream if it is sunny
+is_sunny = True 
+if not is_sunny: 
+  print("Don't buy ice cream")
+else: 
+  print("Buy ice cream")
+```
+_What about ```if not not is_sunny:```?_
+
+## and
+
+```{python}
+#| eval: false
+
+# Use of and with if statement 
+# Only buy ice cream when hungry and it is sunny
+is_sunny = True
+am_hungry = True
+if is_sunny and am_hungry: 
+  print("It's sunny and you're hungry - buy ice cream")
+else: 
+  print("It's either not sunny or you're not hungry - don't buy ice cream")
+```
+
+## or 
+
+```{python}
+#| eval: false
+
+# Use of or with if statement 
+# Buy ice cream if it is sunny or you are hungry
+
+is_sunny = False
+am_hungry = True
+if is_sunny or am_hungry: 
+  print("It's either sunny or you're hungry - buy ice cream")
+else: 
+  print("It's not sunny and you're not hungry - don't buy ice cream")
+```
+
+:::
+
+## Be careful - sneaky errors!
+
+_Does this print out what you expect?_
+```{python}
+#| eval: true
+# Testing if letters "z" and "f" in string
+my_string = "find the One Piece" 
+
+if "z" and "f" in my_string: 
+  print(f"both z and f are in string {my_string}")
+else:
+  print(f"z and f are not both in string {my_string}")
+```
+
+::: { .callout-tip collapse="true" title="Show explanation"}
+
+The issue is with `if "z" and` - this is `True` if `"z"` is a non empty string! 
+
+To test whether both z and f are in the string, you need to type it out explicitly
+
+`if "z" in my_string` (search for "z" in my_string)
+`and`
+`if "f" in my_string` (search for "f" in my_string)
+
+```{python}
+#| eval: false
+
+if "z" in my_string and "f" in my_string: 
+  print(f"both z and f are in string {my_string}")
+else:
+  print(f"z and f are not both in string {my_string}")
+```
+:::
