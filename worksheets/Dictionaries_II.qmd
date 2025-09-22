@@ -2,16 +2,17 @@
 
 ## Adding to a dictionary 
 
-It's simple to add a new item to a dictionary. You used ```.append()``` to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format:
-```dictionary_name[key] = value```
+It's simple to add a new item to a dictionary. You used `.append()` to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format:
+`dictionary_name[key] = value`
 
 Here's a program that adds some chemicals and then invites you to add another three:
 
 ```{python}
 #| eval: true
-my_elements = {}  # this is an empty dictionary... 
+# Create an empty dictionary
+my_elements = {} 
 
-# ...so let's add some key-value pairs
+# Add elements to the dictionary 
 
 my_elements["H"]  = "Hydrogen"
 my_elements["He"] = "Helium"
@@ -22,7 +23,7 @@ my_elements["C"]  = "Carbon"
 print(my_elements)
 ```
 
-Can you use the ```input()``` function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary? 
+_Can you use the `input()` function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?_
 
 ::: { .callout-tip collapse="true" title="Show answer"}
 ```{python}
@@ -34,6 +35,27 @@ my_elements[symbol] = name
 ```
 :::
 
+## Dictionary keys
+
+You can use the function `.keys()` to get a list of all the keys in your dictionary. You could also use `.values()` to get a list of all the values. Which one do you think is more useful? When would you use them? 
+
+```{python}
+#| eval: true
+# Create a dictionary of elements
+my_elements = {  
+    # each key-value pair is separated by a comma
+    "H"  : "Hydrogen",
+    "He" : "Helium",
+    "O"  : "Oxygen",
+    "C"  : "Carbon"
+}
+
+# print the keys
+print(f"Dictionary keys are {my_elements.keys()}")
+print(f"Dictionary values are {my_elements.values()}")
+```
+
+_Could you use an if statement to see if a user input chemical symbol is in the dictionary?_
 
 ## Dictionary errors
 
@@ -53,4 +75,4 @@ my_elements["C"]  = "Carbon"
 print(my_elements["N"])
 ```
 
-Error messages are supposed to be helpful - so it's good to make a note of what types of errors you get. Next time you get a ```KeyError```, you'll know the issue is with your dictionary. 
+Error messages are supposed to be helpful - so it's good to make a note of what types of errors you get. Next time you get a `KeyError` you'll know the issue is with your dictionary. 
