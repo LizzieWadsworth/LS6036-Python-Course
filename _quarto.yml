@@ -51,7 +51,6 @@ website:
                  - href: worksheets/List_index.qmd
                  - href: worksheets/List_slicing.qmd
                  - href: worksheets/List_methods.qmd
-                 - href: worksheets/Range.qmd
                  - href: worksheets/Dictionaries.qmd
                  - href: worksheets/Dictionaries_II.qmd
                  - href: worksheets/Species_ages.qmd
@@ -64,6 +63,7 @@ website:
             - section: "Loops"
               contents:
                  - href: worksheets/forloops.qmd
+                 - href: worksheets/Range.qmd
   favicon: /Logo/LS6036_face.png
     
 

@@ -65,8 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../worksheets/Dictionaries.html" rel="next">
-<link href="../worksheets/List_methods.html" rel="prev">
+<link href="../worksheets/forloops.html" rel="prev">
 <link href="..//Logo/LS6036_face.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -475,13 +474,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Lists and dictionaries</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../worksheets/Lists.html" class="sidebar-item-text sidebar-link">
@@ -504,12 +503,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../worksheets/List_methods.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">List methods</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Range.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Ranges</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -561,24 +554,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../worksheets/String_methods.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">String methods</span></a>
+ <span class="menu-text">String methods, indexing and slicing</span></a>
   </div>
 </li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Loops</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../worksheets/forloops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The for loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Range.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Ranges</span></a>
   </div>
 </li>
       </ul>
@@ -636,17 +635,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpbnQoIHJhbmdlKDEwKSApXG5wcmludCggcmFuZ2UoMCwgMTApIClcbnByaW50KCByYW5nZSgwLCAxMCwgMSkgKSJ9
 </script>
 </div>
-<p>Python’s ranges are lazy (it’s a technical term): it means that Python is not printing out the values of those ranges because it knows you haven’t actually asked to look at any of them. It knows the range but won’t bother actually enumerating the values until it really needs to. This is heplful when you have big numbers; it can result in more efficient programs that don’t require so much memory. You can print the numbers out using a loop, or, force the range to be a list using <code>list()</code>… because, unlike ranges, lists are not lazy:</p>
-<p>Run this to see the difference from the example above:</p>
+<p>Python’s ranges are lazy (it’s a technical term): it means that Python is not printing out the values of those ranges because it knows you haven’t actually asked to look at any of them. It knows the range but won’t bother actually enumerating the values until it really needs to. This is helpful when you have big numbers; it can result in more efficient programs that don’t require so much memory.</p>
+<p>You can print the numbers out using a for loop:</p>
 <div>
 <div id="pyodide-2" class="exercise-cell">
 
 </div>
 <script type="pyodide-2-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpbnQoIGxpc3QoIHJhbmdlKDEwKSApIClcbnByaW50KCBsaXN0KCByYW5nZSgwLCAxMCkgKSApXG5wcmludCggbGlzdCggcmFuZ2UoMCwgMTAsIDEpICkgKVxuXG5mb3IgaSBpbiByYW5nZSgxMCk6XG4gICAgcHJpbnQoaSwgZW5kPScgJykifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBMb29wIHRocm91Z2ggZXZlcnkgbnVtYmVyIGluIHRoZSByYW5nZVxuZm9yIG51bWJlciBpbiByYW5nZSgxMCk6XG4gICAgcHJpbnQobnVtYmVyKSJ9
 </script>
 </div>
-<p>Note how <code>list()</code> returns its argument as a list data type… just like <code>int()</code> returned an integer, <code>float()</code> a floating-point number, and <code>bool()</code> a Boolean. Converting something into a specific data type like this is called casting it.</p>
 <section id="give-it-a-go" class="level2">
 <h2 class="anchored" data-anchor-id="give-it-a-go">Give it a go:</h2>
 <p>Write a program that asks for an integer <code>n</code> and, using <code>range()</code>, prints the following:</p>
@@ -668,29 +666,33 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpbnQoIGxpc3QoIHJhbmdl
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="8d554795" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>user_int <span class="op">=</span> <span class="bu">int</span>( <span class="bu">input</span>(<span class="st">"please input an integer: "</span>))</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of all integers from 1 to n</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>my_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, user_int<span class="op">+</span><span class="dv">1</span>, <span class="dv">1</span>):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  my_sum <span class="op">=</span> my_sum <span class="op">+</span> i</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_sum)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of all even integers from 1 to n</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>my_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, user_int<span class="op">+</span><span class="dv">1</span>, <span class="dv">2</span>):</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  my_sum <span class="op">=</span> my_sum <span class="op">+</span> i</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_sum)</span>
+<div id="97cc47ac" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example user int of 5, try using input() function</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>user_int <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of all integers from 1 to n</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>my_sum_1_n <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, user_int<span class="op">+</span><span class="dv">1</span>, <span class="dv">1</span>):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  my_sum_1_n <span class="op">=</span> my_sum_1_n <span class="op">+</span> i</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># exit loop to print final result</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sum of integers from 1 to n is </span><span class="sc">{</span>my_sum_1_n<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of all even integers from 1 to n</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>my_sum_2_n <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, user_int<span class="op">+</span><span class="dv">1</span>, <span class="dv">2</span>):</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  my_sum_2_n <span class="op">=</span> my_sum_2_n <span class="op">+</span> i</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sum of even integers from 1 to n is </span><span class="sc">{</span>my_sum_2_n<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># sum of all multiples of 3 from 1 to n</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>my_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>my_sum_3_n <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>, user_int<span class="op">+</span><span class="dv">1</span>, <span class="dv">3</span>):</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  my_sum <span class="op">=</span> my_sum <span class="op">+</span> i</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_sum)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  my_sum_3_n <span class="op">=</span> my_sum_3_n <span class="op">+</span> i</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sum of multiples of 3 from 1 to n is </span><span class="sc">{</span>my_sum_3_n<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sum of integers from 1 to n is 15
+Sum of even integers from 1 to n is 6
+Sum of multiples of 3 from 1 to n is 3</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -1143,14 +1145,11 @@ window._ojs.runtime.interpretFromScriptTags();
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../worksheets/List_methods.html" class="pagination-link" aria-label="List methods">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">List methods</span>
+      <a href="../worksheets/forloops.html" class="pagination-link" aria-label="The for loop">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The for loop</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../worksheets/Dictionaries.html" class="pagination-link" aria-label="Dictionaries">
-        <span class="nav-page-text">Dictionaries</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

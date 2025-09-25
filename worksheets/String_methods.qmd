@@ -1,4 +1,8 @@
-# String methods
+# String methods, indexing and slicing
+
+::: {.panel-tabset}
+
+## String methods
 
 So far we've only been using strings exactly as they are - including when we compare them. But python is case senstive; so `"atg"` is not the same as `"ATG"`. 
 
@@ -7,27 +11,19 @@ We can use the following methods with an if statement - they will return a `True
 -  `.isupper()`: check if string is upper case 
 -  `.islower()`: check if string is lower case 
 -  `.isdigit()`: check if string is numerical digits 
-
-```{python}
-my_sequence = "atg"
-
-if my_sequence.islower():
-    print(f"my sequence is {my_sequence} and it is lower case")
-else:
-    print(f"my sequence is {my_sequence} and it is upper case")
-```
-
-We can also use built in functions to convert strings between upper, lower and sentence case. 
-
 -  `.upper()`: converts string to upper case 
 -  `.lower()`: converts string to lower case 
 
 ```{python}
+# Define a sequence
 my_sequence = "atg"
 
+# Use .iflower() to determine if string is lower case
 if my_sequence.islower():
+    # if lower case, convert to upper case using .upper()
     my_sequence = my_sequence.upper()
 
+# print final sequence
 print(f"My sequence {my_sequence} is upper case")
 ```
 
@@ -39,6 +35,8 @@ my_sequence = "Atg"
 
 What do you think is happening? Can you rewrite the code so that this works?
 :::
+
+## Converting to integers
 
 We can also convert strings to integers using `int()` and floats using `float()`. 
 
@@ -61,4 +59,29 @@ If you try to convert a string that isn't a number - e.g. `"hello"` - to a float
 my_sequence = "hello"
 my_sequence = float(my_sequence)
 ```
+:::
+
+## String indexing and slicing
+
+We can also retrieve a character from a string using an **index** or get a selection using **string slicing** - just like we can with lists! 
+
+We can give up to three values when retrieving information from a string:
+
+List_name [ **start** : **stop** : **step** ]
+
+-  **start**: the index to start with (e.g. 2 for the third item)
+-  **stop**: the index to stop at (the stop item will _not_ be included)
+-  **step**: how gap between items (e.g. 2 would mean every _second_ item from the list)
+
+```{python}
+my_sequence = "Hello World!"
+
+# Printing the 2nd and 11th characters from the string using the index 
+print(f"my_sequence[1] is {my_sequence[1]}")
+print(f"my_sequence[10] is {my_sequence[10]}")
+
+# Printing every third item from the 2nd to the 11th items in the list
+print(f"my_sequence [ 1 : 10 : 3 ] is {my_sequence [ 1 : 10 : 3 ]}" )
+```
+
 :::
