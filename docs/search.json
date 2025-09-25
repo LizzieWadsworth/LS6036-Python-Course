@@ -17,14 +17,98 @@
     "href": "cheatsheet.html",
     "title": "Cheatsheet",
     "section": "",
-    "text": "Cheatsheet"
+    "text": "Quick examples of: strings, lists, dictionaries, if/else, user input, for loops, while loops, matplotlib, functions."
+  },
+  {
+    "objectID": "cheatsheet.html#strings",
+    "href": "cheatsheet.html#strings",
+    "title": "Cheatsheet",
+    "section": "1. Strings",
+    "text": "1. Strings\nLetters and words - useful for DNA / protein sequences\n\n# Define a string with quotes \"\" or ''\nseq = \"acgtacgtaaa\"\n\n# String functions\nseq_upper = seq.upper()          # \"ACGTACGTAAA\"\nlength = len(seq_upper)          # 11\na_count = seq_upper.count(\"A\")   # 4\n\n\n# String indexing - [start:stop:step]\nfirst = seq_upper[0]             # \"A\"\nlast_three = seq_upper[-3:]      # \"AAA\"\nmiddle = seq_upper[2:6]          # \"GTAC\"\n\n# Use with if statement\nif \"TATA\" in seq_upper:\n    print(f\"TATA in {seq_upper}\")  \nelif \"TACG\" in seq_upper:\n    print(f\"TACG in {seq_upper}\")  \n\nTACG in ACGTACGTAAA"
+  },
+  {
+    "objectID": "cheatsheet.html#user-input",
+    "href": "cheatsheet.html#user-input",
+    "title": "Cheatsheet",
+    "section": "2. User input",
+    "text": "2. User input\n\n# Input name using user input - saves as a string\nname = input(\"Your name: \")\n\n# Input age, and convert from string to integer\nage_text = input(\"Your age: \")\nage = int(age_text)\n\n# Print solution\nprint(f\"Hello {name}, next year you will be {age + 1}.\")"
+  },
+  {
+    "objectID": "cheatsheet.html#if-else",
+    "href": "cheatsheet.html#if-else",
+    "title": "Cheatsheet",
+    "section": "3. if / else",
+    "text": "3. if / else\n\n# Variables to be tested in if statement\ngc = 0.45\nstatus = \"Unknown\"\n\n# define if statement\nif gc &gt;= 0.6:\n    status = \"High GC\"\n\n# elif (else if, when if was False) \nelif gc &lt; 0.35:\n    status = \"Low GC\"\n\n# else (both if and elif were False)\nelse:\n    status = \"Moderate GC\"\n\nprint(status)\n\nModerate GC"
+  },
+  {
+    "objectID": "cheatsheet.html#lists",
+    "href": "cheatsheet.html#lists",
+    "title": "Cheatsheet",
+    "section": "4. Lists",
+    "text": "4. Lists\nCollections of objects - useful for lists of sequences or genes\n\n# Define a list with square brackets []\ngenes = [\"BRCA1\", \"TP53\", \"EGFR\"]\n\n# List functions\ngenes.append(\"MYC\")          # add to end\nn_genes = len(genes)         # 4\ngenes.sort()                 # sort alphabetically\n\n# List indexing - [start:stop:step]\nfirst_two = genes[:2]        # [\"BRCA1\", \"TP53\"]\n\n# Use with if statement\nif \"TP53\" in genes:\n    print(f\"TATA in {genes}\") \n\nTATA in ['BRCA1', 'EGFR', 'MYC', 'TP53']"
+  },
+  {
+    "objectID": "cheatsheet.html#dictionaries",
+    "href": "cheatsheet.html#dictionaries",
+    "title": "Cheatsheet",
+    "section": "5. Dictionaries",
+    "text": "5. Dictionaries\nUseful for storing and retrieving information about a particular item; e.g. for information about each sample\n\n# define dictionary with curly brackets {}\nsample_species = {\"S1\": \"E.coli\", \"S2\": \"S.aureus\"}\n\n# add new items to the dictionary\nsample_species[\"S3\"] = \"B.subtilis\"\n\n# retrieve information\nprint(sample_species[\"S3\"])\n\n# use with for loop\nfor sample in sample_species.keys():\n    print(f\"{sample} is {sample_species[sample]}\")\n\nB.subtilis\nS1 is E.coli\nS2 is S.aureus\nS3 is B.subtilis"
+  },
+  {
+    "objectID": "cheatsheet.html#for-loops",
+    "href": "cheatsheet.html#for-loops",
+    "title": "Cheatsheet",
+    "section": "6. for loops",
+    "text": "6. for loops\n\n# Define sequence to loop through\nseq = \"ACGTACGTAAA\"\n# Define dictionary to count bases\ncounts = {\"A\": 0, \"C\": 0, \"G\": 0, \"T\": 0}\n\n# Loop through every base in sequence seq\nfor base in seq:\n    # Add 1 to dictionary value for base key\n    counts[base] += 1\n\n# print result\nprint(counts)\n\n{'A': 5, 'C': 2, 'G': 2, 'T': 2}"
+  },
+  {
+    "objectID": "cheatsheet.html#while-loops",
+    "href": "cheatsheet.html#while-loops",
+    "title": "Cheatsheet",
+    "section": "7. while loops",
+    "text": "7. while loops\n\n# set initial values\nmax_value = 5\ncurrent_value = 0\n\n# while loop for until current value reaches 10\nwhile current_value &lt; max_value: \n    print(f\"{current_value} less than {max_value}\")\n    # add 1 to current value\n    current_value += 1\n\n0 less than 5\n1 less than 5\n2 less than 5\n3 less than 5\n4 less than 5\n\n\n\n\n\n\n\n\nCautionNeverending while loop\n\n\n\nAlways make sure the statement you are evaluating (here current_value &lt; max_value) changes during the loop - otherwise your while loop will loop forever!\nWe did this here by doing a +1 to our current_value, you could also change a Boolean from False to True"
+  },
+  {
+    "objectID": "cheatsheet.html#matplotlib",
+    "href": "cheatsheet.html#matplotlib",
+    "title": "Cheatsheet",
+    "section": "8. matplotlib",
+    "text": "8. matplotlib\n\n# import matplotlib plotting package using plt alias\nimport matplotlib.pyplot as plt\n\n# Define data to plot - x and y values \nx = [1,2,3]\ny = [10,0,14]\ny2 = [11, 14, 3]\n\n# plot values \nplt.plot(x,y, label = \"Line 1\")\nplt.plot(x,y2, label=\"Line 2\")\n\n# Gather labels for legend\nplt.legend()\n\n# Change title, x and y axis labels\nplt.title(\"Example graph\")\nplt.xlabel(\"X axis label\")\nplt.ylabel(\"Y axis label\")\n\n# Show plot\nplt.show()"
+  },
+  {
+    "objectID": "cheatsheet.html#functions",
+    "href": "cheatsheet.html#functions",
+    "title": "Cheatsheet",
+    "section": "9. Functions",
+    "text": "9. Functions\n\n# Define a function - a piece of code you'll need to use more than once, to avoid copy and pasting \ndef gc_content(seq): # seq is an argument\n    \"\"\"Use triple quotes to leave a function description\"\"\"\n    # do code you want to apply to seq\n    # here we calculate counts of G and C\n    gc = seq.count(\"G\") + seq.count(\"C\")\n    # now we calculate the length of the sequence \n    seq_len = len(seq)\n    # we can now calculate the proportion of GC in the sequence\n    gc_proportion = gc / seq_len\n    # return the result\n    return gc_proportion\n\n# use function to calculate GC content of sequence\nsequence_1 = \"ACGTACGTAAA\"\nprint(f\"{sequence_1} has a GC content of {gc_content(sequence_1)}\")\n\n# use same function to calculate GC content of second sequence\nsequence_2 = \"GGTCCAGGCGT\"\nprint(f\"{sequence_2} has a GC content of {gc_content(sequence_2)}\")\n\nACGTACGTAAA has a GC content of 0.36363636363636365\nGGTCCAGGCGT has a GC content of 0.7272727272727273"
   },
   {
     "objectID": "careers.html",
     "href": "careers.html",
     "title": "Careers",
     "section": "",
-    "text": "Careers"
+    "text": "Links to some graduate schemes and masters programs in bioinformatics in the UK — plus adjacent roles that use programming skills.\n\n\n\n\nNHS STPMRCGenomics EnglandWellcome SangerGSK\n\n\n\n\n\nNHS Logo\n\n\n\n\n\nScientist Training Programme (STP) — 3-year salaried training with an accredited master’s and NHS Trust placement.\n\nOverview & entry requirements: Health Careers – STP\n\nClinical Bioinformatics (Genomics) specialty info & example posts: NHS STP – Clinical Bioinformatics (Genomics) and Health Careers – Clinical Bioinformatics\n\n\n\n\n\n\n\n\nMRC Logo\n\n\n\n\nThe MRC Laboratory of Medical Sciences (LMS) runs a Science Technology Graduate Programme with placements in the Bioinformatics Facility.\n\nProgramme: Science Technology Graduate Programme — Bioinformatics Facility, LMS\n\nOrganisation: MRC LMS\n\nDuration: 2 years — Year 1 rotations & training, Year 2 independent project work.\n\nSalary: ~£36,000 (London rate).\n\nFocus: supporting bioinformatics analyses across groups, developing pipelines, learning HPC systems, and gaining transferable programming/data analysis skills.\n\nOutcome: strong technical grounding in applied bioinformatics, good launchpad for PhD or facility-based roles.\n\n\n\n\n\n\n\nGenomics England Logo\n\n\n\n\n\nCareers & Open Roles • Bioinformatics Careers Page\n\nOrganisation: government-funded company delivering large-scale genomics programmes (including the 100,000 Genomes Project).\n\nGraduate opportunities:\n\nRoles in bioinformatics, data engineering, software engineering, health informatics.\n\nWork includes variant calling, clinical reporting pipelines, data curation, cloud infrastructure, and data sharing platforms.\n\nOften advertised as associate bioinformatician, graduate data scientist, or trainee bioinformatician.\n\n\nEnvironment: hybrid work (London / flexible), with strong ties to NHS Genomic Medicine Service.\n\nWhy apply: exposure to clinical genomics pipelines at national scale, real-world health data, and policy-relevant projects. Good balance of science + healthcare delivery.\n\n\n\n\n\n\n\nWellcome Sanger Logo\n\n\n\n\n\nInstitute: world-leading genomics research centre in Cambridge (UK), with large-scale sequencing, cellular genetics, cancer, pathogen, and computational biology programmes.\n\nSanger Early Careers hub • Graduate scheme\n\nProgramme type: 2-year graduate programme, fixed-term contract.\n\nRotations: typically 3–4 placements across teams (bioinformatics, data analysis, lab science, project management).\n\nTraining: structured workshops in coding, reproducible analysis, presentation skills, scientific writing, and professional development.\n\nEligibility: recent graduates (BSc/MSc/PhD) in relevant disciplines (biology, maths, computer science, data science).\n\nWhy apply: Sanger exposes you to “big science” in genomics and bioinformatics — from cancer genomics pipelines to pathogen surveillance — with huge data sets and cutting-edge infrastructure. Many alumni progress into PhDs, postdocs, or permanent informatics roles.\n\n\n\n\n\n\n\nGSK Logo\n\n\n\n\n\nEarly Careers Hub • R&D (Data/AI) Overview\n\nProgramme: Future Leaders Graduate Programme (FLP), 2–3 years.\n\nTracks: R&D (Data Science, AI, Computational Biology, Bioinformatics), Manufacturing, Commercial, and more.\n\nRotations: multiple placements across discovery science, clinical data, and informatics teams.\n\nTraining: leadership development, global networking, technical workshops (machine learning, advanced analytics, drug discovery pipelines).\n\nLocations: UK (Stevenage, Ware, Brentford), with potential international placements.\n\nWhy apply: GSK offers broad pharma R&D exposure, with projects spanning omics integration, drug target validation, imaging analysis, and clinical trial data. Ideal for those considering pharma-industry bioinformatics or translational data science careers.\n\n\n\n\n\n\n\n\n\nData Science Conversion MScBioinformatics MSc by Research\n\n\nHere are key details for the Data Science Conversion MSc at Kingston University, especially for those interested in bioinformatics or computational biology.\n\nCourse page: Data Science Conversion MSc – Kingston University :contentReferenceoaicite:0\n\nIt is a conversion course aimed at those without strong backgrounds in programming or statistics.\n\nIncludes a pre-sessional bootcamp / ‘boot camp’ (≈ 2-week intensive) to bring everyone to baseline levels in programming, statistics, data modelling.\nDuration options:\n\nFull-time: 1 year (starting September)\nPart-time: 2 years\n\nTypical entry: 2:2 or above honours degree in any discipline. Individual applications may require additional requirements.\nAccreditation by the British Computer Society (BCS).\n\n\n\n\nBritish Computer Society Logo\n\n\n\n\nAn MSc by Research is a one-year, research-intensive master’s (Level 7) where most credit comes from a thesis-style project under a supervisor. It’s ideal if you want deep research experience before a PhD or a technical industry role.\nIf you’re interested in staying with us to do a Bioinformatics MSc by Research, come and have a chat with us about potential projects!\nInformation about fees for MRes degrees can be found here.\n\n\n\n\n\n\n\nHealth Data Analyst / Health Informatician — NHS Trusts, public health bodies, charities. SQL/Python/R on Electronic Health Records (EHRs) and other healthcare data.\nBiostatistician / Statistical Programmer — Clinical Research Organizations and pharmaceutical companies (R/Python), clinical trials analysis and reporting.\n\nData Scientist (Healthcare / Pharmaceutical / MedTech) — modelling omics (genomics, proteomics, transcriptomics…) or real-world data.\nBioimage Analysis / Scientific Software Engineer — microscopy pipelines, segmentation, tracking (Python/C++, image processing).\n\nScientific Publishing / Data Curation — build tools and pipelines that improve metadata, reproducibility and peer-review workflows.\n\nAnd you are also qualified for other programming jobs outside of Life Scientists! Have a look for boot camps and graduate schemes, or do a job search using the keyword “python”."
+  },
+  {
+    "objectID": "careers.html#uk-graduate-schemes-early-career-programmes",
+    "href": "careers.html#uk-graduate-schemes-early-career-programmes",
+    "title": "Careers",
+    "section": "",
+    "text": "NHS STPMRCGenomics EnglandWellcome SangerGSK\n\n\n\n\n\nNHS Logo\n\n\n\n\n\nScientist Training Programme (STP) — 3-year salaried training with an accredited master’s and NHS Trust placement.\n\nOverview & entry requirements: Health Careers – STP\n\nClinical Bioinformatics (Genomics) specialty info & example posts: NHS STP – Clinical Bioinformatics (Genomics) and Health Careers – Clinical Bioinformatics\n\n\n\n\n\n\n\n\nMRC Logo\n\n\n\n\nThe MRC Laboratory of Medical Sciences (LMS) runs a Science Technology Graduate Programme with placements in the Bioinformatics Facility.\n\nProgramme: Science Technology Graduate Programme — Bioinformatics Facility, LMS\n\nOrganisation: MRC LMS\n\nDuration: 2 years — Year 1 rotations & training, Year 2 independent project work.\n\nSalary: ~£36,000 (London rate).\n\nFocus: supporting bioinformatics analyses across groups, developing pipelines, learning HPC systems, and gaining transferable programming/data analysis skills.\n\nOutcome: strong technical grounding in applied bioinformatics, good launchpad for PhD or facility-based roles.\n\n\n\n\n\n\n\nGenomics England Logo\n\n\n\n\n\nCareers & Open Roles • Bioinformatics Careers Page\n\nOrganisation: government-funded company delivering large-scale genomics programmes (including the 100,000 Genomes Project).\n\nGraduate opportunities:\n\nRoles in bioinformatics, data engineering, software engineering, health informatics.\n\nWork includes variant calling, clinical reporting pipelines, data curation, cloud infrastructure, and data sharing platforms.\n\nOften advertised as associate bioinformatician, graduate data scientist, or trainee bioinformatician.\n\n\nEnvironment: hybrid work (London / flexible), with strong ties to NHS Genomic Medicine Service.\n\nWhy apply: exposure to clinical genomics pipelines at national scale, real-world health data, and policy-relevant projects. Good balance of science + healthcare delivery.\n\n\n\n\n\n\n\nWellcome Sanger Logo\n\n\n\n\n\nInstitute: world-leading genomics research centre in Cambridge (UK), with large-scale sequencing, cellular genetics, cancer, pathogen, and computational biology programmes.\n\nSanger Early Careers hub • Graduate scheme\n\nProgramme type: 2-year graduate programme, fixed-term contract.\n\nRotations: typically 3–4 placements across teams (bioinformatics, data analysis, lab science, project management).\n\nTraining: structured workshops in coding, reproducible analysis, presentation skills, scientific writing, and professional development.\n\nEligibility: recent graduates (BSc/MSc/PhD) in relevant disciplines (biology, maths, computer science, data science).\n\nWhy apply: Sanger exposes you to “big science” in genomics and bioinformatics — from cancer genomics pipelines to pathogen surveillance — with huge data sets and cutting-edge infrastructure. Many alumni progress into PhDs, postdocs, or permanent informatics roles.\n\n\n\n\n\n\n\nGSK Logo\n\n\n\n\n\nEarly Careers Hub • R&D (Data/AI) Overview\n\nProgramme: Future Leaders Graduate Programme (FLP), 2–3 years.\n\nTracks: R&D (Data Science, AI, Computational Biology, Bioinformatics), Manufacturing, Commercial, and more.\n\nRotations: multiple placements across discovery science, clinical data, and informatics teams.\n\nTraining: leadership development, global networking, technical workshops (machine learning, advanced analytics, drug discovery pipelines).\n\nLocations: UK (Stevenage, Ware, Brentford), with potential international placements.\n\nWhy apply: GSK offers broad pharma R&D exposure, with projects spanning omics integration, drug target validation, imaging analysis, and clinical trial data. Ideal for those considering pharma-industry bioinformatics or translational data science careers."
+  },
+  {
+    "objectID": "careers.html#masters-study-at-kingston-university",
+    "href": "careers.html#masters-study-at-kingston-university",
+    "title": "Careers",
+    "section": "",
+    "text": "Data Science Conversion MScBioinformatics MSc by Research\n\n\nHere are key details for the Data Science Conversion MSc at Kingston University, especially for those interested in bioinformatics or computational biology.\n\nCourse page: Data Science Conversion MSc – Kingston University :contentReferenceoaicite:0\n\nIt is a conversion course aimed at those without strong backgrounds in programming or statistics.\n\nIncludes a pre-sessional bootcamp / ‘boot camp’ (≈ 2-week intensive) to bring everyone to baseline levels in programming, statistics, data modelling.\nDuration options:\n\nFull-time: 1 year (starting September)\nPart-time: 2 years\n\nTypical entry: 2:2 or above honours degree in any discipline. Individual applications may require additional requirements.\nAccreditation by the British Computer Society (BCS).\n\n\n\n\nBritish Computer Society Logo\n\n\n\n\nAn MSc by Research is a one-year, research-intensive master’s (Level 7) where most credit comes from a thesis-style project under a supervisor. It’s ideal if you want deep research experience before a PhD or a technical industry role.\nIf you’re interested in staying with us to do a Bioinformatics MSc by Research, come and have a chat with us about potential projects!\nInformation about fees for MRes degrees can be found here."
+  },
+  {
+    "objectID": "careers.html#programming-led-jobs-outside-core-bioinformatics",
+    "href": "careers.html#programming-led-jobs-outside-core-bioinformatics",
+    "title": "Careers",
+    "section": "",
+    "text": "Health Data Analyst / Health Informatician — NHS Trusts, public health bodies, charities. SQL/Python/R on Electronic Health Records (EHRs) and other healthcare data.\nBiostatistician / Statistical Programmer — Clinical Research Organizations and pharmaceutical companies (R/Python), clinical trials analysis and reporting.\n\nData Scientist (Healthcare / Pharmaceutical / MedTech) — modelling omics (genomics, proteomics, transcriptomics…) or real-world data.\nBioimage Analysis / Scientific Software Engineer — microscopy pipelines, segmentation, tracking (Python/C++, image processing).\n\nScientific Publishing / Data Curation — build tools and pipelines that improve metadata, reproducibility and peer-review workflows.\n\nAnd you are also qualified for other programming jobs outside of Life Scientists! Have a look for boot camps and graduate schemes, or do a job search using the keyword “python”."
   },
   {
     "objectID": "index.html",
@@ -735,9 +819,79 @@
   {
     "objectID": "help.html",
     "href": "help.html",
-    "title": "Help",
+    "title": "Help, Error!",
     "section": "",
-    "text": "Help"
+    "text": "One of the most frustrating parts of learning programming is getting an Error message and trying to figure out what it means!\nError messages are trying to be helpful - telling you what line they find an error on and what type of error it is. But they’re not foolproof, sometimes there may be an error on the line before or earlier in the code…\nThis cheatsheet shows some common Python errors you will encounter as a beginner, with simple examples. Try and compare your error to these…"
+  },
+  {
+    "objectID": "help.html#nameerror",
+    "href": "help.html#nameerror",
+    "title": "Help, Error!",
+    "section": "1. NameError",
+    "text": "1. NameError\nHappens when you use a variable or function name that Python doesn’t know.\n\nprint(unknown_variable)\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[1], line 1\n----&gt; 1 print(unknown_variable)\n\nNameError: name 'unknown_variable' is not defined\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nWe often get a NameError if we have a typo in our variable name. Python doesn’t know that you wanted the variable pineapple when you print pinapple!"
+  },
+  {
+    "objectID": "help.html#typeerror",
+    "href": "help.html#typeerror",
+    "title": "Help, Error!",
+    "section": "2. TypeError",
+    "text": "2. TypeError\nOccurs when an operation is applied to the wrong type of object.\nWe can add two numbers together, or two words together, but we can’t add a number to a word - python doesn’t know what to do!\n\n\"Age: \" + 42\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 \"Age: \" + 42\n\nTypeError: can only concatenate str (not \"int\") to str"
+  },
+  {
+    "objectID": "help.html#valueerror",
+    "href": "help.html#valueerror",
+    "title": "Help, Error!",
+    "section": "3. ValueError",
+    "text": "3. ValueError\nRaised when a function receives the right type but an invalid value.\nWhat is wrong with the below example?\n\nint(\"forty-two\")\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[3], line 1\n----&gt; 1 int(\"forty-two\")\n\nValueError: invalid literal for int() with base 10: 'forty-two'"
+  },
+  {
+    "objectID": "help.html#indexerror",
+    "href": "help.html#indexerror",
+    "title": "Help, Error!",
+    "section": "4. IndexError",
+    "text": "4. IndexError\nHappens when you try to access a list index that doesn’t exist.\n\nletters = [\"A\", \"B\", \"C\"]\nprint(letters[5])\n\n\n---------------------------------------------------------------------------\nIndexError                                Traceback (most recent call last)\nCell In[4], line 2\n      1 letters = [\"A\", \"B\", \"C\"]\n----&gt; 2 print(letters[5])\n\nIndexError: list index out of range\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nPython starts counting from 0! The first item in your list is item 0, not item 1…"
+  },
+  {
+    "objectID": "help.html#keyerror",
+    "href": "help.html#keyerror",
+    "title": "Help, Error!",
+    "section": "5. KeyError",
+    "text": "5. KeyError\nOccurs when you look up a missing key in a dictionary.\n\nbases = {\"A\": 1, \"C\": 2}\nprint(bases[\"T\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[5], line 2\n      1 bases = {\"A\": 1, \"C\": 2}\n----&gt; 2 print(bases[\"T\"])\n\nKeyError: 'T'\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nYou can always check what the keys in your dictionary are by using print(dictionary_name.keys())"
+  },
+  {
+    "objectID": "help.html#attributeerror",
+    "href": "help.html#attributeerror",
+    "title": "Help, Error!",
+    "section": "6. AttributeError",
+    "text": "6. AttributeError\nHappens when you try to call a method that doesn’t exist for an object.\n\nnum = 42\nnum.append(99)\n\n\n---------------------------------------------------------------------------\nAttributeError                            Traceback (most recent call last)\nCell In[6], line 2\n      1 num = 42\n----&gt; 2 num.append(99)\n\nAttributeError: 'int' object has no attribute 'append'\n\n\n\nWe can .append() to a list (add an item to the end of a list) but if we try to do the same with a number python will be confused…"
+  },
+  {
+    "objectID": "help.html#zerodivisionerror",
+    "href": "help.html#zerodivisionerror",
+    "title": "Help, Error!",
+    "section": "7. ZeroDivisionError",
+    "text": "7. ZeroDivisionError\nRaised when you divide by zero.\n\n10 / 0\n\n\n---------------------------------------------------------------------------\nZeroDivisionError                         Traceback (most recent call last)\nCell In[7], line 1\n----&gt; 1 10 / 0\n\nZeroDivisionError: division by zero\n\n\n\nThis isn’t a python problem, it’s a maths problem! If you have 10 sweets and you split them between 0 people, who do you give them to?\nRead more about why we can’t divide by 0"
+  },
+  {
+    "objectID": "help.html#importerror-modulenotfounderror",
+    "href": "help.html#importerror-modulenotfounderror",
+    "title": "Help, Error!",
+    "section": "8. ImportError / ModuleNotFoundError",
+    "text": "8. ImportError / ModuleNotFoundError\nOccurs when you try to import something that doesn’t exist.\n\nimport not_a_real_module\n\n\n---------------------------------------------------------------------------\nModuleNotFoundError                       Traceback (most recent call last)\nCell In[8], line 1\n----&gt; 1 import not_a_real_module\n\nModuleNotFoundError: No module named 'not_a_real_module'\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nMake sure you have spelt the module name correctly. If it doesn’t exist, you may need to install it in the VSCode terminal: pip install module_name"
+  },
+  {
+    "objectID": "help.html#indentationerror",
+    "href": "help.html#indentationerror",
+    "title": "Help, Error!",
+    "section": "9. IndentationError",
+    "text": "9. IndentationError\nHappens when code isn’t indented properly.\n\ndef hello():\nprint(\"Hi\")   # wrong indentation\n\n\n  Cell In[9], line 2\n    print(\"Hi\")   # wrong indentation\n    ^\nIndentationError: expected an indented block after function definition on line 1\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nAn indent is typically four spaces.\n\n# not indented line\n   #indented line\n\nAlso make sure you include the : after your if, for or def statement!"
+  },
+  {
+    "objectID": "help.html#syntaxerror",
+    "href": "help.html#syntaxerror",
+    "title": "Help, Error!",
+    "section": "10. SyntaxError",
+    "text": "10. SyntaxError\nGeneral error for code that breaks Python’s rules.\nUsually a problem with the grammar - are you missing a :, do you have an extra ,, have you kept the right format?\n\nprint(\"Hello\") print(\"World\")\n\n\n  Cell In[11], line 1\n    print(\"Hello\") print(\"World\")\n                   ^\nSyntaxError: invalid syntax\n\n\n\n\nCompare with a similar piece of code from the examples to check the structure!\n\n\nTips\n\nRead the error message carefully — it tells you the type and where it happened.\nWrite your code in small chunks and run it to see if it works. It’s much easier to fix one error than 10!\nDon’t panic — every Python programmer sees these daily! Even after over 10 years…\n\n\n\n\nGIF of an otter clapping"
   },
   {
     "objectID": "setup.html",

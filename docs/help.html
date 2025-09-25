@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -297,7 +332,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./help.html" aria-current="page"> 
-<span class="menu-text">Help</span></a>
+<span class="menu-text">Help, Error!</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -312,19 +347,311 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><a href="./Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="./Logo/LS6036_with_text.png" class="img-fluid"></a></p>
+<p><a href="./Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="./Logo/LS6036_with_text.png" class="img-fluid"></a></p>
 </div></div>
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Help, Error!</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="help" class="level1">
-<h1>Help</h1>
+</header>
+
+
+<p>One of the most frustrating parts of learning programming is getting an Error message and trying to figure out what it means!</p>
+<p>Error messages are <em>trying</em> to be helpful - telling you what line they find an error on and what type of error it is. But they’re not foolproof, sometimes there may be an error <em>on the line before</em> or earlier in the code…</p>
+<p>This cheatsheet shows some <strong>common Python errors</strong> you will encounter as a beginner, with simple examples. Try and compare your error to these…</p>
+<hr>
+<section id="nameerror" class="level2">
+<h2 class="anchored" data-anchor-id="nameerror">1. NameError</h2>
+<p>Happens when you use a variable or function name that Python doesn’t know.</p>
+<div id="bd80e78b" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unknown_variable)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[1], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color:rgb(0,135,0)">print</span>(unknown_variable)
+
+<span class="ansi-red-fg">NameError</span>: name 'unknown_variable' is not defined</pre>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We often get a NameError if we have a <strong>typo</strong> in our variable name. Python doesn’t know that you wanted the variable <code>pineapple</code> when you print <code>pinapple</code>!</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="typeerror" class="level2">
+<h2 class="anchored" data-anchor-id="typeerror">2. TypeError</h2>
+<p>Occurs when an operation is applied to the wrong type of object.</p>
+<p>We can add two numbers together, or two words together, but we can’t add a number to a word - python doesn’t know what to do!</p>
+<div id="3127c54e" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"Age: "</span> <span class="op">+</span> <span class="dv">42</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[2], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Age: </span><span style="color:rgb(175,0,0)">"</span> <span style="color:rgb(98,98,98)">+</span> <span style="color:rgb(98,98,98)">42</span>
+
+<span class="ansi-red-fg">TypeError</span>: can only concatenate str (not "int") to str</pre>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="valueerror" class="level2">
+<h2 class="anchored" data-anchor-id="valueerror">3. ValueError</h2>
+<p>Raised when a function receives the right type but an invalid value.</p>
+<p><em>What is wrong with the below example?</em></p>
+<div id="f85a0683" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(<span class="st">"forty-two"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[3], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color:rgb(0,135,0)">int</span>(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">forty-two</span><span style="color:rgb(175,0,0)">"</span>)
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: 'forty-two'</pre>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="indexerror" class="level2">
+<h2 class="anchored" data-anchor-id="indexerror">4. IndexError</h2>
+<p>Happens when you try to access a list index that doesn’t exist.</p>
+<div id="07bec6a5" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters[<span class="dv">5</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 2</span>
+<span class="ansi-green-fg ansi-bold">      1</span> letters <span style="color:rgb(98,98,98)">=</span> [<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">A</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">B</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">C</span><span style="color:rgb(175,0,0)">"</span>]
+<span class="ansi-green-fg">----&gt; 2</span> <span style="color:rgb(0,135,0)">print</span>(letters[<span style="color:rgb(98,98,98)">5</span>])
+
+<span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Python starts counting from 0!</strong> The first item in your list is item 0, not item 1…</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="keyerror" class="level2">
+<h2 class="anchored" data-anchor-id="keyerror">5. KeyError</h2>
+<p>Occurs when you look up a missing key in a dictionary.</p>
+<div id="cb7b5abc" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bases <span class="op">=</span> {<span class="st">"A"</span>: <span class="dv">1</span>, <span class="st">"C"</span>: <span class="dv">2</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bases[<span class="st">"T"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[5], line 2</span>
+<span class="ansi-green-fg ansi-bold">      1</span> bases <span style="color:rgb(98,98,98)">=</span> {<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">A</span><span style="color:rgb(175,0,0)">"</span>: <span style="color:rgb(98,98,98)">1</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">C</span><span style="color:rgb(175,0,0)">"</span>: <span style="color:rgb(98,98,98)">2</span>}
+<span class="ansi-green-fg">----&gt; 2</span> <span style="color:rgb(0,135,0)">print</span>(bases[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">T</span><span style="color:rgb(175,0,0)">"</span>])
+
+<span class="ansi-red-fg">KeyError</span>: 'T'</pre>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can always check what the keys in your dictionary are by using <code>print(dictionary_name.keys())</code></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="attributeerror" class="level2">
+<h2 class="anchored" data-anchor-id="attributeerror">6. AttributeError</h2>
+<p>Happens when you try to call a method that doesn’t exist for an object.</p>
+<div id="ec0c8d08" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>num.append(<span class="dv">99</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[6], line 2</span>
+<span class="ansi-green-fg ansi-bold">      1</span> num <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">42</span>
+<span class="ansi-green-fg">----&gt; 2</span> num<span style="color:rgb(98,98,98)">.</span>append(<span style="color:rgb(98,98,98)">99</span>)
+
+<span class="ansi-red-fg">AttributeError</span>: 'int' object has no attribute 'append'</pre>
+</div>
+</div>
+</div>
+<p>We can <code>.append()</code> to a list (add an item to the end of a list) but if we try to do the same with a number python will be confused…</p>
+<hr>
+</section>
+<section id="zerodivisionerror" class="level2">
+<h2 class="anchored" data-anchor-id="zerodivisionerror">7. ZeroDivisionError</h2>
+<p>Raised when you divide by zero.</p>
+<div id="cfae3113" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="op">/</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[7], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="color:rgb(98,98,98)">10</span> <span style="color:rgb(98,98,98)">/</span> <span style="color:rgb(98,98,98)">0</span>
+
+<span class="ansi-red-fg">ZeroDivisionError</span>: division by zero</pre>
+</div>
+</div>
+</div>
+<p>This isn’t a python problem, it’s a maths problem! If you have 10 sweets and you split them between 0 people, who do you give them to?</p>
+<p><a href="https://www.mathsisfun.com/numbers/dividing-by-zero.html">Read more about why we can’t divide by 0</a></p>
+<hr>
+</section>
+<section id="importerror-modulenotfounderror" class="level2">
+<h2 class="anchored" data-anchor-id="importerror-modulenotfounderror">8. ImportError / ModuleNotFoundError</h2>
+<p>Occurs when you try to import something that doesn’t exist.</p>
+<div id="2198cd58" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> not_a_real_module</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[8], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span> <span style="font-weight:bold;color:rgb(0,0,255)">not_a_real_module</span>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'not_a_real_module'</pre>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure you have spelt the module name correctly. If it doesn’t exist, you may need to install it in the VSCode terminal: <code>pip install module_name</code></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="indentationerror" class="level2">
+<h2 class="anchored" data-anchor-id="indentationerror">9. IndentationError</h2>
+<p>Happens when code isn’t indented properly.</p>
+<div id="2908bf5c" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello():</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hi"</span>)   <span class="co"># wrong indentation</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[9], line 2</span>
+<span class="ansi-red-fg">    print("Hi")   # wrong indentation</span>
+    ^
+<span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> expected an indented block after function definition on line 1
+</pre>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An indent is typically four spaces.</p>
+<div id="c83ea45e" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># not indented line</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">#indented line</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Also make sure you include the <code>:</code> after your <code>if</code>, <code>for</code> or <code>def</code> statement!</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="syntaxerror" class="level2">
+<h2 class="anchored" data-anchor-id="syntaxerror">10. SyntaxError</h2>
+<p>General error for code that breaks Python’s rules.</p>
+<p>Usually a problem with the grammar - are you missing a <code>:</code>, do you have an extra <code>,</code>, have you kept the right format?</p>
+<div id="2d52fc84" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello"</span>) <span class="bu">print</span>(<span class="st">"World"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[11], line 1</span>
+<span class="ansi-red-fg">    print("Hello") print("World")</span>
+                   ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+</div>
+<p>Compare with a similar piece of code from the examples to check the structure!</p>
+<hr>
+<section id="tips" class="level3">
+<h3 class="anchored" data-anchor-id="tips">Tips</h3>
+<ul>
+<li><strong>Read the error message carefully</strong> — it tells you the type and where it happened.</li>
+<li>Write your code in <strong>small chunks</strong> and run it to see if it works. It’s much easier to fix one error than 10!</li>
+<li>Don’t panic — every Python programmer sees these daily! <em>Even after over 10 years…</em></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDY4MzFjNjdmNDdjYjc3M2RhZDU4YmM4NDIxMmM2MjQ2NGYxYzFjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/ely3apij36BJhoZ234/giphy-downsized-large.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="GIF of an otter clapping"><img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDY4MzFjNjdmNDdjYjc3M2RhZDU4YmM4NDIxMmM2MjQ2NGYxYzFjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/ely3apij36BJhoZ234/giphy-downsized-large.gif" class="img-fluid figure-img" alt="GIF of an otter clapping"></a></p>
+<figcaption>GIF of an otter clapping</figcaption>
+</figure>
+</div>
 
 
 <script type="ojs-module-contents">
@@ -341,6 +668,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->

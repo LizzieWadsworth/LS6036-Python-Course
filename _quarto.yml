@@ -18,7 +18,7 @@ website:
           href: careers.qmd
         - text: "CheatSheet"
           href: cheatsheet.qmd
-        - text: "Help"
+        - text: "Help, Error!"
           href: help.qmd
   sidebar:
     - title: "Learn"
