@@ -8,7 +8,7 @@ There are three logical operators we can use with booleans:
 
 Let's test it on the example - do you buy ice cream if it's sunny and (or) if you're hungry? 
 
-![Ice cream in the sun. © [Elisabeth] / Adobe Stock ](/images/icecream.png)
+![Ice cream in the sun. © [Elisabeth] / Adobe Stock ](/images/icecream.png){width=50%}
 
 What will the below code give you?
 

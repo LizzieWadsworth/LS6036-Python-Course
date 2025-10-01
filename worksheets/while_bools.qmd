@@ -1,0 +1,54 @@
+# What can we use while with? 
+
+Our `while` loops can use any expression that will give a boolean `True` or `False`, such as what we use with an `if` statement. 
+
+Some of the more common while loops include: 
+
+-  Setting a variable to `True` and changing it to `False` when a condition is met 
+-  Setting a variable to `False` and changing it to `True` when a condition is met (using `while not`)
+-  Comparing two numerical variables 
+
+See examples below: 
+
+::: {.panel-tabset}
+
+## Boolean example 1
+
+```{python}
+#| eval: false
+keep_going = True 
+
+while keep_going:
+    user_choice = input("Should we keep going?") 
+    if user_choice == "no":
+        keep_going = False 
+```
+
+## Boolean example 2
+
+```{python}
+#| eval: false
+stop_loop = False 
+
+while not stop_loop:
+    user_choice = input("Should we keep going?") 
+    if user_choice == "no":
+        stop_loop = True 
+```
+
+## Boolean example 3
+
+```{python}
+#| eval: false
+# Create list
+my_list = ["pikachu", "eevee", "psyduck", "mew", "jigglypuff"]
+# Set initial index
+i = 0
+
+while i < len(my_list):
+    # print pokemon
+    print(f"Pokemon {i} is {my_list[i]}")
+    # Add 1 to index 
+    # !IMPORTANT! - if you don't do this you'll get a neverending loop
+    i += 1
+```

@@ -92,5 +92,32 @@
   },
   "worksheets/Logic.qmd": {
     "Logic.html": "c693db32"
+  },
+  "worksheets/FizzBuzz.qmd": {
+    "FizzBuzz.html": "03685c1f"
+  },
+  "worksheets/forloop_practice.qmd": {
+    "forloop_practice.html": "660f788d"
+  },
+  "worksheets/random.qmd": {
+    "random.html": "ff18ff94"
+  },
+  "worksheets/while_loop.qmd": {
+    "while_loop.html": "d44b8822"
+  },
+  "worksheets/whileloop_neverending.qmd": {
+    "whileloop_neverending.html": "d907896e"
+  },
+  "worksheets/Adding_number_string.qmd": {
+    "Adding_number_string.html": "1bf09dce"
+  },
+  "worksheets/for_iterables.qmd": {
+    "for_iterables.html": "b0cde5cf"
+  },
+  "worksheets/while_practice.qmd": {
+    "while_practice.html": "ce194b80"
+  },
+  "worksheets/while_bools.qmd": {
+    "while_bools.html": "f96f2393"
   }
 }

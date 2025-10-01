@@ -1,0 +1,200 @@
+# While loop practice
+
+::: {.panel-tabset}
+
+## Bacterial population growth 
+
+Bacteria grow exponentially, and _E. coli_ doubles every 20 minutes in optimum growth conditions. 
+
+Start with 1 bacterium, and use a `while` loop to determine how many minutes it would take for the population to exceed 1 million. 
+
+::: { .callout-note collapse="true" title="Example output"}
+
+This is the answer for when the population exceeds 100,000. 
+
+```{python}
+#| echo: false
+bacteria = 1
+minutes = 0
+
+while bacteria < 100000:
+    bacteria *= 2
+    minutes += 20
+
+print(f"Bacteria reached a population of {bacteria} in {minutes} minutes")
+```
+
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+There are multiple ways to do this, one example answer is: 
+```{python}
+#| eval: false
+# Set initial values for bacteria and minutes
+bacteria = 1
+minutes = 0
+
+# while loop for while bacteria number is less than 1 million
+while bacteria < 1000000:
+    # Double bacteria number (bacteria = bacteria * 2)
+    bacteria *= 2
+    # Add 20 to the minutes (minutes = minutes + 20)
+    minutes += 20
+
+# Outside of while loop 
+# Print final result
+print(f"Bacteria reached a population of {bacteria} in {minutes} minutes")
+```
+:::
+
+## DNA Base Counter
+
+Ask the user to type DNA bases (A, T, G, C) one by one. 
+Use a `while` loop to keep asking until the user types “STOP”
+Print the counts of each base.
+
+::: { .callout-note collapse="true" title="Example output"}
+Your answer may look something like this: (if the user types in A A C T C A stop)
+
+```{python}
+#| echo: false 
+print("Please input a base A T C or G. If done type stop")
+
+my_string = "AACTCA"
+
+print(f"The sequence you typed in was {my_string}")
+print(f"This sequence has {my_string.count("A")} A bases")
+print(f"This sequence has {my_string.count("T")} T bases")
+print(f"This sequence has {my_string.count("C")} C bases")
+print(f"This sequence has {my_string.count("G")} G bases")
+```
+
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+There are multiple ways to do this, one example answer is: 
+```{python}
+#| eval: false 
+
+# Set boolean to continue or stop 
+keep_going = True
+# Create empty string (or list) to add bases to
+my_sequence = ""
+
+while keep_going:
+    # Ask user to input a base, or stop
+    base = input("Please input a base A T C or G. If done type stop")
+    # Check for stop base
+    if base == "stop":
+        # set keep_going to False to stop the loop 
+        keep_going = False 
+    # else - only if base is not stop add to string
+    else: 
+        # Add base to my_sequence (my_sequence = my_sequence + base)
+        my_sequence += base 
+
+# Outside of whlie loop
+# Print results
+print(f"The sequence you typed in was {my_sequence}")
+# Use .count() to count each base
+print(f"This sequence has {my_sequence.count("A")} A bases")
+print(f"This sequence has {my_sequence.count("T")} T bases")
+print(f"This sequence has {my_sequence.count("C")} C bases")
+print(f"This sequence has {my_sequence.count("G")} G bases")
+```
+:::
+
+## Predator-Prey Simulation
+
+Start with 50 rabbits and 5 foxes.
+Each iteration (time step), rabbits reproduce, and foxes eat rabbits or die of hunger - you can decide how this is determined. 
+Use a `while` loop until either species goes extinct.
+
+::: { .callout-note collapse="true" title="Example output"}
+Your answer may look something like this:
+
+```{python}
+#| echo: false
+import random
+rabbits = 50
+foxes = 5
+rounds = 1
+
+while rabbits > 0 and foxes > 0:
+    # reproduce rabbits
+    # random number of new rabbits between 0 and 2
+    new_rabbits = random.randint(0, 2)
+    # use round() to get a whole number
+    new_rabbits = round(new_rabbits)
+    # update number of rabbits (rabbits = rabbits + new_rabbits)
+    rabbits += new_rabbits
+
+    # foxes eat rabbits
+    # each fox can eat up to 5 rabbits
+    # if a fox doesn't eat a rabbit, it will die of hunger
+    # use a for loop to treat each fox separately
+    dead_foxes = 0
+    total_rabbits_eaten = 0
+    for fox in range(foxes):
+        rabbits_eaten = random.randint(0, 5)
+        total_rabbits_eaten += rabbits_eaten
+        if rabbits_eaten < 1:
+            dead_foxes +=1
+    # update number of rabbits
+    rabbits -= rabbits_eaten
+    foxes -= dead_foxes
+
+    # Print round results
+    print(f"Round {rounds}; {rabbits} rabbits and {foxes} foxes")
+```
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+There are multiple ways to do this, one example answer is: 
+
+```{python}
+#| eval: false
+# Use random module to decide reproduction and death rates
+import random
+# Set initial values for rabbits, foxes and rounds
+rabbits = 50
+foxes = 5
+rounds = 1
+
+# While loop for while both rabbits and foxes are more than 0
+while rabbits > 0 and foxes > 0:
+    # Reproduce rabbits
+    # random number of new rabbits between 0 and 2
+    new_rabbits = random.randint(0, 2)
+    # update number of rabbits (rabbits = rabbits + new_rabbits)
+    rabbits += new_rabbits
+
+    # Foxes eat rabbits
+    # Each fox can eat up to 5 rabbits
+    # If a fox doesn't eat a rabbit, it will die of hunger
+    # Use a for loop to treat each fox separately
+
+    # Set initial values for dead foxes and total rabbits eaten
+    dead_foxes = 0
+    total_rabbits_eaten = 0
+    # Use a for loop to treat each fox separately
+    for fox in range(foxes):
+        # Calculate random number of rabbits eaten between 0 and 5
+        rabbits_eaten = random.randint(0, 5)
+        # Add to total rabbits eaten 
+        total_rabbits_eaten += rabbits_eaten
+        # If no rabbits eaten, fox dies
+        if rabbits_eaten < 1:
+            dead_foxes +=1
+
+    # Update number of rabbits and foxes
+    rabbits -= rabbits_eaten
+    foxes -= dead_foxes
+
+    # Print round results
+    print(f"Round {rounds}; {rabbits} rabbits and {foxes} foxes")
+```
+
+In this answer, the rabbits always win. _Can you write a version where the rabbits and foxes have equal chances of winning?_
+:::
+:::

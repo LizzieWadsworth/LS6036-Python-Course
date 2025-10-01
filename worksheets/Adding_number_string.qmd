@@ -1,0 +1,80 @@
+# Adding to numbers and strings 
+
+We can add two numbers together, or two strings together, but in the examples so far we've always saved the result in a new variable. 
+
+Why doesn't the below code change the variable value? 
+
+```{python}
+# Create variable 
+a = 20
+# Add to variable 
+a + 100 
+# Print variable at the end
+print(f"Variable a is {a}")
+``` 
+
+This is because we added to our variable, but we didn't _save_ the result anywhere. 
+
+So python **did** the calculation. But didn't save the result - we didn't tell it to replace the value of `a`. 
+
+If we want to change the value of the variable, we can _save_ the result as `a`. This will **overwrite** the previous value. 
+
+```{python}
+a = a + 100
+```
+
+We can also use the shorthand `+=` to do the same thing: 
+
+```{python}
+a += 100
+```
+
+Check out the examples below: 
+
+::: {.panel-tabset}
+
+## Number example 1
+
+```{python}
+# Create variable 
+a = 20
+# Add to variable 
+a += 100 
+# Print variable at the end
+print(f"Variable a is {a}")
+``` 
+
+## Number example 2
+
+```{python}
+# Create variable 
+a = 105
+# Add to variable 
+a -= 23.4 
+# Print variable at the end
+print(f"Variable a is {a}")
+``` 
+
+## String example 1
+
+```{python}
+# Create variable 
+string1 = "Hello"
+# Add to variable 
+string1 += " world" 
+# Print variable at the end
+print(f"String 1 is {string1}")
+``` 
+
+## String example 2 
+
+```{python}
+# Create variable 
+string1 = "29"
+# Add to variable 
+string1 += "100" 
+# Print variable at the end
+print(f"String 1 is {string1}")
+``` 
+
+:::

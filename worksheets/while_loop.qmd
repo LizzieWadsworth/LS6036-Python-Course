@@ -1,0 +1,247 @@
+# The while loop 
+
+While loops are a different (and _more dangerous_) type of loop. 
+
+They are useful for if you want a piece of code to keep repeating _until a condition is met_ and you may not know how many times that will be. 
+
+For example, if we had a DNA sequence for a protein, we might want to loop through each codon until we reach a stop codon.
+
+```{python}
+#| eval: false
+
+# List of codons 
+codons = ["ATG", "CCG", "TAC", "GGT", "ACG", "TGA", "ATC", "CGC"]
+
+# List of stop codons 
+stop_codons = ["TAA", "TAG", "TGA"]
+
+# Set index 
+i = 0 
+
+# Set while loop to keep going until stop codon is found 
+while codons[i] not in stop_codons: 
+    # Add 1 to i, to iterate to next codon 
+    i += 1 
+
+# Print index of stop codon
+print(f"Stop codon found at index {i}")
+```
+
+## While loop animation
+
+```{=html}
+<!-- Controls -->
+<div class="d-flex align-items-center gap-2 mb-3">
+  <button id="play-while"  class="btn btn-primary btn-sm">Play</button>
+  <button id="pause-while" class="btn btn-outline-secondary btn-sm">Pause</button>
+  <button id="reset-while" class="btn btn-outline-secondary btn-sm">Restart</button>
+  <span id="status-while" class="ms-auto small font-monospace">idle</span>
+</div>
+
+<!-- Code block -->
+<pre class="small lh-sm font-monospace"><code id="code-while">
+<span id="w-line-1" class="code-line">codons = [<span id="codon-0" class="codon-item">"ATG"</span>, <span id="codon-1" class="codon-item">"CCG"</span>, <span id="codon-2" class="codon-item">"TAC"</span>, <span id="codon-3" class="codon-item">"GGT"</span>, <span id="codon-4" class="codon-item">"ACG"</span>, <span id="codon-5" class="codon-item">"TGA"</span>, <span id="codon-6" class="codon-item">"ATC"</span>, <span id="codon-7" class="codon-item">"CGC"</span>]</span>
+<span id="w-line-2" class="code-line">stop_codons = [<span id="stop-0" class="stop-item">"TAA"</span>, <span id="stop-1" class="stop-item">"TAG"</span>, <span id="stop-2" class="stop-item">"TGA"</span>]</span>
+<span id="w-line-3" class="code-line">i = <span class="ival-init">0</span></span>
+
+<span id="w-line-4" class="code-line">while <span class="codon-token">codons[i]</span> not in stop_codons:</span>
+<span id="w-line-5" class="code-line">    i = <span class="ival-loop">i+1</span></span>
+
+<span id="w-line-6" class="code-line">print(f"Stop codon found at index {<span class="ival-print">i</span>}")</span>
+</code></pre>
+
+<!-- Console -->
+<section>
+  <h2 class="h6 fw-semibold mb-2">Console</h2>
+  <div id="console-while" class="font-monospace small border rounded p-3" style="min-height:3rem;"></div>
+</section>
+
+<style>
+  .fade-in { opacity: 0; transform: translateY(4px); animation: fadeInUp .3s forwards }
+  @keyframes fadeInUp { to { opacity: 1; transform: translateY(0) } }
+
+  .code-line { display: block; padding: .125rem .375rem; border-radius: .25rem; }
+  .code-line.active { background: var(--bs-info-bg-subtle); outline: 1px solid var(--bs-info-border-subtle); }
+
+  /* Tokens */
+  .ival-init, .ival-loop, .ival-print, .codon-token {
+    display: inline-block; padding: 0 .2rem; border-radius: .25rem;
+    background: var(--bs-warning-bg-subtle); color: var(--bs-body-color); font-weight: 600;
+    will-change: opacity, transform;
+  }
+  .swap-hide { opacity: 0; transform: translateY(-4px); transition: opacity .18s ease, transform .18s ease; }
+  .swap-show { opacity: 1; transform: translateY(0);    transition: opacity .18s ease, transform .18s ease; }
+
+  /* Codon highlights inside the code lists */
+  .codon-item, .stop-item { padding: .05rem .25rem; border-radius: .25rem; }
+  .codon-item.active { background: var(--bs-info-bg-subtle); outline: 1px solid var(--bs-info-border-subtle); font-weight: 600; }
+  .codon-item.found   { background: var(--bs-danger-bg-subtle); outline: 1px solid var(--bs-danger-border-subtle); }
+  .stop-item.found    { background: var(--bs-danger-bg-subtle); outline: 1px solid var(--bs-danger-border-subtle); font-weight: 700; }
+
+  /* Strong dark-mode contrast */
+  body[data-bs-theme="dark"] .code-line.active,
+  .quarto-dark .code-line.active { background: #0e3f66 !important; outline: 1px solid #3fa9f5 !important; color: #fff !important; }
+  body[data-bs-theme="dark"] pre code .ival-init,
+  body[data-bs-theme="dark"] pre code .ival-loop,
+  body[data-bs-theme="dark"] pre code .ival-print,
+  body[data-bs-theme="dark"] pre code .codon-token,
+  .quarto-dark pre code .ival-init,
+  .quarto-dark pre code .ival-loop,
+  .quarto-dark pre code .ival-print,
+  .quarto-dark pre code .codon-token { background: #7a5d00 !important; color: #fff !important; font-weight: 700; }
+  body[data-bs-theme="dark"] .codon-item.active,
+  .quarto-dark .codon-item.active { background: #0e3f66 !important; outline: 1px solid #3fa9f5 !important; color: #fff !important; }
+  body[data-bs-theme="dark"] .codon-item.stop,
+  .quarto-dark .codon-item.stop { background: #4d0e0e !important; outline: 1px solid #cc4b4b !important; }
+  body[data-bs-theme="dark"] .codon-item.found,
+  .quarto-dark .codon-item.found,
+  body[data-bs-theme="dark"] .stop-item.found,
+  .quarto-dark .stop-item.found { background: #0f3d2e !important; outline: 2px solid #3ac38f !important; color:#fff !important; }
+</style>
+
+<script>
+  const codons = ["ATG","CCG","TAC","GGT","ACG","TGA","ATC","CGC"];
+  const stop_codons = ["TAA","TAG","TGA"];
+
+  const consoleBox = document.getElementById("console-while");
+  const status = document.getElementById("status-while");
+  const codeLines = [...document.querySelectorAll("#code-while .code-line")];
+
+  // Codon items inside the code block
+  const codonItems = codons.map((_, idx)=>document.getElementById(`codon-${idx}`));
+  const stopItems  = stop_codons.map((_, idx)=>document.getElementById(`stop-${idx}`));
+
+  function clearCodeHighlights(){ codeLines.forEach(l => l.classList.remove("active")); }
+  function highlightLine(id){ clearCodeHighlights(); document.getElementById(id)?.classList.add("active"); }
+
+  function setActiveCodon(idx){
+    codonItems.forEach((el,j)=>{
+      el.classList.toggle("active", j===idx);
+      el.classList.toggle("stop", stop_codons.includes(codons[j]));
+      if(j !== idx) el.classList.remove("found");
+    });
+  }
+
+  function highlightStopValue(value){
+    stopItems.forEach(el=>{
+      const txt = el.textContent.replace(/"/g,"");
+      el.classList.toggle("found", txt === value);
+    });
+  }
+
+  function resetLists(){
+    codonItems.forEach((el,i)=>{
+      el.classList.remove("active","found","stop");
+      if (stop_codons.includes(codons[i])) el.classList.add("stop");
+    });
+    stopItems.forEach(el=>el.classList.remove("found"));
+  }
+
+  function resetTokens(){
+    document.querySelector('.ival-init').textContent = "0";
+    document.querySelector('.ival-loop').textContent = "i+1";
+    document.querySelector('.ival-print').textContent = "i";
+    document.querySelectorAll('.codon-token').forEach(tok => { tok.textContent = "codons[i]"; });
+  }
+
+  function animateToken(selector, newText){
+    document.querySelectorAll(selector).forEach(tok=>{
+      tok.classList.remove("swap-show");
+      tok.classList.add("swap-hide");
+      requestAnimationFrame(()=>{
+        tok.textContent = newText;
+        requestAnimationFrame(()=>{
+          tok.classList.remove("swap-hide");
+          tok.classList.add("swap-show");
+        });
+      });
+    });
+  }
+
+  // Playback state
+  let running=false, timer=null, phase=0, loopDone=false, iVal=0;
+
+  function setStatus(t){ status.textContent = t; }
+
+  function step(){
+    if(loopDone){
+      highlightLine("w-line-6");
+      animateToken(".ival-print", String(iVal));
+      codonItems[iVal].classList.add("found");
+      highlightStopValue(codons[iVal]);            // highlight "TGA" in stop_codons list
+      const p=document.createElement("div");
+      p.className="fade-in";
+      p.textContent=`🛑 Stop codon found at index ${iVal} (${codons[iVal]})`;
+      consoleBox.appendChild(p);
+      setStatus("done");
+      loopDone=false;
+      setTimeout(()=>{ if(running){ resetAll(); step(); }}, 2000);
+      return;
+    }
+
+    if(phase===0){
+      setStatus("checking condition");
+      highlightLine("w-line-4");
+      setActiveCodon(iVal);
+      const current = codons[iVal];
+      animateToken(".codon-token", `codons[${iVal}] (${current})`);
+      if (stop_codons.includes(current)) {
+        loopDone = true;
+        timer = setTimeout(()=>running && step(), 900);
+      } else {
+        phase = 1;
+        timer = setTimeout(()=>running && step(), 900);
+      }
+      return;
+    }
+
+    if(phase===1){
+      setStatus("incrementing i");
+      highlightLine("w-line-5");
+      iVal += 1;
+      animateToken(".ival-loop", String(iVal));
+      setActiveCodon(iVal);
+      phase = 0;
+      timer = setTimeout(()=>running && step(), 900);
+      return;
+    }
+  }
+
+  function resetAll(){
+    iVal=0; phase=0; loopDone=false;
+    consoleBox.innerHTML="";
+    clearCodeHighlights();
+    resetTokens();
+    resetLists();
+    setActiveCodon(iVal);
+    animateToken(".ival-loop", String(iVal));
+    highlightStopValue(""); // clear any previous highlight
+  }
+
+  // Controls
+  document.getElementById("play-while").addEventListener("click",()=>{
+    if(running) return;
+    running=true;
+    setStatus("starting…");
+    resetAll();
+    timer=setTimeout(step,500);
+  });
+
+  document.getElementById("pause-while").addEventListener("click",()=>{
+    if(!running) return;
+    running=false;
+    setStatus("paused");
+    clearTimeout(timer);
+  });
+
+  document.getElementById("reset-while").addEventListener("click",()=>{
+    running=false;
+    clearTimeout(timer);
+    resetAll();
+    setStatus("idle");
+  });
+
+  // AUTO-START on load
+  document.getElementById("play-while").click();
+</script>
+```

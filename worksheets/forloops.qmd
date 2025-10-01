@@ -4,7 +4,6 @@ One of the benefits of programming is _automation_. For example, imagine we have
 
 We can use a **for** loop to test every item in our list for if it contains "ATG".
 
-## Python code 
 ```{python}
 #| eval: false
 # Put sequences in a list

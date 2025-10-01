@@ -250,121 +250,211 @@
     ]
   },
   {
-    "objectID": "worksheets/List_index.html",
-    "href": "worksheets/List_index.html",
-    "title": "List index",
+    "objectID": "worksheets/random.html",
+    "href": "worksheets/random.html",
+    "title": "The random package",
     "section": "",
-    "text": "You can extract items from a list using the index - the numerical position of the item in the list. As lists have a defined order, you can extract, for example, the third item in the list.\nTry below, does this give you the result you’re expecting?\n\n\n\n\n\n\nPython starts counting at 0, so index 3 is the number ‘four’ in the above example.\nThis means the indexes for the above number are:\nnumbers[0] = the first number = ‘one’\nnumbers[1] = the second number = ‘two’\nnumbers[2] = the third number = ‘three’\nnumbers[3] = the forth number = ‘four’\nnumbers[4] = the fifth number = ‘five’\nnumbers[5] = out of range = IndexError\nOutput: \"The third number is four\"\n\n\n\nVisual representation of the list index",
+    "text": "For some programs, you may want a random number or to choose a random item from a list.\nTo do this we can import random from our python library.",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "The random package"
+    ]
+  },
+  {
+    "objectID": "worksheets/random.html#choosing-a-random-number",
+    "href": "worksheets/random.html#choosing-a-random-number",
+    "title": "The random package",
+    "section": "Choosing a random number",
+    "text": "Choosing a random number\nTo get a single random number, we can use the random integer function random.randint().\n\n\n\n\n\n\nThe two numbers we put into randint are the numbers we want to choose between - so (0,50) is asking for a random number between 0 and 50.",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "The random package"
+    ]
+  },
+  {
+    "objectID": "worksheets/random.html#choosing-a-random-item-from-a-list",
+    "href": "worksheets/random.html#choosing-a-random-item-from-a-list",
+    "title": "The random package",
+    "section": "Choosing a random item from a list",
+    "text": "Choosing a random item from a list",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "The random package"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries_II.html",
+    "href": "worksheets/Dictionaries_II.html",
+    "title": "Dictionaries II",
+    "section": "",
+    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\n# Create an empty dictionary\nmy_elements = {} \n\n# Add elements to the dictionary \n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# print the final dictionary\nprint(my_elements)\n\n{'H': 'Hydrogen', 'He': 'Helium', 'O': 'Oxygen', 'C': 'Carbon'}\n\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
       "Lists and dictionaries",
-      "List index"
+      "Dictionaries II"
     ]
   },
   {
-    "objectID": "worksheets/Logic.html",
-    "href": "worksheets/Logic.html",
-    "title": "Logic",
+    "objectID": "worksheets/Dictionaries_II.html#adding-to-a-dictionary",
+    "href": "worksheets/Dictionaries_II.html#adding-to-a-dictionary",
+    "title": "Dictionaries II",
     "section": "",
-    "text": "There are three logical operators we can use with booleans:\nLet’s test it on the example - do you buy ice cream if it’s sunny and (or) if you’re hungry?\nWhat will the below code give you?",
-    "crumbs": [
-      "Learn",
-      "**Python Logic and Loops**",
-      "Logic",
-      "Logic"
-    ]
-  },
-  {
-    "objectID": "worksheets/Logic.html#be-careful---sneaky-errors",
-    "href": "worksheets/Logic.html#be-careful---sneaky-errors",
-    "title": "Logic",
-    "section": "Be careful - sneaky errors!",
-    "text": "Be careful - sneaky errors!\nDoes this print out what you expect?\n\n# Testing if letters \"z\" and \"f\" in string\nmy_string = \"find the One Piece\" \n\nif \"z\" and \"f\" in my_string: \n  print(f\"both z and f are in string {my_string}\")\nelse:\n  print(f\"z and f are not both in string {my_string}\")\n\nboth z and f are in string find the One Piece\n\n\n\n\n\n\n\n\nTipShow explanation\n\n\n\n\n\nThe issue is with if \"z\" and - this is True if \"z\" is a non empty string!\nTo test whether both z and f are in the string, you need to type it out explicitly\nif \"z\" in my_string (search for “z” in my_string) and if \"f\" in my_string (search for “f” in my_string)\n\nif \"z\" in my_string and \"f\" in my_string: \n  print(f\"both z and f are in string {my_string}\")\nelse:\n  print(f\"z and f are not both in string {my_string}\")",
-    "crumbs": [
-      "Learn",
-      "**Python Logic and Loops**",
-      "Logic",
-      "Logic"
-    ]
-  },
-  {
-    "objectID": "worksheets/UserInput_DataTypes.html",
-    "href": "worksheets/UserInput_DataTypes.html",
-    "title": "Input data types",
-    "section": "",
-    "text": "The returned result of input() will always be a string…\nTry the below example - it should give you an error!\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\nYou should get the error:\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))"
-  },
-  {
-    "objectID": "worksheets/UserInput_DataTypes.html#give-it-a-go",
-    "href": "worksheets/UserInput_DataTypes.html#give-it-a-go",
-    "title": "Input data types",
-    "section": "Give it a go:",
-    "text": "Give it a go:\nWrite a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)"
-  },
-  {
-    "objectID": "worksheets/Range.html",
-    "href": "worksheets/Range.html",
-    "title": "Ranges",
-    "section": "",
-    "text": "Python has a useful built-in range() function for generating ranges of values.\nIt’s useful for generating ranges for definite iteration (that’s where you know when you start your loop how many iterations you’re going to do). In Python that means the for loop.\nThe range() function can take one, two, or three arguments:\nYou choose whichever version best fits the problem you’re solving. If you have a choice, use the simplest one.\nRun the code below. Can you see why these three all do the same thing?\nPython’s ranges are lazy (it’s a technical term): it means that Python is not printing out the values of those ranges because it knows you haven’t actually asked to look at any of them. It knows the range but won’t bother actually enumerating the values until it really needs to. This is helpful when you have big numbers; it can result in more efficient programs that don’t require so much memory.\nYou can print the numbers out using a for loop:",
-    "crumbs": [
-      "Learn",
-      "**Python Logic and Loops**",
-      "Loops",
-      "Ranges"
-    ]
-  },
-  {
-    "objectID": "worksheets/Range.html#give-it-a-go",
-    "href": "worksheets/Range.html#give-it-a-go",
-    "title": "Ranges",
-    "section": "Give it a go:",
-    "text": "Give it a go:\nWrite a program that asks for an integer n and, using range(), prints the following:\n\nthe sum of all integer from 1 to n\nthe sum of all even integers from 1 to n\nthe sum of all multiples of 3 from 1 to n\n\nHint: use a different range() for each one of those.\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Example user int of 5, try using input() function\nuser_int = 5\n\n# sum of all integers from 1 to n\nmy_sum_1_n = 0\nfor i in range(1, user_int+1, 1):\n  my_sum_1_n = my_sum_1_n + i\n# exit loop to print final result\nprint(f\"Sum of integers from 1 to n is {my_sum_1_n}\")\n\n# sum of all even integers from 1 to n\nmy_sum_2_n = 0\nfor i in range(2, user_int+1, 2):\n  my_sum_2_n = my_sum_2_n + i\nprint(f\"Sum of even integers from 1 to n is {my_sum_2_n}\")\n\n# sum of all multiples of 3 from 1 to n\nmy_sum_3_n = 0\nfor i in range(3, user_int+1, 3):\n  my_sum_3_n = my_sum_3_n + i\nprint(f\"Sum of multiples of 3 from 1 to n is {my_sum_3_n}\")\n\nSum of integers from 1 to n is 15\nSum of even integers from 1 to n is 6\nSum of multiples of 3 from 1 to n is 3",
-    "crumbs": [
-      "Learn",
-      "**Python Logic and Loops**",
-      "Loops",
-      "Ranges"
-    ]
-  },
-  {
-    "objectID": "worksheets/String_methods.html",
-    "href": "worksheets/String_methods.html",
-    "title": "String methods, indexing and slicing",
-    "section": "",
-    "text": "String methodsConverting to integersString indexing and slicing\n\n\nSo far we’ve only been using strings exactly as they are - including when we compare them. But python is case senstive; so \"atg\" is not the same as \"ATG\".\nWe can use the following methods with an if statement - they will return a True or False\n\n.isupper(): check if string is upper case\n.islower(): check if string is lower case\n.isdigit(): check if string is numerical digits\n.upper(): converts string to upper case\n.lower(): converts string to lower case\n\n\n# Define a sequence\nmy_sequence = \"atg\"\n\n# Use .iflower() to determine if string is lower case\nif my_sequence.islower():\n    # if lower case, convert to upper case using .upper()\n    my_sequence = my_sequence.upper()\n\n# print final sequence\nprint(f\"My sequence {my_sequence} is upper case\")\n\nMy sequence ATG is upper case\n\n\n\n\n\n\n\n\nWarningWill this work on Sentence Case?\n\n\n\n\n\nWill this still work if we change the first line to the following?\n\nmy_sequence = \"Atg\"\n\nWhat do you think is happening? Can you rewrite the code so that this works?\n\n\n\n\n\nWe can also convert strings to integers using int() and floats using float().\n\nmy_sequence = \"15\"\n\nif my_sequence.isdigit():\n    my_sequence = float(my_sequence)\n\nprint(f\"My sequence {my_sequence} is of type {type(my_sequence)}\")\n\nMy sequence 15.0 is of type &lt;class 'float'&gt;\n\n\n\n\n\n\n\n\nNoteWhy have we used an if statement?\n\n\n\n\n\nWe didn’t need to use an if statement here - but it’s a good way of checking if the variable you want to convert to a float is infact a number.\nIf you try to convert a string that isn’t a number - e.g. \"hello\" - to a float, then you’ll get an error.\n\nmy_sequence = \"hello\"\nmy_sequence = float(my_sequence)\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[4], line 2\n      1 my_sequence = \"hello\"\n----&gt; 2 my_sequence = float(my_sequence)\n\nValueError: could not convert string to float: 'hello'\n\n\n\n\n\n\n\n\nWe can also retrieve a character from a string using an index or get a selection using string slicing - just like we can with lists!\nWe can give up to three values when retrieving information from a string:\nList_name [ start : stop : step ]\n\nstart: the index to start with (e.g. 2 for the third item)\nstop: the index to stop at (the stop item will not be included)\nstep: how gap between items (e.g. 2 would mean every second item from the list)\n\n\nmy_sequence = \"Hello World!\"\n\n# Printing the 2nd and 11th characters from the string using the index \nprint(f\"my_sequence[1] is {my_sequence[1]}\")\nprint(f\"my_sequence[10] is {my_sequence[10]}\")\n\n# Printing every third item from the 2nd to the 11th items in the list\nprint(f\"my_sequence [ 1 : 10 : 3 ] is {my_sequence [ 1 : 10 : 3 ]}\" )\n\nmy_sequence[1] is e\nmy_sequence[10] is d\nmy_sequence [ 1 : 10 : 3 ] is eoo",
-    "crumbs": [
-      "Learn",
-      "**Python Logic and Loops**",
-      "Logic",
-      "String methods, indexing and slicing"
-    ]
-  },
-  {
-    "objectID": "worksheets/Maths.html",
-    "href": "worksheets/Maths.html",
-    "title": "Maths",
-    "section": "",
-    "text": "We’ve looked at saving a numerical value (integer or float) as a variable. Next we can look at doing mathematics in python. Table 2 contains example code for different mathematical operations and how we write them.\nTry the below code, and then change the mathematical operator as in the above Table. Does the result that prints out match what you expect?",
+    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\n# Create an empty dictionary\nmy_elements = {} \n\n# Add elements to the dictionary \n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# print the final dictionary\nprint(my_elements)\n\n{'H': 'Hydrogen', 'He': 'Helium', 'O': 'Oxygen', 'C': 'Carbon'}\n\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python essentials",
-      "Maths"
+      "Lists and dictionaries",
+      "Dictionaries II"
     ]
   },
   {
-    "objectID": "worksheets/Maths.html#order-of-operations",
-    "href": "worksheets/Maths.html#order-of-operations",
-    "title": "Maths",
-    "section": "Order of operations",
-    "text": "Order of operations\nIn python, arithmetic operations always occur in the following order:\n\nExponential **\nMultiplication * or division (/ or // or % )\nAddition + or subtraction -\n\nWhere there is two operations of the same level (eg. one * and one / ) then the order depends on which comes first.\nJust like in mathematics, we can use brackets ( ) to highlight which operations should be done first.\nWhat would be the result of the following equations in python? Calculate them manually (without python) first.\n\n4 - 3 * 5 + 6\n4 - ( 3 * 5 ) + 6\n(4 - 3) * 5 + 6\n\n4 - (3 * 5 + 6)\n4 - 3.0 * 5 + 6\n4. - ( 3 * 5 ) + 6\n(4 + 2) / 5 + 6\n\n4 // (3 * 5 + 6.)\n\nNow try the above in python. You can do this using print() like in the example below. Were your predictions correct?\n\n\n\n\n\n\nNote: In Python, you can mix integers and floats in the same arithmetic expression. The type of the evaluation will be a float.\n\n\n\n\n\n\nTipSide note: Rounding errors\n\n\n\n\n\nA float is any number with a decimal point, whereas an integer is a whole number (eg. 5.0 is a float and 5 is an integer)\nIn python, there’s something a little unusual about mathematical calculations with floats…\nTry:\n\n\n\n\n\n\nDid you get what you expected? What do you think is going on here?\nConfused? This is to do with how the hardware stores numbers in binary - it isn’t a bug with the python code. You can check out more in this geeks for geeks article.",
+    "objectID": "worksheets/Dictionaries_II.html#dictionary-keys",
+    "href": "worksheets/Dictionaries_II.html#dictionary-keys",
+    "title": "Dictionaries II",
+    "section": "Dictionary keys",
+    "text": "Dictionary keys\nYou can use the function .keys() to get a list of all the keys in your dictionary. You could also use .values() to get a list of all the values. Which one do you think is more useful? When would you use them?\n\n# Create a dictionary of elements\nmy_elements = {  \n    # each key-value pair is separated by a comma\n    \"H\"  : \"Hydrogen\",\n    \"He\" : \"Helium\",\n    \"O\"  : \"Oxygen\",\n    \"C\"  : \"Carbon\"\n}\n\n# print the keys\nprint(f\"Dictionary keys are {my_elements.keys()}\")\nprint(f\"Dictionary values are {my_elements.values()}\")\n\nDictionary keys are dict_keys(['H', 'He', 'O', 'C'])\nDictionary values are dict_values(['Hydrogen', 'Helium', 'Oxygen', 'Carbon'])\n\n\nCould you use an if statement to see if a user input chemical symbol is in the dictionary?",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Python essentials",
-      "Maths"
+      "Lists and dictionaries",
+      "Dictionaries II"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries_II.html#dictionary-errors",
+    "href": "worksheets/Dictionaries_II.html#dictionary-errors",
+    "title": "Dictionaries II",
+    "section": "Dictionary errors",
+    "text": "Dictionary errors\nIn the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[3], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError you’ll know the issue is with your dictionary.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries II"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloops.html",
+    "href": "worksheets/forloops.html",
+    "title": "The for loop",
+    "section": "",
+    "text": "One of the benefits of programming is automation. For example, imagine we have a list of DNA sequences, and we want to see which ones contain a start codon “ATG”. If we had 10 sequences we could manually search for them - but it would be a lot harder if we had 10,000 sequences!\nWe can use a for loop to test every item in our list for if it contains “ATG”.\n# Put sequences in a list\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\n# loop through every sequence\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\nThe way this is working is by using a temporary variable dna. We then go through every item in the list Sequences, and replace this temporary variable with each item.\nOnce we reach the end of the loop (when there is no more indentation), the code repeats with the next item in the list.",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "for loops",
+      "The for loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloops.html#animation-of-the-for-loop",
+    "href": "worksheets/forloops.html#animation-of-the-for-loop",
+    "title": "The for loop",
+    "section": "Animation of the for loop",
+    "text": "Animation of the for loop\n\n\n  Play\n  Pause\n  Restart\n  idle\n\n\n\n\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\n\n\n\n  Output\n  \n\n\n\n\n\nAnimation generated by ChatGPT",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "for loops",
+      "The for loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries.html",
+    "href": "worksheets/Dictionaries.html",
+    "title": "Dictionaries",
+    "section": "",
+    "text": "The basic concept of a dictionary is a key-value pair. That means you have a value (like the definition “a large non-venomous snake that kills prey by constriction”) and a key you might use to look it up (like “python”).\nThe dictionary you know as a book is an example of lots of key-value pairs.\nPython’s dictionaries are similar to that, so it’s a useful metaphor (although there are some differences).\nThe main point is that you get the value of an item (the definition) by using “python” as the key for finding it.\nThis is different from lists where you found a the value of an item by its position in the list. In a dictionary (book), you really don’t care about the page number: all you care about is that you have the definition for the key. That is, you want the value (definition) for the key (word) and once you’ve got it it doesn’t matter where in the dictionary you found it (provided you found it).",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries.html#dictionaries-verses-lists",
+    "href": "worksheets/Dictionaries.html#dictionaries-verses-lists",
+    "title": "Dictionaries",
+    "section": "Dictionaries verses lists",
+    "text": "Dictionaries verses lists\n\nDictionaries uses curly brackets {} where lists use square brackets []\n\nIt might seem like a small distinction, but it’s very important! If you use curly brackets { }, you’re telling the Python interpreter that you are declaring a dictionary (just like square brackets indicated a list). But that also means Python expects a name-value pair for each entry… and that’s done with a colon.\nFor example:\nRun this and compare it with wht you would expect if you just printed out a list. Note how _buildings is the name of the variable that is the dictionary; you know that because it’s on the left-hand side of the assignment operator (=), so this is a variable declaration.\n\n\n\n\n\n\nThat’s not very exciting — it’s just printed back what you put in, more or less, right? But… note that Python prints a dictionary within those { } curly brackets, and shows colons in there. This is different to lists, and later it might help you to remember that they look different when you ask Python to print them out.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries"
+    ]
+  },
+  {
+    "objectID": "worksheets/Dictionaries.html#dictionary-retrieval-use-key-instead-of-index",
+    "href": "worksheets/Dictionaries.html#dictionary-retrieval-use-key-instead-of-index",
+    "title": "Dictionaries",
+    "section": "Dictionary retrieval: use key instead of index",
+    "text": "Dictionary retrieval: use key instead of index\nAnd here is the magic of dictionaries: you get the module you want from that dictionary by using the module code as the key. Run the following and see that you get the right value, just by saying “LS6036”… without ever needing the index.\nNote that the key goes inside square brackets just like the index in a list.\n\nprint( module_codes[ \"LS6036\" ] )",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Lists and dictionaries",
+      "Dictionaries"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_conditions.html",
+    "href": "worksheets/ifelse_conditions.html",
+    "title": "If and else conditions",
+    "section": "",
+    "text": "See below table for a list of conditions that you can use with an if statement.\nThe condition always goes between if and : and is evaluated to be True or False.",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else conditions"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_conditions.html#give-it-a-go",
+    "href": "worksheets/ifelse_conditions.html#give-it-a-go",
+    "title": "If and else conditions",
+    "section": "Give it a go:",
+    "text": "Give it a go:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "If and else conditions"
+    ]
+  },
+  {
+    "objectID": "worksheets/ifelse_fixerrors.html",
+    "href": "worksheets/ifelse_fixerrors.html",
+    "title": "Fix the errors activity",
+    "section": "",
+    "text": "Below are a set of if statements - they all have errors in. Can you fix them?\n\nFix the error 1:Fix the error 2:Fix the error 3:\n\n\n\nmy_value = 0.01 \nif my_value\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n\n  Cell In[1], line 2\n    if my_value\n               ^\nSyntaxError: expected ':'\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\nmy_value = 0.01 \nif my_value: # : was missing at the end of if statement\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n0.01 is not 0\n\n\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\nprint(\"You are too young\")\nelse: \nprint(\"You are old enough\")\n\n\n  Cell In[3], line 5\n    print(\"You are too young\")\n    ^\nIndentationError: expected an indented block after 'if' statement on line 4\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\n    print(\"You are too young\") # indentation was missing (four spaces at start of line)\nelse: \n    print(\"You are old enough\") # indentation was missing (four spaces at start of line)\n\nYou are too young\n\n\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\nif Target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[5], line 5\n      2 target_genus = \"Trypanosoma\"\n      3 my_species = \"Trypanosoma brucei\"\n----&gt; 5 if Target_genus in my_species:\n      6   print(f\"{my_species} is part of {target_genus}\")\n      7 else: \n\nNameError: name 'Target_genus' is not defined\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\n# python is case sensenitive \n# if your variable is target_genus (with no capital letters) then you always need to refer to is as target_genus. \nif target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\nTrypanosoma brucei is part of Trypanosoma",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Inputs, ifs and elses",
+      "Fix the errors activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/Adding_number_string.html",
+    "href": "worksheets/Adding_number_string.html",
+    "title": "Adding to numbers and strings",
+    "section": "",
+    "text": "We can add two numbers together, or two strings together, but in the examples so far we’ve always saved the result in a new variable.\nWhy doesn’t the below code change the variable value?\n\n# Create variable \na = 20\n# Add to variable \na + 100 \n# Print variable at the end\nprint(f\"Variable a is {a}\")\n\nVariable a is 20\n\n\nThis is because we added to our variable, but we didn’t save the result anywhere.\nSo python did the calculation. But didn’t save the result - we didn’t tell it to replace the value of a.\nIf we want to change the value of the variable, we can save the result as a. This will overwrite the previous value.\n\na = a + 100\n\nWe can also use the shorthand += to do the same thing:\n\na += 100\n\nCheck out the examples below:\n\nNumber example 1Number example 2String example 1String example 2\n\n\n\n# Create variable \na = 20\n# Add to variable \na += 100 \n# Print variable at the end\nprint(f\"Variable a is {a}\")\n\nVariable a is 120\n\n\n\n\n\n# Create variable \na = 105\n# Add to variable \na -= 23.4 \n# Print variable at the end\nprint(f\"Variable a is {a}\")\n\nVariable a is 81.6\n\n\n\n\n\n# Create variable \nstring1 = \"Hello\"\n# Add to variable \nstring1 += \" world\" \n# Print variable at the end\nprint(f\"String 1 is {string1}\")\n\nString 1 is Hello world\n\n\n\n\n\n# Create variable \nstring1 = \"29\"\n# Add to variable \nstring1 += \"100\" \n# Print variable at the end\nprint(f\"String 1 is {string1}\")\n\nString 1 is 29100",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "Adding to numbers and strings"
     ]
   },
   {
@@ -381,6 +471,13 @@
     ]
   },
   {
+    "objectID": "worksheets/while_bools.html",
+    "href": "worksheets/while_bools.html",
+    "title": "What can we use while with?",
+    "section": "",
+    "text": "Our while loops can use any expression that will give a boolean True or False, such as what we use with an if statement.\nSome of the more common while loops include:\n\nSetting a variable to True and changing it to False when a condition is met\nSetting a variable to False and changing it to True when a condition is met (using while not)\nComparing two numerical variables\n\nSee examples below:\n\nBoolean example 1Boolean example 2Boolean example 3\n\n\n\nkeep_going = True \n\nwhile keep_going:\n    user_choice = input(\"Should we keep going?\") \n    if user_choice == \"no\":\n        keep_going = False \n\n\n\n\nstop_loop = False \n\nwhile not stop_loop:\n    user_choice = input(\"Should we keep going?\") \n    if user_choice == \"no\":\n        stop_loop = True \n\n\n\n\n# Create list\nmy_list = [\"pikachu\", \"eevee\", \"psyduck\", \"mew\", \"jigglypuff\"]\n# Set initial index\ni = 0\n\nwhile i &lt; len(my_list):\n    # print pokemon\n    print(f\"Pokemon {i} is {my_list[i]}\")\n    # Add 1 to index \n    # !IMPORTANT! - if you don't do this you'll get a neverending loop\n    i += 1"
+  },
+  {
     "objectID": "worksheets/Variables.html",
     "href": "worksheets/Variables.html",
     "title": "Variables",
@@ -391,6 +488,45 @@
       "**Python introduction: basics**",
       "Python essentials",
       "Variables"
+    ]
+  },
+  {
+    "objectID": "worksheets/FizzBuzz.html",
+    "href": "worksheets/FizzBuzz.html",
+    "title": "FizzBuzz Activity",
+    "section": "",
+    "text": "This is a classic question for learning programming.\nPlease write a program that prints the numbers from 1 to 100. But: - for the multiples of three print the word ”Fizz” instead of the number - for the multiples of five print the word ”Buzz” instead of the number - for numbers that are multiples of both three and five, print the word ”FizzBuzz”.\n\n\n\n\n\n\nNoteShow output\n\n\n\n\n\nThe output should look like this:\n\n\n1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n64\nBuzz\nFizz\n67\n68\nFizz\nBuzz\n71\nFizz\n73\n74\nFizzBuzz\n76\n77\nFizz\n79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\n\n\n\n\n\n\n\n\n\n\n\nTipHint 1\n\n\n\n\n\nWhen writing this, do one step at a time and test your code:\n\nJust print all the numbers from 1 to 100\nChange the numbers divisible by 3 to “Fizz”\nChange the numbers divisible by 5 to “Buzz”\nChange the numbers divisible by 3 and 5 to “FizzBuzz”\n\nOne way of calculating if a number can be divided by 3 is using the modulus % which gives you the remainder after division. If a number is divisible by 3, when you divide by three what is the remainder?\n\n\n\n\n\n\n\n\n\nTipHint 2\n\n\n\n\n\nYou’ll need to use a range of different skills here: 1. A for loop, to go from 1 to 100 2. If/elif/else statements to determine if each number if divisible by 3 or 5 3. The maths modulus sign % or ranges with a step.\n\n\n\n\n\n\n\n\n\nTipHint 3\n\n\n\n\n\nYou need to make sure your if statements are in the right order - else you may never get a FizzBuzz.\nDrawing a flow chart can help you plan your answer!",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "for loops",
+      "FizzBuzz Activity"
+    ]
+  },
+  {
+    "objectID": "worksheets/while_practice.html",
+    "href": "worksheets/while_practice.html",
+    "title": "While loop practice",
+    "section": "",
+    "text": "Bacterial population growthDNA Base CounterPredator-Prey Simulation\n\n\nBacteria grow exponentially, and E. coli doubles every 20 minutes in optimum growth conditions.\nStart with 1 bacterium, and use a while loop to determine how many minutes it would take for the population to exceed 1 million.\n\n\n\n\n\n\nNoteExample output\n\n\n\n\n\nThis is the answer for when the population exceeds 100,000.\n\n\nBacteria reached a population of 131072 in 340 minutes\n\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\nThere are multiple ways to do this, one example answer is:\n\n# Set initial values for bacteria and minutes\nbacteria = 1\nminutes = 0\n\n# while loop for while bacteria number is less than 1 million\nwhile bacteria &lt; 1000000:\n    # Double bacteria number (bacteria = bacteria * 2)\n    bacteria *= 2\n    # Add 20 to the minutes (minutes = minutes + 20)\n    minutes += 20\n\n# Outside of while loop \n# Print final result\nprint(f\"Bacteria reached a population of {bacteria} in {minutes} minutes\")\n\n\n\n\n\n\nAsk the user to type DNA bases (A, T, G, C) one by one. Use a while loop to keep asking until the user types “STOP” Print the counts of each base.\n\n\n\n\n\n\nNoteExample output\n\n\n\n\n\nYour answer may look something like this: (if the user types in A A C T C A stop)\n\n\nPlease input a base A T C or G. If done type stop\nThe sequence you typed in was AACTCA\nThis sequence has 3 A bases\nThis sequence has 1 T bases\nThis sequence has 2 C bases\nThis sequence has 0 G bases\n\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\nThere are multiple ways to do this, one example answer is:\n\n# Set boolean to continue or stop \nkeep_going = True\n# Create empty string (or list) to add bases to\nmy_sequence = \"\"\n\nwhile keep_going:\n    # Ask user to input a base, or stop\n    base = input(\"Please input a base A T C or G. If done type stop\")\n    # Check for stop base\n    if base == \"stop\":\n        # set keep_going to False to stop the loop \n        keep_going = False \n    # else - only if base is not stop add to string\n    else: \n        # Add base to my_sequence (my_sequence = my_sequence + base)\n        my_sequence += base \n\n# Outside of whlie loop\n# Print results\nprint(f\"The sequence you typed in was {my_sequence}\")\n# Use .count() to count each base\nprint(f\"This sequence has {my_sequence.count(\"A\")} A bases\")\nprint(f\"This sequence has {my_sequence.count(\"T\")} T bases\")\nprint(f\"This sequence has {my_sequence.count(\"C\")} C bases\")\nprint(f\"This sequence has {my_sequence.count(\"G\")} G bases\")\n\n\n\n\n\n\nStart with 50 rabbits and 5 foxes. Each iteration (time step), rabbits reproduce, and foxes eat rabbits or die of hunger - you can decide how this is determined. Use a while loop until either species goes extinct.\n\n\n\n\n\n\nNoteExample output\n\n\n\n\n\nYour answer may look something like this:\n\n\nRound 1; 50 rabbits and 3 foxes\nRound 1; 45 rabbits and 3 foxes\nRound 1; 41 rabbits and 3 foxes\nRound 1; 39 rabbits and 3 foxes\nRound 1; 36 rabbits and 3 foxes\nRound 1; 36 rabbits and 3 foxes\nRound 1; 37 rabbits and 3 foxes\nRound 1; 34 rabbits and 3 foxes\nRound 1; 36 rabbits and 1 foxes\nRound 1; 34 rabbits and 1 foxes\nRound 1; 34 rabbits and 0 foxes\n\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\nThere are multiple ways to do this, one example answer is:\n\n# Use random module to decide reproduction and death rates\nimport random\n# Set initial values for rabbits, foxes and rounds\nrabbits = 50\nfoxes = 5\nrounds = 1\n\n# While loop for while both rabbits and foxes are more than 0\nwhile rabbits &gt; 0 and foxes &gt; 0:\n    # Reproduce rabbits\n    # random number of new rabbits between 0 and 2\n    new_rabbits = random.randint(0, 2)\n    # update number of rabbits (rabbits = rabbits + new_rabbits)\n    rabbits += new_rabbits\n\n    # Foxes eat rabbits\n    # Each fox can eat up to 5 rabbits\n    # If a fox doesn't eat a rabbit, it will die of hunger\n    # Use a for loop to treat each fox separately\n\n    # Set initial values for dead foxes and total rabbits eaten\n    dead_foxes = 0\n    total_rabbits_eaten = 0\n    # Use a for loop to treat each fox separately\n    for fox in range(foxes):\n        # Calculate random number of rabbits eaten between 0 and 5\n        rabbits_eaten = random.randint(0, 5)\n        # Add to total rabbits eaten \n        total_rabbits_eaten += rabbits_eaten\n        # If no rabbits eaten, fox dies\n        if rabbits_eaten &lt; 1:\n            dead_foxes +=1\n\n    # Update number of rabbits and foxes\n    rabbits -= rabbits_eaten\n    foxes -= dead_foxes\n\n    # Print round results\n    print(f\"Round {rounds}; {rabbits} rabbits and {foxes} foxes\")\n\nIn this answer, the rabbits always win. Can you write a version where the rabbits and foxes have equal chances of winning?",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "while loops",
+      "While loop practice"
+    ]
+  },
+  {
+    "objectID": "worksheets/Comments.html",
+    "href": "worksheets/Comments.html",
+    "title": "Comments",
+    "section": "",
+    "text": "One of the most important practices in programming is to use good comments.\nComments help explain what the code is doing - to another programmer, to whoever is marking your assignments, to your future self (you will forget how your own code works!).\nComments are sections of the code that are ignored by the compiler - they aren’t executed like the rest of your code. In python, you can comment by:\n\n# Starting with a '#' (this is the best way!)\n\"\"\"Wrapping text in triple quotes\"\"\"\n\nTry the below example:",
+    "crumbs": [
+      "Learn",
+      "**Python introduction: basics**",
+      "Python essentials",
+      "Comments"
     ]
   },
   {
@@ -420,16 +556,81 @@
     ]
   },
   {
-    "objectID": "worksheets/Comments.html",
-    "href": "worksheets/Comments.html",
-    "title": "Comments",
+    "objectID": "worksheets/while_loop.html",
+    "href": "worksheets/while_loop.html",
+    "title": "The while loop",
     "section": "",
-    "text": "One of the most important practices in programming is to use good comments.\nComments help explain what the code is doing - to another programmer, to whoever is marking your assignments, to your future self (you will forget how your own code works!).\nComments are sections of the code that are ignored by the compiler - they aren’t executed like the rest of your code. In python, you can comment by:\n\n# Starting with a '#' (this is the best way!)\n\"\"\"Wrapping text in triple quotes\"\"\"\n\nTry the below example:",
+    "text": "While loops are a different (and more dangerous) type of loop.\nThey are useful for if you want a piece of code to keep repeating until a condition is met and you may not know how many times that will be.\nFor example, if we had a DNA sequence for a protein, we might want to loop through each codon until we reach a stop codon.\n# List of codons \ncodons = [\"ATG\", \"CCG\", \"TAC\", \"GGT\", \"ACG\", \"TGA\", \"ATC\", \"CGC\"]\n\n# List of stop codons \nstop_codons = [\"TAA\", \"TAG\", \"TGA\"]\n\n# Set index \ni = 0 \n\n# Set while loop to keep going until stop codon is found \nwhile codons[i] not in stop_codons: \n    # Add 1 to i, to iterate to next codon \n    i += 1 \n\n# Print index of stop codon\nprint(f\"Stop codon found at index {i}\")",
     "crumbs": [
       "Learn",
-      "**Python introduction: basics**",
-      "Python essentials",
-      "Comments"
+      "**Python Logic and Loops**",
+      "while loops",
+      "The while loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/while_loop.html#while-loop-animation",
+    "href": "worksheets/while_loop.html#while-loop-animation",
+    "title": "The while loop",
+    "section": "While loop animation",
+    "text": "While loop animation\n\n\n  Play\n  Pause\n  Restart\n  idle\n\n\n\n\ncodons = [\"ATG\", \"CCG\", \"TAC\", \"GGT\", \"ACG\", \"TGA\", \"ATC\", \"CGC\"]\nstop_codons = [\"TAA\", \"TAG\", \"TGA\"]\ni = 0\n\nwhile codons[i] not in stop_codons:\n    i = i+1\n\nprint(f\"Stop codon found at index {i}\")\n\n\n\n\n  Console",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "while loops",
+      "The while loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/for_iterables.html",
+    "href": "worksheets/for_iterables.html",
+    "title": "What can we use for with?",
+    "section": "",
+    "text": "The for loop is quite clever, it looks at what the type of your variable is to figure out what to loop through.\n\nEvery item in a list\nEvery key in a dictionary (using .keys())\nEvery character in a string\nEvery number in a range\n\nHowever it can’t loop through everything, you will get an error if you use an integer or float.\nSee the examples below:\n\nList exampleDictionary exampleString exampleRange exampleInteger Error example\n\n\nLoop through every item in a list\n\n# make a list\nfruits_list = [\"apple\", \"banana\", \"orange\"]\n\n# use a for loop \nfor thingy in fruits_list:\n    print(thingy)\n\napple\nbanana\norange\n\n\n\n\n\n\n\n\nNote\n\n\n\nHere I’ve used thingy as a temporary variable - you can change this to anything you like!\nYou only need to be consistent when you then use it inside the for loop.\nSee if you can change it to something else!\n\n\n\n\nLoop through every key in a dictionary\n\n# make a list\nfruits_dict = {\n    \"apple\": \"green\", \n    \"banana\": \"yellow\", \n    \"orange\": \"orange\"\n}\n\n# use a for loop \nfor fruit in fruits_dict.keys():\n    print(f\"{fruit} is {fruits_dict[fruit]}\")\n\nfor f in fruits_dict: \n    print(f)\n\napple is green\nbanana is yellow\norange is orange\napple\nbanana\norange\n\n\n\n\nLoop through every character in a string\n\n# Make a string\nmy_string = \"Hello World!\"\n\n# use a for loop \nfor letter in my_string:\n    print(letter)\n\nH\ne\nl\nl\no\n \nW\no\nr\nl\nd\n!\n\n\n\n\nLoop through every number in a range of numbers\n\n# Define a range\nmy_range = range(10,0,-1)\n\n# use a for loop \nfor number in my_range:\n    print(number)\n\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n\n\n\n\nIntegers and floats do not work with for - python does not know what you meant to loop through! You’ll get the below TypeError:\n\nmy_integer = 7\n\n# use a for loop \nfor number in my_integer:\n    print(number)\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[5], line 4\n      1 my_integer = 7\n      3 # use a for loop \n----&gt; 4 for number in my_integer:\n      5     print(number)\n\nTypeError: 'int' object is not iterable\n\n\n\nIf you want to loop through a range of numbers, you’ll need to use range()",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "for loops",
+      "What can we use for with?"
+    ]
+  },
+  {
+    "objectID": "worksheets/forloop_practice.html",
+    "href": "worksheets/forloop_practice.html",
+    "title": "for loop practice activities",
+    "section": "",
+    "text": "Activity 1: 50 numbers in a listActivity 2: Reverse complementActivity 3: Average protein expression\n\n\nWrite a program that:\n\nFills a 50-element list with random integers from 1–10.\nPrints every element in the list\nCalculates and prints the sum of the random numbers in the list\n\nThen, adapt your program so that:\n\nIt asks the user for a number, and prints out the number of times that a particular number appears in the list.\n\n\n\n\n\n\n\nNoteExample output\n\n\n\n\n\nYour answer may look something like this:\n\n\nMy list numbers are [7, 10, 10, 9, 1, 5, 3, 5, 6, 3, 10, 7, 4, 5, 8, 9, 10, 3, 6, 7, 9, 3, 9, 6, 6, 5, 6, 2, 2, 10, 3, 2, 2, 8, 6, 2, 7, 10, 4, 1, 8, 8, 2, 2, 2, 5, 2, 6, 2, 7]\nThe sum of these numbers is 275\n\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\nThere are multiple ways to do this, one example answer is:\n\n# Import random package  \nimport random \n# Create empty list\nmy_list = [] \n# Use a 50 element for loop \nfor i in range(50):\n    # Choose a random number between 1 and 10\n    random_number = random.randint(1,10)\n    # Add the number to our list \n    my_list.append(random_number)\n\n# Print all the elements in the list \nprint(f'My list numbers are {my_list}') \n\n# Calculate the sum of all the numbers in the list \n# Initial value of 0 for the sum \nmy_sum = 0\n# Loop through every number in the list\nfor number in my_list:\n    # Add number to my_sum \n    my_sum += number \n\n# Exit the for loop to print the final number \nprint(f\"The sum of these numbers is {my_sum}\")\n\n\n\n\n\n\nLoop through the following sequence and create a new string containing the reverse complement.\n\nmy_sequence = \"ATCGCTCAGTCAGCTAGCCCTAAACGCGCGG\"\n\nYou’ll need to do two things here:\n\nReverse the sequence\nReplace each base with it’s complement (A with T, C with G)\n\n\n\n\n\n\n\nNoteExample output\n\n\n\n\n\nYour answer may look something like this:\n\n\nThe reverse complement of \nATCGCTCAGTCAGCTAGCCCTAAACGCGCGG is \nCCGCGCGTTTAGGGCTAGCTGACTGAGCGAT\n\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\nThere are multiple ways to do this, one example answer is:\n\n# Initial sequence\nmy_sequence = \"ATCGCTCAGTCAGCTAGCCCTAAACGCGCGG\"\n\n# Container for new sequence\nreverse_complement = \"\" \n\n# Make a dictionary to have the complement for every base\ncomplement_dict = {\n    \"A\":\"T\", \n    \"T\":\"A\",\n    \"C\":\"G\",\n    \"G\":\"C\"\n}\n\n# Loop through every base in the sequence\n# Using splicing [::-1] will go through the loop backwards (a step of -1) \nfor base in my_sequence[::-1]: \n    # calculate complement of base \n    comp_base = complement_dict[base]\n    # add comp_base to new sequence \n    reverse_complement += comp_base\n\n# print results \n# put each sequence on a new line with \\n so they line up\nprint(f\"The reverse complement of \\n{my_sequence} is \\n{reverse_complement}\")\n\n\n\n\n\n\nThe following dictionary contains a set of genes, and a list of expression levels for each genes from 5 samples.\n\ngenes_expression_dict = {\n    \"SHH\": [10.0, 14.2, 12.3, 9.4, 8.7],\n    \"HSP10\": [105.3, 121.0, 94.8, 144, 132],\n    \"HBB\": [52, 48.4, 23.5, 56.7, 67.8]\n}\n\nLoop through every protein in the dictionary, and for each protein print the mean, minimum and maximum expression levels.\n\n\n\n\n\n\nNoteExample output\n\n\n\n\n\nYour answer may look something like this:\n\n\nThe gene SHH has a mean expression of 10.919999999999998\nwith a minimum of 8.7 and a maximum of 14.2\nThe gene HSP10 has a mean expression of 119.42\nwith a minimum of 94.8 and a maximum of 144\nThe gene HBB has a mean expression of 49.68000000000001\nwith a minimum of 23.5 and a maximum of 67.8\n\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\nThere are multiple ways to do this, one example answer is:\n\n# import numpy library for mean function\nimport numpy as np\n# Expression dictionary\ngenes_expression_dict = {\n    \"SHH\": [10.0, 14.2, 12.3, 9.4, 8.7],\n    \"HSP10\": [105.3, 121.0, 94.8, 144, 132],\n    \"HBB\": [52, 48.4, 23.5, 56.7, 67.8]\n}\n\n# Loop through every gene in the dictionary \nfor gene in genes_expression_dict.keys():\n    # Extract the list of expression values \n    expression_values = genes_expression_dict[gene]\n    # Calculate the mean, min and max \n    mean_expression = np.mean(expression_values)\n    min_expression = min(expression_values)\n    max_expression = max(expression_values)\n\n    # print findings\n    print(f\"The gene {gene} has a mean expression of {mean_expression}\\nwith a minimum of {min_expression} and a maximum of {max_expression}\")",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "for loops",
+      "for loop practice activities"
+    ]
+  },
+  {
+    "objectID": "worksheets/whileloop_neverending.html",
+    "href": "worksheets/whileloop_neverending.html",
+    "title": "Neverending while loop",
+    "section": "",
+    "text": "While loops are dangerous - they’re very easy to get wrong!\nImagine if we accidentally put i=1 (set index to 1) instead of i+=1 (add 1 to our index) in our while loop - then the index would always stay at 1 and never change.\nWhatever your while loop condition is, you have to ensure that it changes inside the loop.\n# List of codons \ncodons = [\"ATG\", \"CCG\", \"TAC\", \"GGT\", \"ACG\", \"TGA\", \"ATC\", \"CGC\"]\n\n# List of stop codons \nstop_codons = [\"TAA\", \"TAG\", \"TGA\"]\n\n# Set index \ni = 0 \n\n# Set while loop to keep going until stop codon is found \nwhile codons[i] not in stop_codons: \n    # Bug: Instead of adding 1 to i, changing i to 1\n    i = 1 \n\n# Print index of stop codon\nprint(f\"Stop codon found at index {i}\")",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "while loops",
+      "Neverending while loop"
+    ]
+  },
+  {
+    "objectID": "worksheets/whileloop_neverending.html#neverending-while-loop-animation",
+    "href": "worksheets/whileloop_neverending.html#neverending-while-loop-animation",
+    "title": "Neverending while loop",
+    "section": "Neverending while loop animation",
+    "text": "Neverending while loop animation\n\n\n  Play\n  Pause\n  Restart\n  idle\n\n\n\n\ncodons = [\"ATG\", \"CCG\", \"TAC\", \"GGT\", \"ACG\", \"TGA\", \"ATC\", \"CGC\"]\nstop_codons = [\"TAA\", \"TAG\", \"TGA\"]\ni = 0\n\nwhile codons[i] not in stop_codons:\n    i = 1\n\nprint(f\"Stop codon found at index {i}\")\n\n\n\n\n  Console",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "while loops",
+      "Neverending while loop"
     ]
   },
   {
@@ -498,172 +699,121 @@
     ]
   },
   {
-    "objectID": "worksheets/ifelse_fixerrors.html",
-    "href": "worksheets/ifelse_fixerrors.html",
-    "title": "Fix the errors activity",
+    "objectID": "worksheets/Maths.html",
+    "href": "worksheets/Maths.html",
+    "title": "Maths",
     "section": "",
-    "text": "Below are a set of if statements - they all have errors in. Can you fix them?\n\nFix the error 1:Fix the error 2:Fix the error 3:\n\n\n\nmy_value = 0.01 \nif my_value\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n\n  Cell In[1], line 2\n    if my_value\n               ^\nSyntaxError: expected ':'\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\nmy_value = 0.01 \nif my_value: # : was missing at the end of if statement\n  print(my_value, \"is not 0\")\nelse: \n  print(my_value, \"is 0\")\n\n0.01 is not 0\n\n\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\nprint(\"You are too young\")\nelse: \nprint(\"You are old enough\")\n\n\n  Cell In[3], line 5\n    print(\"You are too young\")\n    ^\nIndentationError: expected an indented block after 'if' statement on line 4\n\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\nuser_age = 14\nage_restriction = 18\n\nif user_age &lt; age_restriction:\n    print(\"You are too young\") # indentation was missing (four spaces at start of line)\nelse: \n    print(\"You are old enough\") # indentation was missing (four spaces at start of line)\n\nYou are too young\n\n\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\nif Target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\n\n---------------------------------------------------------------------------\nNameError                                 Traceback (most recent call last)\nCell In[5], line 5\n      2 target_genus = \"Trypanosoma\"\n      3 my_species = \"Trypanosoma brucei\"\n----&gt; 5 if Target_genus in my_species:\n      6   print(f\"{my_species} is part of {target_genus}\")\n      7 else: \n\nNameError: name 'Target_genus' is not defined\n\n\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Check if species belongs to genus\ntarget_genus = \"Trypanosoma\"\nmy_species = \"Trypanosoma brucei\"\n\n# python is case sensenitive \n# if your variable is target_genus (with no capital letters) then you always need to refer to is as target_genus. \nif target_genus in my_species:\n  print(f\"{my_species} is part of {target_genus}\")\nelse: \n  print(f\"{my_species} is not part of {target_genus}\")\n\nTrypanosoma brucei is part of Trypanosoma",
+    "text": "We’ve looked at saving a numerical value (integer or float) as a variable. Next we can look at doing mathematics in python. Table 2 contains example code for different mathematical operations and how we write them.\nTry the below code, and then change the mathematical operator as in the above Table. Does the result that prints out match what you expect?",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "Fix the errors activity"
+      "Python essentials",
+      "Maths"
     ]
   },
   {
-    "objectID": "worksheets/ifelse_conditions.html",
-    "href": "worksheets/ifelse_conditions.html",
-    "title": "If and else conditions",
-    "section": "",
-    "text": "See below table for a list of conditions that you can use with an if statement.\nThe condition always goes between if and : and is evaluated to be True or False.",
+    "objectID": "worksheets/Maths.html#order-of-operations",
+    "href": "worksheets/Maths.html#order-of-operations",
+    "title": "Maths",
+    "section": "Order of operations",
+    "text": "Order of operations\nIn python, arithmetic operations always occur in the following order:\n\nExponential **\nMultiplication * or division (/ or // or % )\nAddition + or subtraction -\n\nWhere there is two operations of the same level (eg. one * and one / ) then the order depends on which comes first.\nJust like in mathematics, we can use brackets ( ) to highlight which operations should be done first.\nWhat would be the result of the following equations in python? Calculate them manually (without python) first.\n\n4 - 3 * 5 + 6\n4 - ( 3 * 5 ) + 6\n(4 - 3) * 5 + 6\n\n4 - (3 * 5 + 6)\n4 - 3.0 * 5 + 6\n4. - ( 3 * 5 ) + 6\n(4 + 2) / 5 + 6\n\n4 // (3 * 5 + 6.)\n\nNow try the above in python. You can do this using print() like in the example below. Were your predictions correct?\n\n\n\n\n\n\nNote: In Python, you can mix integers and floats in the same arithmetic expression. The type of the evaluation will be a float.\n\n\n\n\n\n\nTipSide note: Rounding errors\n\n\n\n\n\nA float is any number with a decimal point, whereas an integer is a whole number (eg. 5.0 is a float and 5 is an integer)\nIn python, there’s something a little unusual about mathematical calculations with floats…\nTry:\n\n\n\n\n\n\nDid you get what you expected? What do you think is going on here?\nConfused? This is to do with how the hardware stores numbers in binary - it isn’t a bug with the python code. You can check out more in this geeks for geeks article.",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "If and else conditions"
+      "Python essentials",
+      "Maths"
     ]
   },
   {
-    "objectID": "worksheets/ifelse_conditions.html#give-it-a-go",
-    "href": "worksheets/ifelse_conditions.html#give-it-a-go",
-    "title": "If and else conditions",
+    "objectID": "worksheets/String_methods.html",
+    "href": "worksheets/String_methods.html",
+    "title": "String methods, indexing and slicing",
+    "section": "",
+    "text": "String methodsConverting to integersString indexing and slicing\n\n\nSo far we’ve only been using strings exactly as they are - including when we compare them. But python is case senstive; so \"atg\" is not the same as \"ATG\".\nWe can use the following methods with an if statement - they will return a True or False\n\n.isupper(): check if string is upper case\n.islower(): check if string is lower case\n.isdigit(): check if string is numerical digits\n.upper(): converts string to upper case\n.lower(): converts string to lower case\n\n\n# Define a sequence\nmy_sequence = \"atg\"\n\n# Use .iflower() to determine if string is lower case\nif my_sequence.islower():\n    # if lower case, convert to upper case using .upper()\n    my_sequence = my_sequence.upper()\n\n# print final sequence\nprint(f\"My sequence {my_sequence} is upper case\")\n\nMy sequence ATG is upper case\n\n\n\n\n\n\n\n\nWarningWill this work on Sentence Case?\n\n\n\n\n\nWill this still work if we change the first line to the following?\n\nmy_sequence = \"Atg\"\n\nWhat do you think is happening? Can you rewrite the code so that this works?\n\n\n\n\n\nWe can also convert strings to integers using int() and floats using float().\n\nmy_sequence = \"15\"\n\nif my_sequence.isdigit():\n    my_sequence = float(my_sequence)\n\nprint(f\"My sequence {my_sequence} is of type {type(my_sequence)}\")\n\nMy sequence 15.0 is of type &lt;class 'float'&gt;\n\n\n\n\n\n\n\n\nNoteWhy have we used an if statement?\n\n\n\n\n\nWe didn’t need to use an if statement here - but it’s a good way of checking if the variable you want to convert to a float is infact a number.\nIf you try to convert a string that isn’t a number - e.g. \"hello\" - to a float, then you’ll get an error.\n\nmy_sequence = \"hello\"\nmy_sequence = float(my_sequence)\n\n\n---------------------------------------------------------------------------\nValueError                                Traceback (most recent call last)\nCell In[4], line 2\n      1 my_sequence = \"hello\"\n----&gt; 2 my_sequence = float(my_sequence)\n\nValueError: could not convert string to float: 'hello'\n\n\n\n\n\n\n\n\nWe can also retrieve a character from a string using an index or get a selection using string slicing - just like we can with lists!\nWe can give up to three values when retrieving information from a string:\nList_name [ start : stop : step ]\n\nstart: the index to start with (e.g. 2 for the third item)\nstop: the index to stop at (the stop item will not be included)\nstep: how gap between items (e.g. 2 would mean every second item from the list)\n\n\nmy_sequence = \"Hello World!\"\n\n# Printing the 2nd and 11th characters from the string using the index \nprint(f\"my_sequence[1] is {my_sequence[1]}\")\nprint(f\"my_sequence[10] is {my_sequence[10]}\")\n\n# Printing every third item from the 2nd to the 11th items in the list\nprint(f\"my_sequence [ 1 : 10 : 3 ] is {my_sequence [ 1 : 10 : 3 ]}\" )\n\nmy_sequence[1] is e\nmy_sequence[10] is d\nmy_sequence [ 1 : 10 : 3 ] is eoo",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "Logic",
+      "String methods, indexing and slicing"
+    ]
+  },
+  {
+    "objectID": "worksheets/Range.html",
+    "href": "worksheets/Range.html",
+    "title": "Ranges",
+    "section": "",
+    "text": "Python has a useful built-in range() function for generating ranges of values.\nIt’s useful for generating ranges for definite iteration (that’s where you know when you start your loop how many iterations you’re going to do). In Python that means the for loop.\nThe range() function can take one, two, or three arguments:\nYou choose whichever version best fits the problem you’re solving. If you have a choice, use the simplest one.\nRun the code below. Can you see why these three all do the same thing?\nPython’s ranges are lazy (it’s a technical term): it means that Python is not printing out the values of those ranges because it knows you haven’t actually asked to look at any of them. It knows the range but won’t bother actually enumerating the values until it really needs to. This is helpful when you have big numbers; it can result in more efficient programs that don’t require so much memory.\nYou can print the numbers out using a for loop:",
+    "crumbs": [
+      "Learn",
+      "**Python Logic and Loops**",
+      "for loops",
+      "Ranges"
+    ]
+  },
+  {
+    "objectID": "worksheets/Range.html#give-it-a-go",
+    "href": "worksheets/Range.html#give-it-a-go",
+    "title": "Ranges",
     "section": "Give it a go:",
-    "text": "Give it a go:",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Inputs, ifs and elses",
-      "If and else conditions"
-    ]
-  },
-  {
-    "objectID": "worksheets/Dictionaries.html",
-    "href": "worksheets/Dictionaries.html",
-    "title": "Dictionaries",
-    "section": "",
-    "text": "The basic concept of a dictionary is a key-value pair. That means you have a value (like the definition “a large non-venomous snake that kills prey by constriction”) and a key you might use to look it up (like “python”).\nThe dictionary you know as a book is an example of lots of key-value pairs.\nPython’s dictionaries are similar to that, so it’s a useful metaphor (although there are some differences).\nThe main point is that you get the value of an item (the definition) by using “python” as the key for finding it.\nThis is different from lists where you found a the value of an item by its position in the list. In a dictionary (book), you really don’t care about the page number: all you care about is that you have the definition for the key. That is, you want the value (definition) for the key (word) and once you’ve got it it doesn’t matter where in the dictionary you found it (provided you found it).",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Dictionaries"
-    ]
-  },
-  {
-    "objectID": "worksheets/Dictionaries.html#dictionaries-verses-lists",
-    "href": "worksheets/Dictionaries.html#dictionaries-verses-lists",
-    "title": "Dictionaries",
-    "section": "Dictionaries verses lists",
-    "text": "Dictionaries verses lists\n\nDictionaries uses curly brackets {} where lists use square brackets []\n\nIt might seem like a small distinction, but it’s very important! If you use curly brackets { }, you’re telling the Python interpreter that you are declaring a dictionary (just like square brackets indicated a list). But that also means Python expects a name-value pair for each entry… and that’s done with a colon.\nFor example:\nRun this and compare it with wht you would expect if you just printed out a list. Note how _buildings is the name of the variable that is the dictionary; you know that because it’s on the left-hand side of the assignment operator (=), so this is a variable declaration.\n\n\n\n\n\n\nThat’s not very exciting — it’s just printed back what you put in, more or less, right? But… note that Python prints a dictionary within those { } curly brackets, and shows colons in there. This is different to lists, and later it might help you to remember that they look different when you ask Python to print them out.",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Dictionaries"
-    ]
-  },
-  {
-    "objectID": "worksheets/Dictionaries.html#dictionary-retrieval-use-key-instead-of-index",
-    "href": "worksheets/Dictionaries.html#dictionary-retrieval-use-key-instead-of-index",
-    "title": "Dictionaries",
-    "section": "Dictionary retrieval: use key instead of index",
-    "text": "Dictionary retrieval: use key instead of index\nAnd here is the magic of dictionaries: you get the module you want from that dictionary by using the module code as the key. Run the following and see that you get the right value, just by saying “LS6036”… without ever needing the index.\nNote that the key goes inside square brackets just like the index in a list.\n\nprint( module_codes[ \"LS6036\" ] )",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Dictionaries"
-    ]
-  },
-  {
-    "objectID": "worksheets/forloops.html",
-    "href": "worksheets/forloops.html",
-    "title": "The for loop",
-    "section": "",
-    "text": "One of the benefits of programming is automation. For example, imagine we have a list of DNA sequences, and we want to see which ones contain a start codon “ATG”. If we had 10 sequences we could manually search for them - but it would be a lot harder if we had 10,000 sequences!\nWe can use a for loop to test every item in our list for if it contains “ATG”.",
+    "text": "Give it a go:\nWrite a program that asks for an integer n and, using range(), prints the following:\n\nthe sum of all integer from 1 to n\nthe sum of all even integers from 1 to n\nthe sum of all multiples of 3 from 1 to n\n\nHint: use a different range() for each one of those.\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Example user int of 5, try using input() function\nuser_int = 5\n\n# sum of all integers from 1 to n\nmy_sum_1_n = 0\nfor i in range(1, user_int+1, 1):\n  my_sum_1_n = my_sum_1_n + i\n# exit loop to print final result\nprint(f\"Sum of integers from 1 to n is {my_sum_1_n}\")\n\n# sum of all even integers from 1 to n\nmy_sum_2_n = 0\nfor i in range(2, user_int+1, 2):\n  my_sum_2_n = my_sum_2_n + i\nprint(f\"Sum of even integers from 1 to n is {my_sum_2_n}\")\n\n# sum of all multiples of 3 from 1 to n\nmy_sum_3_n = 0\nfor i in range(3, user_int+1, 3):\n  my_sum_3_n = my_sum_3_n + i\nprint(f\"Sum of multiples of 3 from 1 to n is {my_sum_3_n}\")\n\nSum of integers from 1 to n is 15\nSum of even integers from 1 to n is 6\nSum of multiples of 3 from 1 to n is 3",
     "crumbs": [
       "Learn",
       "**Python Logic and Loops**",
-      "Loops",
-      "The for loop"
+      "for loops",
+      "Ranges"
     ]
   },
   {
-    "objectID": "worksheets/forloops.html#python-code",
-    "href": "worksheets/forloops.html#python-code",
-    "title": "The for loop",
-    "section": "Python code",
-    "text": "Python code\n\n# Put sequences in a list\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\n# loop through every sequence\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\nThe way this is working is by using a temporary variable dna. We then go through every item in the list Sequences, and replace this temporary variable with each item.\nOnce we reach the end of the loop (when there is no more indentation), the code repeats with the next item in the list.",
+    "objectID": "worksheets/UserInput_DataTypes.html",
+    "href": "worksheets/UserInput_DataTypes.html",
+    "title": "Input data types",
+    "section": "",
+    "text": "The returned result of input() will always be a string…\nTry the below example - it should give you an error!\n# Calculate users age in 10 years\nuser_age = input(\"What is your age? \")\nfuture_age = user_age + 10\nprint(\"In ten years you will be \", future_age)\nYou should get the error:\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[2], line 1\n----&gt; 1 future_age = user_age + 10\n\nTypeError: can only concatenate str (not \"int\") to str\nThis is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the input() function as a string.\nTo change a string to a numerical value, so that we can do things like addition, we need to use the int() or float() functions.\nExamples of different functions to use data types is found below:\n# Change from a string to an integer using str()\nmy_string = \"10\"\nmy_int = int(my_string)\nprint (my_int, \"is of type\", type ( my_int ))\n\n# Change from a string to a floating point number using float()\nmy_string = \"10.5\"\nmy_float = float(my_string)\nprint (my_float, \"is of type\", type ( my_float ))\n\n# Change from an integer to a string using str()\nmy_int = 10\nmy_string = str(my_int)\nprint (my_string, \"is of type\", type ( my_string ))"
+  },
+  {
+    "objectID": "worksheets/UserInput_DataTypes.html#give-it-a-go",
+    "href": "worksheets/UserInput_DataTypes.html#give-it-a-go",
+    "title": "Input data types",
+    "section": "Give it a go:",
+    "text": "Give it a go:\nWrite a python program which:\n\nAsks the user which year they were born\nCalculates how old they will be in the year 3000\nPrints this information back to the user\n\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Get user birth year using input()\nuser_birth_year = input(\"What year were you born?\")\n\n# Convert birth year to integer\nuser_birth_year = int(user_birth_year)\n\n# Calculate age in the Year 3000\nuser_year_3000_age = 3000 - user_birth_year \n\n# Print result\nprint(\"In the year 3000 you will be: \", user_year_3000_age)"
+  },
+  {
+    "objectID": "worksheets/Logic.html",
+    "href": "worksheets/Logic.html",
+    "title": "Logic",
+    "section": "",
+    "text": "There are three logical operators we can use with booleans:\nLet’s test it on the example - do you buy ice cream if it’s sunny and (or) if you’re hungry?\nWhat will the below code give you?",
     "crumbs": [
       "Learn",
       "**Python Logic and Loops**",
-      "Loops",
-      "The for loop"
+      "Logic",
+      "Logic"
     ]
   },
   {
-    "objectID": "worksheets/forloops.html#animation-of-the-for-loop",
-    "href": "worksheets/forloops.html#animation-of-the-for-loop",
-    "title": "The for loop",
-    "section": "Animation of the for loop",
-    "text": "Animation of the for loop\n\n\n  Play\n  Pause\n  Restart\n  idle\n\n\n\n\nSequences = [\n  \"AAGATGGGCCAT\", \n  \"GGGCTATGCAC\", \n  \"TTTTACCGTAATAG\"\n]\n\nfor dna in Sequences:\n    if \"ATG\" in dna:\n        print(f\"{dna} contains a start codon\")\n    else:\n        print(f\"{dna} does not contain a start codon\")\n\n\n\n\n  Output\n  \n\n\n\n\n\nAnimation generated by ChatGPT",
+    "objectID": "worksheets/Logic.html#be-careful---sneaky-errors",
+    "href": "worksheets/Logic.html#be-careful---sneaky-errors",
+    "title": "Logic",
+    "section": "Be careful - sneaky errors!",
+    "text": "Be careful - sneaky errors!\nDoes this print out what you expect?\n\n# Testing if letters \"z\" and \"f\" in string\nmy_string = \"find the One Piece\" \n\nif \"z\" and \"f\" in my_string: \n  print(f\"both z and f are in string {my_string}\")\nelse:\n  print(f\"z and f are not both in string {my_string}\")\n\nboth z and f are in string find the One Piece\n\n\n\n\n\n\n\n\nTipShow explanation\n\n\n\n\n\nThe issue is with if \"z\" and - this is True if \"z\" is a non empty string!\nTo test whether both z and f are in the string, you need to type it out explicitly\nif \"z\" in my_string (search for “z” in my_string) and if \"f\" in my_string (search for “f” in my_string)\n\nif \"z\" in my_string and \"f\" in my_string: \n  print(f\"both z and f are in string {my_string}\")\nelse:\n  print(f\"z and f are not both in string {my_string}\")",
     "crumbs": [
       "Learn",
       "**Python Logic and Loops**",
-      "Loops",
-      "The for loop"
+      "Logic",
+      "Logic"
     ]
   },
   {
-    "objectID": "worksheets/Dictionaries_II.html",
-    "href": "worksheets/Dictionaries_II.html",
-    "title": "Dictionaries II",
+    "objectID": "worksheets/List_index.html",
+    "href": "worksheets/List_index.html",
+    "title": "List index",
     "section": "",
-    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\n# Create an empty dictionary\nmy_elements = {} \n\n# Add elements to the dictionary \n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# print the final dictionary\nprint(my_elements)\n\n{'H': 'Hydrogen', 'He': 'Helium', 'O': 'Oxygen', 'C': 'Carbon'}\n\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
+    "text": "You can extract items from a list using the index - the numerical position of the item in the list. As lists have a defined order, you can extract, for example, the third item in the list.\nTry below, does this give you the result you’re expecting?\n\n\n\n\n\n\nPython starts counting at 0, so index 3 is the number ‘four’ in the above example.\nThis means the indexes for the above number are:\nnumbers[0] = the first number = ‘one’\nnumbers[1] = the second number = ‘two’\nnumbers[2] = the third number = ‘three’\nnumbers[3] = the forth number = ‘four’\nnumbers[4] = the fifth number = ‘five’\nnumbers[5] = out of range = IndexError\nOutput: \"The third number is four\"\n\n\n\nVisual representation of the list index",
     "crumbs": [
       "Learn",
       "**Python introduction: basics**",
       "Lists and dictionaries",
-      "Dictionaries II"
-    ]
-  },
-  {
-    "objectID": "worksheets/Dictionaries_II.html#adding-to-a-dictionary",
-    "href": "worksheets/Dictionaries_II.html#adding-to-a-dictionary",
-    "title": "Dictionaries II",
-    "section": "",
-    "text": "It’s simple to add a new item to a dictionary. You used .append() to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: dictionary_name[key] = value\nHere’s a program that adds some chemicals and then invites you to add another three:\n\n# Create an empty dictionary\nmy_elements = {} \n\n# Add elements to the dictionary \n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\n# print the final dictionary\nprint(my_elements)\n\n{'H': 'Hydrogen', 'He': 'Helium', 'O': 'Oxygen', 'C': 'Carbon'}\n\n\nCan you use the input() function to get the user to input a chemical symbol and the corresponding name, and add that to the dictionary?\n\n\n\n\n\n\nTipShow answer\n\n\n\n\n\n\n# Invite the user to enter a key value pair\nsymbol = input(\"Enter a chemical symbol: \")\nname = input(f\"And the name for {symbol}: \")\nmy_elements[symbol] = name",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Dictionaries II"
-    ]
-  },
-  {
-    "objectID": "worksheets/Dictionaries_II.html#dictionary-keys",
-    "href": "worksheets/Dictionaries_II.html#dictionary-keys",
-    "title": "Dictionaries II",
-    "section": "Dictionary keys",
-    "text": "Dictionary keys\nYou can use the function .keys() to get a list of all the keys in your dictionary. You could also use .values() to get a list of all the values. Which one do you think is more useful? When would you use them?\n\n# Create a dictionary of elements\nmy_elements = {  \n    # each key-value pair is separated by a comma\n    \"H\"  : \"Hydrogen\",\n    \"He\" : \"Helium\",\n    \"O\"  : \"Oxygen\",\n    \"C\"  : \"Carbon\"\n}\n\n# print the keys\nprint(f\"Dictionary keys are {my_elements.keys()}\")\nprint(f\"Dictionary values are {my_elements.values()}\")\n\nDictionary keys are dict_keys(['H', 'He', 'O', 'C'])\nDictionary values are dict_values(['Hydrogen', 'Helium', 'Oxygen', 'Carbon'])\n\n\nCould you use an if statement to see if a user input chemical symbol is in the dictionary?",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Dictionaries II"
-    ]
-  },
-  {
-    "objectID": "worksheets/Dictionaries_II.html#dictionary-errors",
-    "href": "worksheets/Dictionaries_II.html#dictionary-errors",
-    "title": "Dictionaries II",
-    "section": "Dictionary errors",
-    "text": "Dictionary errors\nIn the below example we ask for a key that isn’t in the dictionary - what type of error do we get?\n\nmy_elements = {}  # this is an empty dictionary... \n\n# ...so let's add some key-value pairs\n\nmy_elements[\"H\"]  = \"Hydrogen\"\nmy_elements[\"He\"] = \"Helium\"\nmy_elements[\"O\"]  = \"Oxygen\"\nmy_elements[\"C\"]  = \"Carbon\"\n\nprint(my_elements[\"N\"])\n\n\n---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nCell In[3], line 10\n      7 my_elements[\"O\"]  = \"Oxygen\"\n      8 my_elements[\"C\"]  = \"Carbon\"\n---&gt; 10 print(my_elements[\"N\"])\n\nKeyError: 'N'\n\n\n\nError messages are supposed to be helpful - so it’s good to make a note of what types of errors you get. Next time you get a KeyError you’ll know the issue is with your dictionary.",
-    "crumbs": [
-      "Learn",
-      "**Python introduction: basics**",
-      "Lists and dictionaries",
-      "Dictionaries II"
+      "List index"
     ]
   },
   {

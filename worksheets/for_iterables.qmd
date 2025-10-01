@@ -1,0 +1,98 @@
+# What can we use for with?
+
+The for loop is quite clever, it looks at what the `type` of your variable is to figure out what to loop through. 
+
+-  Every item in a list 
+-  Every key in a dictionary (using `.keys()`)
+-  Every character in a string 
+-  Every number in a range 
+
+However it can't loop through everything, you will get an error if you use an integer or float. 
+
+See the examples below: 
+
+::: {.panel-tabset}
+
+## List example 
+
+Loop through every item in a list
+
+```{python}
+# make a list
+fruits_list = ["apple", "banana", "orange"]
+
+# use a for loop 
+for thingy in fruits_list:
+    print(thingy)
+```
+
+::: {.callout-note}
+Here I've used `thingy` as a temporary variable - you can change this to anything you like! 
+
+You only need to be **consistent** when you then use it inside the for loop. 
+
+See if you can change it to something else!
+:::
+
+## Dictionary example 
+
+Loop through every key in a dictionary
+
+```{python}
+# make a list
+fruits_dict = {
+    "apple": "green", 
+    "banana": "yellow", 
+    "orange": "orange"
+}
+
+# use a for loop 
+for fruit in fruits_dict.keys():
+    print(f"{fruit} is {fruits_dict[fruit]}")
+
+for f in fruits_dict: 
+    print(f)
+```
+
+## String example
+
+Loop through every character in a string
+
+```{python}
+# Make a string
+my_string = "Hello World!"
+
+# use a for loop 
+for letter in my_string:
+    print(letter)
+```
+
+## Range example
+
+Loop through every number in a range of numbers
+
+```{python}
+# Define a range
+my_range = range(10,0,-1)
+
+# use a for loop 
+for number in my_range:
+    print(number)
+```
+
+## Integer Error example
+
+Integers and floats do not work with `for` - python does not know what you meant to loop through! You'll get the below `TypeError`:
+
+```{python}
+#| error: true
+my_integer = 7
+
+# use a for loop 
+for number in my_integer:
+    print(number)
+```
+
+If you want to loop through a range of numbers, you'll need to use `range()`
+
+:::

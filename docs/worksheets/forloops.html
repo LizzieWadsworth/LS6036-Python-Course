@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../worksheets/Range.html" rel="next">
-<link href="../worksheets/String_methods.html" rel="prev">
+<link href="../worksheets/random.html" rel="prev">
 <link href="..//Logo/LS6036_face.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -558,12 +558,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">String methods, indexing and slicing</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Adding_number_string.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Adding to numbers and strings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/random.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The random package</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Loops</span></a>
+ <span class="menu-text">for loops</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -579,6 +591,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../worksheets/Range.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ranges</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/for_iterables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What can we use for with?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/forloop_practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">for loop practice activities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/FizzBuzz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FizzBuzz Activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">while loops</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/while_loop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The while loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/whileloop_neverending.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neverending while loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/while_practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">While loop practice</span></a>
   </div>
 </li>
       </ul>
@@ -620,9 +679,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>One of the benefits of programming is <em>automation</em>. For example, imagine we have a list of DNA sequences, and we want to see which ones contain a start codon “ATG”. If we had 10 sequences we could manually search for them - but it would be a lot harder if we had 10,000 sequences!</p>
 <p>We can use a <strong>for</strong> loop to test every item in our list for if it contains “ATG”.</p>
-<section id="python-code" class="level2">
-<h2 class="anchored" data-anchor-id="python-code">Python code</h2>
-<div id="4b637044" class="cell" data-execution_count="1">
+<div id="3f7847d5" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Put sequences in a list</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Sequences <span class="op">=</span> [</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"AAGATGGGCCAT"</span>, </span>
@@ -639,7 +696,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The way this is working is by using a <em>temporary variable</em> <code>dna</code>. We then go through every item in the list <code>Sequences</code>, and replace this temporary variable with each item.</p>
 <p>Once we reach the end of the loop (when there is no more <em>indentation</em>), the code repeats with the next item in the list.</p>
-</section>
 <section id="animation-of-the-for-loop" class="level2">
 <h2 class="anchored" data-anchor-id="animation-of-the-for-loop">Animation of the for loop</h2>
 <!-- Controls -->
@@ -1313,8 +1369,8 @@ window._ojs.runtime.interpretFromScriptTags();
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../worksheets/String_methods.html" class="pagination-link" aria-label="String methods, indexing and slicing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">String methods, indexing and slicing</span>
+      <a href="../worksheets/random.html" class="pagination-link" aria-label="The random package">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The random package</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

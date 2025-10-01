@@ -1,0 +1,226 @@
+# for loop practice activities
+
+::: {.panel-tabset}
+
+## Activity 1: 50 numbers in a list
+
+Write a program that:
+
+1.  Fills a 50-element list with random integers from 1–10.
+2.  Prints every element in the list 
+3.  Calculates and prints the sum of the random numbers in the list
+
+Then, adapt your program so that:
+
+1.  It asks the user for a number, and prints out the number of times that a particular number appears in the list. 
+
+::: { .callout-note collapse="true" title="Example output"}
+Your answer may look something like this: 
+```{python}
+#| echo: false
+# Import random package  
+import random 
+# Create empty list
+my_list = [] 
+# Use a 50 element for loop 
+for i in range(50):
+    # Choose a random number between 1 and 10
+    random_number = random.randint(1,10)
+    # Add the number to our list 
+    my_list.append(random_number)
+
+# Print all the elements in the list 
+print(f'My list numbers are {my_list}') 
+
+# Calculate the sum of all the numbers in the list 
+# Initial value of 0 for the sum 
+my_sum = 0
+# Loop through every number in the list
+for number in my_list:
+    # Add number to my_sum 
+    my_sum += number 
+
+# Exit the for loop to print the final number 
+print(f"The sum of these numbers is {my_sum}")
+```
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+There are multiple ways to do this, one example answer is: 
+```{python}
+#| eval: false
+# Import random package  
+import random 
+# Create empty list
+my_list = [] 
+# Use a 50 element for loop 
+for i in range(50):
+    # Choose a random number between 1 and 10
+    random_number = random.randint(1,10)
+    # Add the number to our list 
+    my_list.append(random_number)
+
+# Print all the elements in the list 
+print(f'My list numbers are {my_list}') 
+
+# Calculate the sum of all the numbers in the list 
+# Initial value of 0 for the sum 
+my_sum = 0
+# Loop through every number in the list
+for number in my_list:
+    # Add number to my_sum 
+    my_sum += number 
+
+# Exit the for loop to print the final number 
+print(f"The sum of these numbers is {my_sum}")
+```
+:::
+
+## Activity 2: Reverse complement
+
+Loop through the following sequence and create a new string containing the **reverse complement**. 
+
+```{python}
+my_sequence = "ATCGCTCAGTCAGCTAGCCCTAAACGCGCGG"
+```
+
+You'll need to do two things here: 
+
+1.  Reverse the sequence 
+2.  Replace each base with it's complement (A with T, C with G)
+
+::: { .callout-note collapse="true" title="Example output"}
+Your answer may look something like this: 
+```{python}
+#| echo: false
+# Initial sequence
+my_sequence = "ATCGCTCAGTCAGCTAGCCCTAAACGCGCGG"
+
+# Container for new sequence
+reverse_complement = "" 
+
+# Make a dictionary to have the complement for every base
+complement_dict = {
+    "A":"T", 
+    "T":"A",
+    "C":"G",
+    "G":"C"
+}
+
+# Loop through every base in the sequence
+# Using splicing [::-1] will go through the loop backwards (a step of -1) 
+for base in my_sequence[::-1]: 
+    # calculate complement of base 
+    comp_base = complement_dict[base]
+    # add comp_base to new sequence 
+    reverse_complement += comp_base
+
+# print results 
+# put each sequence on a new line with \n so they line up
+print(f"The reverse complement of \n{my_sequence} is \n{reverse_complement}")
+```
+::: 
+
+::: { .callout-tip collapse="true" title="Show answer"}
+There are multiple ways to do this, one example answer is: 
+```{python}
+#| eval: false
+# Initial sequence
+my_sequence = "ATCGCTCAGTCAGCTAGCCCTAAACGCGCGG"
+
+# Container for new sequence
+reverse_complement = "" 
+
+# Make a dictionary to have the complement for every base
+complement_dict = {
+    "A":"T", 
+    "T":"A",
+    "C":"G",
+    "G":"C"
+}
+
+# Loop through every base in the sequence
+# Using splicing [::-1] will go through the loop backwards (a step of -1) 
+for base in my_sequence[::-1]: 
+    # calculate complement of base 
+    comp_base = complement_dict[base]
+    # add comp_base to new sequence 
+    reverse_complement += comp_base
+
+# print results 
+# put each sequence on a new line with \n so they line up
+print(f"The reverse complement of \n{my_sequence} is \n{reverse_complement}")
+```
+:::
+
+## Activity 3: Average protein expression 
+
+The following dictionary contains a set of genes, and a list of expression levels for each genes from 5 samples. 
+
+```{python}
+genes_expression_dict = {
+    "SHH": [10.0, 14.2, 12.3, 9.4, 8.7],
+    "HSP10": [105.3, 121.0, 94.8, 144, 132],
+    "HBB": [52, 48.4, 23.5, 56.7, 67.8]
+}
+```
+
+Loop through every protein in the dictionary, and for each protein print the mean, minimum and maximum expression levels. 
+
+
+::: { .callout-note collapse="true" title="Example output"}
+Your answer may look something like this: 
+```{python}
+#| echo: false
+# import numpy library for mean function
+import numpy as np
+# Expression dictionary
+genes_expression_dict = {
+    "SHH": [10.0, 14.2, 12.3, 9.4, 8.7],
+    "HSP10": [105.3, 121.0, 94.8, 144, 132],
+    "HBB": [52, 48.4, 23.5, 56.7, 67.8]
+}
+
+# Loop through every gene in the dictionary 
+for gene in genes_expression_dict.keys():
+    # Extract the list of expression values 
+    expression_values = genes_expression_dict[gene]
+    # Calculate the mean, min and max 
+    mean_expression = np.mean(expression_values)
+    min_expression = min(expression_values)
+    max_expression = max(expression_values)
+
+    # print findings
+    print(f"The gene {gene} has a mean expression of {mean_expression}\nwith a minimum of {min_expression} and a maximum of {max_expression}")
+```
+
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+There are multiple ways to do this, one example answer is: 
+```{python}
+#| eval: false
+# import numpy library for mean function
+import numpy as np
+# Expression dictionary
+genes_expression_dict = {
+    "SHH": [10.0, 14.2, 12.3, 9.4, 8.7],
+    "HSP10": [105.3, 121.0, 94.8, 144, 132],
+    "HBB": [52, 48.4, 23.5, 56.7, 67.8]
+}
+
+# Loop through every gene in the dictionary 
+for gene in genes_expression_dict.keys():
+    # Extract the list of expression values 
+    expression_values = genes_expression_dict[gene]
+    # Calculate the mean, min and max 
+    mean_expression = np.mean(expression_values)
+    min_expression = min(expression_values)
+    max_expression = max(expression_values)
+
+    # print findings
+    print(f"The gene {gene} has a mean expression of {mean_expression}\nwith a minimum of {min_expression} and a maximum of {max_expression}")
+```
+:::
+
+:::

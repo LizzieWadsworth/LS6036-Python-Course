@@ -59,11 +59,23 @@ website:
             - section: "Logic"
               contents: 
                 - href: worksheets/Logic.qmd
-                - href: worksheets/String_methods.qmd 
-            - section: "Loops"
+                - href: worksheets/String_methods.qmd
+                - href: worksheets/Adding_number_string.qmd 
+                - href: worksheets/random.qmd
+            - section: "for loops"
               contents:
                  - href: worksheets/forloops.qmd
                  - href: worksheets/Range.qmd
+                 - href: worksheets/for_iterables.qmd
+                 - href: worksheets/forloop_practice.qmd
+                 - href: worksheets/FizzBuzz.qmd
+            - section: "while loops"
+              contents:
+                 - href: worksheets/while_loop.qmd
+                 - href: worksheets/whileloop_neverending.qmd
+                 - href: worksheets/while_practice.qmd
+
+
   favicon: /Logo/LS6036_face.png
     
 
