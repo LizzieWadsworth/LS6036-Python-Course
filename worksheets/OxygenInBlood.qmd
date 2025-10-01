@@ -36,11 +36,15 @@ print(Bound_oxygen)
 
 ::: { .callout-tip collapse="true" title="Show answer"}
 ```{python}
+# Add in starting values 
 Hb_concentration = 15
-Hb_saturation = 96
+Hb_saturation = 96 / 100 # divide by 100 as it's a percent (per one hundred)
 Max_oxygen_per_Hb = 1.34 
 
+# Calculate bound oxygen by multiplying the three values 
 Bound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb
+
+# print the result
 print(Bound_oxygen)
 ```
 :::
@@ -70,9 +74,11 @@ print(Dissolved_oxygen)
 
 ::: { .callout-tip collapse="true" title="Show answer"}
 ```{python}
+# Add in values for arterial tension and solubility coefficient
 arterial_tension = 89
 solubility_coefficient = 0.0031
 
+# Calculate by multiplying the two values
 Dissolved_oxygen = arterial_tension * solubility_coefficient
 print(Dissolved_oxygen)
 ```
@@ -84,19 +90,24 @@ Now to calculate the total oxygen, all you need to do is combine the two and add
 
 ::: { .callout-tip collapse="true" title="Show answer"}
 ```{python}
+# Add in starting values 
 Hb_concentration = 15
-Hb_saturation = 96
+Hb_saturation = 96 / 100 # divide by 100 as it's a percent (per one hundred)
 Max_oxygen_per_Hb = 1.34 
 
+# Calculate bound oxygen by multiplying the three values 
 Bound_oxygen = Hb_concentration * Hb_saturation * Max_oxygen_per_Hb
 print(Bound_oxygen)
 
+# Add in values for arterial tension and solubility coefficient
 arterial_tension = 89
 solubility_coefficient = 0.0031
 
+# Calculate by multiplying the two values
 Dissolved_oxygen = arterial_tension * solubility_coefficient
 print(Dissolved_oxygen)
 
+# Calculate total oxygen by adding together bound and dissolved oxygen
 Total_oxygen = Bound_oxygen + Dissolved_oxygen 
 print(Total_oxygen)
 ```

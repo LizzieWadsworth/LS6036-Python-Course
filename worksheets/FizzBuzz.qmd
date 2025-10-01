@@ -40,9 +40,11 @@ _If a number is divisible by 3, when you divide by three what is the remainder?_
 
 ::: { .callout-tip collapse="true" title="Hint 2"}
 You'll need to use a range of different skills here:
+
 1. A for loop, to go from 1 to 100 
 2. If/elif/else statements to determine if each number if divisible by 3 or 5 
 3. The maths modulus sign `%` or ranges with a step. 
+
 :::
 
 ::: { .callout-tip collapse="true" title="Hint 3"}
