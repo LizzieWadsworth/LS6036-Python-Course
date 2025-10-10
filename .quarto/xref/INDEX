@@ -119,5 +119,26 @@
   },
   "worksheets/while_bools.qmd": {
     "while_bools.html": "f96f2393"
+  },
+  "worksheets/matplotlib_intro.qmd": {
+    "matplotlib_intro.html": "29774fa6"
+  },
+  "worksheets/matplotlib_colors.qmd": {
+    "matplotlib_colors.html": "6850e93f"
+  },
+  "worksheets/matplotlib_linestyle.qmd": {
+    "matplotlib_linestyle.html": "4212d73f"
+  },
+  "worksheets/matplotlib_scatter.qmd": {
+    "matplotlib_scatter.html": "d643c49c"
+  },
+  "worksheets/matplotlib_titles.qmd": {
+    "matplotlib_titles.html": "9446f16a"
+  },
+  "worksheets/matplotlib_legend.qmd": {
+    "matplotlib_legend.html": "62dbe692"
+  },
+  "worksheets/matplotlib_practice.qmd": {
+    "matplotlib_practice.html": "815f02b6"
   }
 }

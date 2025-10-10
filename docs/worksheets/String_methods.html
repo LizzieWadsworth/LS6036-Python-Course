@@ -443,6 +443,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../worksheets/UserInput_DataTypes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Input data types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../worksheets/ifelse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">If and else</span></a>
   </div>
@@ -690,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>.upper()</code>: converts string to upper case</li>
 <li><code>.lower()</code>: converts string to lower case</li>
 </ul>
-<div id="7e9822ec" class="cell" data-execution_count="1">
+<div id="8765555f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a sequence</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>my_sequence <span class="op">=</span> <span class="st">"atg"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -718,7 +724,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Will this still work if we change the first line to the following?</p>
-<div id="4786c8b2" class="cell" data-execution_count="2">
+<div id="221b9bc8" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_sequence <span class="op">=</span> <span class="st">"Atg"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>What do you think is happening? Can you rewrite the code so that this works?</p>
@@ -728,7 +734,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>We can also convert strings to integers using <code>int()</code> and floats using <code>float()</code>.</p>
-<div id="b3e3e53b" class="cell" data-execution_count="3">
+<div id="40997ea3" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_sequence <span class="op">=</span> <span class="st">"15"</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_sequence.isdigit():</span>
@@ -753,7 +759,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <p>We didn’t need to use an if statement here - but it’s a good way of checking if the variable you want to convert to a float is infact a number.</p>
 <p>If you try to convert a string that isn’t a number - e.g.&nbsp;<code>"hello"</code> - to a float, then you’ll get an error.</p>
-<div id="32c2587e" class="cell" data-execution_count="4">
+<div id="b50f43ae" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_sequence <span class="op">=</span> <span class="st">"hello"</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>my_sequence <span class="op">=</span> <span class="bu">float</span>(my_sequence)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
@@ -781,7 +787,7 @@ Cell <span class="ansi-green-fg">In[4], line 2</span>
 <li><strong>stop</strong>: the index to stop at (the stop item will <em>not</em> be included)</li>
 <li><strong>step</strong>: how gap between items (e.g.&nbsp;2 would mean every <em>second</em> item from the list)</li>
 </ul>
-<div id="37875c16" class="cell" data-execution_count="5">
+<div id="6075f844" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_sequence <span class="op">=</span> <span class="st">"Hello World!"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Printing the 2nd and 11th characters from the string using the index </span></span>

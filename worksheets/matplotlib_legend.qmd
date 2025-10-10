@@ -1,0 +1,32 @@
+# Matplotlib legends
+
+If we are plotting multiple data points, we can create a legend. This involves two steps: 
+
+- In your call to a plotting function add a label using `label = ""`
+- Add the line `plt.legend()` to the end 
+
+```{python}
+# Import the plotting library from matplotlib 
+import matplotlib.pyplot as plt
+
+# Make a list of x values and y values for first group
+x_1 = [0, 1, 2]
+y_1 = [10, 5, 8]
+
+# Make a list of x values and y values for second group
+x_2 = [2, 1.5, 0.5]
+y_2 = [7, 9, 6]
+
+# Plotting group 1 with red stars
+plt.scatter(x_1, y_1, marker = "*", color = 'r', label = "red stars")
+
+# Plotting line2 with green diamonds
+plt.scatter(x_2, y_2, marker = "D", color = 'g', label = "green diamonds")
+
+# Collect the labels to create the legend 
+plt.legend()
+
+# View the created graph
+plt.show()
+```
+

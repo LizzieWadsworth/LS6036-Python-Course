@@ -40,6 +40,7 @@ website:
             -  section: "Inputs, ifs and elses"
                contents:
                  - href: worksheets/UserInput.qmd
+                 - href: worksheets/UserInput_DataTypes.qmd
                  - href: worksheets/ifelse.qmd
                  - href: worksheets/ifelse_conditions.qmd
                  - href: worksheets/ifelse_fixerrors.qmd
@@ -74,6 +75,17 @@ website:
                  - href: worksheets/while_loop.qmd
                  - href: worksheets/whileloop_neverending.qmd
                  - href: worksheets/while_practice.qmd
+        # - section: "**Matplotlib**"
+        #   contents:
+        #     - section: "Plotting graphs"
+        #       contents: 
+        #           - href: worksheets/matplotlib_intro.qmd
+        #           - href: worksheets/matplotlib_colors.qmd
+        #           - href: worksheets/matplotlib_linestyle.qmd
+        #           - href: worksheets/matplotlib_scatter.qmd
+        #           - href: worksheets/matplotlib_titles.qmd
+        #           - href: worksheets/matplotlib_legend.qmd
+        #           - href: worksheets/matplotlib_practice.qmd
 
 
   favicon: /Logo/LS6036_face.png

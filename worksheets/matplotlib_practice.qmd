@@ -1,0 +1,19 @@
+# Matplotlib practice
+
+Now that you've got an idea of matplotlib, try to plot the following: 
+
+::: {.panel-tabset}
+
+## Example 1 
+
+Add example 
+
+## Example 2 
+
+Add example 
+
+## Example 3 
+
+Add example 
+
+:::

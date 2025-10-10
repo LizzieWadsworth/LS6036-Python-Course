@@ -1,0 +1,27 @@
+# Introduction to matplotlib
+
+Matplotlib is a **library** - it has a set of tools that we can use; python code that has already been written for us! 
+
+This short example will create a very simple line graph: 
+
+```{python}
+# Import the plotting library from matplotlib 
+import matplotlib.pyplot as plt
+
+# Make a list of x values and y values
+x = [0, 1, 2]
+y = [10, 5, 8]
+
+# Plotting x values against y values 
+plt.plot(x, y)
+
+# View the created graph
+plt.show()
+```
+
+## Give it a go:
+
+-  Replace one of the x and y values with another number.
+-  Change the order of numbers in the x list
+-  Add an extra number to the x list and not the y list (so x has 4 values and y has 3). _What's the error here?_
+-  Add more numbers to both lists

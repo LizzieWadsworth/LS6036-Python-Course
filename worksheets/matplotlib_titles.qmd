@@ -1,0 +1,26 @@
+# Matplotlib titles
+
+We can add a title to our graphs, and labels to our x and y axis, so that anyone can see what our graphs are showing.
+
+```{python}
+# Import the plotting library from matplotlib 
+import matplotlib.pyplot as plt
+
+# Make a list of x values and y values
+x = [3, 1, 2.5]
+y = [7,4, 9]
+
+# Plotting x values against y values 
+plt.scatter(x, y, marker="*", s=200, color="darkorchid")
+
+# Add a title 
+plt.title("Example scatter graph")
+
+# Label the x and y axis
+plt.xlabel("This is the x axis")
+plt.ylabel("This is the y axis")
+
+# View the created graph
+plt.show()
+```
+

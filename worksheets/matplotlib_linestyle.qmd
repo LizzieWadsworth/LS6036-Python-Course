@@ -1,0 +1,35 @@
+# Matplotlib linestyle
+
+When we use `plt.plot()` we create a line graph, and we can also change the linestyle. 
+
+There are four options: 
+
+-  `-`: Solid line
+-  `:`: Dotted line 
+-  `--`: Dashed ----------
+-  `-.`: Dash dot ----------
+
+You can apply to each line separately, see below example: 
+
+```{python}
+# Import the plotting library from matplotlib 
+import matplotlib.pyplot as plt
+
+# Make a list of x values and y values for first line
+x_line1 = [0, 1, 2]
+y_line1 = [10, 5, 8]
+
+# Make a list of x values and y values for second line
+x_line2 = [2, 1.5, 0.5]
+y_line2 = [7, 9, 6]
+
+# Plotting line1 with a solid line
+plt.plot(x_line1, y_line1, linestyle = '-')
+
+# Plotting line2 with a dotted line
+plt.plot(x_line2, y_line2, linestyle = ':')
+
+# View the created graph
+plt.show()
+```
+
