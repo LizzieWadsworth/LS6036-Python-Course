@@ -140,5 +140,8 @@
   },
   "worksheets/matplotlib_practice.qmd": {
     "matplotlib_practice.html": "815f02b6"
+  },
+  "worksheets/nested_lists_and_dictionaries.qmd": {
+    "nested_lists_and_dictionaries.html": "f8224db4"
   }
 }

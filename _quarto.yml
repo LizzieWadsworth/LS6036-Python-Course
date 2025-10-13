@@ -54,6 +54,7 @@ website:
                  - href: worksheets/List_methods.qmd
                  - href: worksheets/Dictionaries.qmd
                  - href: worksheets/Dictionaries_II.qmd
+                 - href: worksheets/nested_lists_and_dictionaries.qmd
                  - href: worksheets/Species_ages.qmd
         - section: "**Python Logic and Loops**"
           contents:

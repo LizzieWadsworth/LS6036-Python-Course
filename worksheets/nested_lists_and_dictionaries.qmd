@@ -1,0 +1,153 @@
+# Nested lists and dictionaries 
+
+When we have a bit more information to store, sometimes we may want to use a dictionary where each value is a list, or a dictionary inside a dictionary, or a list inside another list. 
+
+If we want to get a value from inside the inner list or dictionary, we can do so using the format `outer_variable_name[outer_key_or_index][inner_key_or_index]`
+
+See the below examples for a dictionary of lists, dictionary of dictionaries and list of lists. 
+
+::: {.panel-tabset}
+
+## Dictionary of lists
+
+In this example we have a dictionary of students, and each name gives us a list of exam grades. 
+
+To get the mark for a particular exam, we use `student_grades[key][index]` where their name is the dictionary key, and which module is the list index. 
+
+```{python}
+# Define dictionary of students 
+student_grades = {
+    # Each key is a student name, each value is a list of module marks
+    "Wednesday": [89, 72, 65, 68, 75],
+    "Enid": [48, 55, 58, 62, 62],
+    "Bianca": [55, 58, 62, 62, 58],
+} # close outside dictionary
+
+# Print the mark for module 3 for student 208077
+# Third module in the list is index 2, so need to use student_ID_dict[208077][2]
+chosen_student = "Bianca" # store ID of student in variable so can change it easily
+print(f"Student {chosen_student} in module 3 got a mark of {student_grades[chosen_student][2]}")
+```
+
+See below visualisation of what we did: 
+
+<style>
+  .hl { color: #c7254e; font-weight: bold; }
+</style>
+
+<pre><code>chosen_student = "<span class="hl">Bianca</span>"
+        │
+        ▼
+student_grades[chosen_student] → [55, 58, <span class="hl">62</span>, 62, 58]
+                                  │
+                                  ▼
+                         [2] → <span class="hl">62</span>  (mark for module 3)
+</code></pre>
+
+
+
+## Dictionary of dictionaries 
+
+In this example we have a dictionary of students, and each name gives us more information about each student. 
+
+```{python}
+# Define dictionary of students 
+Nevermore_students = {
+    # Define dictionary for each student 
+    "Wednesday": {
+        "Name": "Wednesday Addams",
+        "Outcast": True,
+        "Power": "Psychic", 
+        "Favourite color": "Black"
+    }, 
+
+    "Enid": {
+        "Name": "Enid Sinclair",
+        "Outcast": True,
+        "Power": "Werewolf", 
+        "Favourite color": "Pink"
+    }, 
+    
+    "Bianca": {
+        "Name": "Bianca Barclay",
+        "Outcast": True,
+        "Power": "Siren", 
+        "Favourite color": "Blue"
+    }
+} # close outside dictionary
+
+# Print the information for Enid 
+# Nevermore_students["Enid"] gives the whole Enid dictionary
+# Nevermore_students["Enid"]["Power"] gives "Werewolf"
+
+chosen_student = "Enid"
+print(f"Student {Nevermore_students[chosen_student]["Name"]} has the power {Nevermore_students[chosen_student]["Power"]}")
+```
+
+See below visualisation of what we did: 
+
+<style>
+  .hl-key    { color: #2b6cb0; font-weight: 600; }   /* blue keys */
+  .hl-value  { color: #b83280; font-weight: 600; }   /* magenta values */
+  .hl-arrow  { color: #718096; font-weight: bold; }  /* grey arrows */
+</style>
+
+<pre><code><span class="hl-key">chosen_student</span> = "<span class="hl-value">Enid</span>"
+        │
+        ▼
+<span class="hl-key">Nevermore_students</span>[<span class="hl-key">chosen_student</span>]
+        │
+        ▼
+{ "Name": "<span class="hl-value">Enid Sinclair</span>",
+  "Outcast": <span class="hl-value">True</span>,
+  "Power": "<span class="hl-value">Werewolf</span>",
+  "Favourite color": "<span class="hl-value">Pink</span>" }
+        │
+        ├─ ["<span class="hl-key">Name</span>"]  <span class="hl-arrow">→</span>  "<span class="hl-value">Enid Sinclair</span>"
+        └─ ["<span class="hl-key">Power</span>"] <span class="hl-arrow">→</span>  "<span class="hl-value">Werewolf</span>"
+</code></pre>
+
+
+## List of lists 
+
+You can also have lists of lists. Here we have a list of items in a shop, separated into categories. 
+
+```{python}
+# Define outside list 
+shop_contents = [
+    ['apples', 'bananas', 'oranges', 'kiwis', 'grapes'], # fruits
+    ['USB-C', 'iPhone'], # chargers
+    ['hay', 'millet', 'collar', 'bell', 'dog food', 'cat food'], # pet food  
+    ['toilet roll', 'kitchen roll', 'sponges', 'washing up liquid'] # essentials 
+] # close outside list 
+
+# You can print a particular item in the list by using shop_contents[index][index]
+print(f"We have {shop_contents[2][0]} in stock")
+```
+
+See below visualisation for what we did: 
+
+<pre><code>
+<span class="hl-key">shop_contents</span>[<span class="hl-index">2</span>][<span class="hl-index">0</span>]
+              │  │
+              │  └── index <span class="hl-index">0</span> → "<span class="hl-value">hay</span>"
+              │
+              └── index <span class="hl-index">2</span> → ['<span class="hl-value">hay</span>', 'millet', 'collar', 
+              'bell', 'dog food', 'cat food']
+
+Result:
+"We have <span class="hl-value">hay</span> in stock"
+</code></pre>
+
+We could also use an if statement to check if something is in the relevant list:
+
+```{python}
+# You could also search a list in an if statement 
+check_stock = "kiwis"
+if check_stock in shop_contents[0]: 
+    print(f"{check_stock} are in stock")
+else:
+    print(f"{check_stock} are not in stock")
+```
+
+:::
