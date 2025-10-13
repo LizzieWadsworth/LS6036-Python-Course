@@ -4,6 +4,8 @@ When we have a bit more information to store, sometimes we may want to use a dic
 
 If we want to get a value from inside the inner list or dictionary, we can do so using the format `outer_variable_name[outer_key_or_index][inner_key_or_index]`
 
+![Graphic of a nested dictionary with integers or strings, lists and dictionaries as the values](/images/Nested_dictionaries.png)
+
 See the below examples for a dictionary of lists, dictionary of dictionaries and list of lists. 
 
 ::: {.panel-tabset}
