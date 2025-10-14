@@ -1,0 +1,24 @@
+# Premature stop codon activity 
+
+For this activity you have a Wild Type gene sequence, and three mutants. The task is to write a program that detects whether or not the mutant has a premature stop codon. 
+
+```{python}
+# Provided Wild Type and mutant sequences
+WildType = ""
+mutant1 = ""
+mutant2 = ""
+mutant3 = ""
+```
+
+Try to break this down into small chunks: 
+
+1.  Write a program to find the stop codon in the Wild Type sequence, and count the number of codons. The answer should be ANS. 
+
+
+
+2.  Write a program to find the first stop codon in each of the mutant sequences, and count the number of codons. 
+
+
+
+3.  Compare the number of codons from the Wild Type sequence to each mutant sequence, and determine whether or not the mutant has a premature stop codon. 
+

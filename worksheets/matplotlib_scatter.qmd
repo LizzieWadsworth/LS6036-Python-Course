@@ -1,8 +1,8 @@
 # Matplotlib scatter 
 
-If we want to make a scatter graph instead of a line graph, we can use `plt.scatter()` 
+If we want to make a scatter graph instead of a line graph, we can use `plt.scatter()`. 
 
-We can change the marker shape using `marker` and size using `s`. 
+The rest is the same as for the line graph!
 
 ```{python}
 # Import the plotting library from matplotlib 
@@ -13,82 +13,8 @@ x = [0, 1, 2]
 y = [10, 5, 8]
 
 # Plotting x values against y values 
-plt.scatter(x, y, marker="*", s=200)
+plt.scatter(x, y)
 
 # View the created graph
 plt.show()
 ```
-
-## Markers 
-
-See the below table for a list of the markers available to use.
-```{python}
-#| echo: false
-#| label: generate-marker-images
-import matplotlib.pyplot as plt
-import os
-
-markers = [
-    ('.', 'point'),
-    (',', 'pixel'),
-    ('o', 'circle'),
-    ('v', 'triangle down'),
-    ('^', 'triangle up'),
-    ('<', 'triangle left'),
-    ('>', 'triangle right'),
-    ('1', 'tri_down'),
-    ('2', 'tri_up'),
-    ('3', 'tri_left'),
-    ('4', 'tri_right'),
-    ('s', 'square'),
-    ('p', 'pentagon'),
-    ('*', 'star'),
-    ('h', 'hexagon1'),
-    ('H', 'hexagon2'),
-    ('+', 'plus'),
-    ('x', 'x (cross)'),
-    ('X', 'filled x'),
-    ('D', 'diamond'),
-    ('d', 'thin diamond'),
-    ('|', 'vertical line'),
-    ('_', 'horizontal line'),
-]
-
-# make sure output folder exists
-os.makedirs("marker_imgs", exist_ok=True)
-
-# generate small PNG for each marker
-for marker, desc in markers:
-    fig, ax = plt.subplots(figsize=(0.6, 0.6))
-    ax.plot(0, 0, marker=marker, markersize=14, color='tab:blue', linestyle='None')
-    ax.set_xlim(-1, 1)
-    ax.set_ylim(-1, 1)
-    ax.axis('off')
-    plt.savefig(f"marker_imgs/marker_{str(marker).replace(' ', 'blank') or 'none'}.png", 
-                bbox_inches='tight', transparent=True)
-    plt.close(fig)
-```
-
-| Marker | Example | Description |
-|:--------|:---------|:-------------|
-| `'.'` | ![](marker_imgs/marker_..png){width=40} | Point marker |
-| `','` | ![](marker_imgs/marker_,.png){width=40} | Pixel marker |
-| `'o'` | ![](marker_imgs/marker_o.png){width=40} | Circle marker |
-| `'v'` | ![](marker_imgs/marker_v.png){width=40} | Triangle down |
-| `'^'` | ![](marker_imgs/marker_^.png){width=40} | Triangle up |
-| `'<'` | ![](marker_imgs/marker_<.png){width=40} | Triangle left |
-| `'>'` | ![](marker_imgs/marker_>.png){width=40} | Triangle right |
-| `'1'` | ![](marker_imgs/marker_1.png){width=40} | Tri down (small filled) |
-| `'2'` | ![](marker_imgs/marker_2.png){width=40} | Tri up (small filled) |
-| `'3'` | ![](marker_imgs/marker_3.png){width=40} | Tri left (small filled) |
-| `'4'` | ![](marker_imgs/marker_4.png){width=40} | Tri right (small filled) |
-| `'s'` | ![](marker_imgs/marker_s.png){width=40} | Square |
-| `'p'` | ![](marker_imgs/marker_p.png){width=40} | Pentagon |
-| `'*'` | ![](marker_imgs/marker_*.png){width=40} | Star |
-| `'h'` | ![](marker_imgs/marker_h.png){width=40} | Hexagon1 |
-| `'H'` | ![](marker_imgs/marker_H.png){width=40} | Hexagon2 |
-| `'+'` | ![](marker_imgs/marker_+.png){width=40} | Plus |
-| `'x'` | ![](marker_imgs/marker_x.png){width=40} | Cross (x) |
-| `'X'` | ![](marker_imgs/marker_X.png){width=40} | Filled X |
-| `'D'` | ![](marker_imgs/marker_D.png){width=40} | Diamond |
-| `'d'` | ![](marker_imgs/marker_d.png){width=40} | Thin diamond |

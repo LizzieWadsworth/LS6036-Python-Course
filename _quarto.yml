@@ -76,18 +76,34 @@ website:
                  - href: worksheets/while_loop.qmd
                  - href: worksheets/whileloop_neverending.qmd
                  - href: worksheets/while_practice.qmd
+                #  - href: worksheets/premature_stop_codon.qmd
         # - section: "**Matplotlib**"
         #   contents:
         #     - section: "Plotting graphs"
         #       contents: 
         #           - href: worksheets/matplotlib_intro.qmd
+        #           - href: worksheets/matplotlib_scatter.qmd
+        #           - href: worksheets/matplotlib_barchart.qmd
+        #           - href: worksheets/matplotlib_piechart.qmd
+        #           - href: worksheets/matplotlib_boxplot.qmd
+        #           - href: worksheets/matplotlib_practice.qmd
+        #     - section: "Styling graphs"
+        #       contents: 
         #           - href: worksheets/matplotlib_colors.qmd
         #           - href: worksheets/matplotlib_linestyle.qmd
-        #           - href: worksheets/matplotlib_scatter.qmd
+        #           - href: worksheets/matplotlib_markers.qmd
         #           - href: worksheets/matplotlib_titles.qmd
         #           - href: worksheets/matplotlib_legend.qmd
-        #           - href: worksheets/matplotlib_practice.qmd
-
+        #           - href: worksheets/matplotlib_xyticks.qmd
+        #     - section: "Plotting from a CSV file"
+        #       contents: 
+        #           - href: worksheets/reading_from_a_file.qmd
+        #           - href: worksheets/writing_to_a_file.qmd
+        #           - href: worksheets/reading_a_csv_file.qmd
+        #           - href: worksheets/plotting_from_a_csv_file.qmd 
+        #           # Add a simpler dataset here 
+        #           - href: worksheets/covid_movements.qmd
+                  
 
   favicon: /Logo/LS6036_face.png
     

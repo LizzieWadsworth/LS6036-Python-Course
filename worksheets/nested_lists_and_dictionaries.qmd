@@ -2,7 +2,25 @@
 
 When we have a bit more information to store, sometimes we may want to use a dictionary where each value is a list, or a dictionary inside a dictionary, or a list inside another list. 
 
-If we want to get a value from inside the inner list or dictionary, we can do so using the format `outer_variable_name[outer_key_or_index][inner_key_or_index]`
+If we want to get a value from inside the inner list or dictionary, we can use two pairs of square brackets: 
+
+<center>
+**DictionaryName [FirstKey] [SecondKey]**
+</center>
+
+```{python}
+# Define a dictionary
+dictionary_name = {
+    # Define a second dictionary as a value
+    "Key": {
+        "Second Key": 42
+    }
+}
+# Print the inside value using both keys 
+print(dictionary_name["Key"]["Second Key"])
+```
+
+Dictionaries (and lists) can contain both lists and dictionaries as values or a combination of different types. 
 
 ![Graphic of a nested dictionary with integers or strings, lists and dictionaries as the values](/images/Nested_dictionaries.png)
 

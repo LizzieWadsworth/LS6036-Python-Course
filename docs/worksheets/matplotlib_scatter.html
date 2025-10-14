@@ -374,9 +374,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>If we want to make a scatter graph instead of a line graph, we can use <code>plt.scatter()</code></p>
-<p>We can change the marker shape using <code>marker</code> and size using <code>s</code>.</p>
-<div id="f84d8cac" class="cell" data-execution_count="1">
+<p>If we want to make a scatter graph instead of a line graph, we can use <code>plt.scatter()</code>.</p>
+<p>The rest is the same as for the line graph!</p>
+<div id="45f0f992" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the plotting library from matplotlib </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -385,7 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">8</span>]</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting x values against y values </span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y, marker<span class="op">=</span><span class="st">"*"</span>, s<span class="op">=</span><span class="dv">200</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># View the created graph</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -397,130 +397,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="markers" class="level2">
-<h2 class="anchored" data-anchor-id="markers">Markers</h2>
-<p>See the below table for a list of the markers available to use.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 27%">
-<col style="width: 30%">
-<col style="width: 42%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Marker</th>
-<th style="text-align: left;">Example</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>'.'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_..png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Point marker</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>','</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_,.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Pixel marker</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'o'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_o.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Circle marker</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'v'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_v.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Triangle down</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'^'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_^.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Triangle up</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'&lt;'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_<.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Triangle left</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'&gt;'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_>.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Triangle right</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'1'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_1.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Tri down (small filled)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'2'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_2.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Tri up (small filled)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'3'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_3.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Tri left (small filled)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'4'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_4.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Tri right (small filled)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'s'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_s.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Square</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'p'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_p.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Pentagon</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'*'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_*.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Star</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'h'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_h.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Hexagon1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'H'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_H.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Hexagon2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'+'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_+.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Plus</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'x'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_x.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Cross (x)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'X'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_X.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Filled X</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>'D'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_D.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Diamond</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>'d'</code></td>
-<td style="text-align: left;"><img src="marker_imgs/marker_d.png" class="img-fluid" width="40"></td>
-<td style="text-align: left;">Thin diamond</td>
-</tr>
-</tbody>
-</table>
 
 
 <script type="ojs-module-contents">
@@ -537,7 +413,6 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">

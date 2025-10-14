@@ -690,7 +690,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>When we have a bit more information to store, sometimes we may want to use a dictionary where each value is a list, or a dictionary inside a dictionary, or a list inside another list.</p>
-<p>If we want to get a value from inside the inner list or dictionary, we can do so using the format <code>outer_variable_name[outer_key_or_index][inner_key_or_index]</code></p>
+<p>If we want to get a value from inside the inner list or dictionary, we can use two pairs of square brackets:</p>
+<center>
+<strong>DictionaryName [FirstKey] [SecondKey]</strong>
+</center>
+<div id="0023dc5c" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a dictionary</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>dictionary_name <span class="op">=</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define a second dictionary as a value</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Key"</span>: {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Second Key"</span>: <span class="dv">42</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the inside value using both keys </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dictionary_name[<span class="st">"Key"</span>][<span class="st">"Second Key"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>42</code></pre>
+</div>
+</div>
+<p>Dictionaries (and lists) can contain both lists and dictionaries as values or a combination of different types.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../images/Nested_dictionaries.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Graphic of a nested dictionary with integers or strings, lists and dictionaries as the values"><img src="../images/Nested_dictionaries.png" class="img-fluid figure-img" alt="Graphic of a nested dictionary with integers or strings, lists and dictionaries as the values"></a></p>
@@ -704,19 +722,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>In this example we have a dictionary of students, and each name gives us a list of exam grades.</p>
 <p>To get the mark for a particular exam, we use <code>student_grades[key][index]</code> where their name is the dictionary key, and which module is the list index.</p>
-<div id="8fc98fd6" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dictionary of students </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>student_grades <span class="op">=</span> {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Each key is a student name, each value is a list of module marks</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Wednesday"</span>: [<span class="dv">89</span>, <span class="dv">72</span>, <span class="dv">65</span>, <span class="dv">68</span>, <span class="dv">75</span>],</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Enid"</span>: [<span class="dv">48</span>, <span class="dv">55</span>, <span class="dv">58</span>, <span class="dv">62</span>, <span class="dv">62</span>],</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bianca"</span>: [<span class="dv">55</span>, <span class="dv">58</span>, <span class="dv">62</span>, <span class="dv">62</span>, <span class="dv">58</span>],</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>} <span class="co"># close outside dictionary</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the mark for module 3 for student 208077</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Third module in the list is index 2, so need to use student_ID_dict[208077][2]</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>chosen_student <span class="op">=</span> <span class="st">"Bianca"</span> <span class="co"># store ID of student in variable so can change it easily</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Student </span><span class="sc">{</span>chosen_student<span class="sc">}</span><span class="ss"> in module 3 got a mark of </span><span class="sc">{</span>student_grades[chosen_student][<span class="dv">2</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="e55d6b9b" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define dictionary of students </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>student_grades <span class="op">=</span> {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Each key is a student name, each value is a list of module marks</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Wednesday"</span>: [<span class="dv">89</span>, <span class="dv">72</span>, <span class="dv">65</span>, <span class="dv">68</span>, <span class="dv">75</span>],</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Enid"</span>: [<span class="dv">48</span>, <span class="dv">55</span>, <span class="dv">58</span>, <span class="dv">62</span>, <span class="dv">62</span>],</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bianca"</span>: [<span class="dv">55</span>, <span class="dv">58</span>, <span class="dv">62</span>, <span class="dv">62</span>, <span class="dv">58</span>],</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>} <span class="co"># close outside dictionary</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the mark for module 3 for student 208077</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Third module in the list is index 2, so need to use student_ID_dict[208077][2]</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>chosen_student <span class="op">=</span> <span class="st">"Bianca"</span> <span class="co"># store ID of student in variable so can change it easily</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Student </span><span class="sc">{</span>chosen_student<span class="sc">}</span><span class="ss"> in module 3 got a mark of </span><span class="sc">{</span>student_grades[chosen_student][<span class="dv">2</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Student Bianca in module 3 got a mark of 62</code></pre>
 </div>
@@ -736,38 +754,38 @@ student_grades[chosen_student] → [55, 58, <span class="hl">62</span>, 62, 58]
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>In this example we have a dictionary of students, and each name gives us more information about each student.</p>
-<div id="e2883bb5" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;Define dictionary of students </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Nevermore_students <span class="op">=</span> {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define dictionary for each student </span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Wednesday"</span>: {</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Name"</span>: <span class="st">"Wednesday Addams"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Outcast"</span>: <span class="va">True</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Power"</span>: <span class="st">"Psychic"</span>, </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Favourite color"</span>: <span class="st">"Black"</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    }, </span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Enid"</span>: {</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Name"</span>: <span class="st">"Enid Sinclair"</span>,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Outcast"</span>: <span class="va">True</span>,</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Power"</span>: <span class="st">"Werewolf"</span>, </span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Favourite color"</span>: <span class="st">"Pink"</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    }, </span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bianca"</span>: {</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Name"</span>: <span class="st">"Bianca Barclay"</span>,</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Outcast"</span>: <span class="va">True</span>,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Power"</span>: <span class="st">"Siren"</span>, </span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Favourite color"</span>: <span class="st">"Blue"</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>} <span class="co"># close outside dictionary</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the information for Enid </span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Nevermore_students["Enid"] gives the whole Enid dictionary</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Nevermore_students["Enid"]["Power"] gives "Werewolf"</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>chosen_student <span class="op">=</span> <span class="st">"Enid"</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Student </span><span class="sc">{</span>Nevermore_students[chosen_student][<span class="st">"Name"</span>]<span class="sc">}</span><span class="ss"> has the power </span><span class="sc">{</span>Nevermore_students[chosen_student][<span class="st">"Power"</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="3d178659" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;Define dictionary of students </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Nevermore_students <span class="op">=</span> {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define dictionary for each student </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Wednesday"</span>: {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Name"</span>: <span class="st">"Wednesday Addams"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Outcast"</span>: <span class="va">True</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Power"</span>: <span class="st">"Psychic"</span>, </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Favourite color"</span>: <span class="st">"Black"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    }, </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Enid"</span>: {</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Name"</span>: <span class="st">"Enid Sinclair"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Outcast"</span>: <span class="va">True</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Power"</span>: <span class="st">"Werewolf"</span>, </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Favourite color"</span>: <span class="st">"Pink"</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    }, </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bianca"</span>: {</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Name"</span>: <span class="st">"Bianca Barclay"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Outcast"</span>: <span class="va">True</span>,</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Power"</span>: <span class="st">"Siren"</span>, </span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Favourite color"</span>: <span class="st">"Blue"</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>} <span class="co"># close outside dictionary</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the information for Enid </span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Nevermore_students["Enid"] gives the whole Enid dictionary</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Nevermore_students["Enid"]["Power"] gives "Werewolf"</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>chosen_student <span class="op">=</span> <span class="st">"Enid"</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Student </span><span class="sc">{</span>Nevermore_students[chosen_student][<span class="st">"Name"</span>]<span class="sc">}</span><span class="ss"> has the power </span><span class="sc">{</span>Nevermore_students[chosen_student][<span class="st">"Power"</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Student Enid Sinclair has the power Werewolf</code></pre>
 </div>
@@ -795,17 +813,17 @@ student_grades[chosen_student] → [55, 58, <span class="hl">62</span>, 62, 58]
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>You can also have lists of lists. Here we have a list of items in a shop, separated into categories.</p>
-<div id="3acbe420" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define outside list </span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>shop_contents <span class="op">=</span> [</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'apples'</span>, <span class="st">'bananas'</span>, <span class="st">'oranges'</span>, <span class="st">'kiwis'</span>, <span class="st">'grapes'</span>], <span class="co"># fruits</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'USB-C'</span>, <span class="st">'iPhone'</span>], <span class="co"># chargers</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'hay'</span>, <span class="st">'millet'</span>, <span class="st">'collar'</span>, <span class="st">'bell'</span>, <span class="st">'dog food'</span>, <span class="st">'cat food'</span>], <span class="co"># pet food  </span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'toilet roll'</span>, <span class="st">'kitchen roll'</span>, <span class="st">'sponges'</span>, <span class="st">'washing up liquid'</span>] <span class="co"># essentials </span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>] <span class="co"># close outside list </span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># You can print a particular item in the list by using shop_contents[index][index]</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"We have </span><span class="sc">{</span>shop_contents[<span class="dv">2</span>][<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> in stock"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="3eda42e7" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define outside list </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>shop_contents <span class="op">=</span> [</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'apples'</span>, <span class="st">'bananas'</span>, <span class="st">'oranges'</span>, <span class="st">'kiwis'</span>, <span class="st">'grapes'</span>], <span class="co"># fruits</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'USB-C'</span>, <span class="st">'iPhone'</span>], <span class="co"># chargers</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'hay'</span>, <span class="st">'millet'</span>, <span class="st">'collar'</span>, <span class="st">'bell'</span>, <span class="st">'dog food'</span>, <span class="st">'cat food'</span>], <span class="co"># pet food  </span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'toilet roll'</span>, <span class="st">'kitchen roll'</span>, <span class="st">'sponges'</span>, <span class="st">'washing up liquid'</span>] <span class="co"># essentials </span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>] <span class="co"># close outside list </span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># You can print a particular item in the list by using shop_contents[index][index]</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"We have </span><span class="sc">{</span>shop_contents[<span class="dv">2</span>][<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> in stock"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>We have hay in stock</code></pre>
 </div>
@@ -823,13 +841,13 @@ Result:
 "We have <span class="hl-value">hay</span> in stock"
 </code></pre>
 <p>We could also use an if statement to check if something is in the relevant list:</p>
-<div id="30627dc2" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You could also search a list in an if statement </span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>check_stock <span class="op">=</span> <span class="st">"kiwis"</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> check_stock <span class="kw">in</span> shop_contents[<span class="dv">0</span>]: </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>check_stock<span class="sc">}</span><span class="ss"> are in stock"</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>check_stock<span class="sc">}</span><span class="ss"> are not in stock"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="b9db8692" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You could also search a list in an if statement </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>check_stock <span class="op">=</span> <span class="st">"kiwis"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> check_stock <span class="kw">in</span> shop_contents[<span class="dv">0</span>]: </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>check_stock<span class="sc">}</span><span class="ss"> are in stock"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>check_stock<span class="sc">}</span><span class="ss"> are not in stock"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>kiwis are in stock</code></pre>
 </div>

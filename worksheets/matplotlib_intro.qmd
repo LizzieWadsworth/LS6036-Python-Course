@@ -1,4 +1,4 @@
-# Introduction to matplotlib
+# Matplotlib line graph
 
 Matplotlib is a **library** - it has a set of tools that we can use; python code that has already been written for us! 
 

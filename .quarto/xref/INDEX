@@ -143,5 +143,38 @@
   },
   "worksheets/nested_lists_and_dictionaries.qmd": {
     "nested_lists_and_dictionaries.html": "f8224db4"
+  },
+  "worksheets/matplotlib_markers.qmd": {
+    "matplotlib_markers.html": "f4fed791"
+  },
+  "worksheets/writing_to_a_file.qmd": {
+    "writing_to_a_file.html": "418b54f0"
+  },
+  "worksheets/plotting_from_a_csv_file.qmd": {
+    "plotting_from_a_csv_file.html": "44e16dc7"
+  },
+  "worksheets/covid_movements.qmd": {
+    "covid_movements.html": "5aff5995"
+  },
+  "worksheets/matplotlib_piechart.qmd": {
+    "matplotlib_piechart.html": "89efcd0f"
+  },
+  "worksheets/reading_from_a_file.qmd": {
+    "reading_from_a_file.html": "b6555b0e"
+  },
+  "worksheets/premature_stop_codon.qmd": {
+    "premature_stop_codon.html": "ceb4ffda"
+  },
+  "worksheets/matplotlib_boxplot.qmd": {
+    "matplotlib_boxplot.html": "650ad137"
+  },
+  "worksheets/reading_a_csv_file.qmd": {
+    "reading_a_csv_file.html": "e276c7c6"
+  },
+  "worksheets/matplotlib_barchart.qmd": {
+    "matplotlib_barchart.html": "25fcb429"
+  },
+  "worksheets/matplotlib_xyticks.qmd": {
+    "matplotlib_xyticks.html": "1a763e42"
   }
 }
