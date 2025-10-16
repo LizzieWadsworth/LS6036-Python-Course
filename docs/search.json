@@ -491,7 +491,7 @@
     "href": "worksheets/reading_from_a_file.html",
     "title": "Reading from a file",
     "section": "",
-    "text": "Reading from a file\nNow we know how to use loops, we can use this to read from a file.\nDownload the following file, and add that to the folder where you have your python files:\nExample_file.txt"
+    "text": "Reading from a file\nNow we know how to use loops, we can use this to read from a file.\nDownload the following file, and add that to the folder where you have your python files:\nExample_file.txt\n\n  📥 Download Example_file.txt"
   },
   {
     "objectID": "worksheets/Maths.html",
