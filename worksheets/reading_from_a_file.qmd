@@ -11,7 +11,7 @@ Download the following file, and add that to the folder where you have your pyth
 Example_file.txt
 
 ```{=html}
-<a href="course_files/Example_file.txt" class="btn btn-primary" download>
+<a href="/course_files/Example_file.txt" class="btn btn-primary" download>
   📥 Download Example_file.txt
 </a>
 ```
