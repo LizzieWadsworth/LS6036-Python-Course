@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources: 
+    - course_files/**
 
 website:
   title: "LS6036 Python programming"
