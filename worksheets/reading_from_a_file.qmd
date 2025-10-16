@@ -1,18 +1,144 @@
----
-format: html
----
-
 # Reading from a file
 
 Now we know how to use loops, we can use this to read from a file. 
 
-Download the following file, and add that to the folder where you have your python files: 
-
-Example_file.txt
+Download the following file, and **add that to the folder** where you have your python files: 
 
 ```{=html}
-<a href="../course_files/Example_file.txt" class="btn btn-primary" download>
-  📥 Download Example_file.txt
+<a href="../course_files/Land_of_zog.txt" 
+   class="btn btn-lg text-white rounded-pill px-4 py-2" 
+   style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
+   download>
+  📥 Download Land_of_zog.txt
 </a>
 ```
+  \
 
+In this file, every line contains an object. 
+The second word on each line is either:
+
+-  "exist" - objects that exist in the land of Zog, or
+-  "none" - objects that don't exist in the land of Zog. 
+
+We can read this file in python using the following code: 
+
+```{python}
+#| eval: false
+# Use with to open the file
+with open("Land_of_zog.txt") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+# print the first 5 lines of the list
+print(lines[0:5])
+```
+
+```{python}
+#| echo: false
+# Use with to open the file
+with open("../course_files/Land_of_zog.txt") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+# print the first 5 lines of the list
+print(lines[0:5])
+```
+
+This creates a list where every line in the file is an item in the list. Notice how every line ends with `\n` - this is a newline character, which marks where each line ends. 
+
+We can then use a for loop to go through each line of the file: 
+
+```{python}
+#| eval: false
+# loop through every line in the list 
+for line in lines: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split()
+    print(items)
+```
+
+```{python}
+#| echo: false
+# loop through every line in the list 
+for line in lines[0:5]: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split()
+    print(items)
+```
+
+
+## Give it a go
+
+Can you expand this example so that: 
+
+-  All of the items that exist are printed together
+-  All of the items that don't exist are printed together 
+
+Can you figure out what the rule is? Why do some items exist and others don't? 
+
+::: { .callout-tip collapse="true" title="Show answer"}
+
+We can use an if statement to collect a list of things that exist and list of things that don't, and print these out. 
+
+```{python}
+#| eval: false
+# Use with to open the file
+with open("Land_of_zog.txt") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+
+# make lists to store results
+exist_list = []
+none_list = []
+
+for line in lines: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split()
+    # if statment to determine if exists or not
+    if items[1] == "exist":
+        # add item to exist list
+        exist_list.append(items[0])
+    elif items[1] == "none":
+        # add item to none list
+        none_list.append(items[0])
+
+# print results
+print(f"Items that exist: {exist_list}")
+print(f"Items that do not exist: {none_list}")
+```
+
+```{python}
+#| echo: false
+# Use with to open the file
+with open("../course_files/Land_of_zog.txt") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+
+# make lists to store results
+exist_list = []
+none_list = []
+
+for line in lines: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split()
+    # if statment to determine if exists or not
+    if items[1] == "exist":
+        # add item to exist list
+        exist_list.append(items[0])
+    elif items[1] == "none":
+        # add item to none list
+        none_list.append(items[0])
+
+# print results
+print(f"Items that exist: {exist_list}")
+print(f"Items that do not exist: {none_list}")
+```
+
+Can you spot the similarities in the words which exist in the Land of Zog?
+:::

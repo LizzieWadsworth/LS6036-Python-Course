@@ -654,6 +654,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reading from a file</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_from_a_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading from a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/writing_to_a_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Writing to a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_a_fasta_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading a fasta file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/premature_stop_codon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Premature stop codon activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -692,7 +727,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>While loops are a different (and <em>more dangerous</em>) type of loop.</p>
 <p>They are useful for if you want a piece of code to keep repeating <em>until a condition is met</em> and you may not know how many times that will be.</p>
 <p>For example, if we had a DNA sequence for a protein, we might want to loop through each codon until we reach a stop codon.</p>
-<div id="096063c2" class="cell" data-execution_count="1">
+<div id="c79498e5" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of codons </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>codons <span class="op">=</span> [<span class="st">"ATG"</span>, <span class="st">"CCG"</span>, <span class="st">"TAC"</span>, <span class="st">"GGT"</span>, <span class="st">"ACG"</span>, <span class="st">"TGA"</span>, <span class="st">"ATC"</span>, <span class="st">"CGC"</span>]</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>

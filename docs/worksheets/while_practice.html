@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../worksheets/reading_from_a_file.html" rel="next">
 <link href="../worksheets/whileloop_neverending.html" rel="prev">
 <link href="..//Logo/LS6036_face.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -653,6 +654,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reading from a file</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_from_a_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading from a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/writing_to_a_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Writing to a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_a_fasta_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading a fasta file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/premature_stop_codon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Premature stop codon activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -707,7 +743,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This is the answer for when the population exceeds 100,000.</p>
-<div id="97b1f91f" class="cell" data-execution_count="1">
+<div id="c4f2a6b6" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>Bacteria reached a population of 131072 in 340 minutes</code></pre>
 </div>
@@ -728,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>There are multiple ways to do this, one example answer is:</p>
-<div id="1cdb4471" class="cell" data-execution_count="2">
+<div id="043c0669" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set initial values for bacteria and minutes</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>bacteria <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>minutes <span class="op">=</span> <span class="dv">0</span></span>
@@ -763,7 +799,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Your answer may look something like this: (if the user types in A A C T C A stop)</p>
-<div id="b6df23fb" class="cell" data-execution_count="3">
+<div id="0d995443" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>Please input a base A T C or G. If done type stop
 The sequence you typed in was AACTCA
@@ -789,7 +825,7 @@ This sequence has 0 G bases</code></pre>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>There are multiple ways to do this, one example answer is:</p>
-<div id="54cafa13" class="cell" data-execution_count="4">
+<div id="af7e9da2" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set boolean to continue or stop </span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>keep_going <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create empty string (or list) to add bases to</span></span>
@@ -835,12 +871,15 @@ This sequence has 0 G bases</code></pre>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Your answer may look something like this:</p>
-<div id="6eb13cf1" class="cell" data-execution_count="5">
+<div id="f375b451" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
-<pre><code>Round 1; 48 rabbits and 3 foxes
-Round 1; 48 rabbits and 3 foxes
-Round 1; 44 rabbits and 1 foxes
-Round 1; 44 rabbits and 0 foxes</code></pre>
+<pre><code>Round 1; 50 rabbits and 5 foxes
+Round 1; 46 rabbits and 4 foxes
+Round 1; 45 rabbits and 4 foxes
+Round 1; 42 rabbits and 3 foxes
+Round 1; 40 rabbits and 3 foxes
+Round 1; 40 rabbits and 1 foxes
+Round 1; 41 rabbits and 0 foxes</code></pre>
 </div>
 </div>
 </div>
@@ -859,7 +898,7 @@ Round 1; 44 rabbits and 0 foxes</code></pre>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>There are multiple ways to do this, one example answer is:</p>
-<div id="987db5e7" class="cell" data-execution_count="6">
+<div id="a66f03c6" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use random module to decide reproduction and death rates</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set initial values for rabbits, foxes and rounds</span></span>
@@ -1356,6 +1395,9 @@ window._ojs.runtime.interpretFromScriptTags();
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../worksheets/reading_from_a_file.html" class="pagination-link" aria-label="Reading from a file">
+        <span class="nav-page-text">Reading from a file</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

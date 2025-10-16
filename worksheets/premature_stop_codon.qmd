@@ -2,23 +2,34 @@
 
 For this activity you have a Wild Type gene sequence, and three mutants. The task is to write a program that detects whether or not the mutant has a premature stop codon. 
 
-```{python}
-# Provided Wild Type and mutant sequences
-WildType = ""
-mutant1 = ""
-mutant2 = ""
-mutant3 = ""
+> Start codon: ATG
+
+> Stop codons: TAA, TGA, TAG
+
+```{=html}
+<a href="../course_files/Premature_stop_codon.fa" 
+   class="btn btn-lg text-white rounded-pill px-4 py-2" 
+   style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
+   download>
+  📥 Download Premature_stop_codon.fa
+</a>
 ```
+  \
 
 Try to break this down into small chunks: 
 
-1.  Write a program to find the stop codon in the Wild Type sequence, and count the number of codons. The answer should be ANS. 
+1.  Write a program to read the fasta file, and save the Wild Type and mutant sequences
 
+2.  Write a program to find the stop codon in the Wild Type sequence, and count the number of codons. The answer should be **48** codons. 
 
+3.  Write a program to find the first stop codon in each of the mutant sequences, and count the number of codons. 
 
-2.  Write a program to find the first stop codon in each of the mutant sequences, and count the number of codons. 
+4.  Compare the number of codons from the Wild Type sequence to each mutant sequence, and determine whether or not the mutant has a premature stop codon. 
 
+::: { .callout-note collapse="true" title="Hint"}
+All of these sequences start at the start codon ATG
 
+A codon is three bases long - could you use `range()` to get a loop of indexes which increase by 3 each time? 
 
-3.  Compare the number of codons from the Wild Type sequence to each mutant sequence, and determine whether or not the mutant has a premature stop codon. 
-
+How could you get three bases out of a sequence in one go? Could you use slicing?
+:::

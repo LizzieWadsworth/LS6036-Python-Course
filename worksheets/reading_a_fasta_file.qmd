@@ -1,1 +1,64 @@
 # Reading a fasta file
+
+Now let's apply this to a biological file format - a fasta file (.fa)
+
+A fasta file is a file of sequences, where each sequence is two lines in the file. 
+
+The first line is a header sequence (starts with `>`) The second line is the raw sequence. For example:
+
+```
+>My sequence
+AATTGGCCATG
+```
+
+Download the following file, and **add that to the folder** where you have your python files: 
+
+```{=html}
+<a href="../course_files/Simple_fasta_file.fa" 
+   class="btn btn-lg text-white rounded-pill px-4 py-2" 
+   style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
+   download>
+  📥 Download Simple_fasta_file.fa
+</a>
+```
+  \
+  
+And see if you can do the following: 
+
+1.  Read the file into python 
+2.  For each sequence, calculate the proportion of the sequence that is either G or C (we call this the GC content)
+3.  Print the results 
+
+
+::: { .callout-tip collapse="true" title="Show answer"}
+
+This is one way to do that: 
+
+```{python}
+# Start by opening the file 
+with open("../course_files/Simple_fasta_file.fa") as f:
+    # read the lines to list lines 
+    lines = f.readlines()
+
+# use a for loop to loop through the lines
+for line in lines:
+    # remove the newline \n character
+    line = line.strip()
+
+    # Check if it is header or sequence 
+    if ">" in line:
+        # remove the > and save the header
+        header = line.replace(">", "")
+    # if not header, must be sequence
+    else: 
+        # save the sequence
+        sequence = line
+
+        # calculate proportion of GC
+        # Add counts of G and C, divide by length of sequence
+        GC_content = (sequence.count("G") + sequence.count("C")) / len(sequence)
+
+        # print result
+        print(f"{header} has a GC content of {GC_content}")
+
+```

@@ -78,12 +78,12 @@ website:
                  - href: worksheets/while_loop.qmd
                  - href: worksheets/whileloop_neverending.qmd
                  - href: worksheets/while_practice.qmd
-            # - section: "reading from a file"
-            #   contents:
-            #      - href: worksheets/reading_from_a_file.qmd
-            #      - href: worksheets/writing_to_a_file.qmd
-            #      - href: worksheets/reading_a_fasta_file.qmd
-            #      - href: worksheets/premature_stop_codon.qmd
+            - section: "Reading from a file"
+              contents:
+                 - href: worksheets/reading_from_a_file.qmd
+                 - href: worksheets/writing_to_a_file.qmd
+                 - href: worksheets/reading_a_fasta_file.qmd
+                 - href: worksheets/premature_stop_codon.qmd
         # - section: "**Matplotlib**"
         #   contents:
         #     - section: "Plotting graphs"

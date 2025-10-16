@@ -654,6 +654,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reading from a file</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_from_a_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading from a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/writing_to_a_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Writing to a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_a_fasta_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading a fasta file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/premature_stop_codon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Premature stop codon activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -693,7 +728,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="adding-to-a-dictionary">Adding to a dictionary</h2>
 <p>It’s simple to add a new item to a dictionary. You used <code>.append()</code> to add to a list but there is a simpler way for dictionaries: you can add a new key value pair using the format: <code>dictionary_name[key] = value</code></p>
 <p>Here’s a program that adds some chemicals and then invites you to add another three:</p>
-<div id="37991208" class="cell" data-execution_count="1">
+<div id="1a6cde20" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty dictionary</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>my_elements <span class="op">=</span> {} </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -723,7 +758,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="d8cf0734" class="cell" data-execution_count="2">
+<div id="fe208b1c" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Invite the user to enter a key value pair</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>symbol <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter a chemical symbol: "</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="ss">f"And the name for </span><span class="sc">{</span>symbol<span class="sc">}</span><span class="ss">: "</span>)</span>
@@ -736,7 +771,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="dictionary-keys" class="level2">
 <h2 class="anchored" data-anchor-id="dictionary-keys">Dictionary keys</h2>
 <p>You can use the function <code>.keys()</code> to get a list of all the keys in your dictionary. You could also use <code>.values()</code> to get a list of all the values. Which one do you think is more useful? When would you use them?</p>
-<div id="ed601eab" class="cell" data-execution_count="3">
+<div id="4bf47b57" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary of elements</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>my_elements <span class="op">=</span> {  </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># each key-value pair is separated by a comma</span></span>
@@ -759,7 +794,7 @@ Dictionary values are dict_values(['Hydrogen', 'Helium', 'Oxygen', 'Carbon'])</c
 <section id="dictionary-errors" class="level2">
 <h2 class="anchored" data-anchor-id="dictionary-errors">Dictionary errors</h2>
 <p>In the below example we ask for a key that isn’t in the dictionary - what type of error do we get?</p>
-<div id="9fc5c886" class="cell" data-execution_count="4">
+<div id="281e2386" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_elements <span class="op">=</span> {}  <span class="co"># this is an empty dictionary... </span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ...so let's add some key-value pairs</span></span>

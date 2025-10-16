@@ -1,1 +1,32 @@
 # Writing to a file 
+
+We can also write to a file in a similar way. When we use `open()` it is read-only by default but we can use the options `"a"` or `"w"` to write to files. 
+
+The option `"a"` will append (add to the bottom of) an existing file, and the option `"w"` will **overwrite** an existing file. 
+
+Let's use our lists of people and their favourite colours from an earlier activity, and create a new file to store this information. 
+
+```{python}
+#| eval: false
+# define lists with information
+names = [ "Luffy" , "Zoro" , "Nami" , "Sanji"]
+colours = ["Red", "Green", "Orange", "Yellow"]
+
+# Create or overwrite new file "Strawhat_data.txt"
+
+with open("Strawhat_data.txt", "w") as f: 
+
+    # Use a for loop to loop through every index in the lists 
+    for i in range(0,4): 
+        # Write a line for each character
+        f.write(f"{names[i]} {colours[i]}\n")
+```
+
+If you run this - you should find you now have a new file in your folder! 
+
+What happens if: 
+
+-  You remove the newline `\n` character 
+-  You change `"w"` to `"a"`
+
+You could also create a program that asks the user for information, and then _saves that to a file_. 
