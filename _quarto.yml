@@ -76,7 +76,12 @@ website:
                  - href: worksheets/while_loop.qmd
                  - href: worksheets/whileloop_neverending.qmd
                  - href: worksheets/while_practice.qmd
-                #  - href: worksheets/premature_stop_codon.qmd
+            # - section: "reading from a file"
+            #   contents:
+            #      - href: worksheets/reading_from_a_file.qmd
+            #      - href: worksheets/writing_to_a_file.qmd
+            #      - href: worksheets/reading_a_fasta_file.qmd
+            #      - href: worksheets/premature_stop_codon.qmd
         # - section: "**Matplotlib**"
         #   contents:
         #     - section: "Plotting graphs"
@@ -97,8 +102,6 @@ website:
         #           - href: worksheets/matplotlib_xyticks.qmd
         #     - section: "Plotting from a CSV file"
         #       contents: 
-        #           - href: worksheets/reading_from_a_file.qmd
-        #           - href: worksheets/writing_to_a_file.qmd
         #           - href: worksheets/reading_a_csv_file.qmd
         #           - href: worksheets/plotting_from_a_csv_file.qmd 
         #           # Add a simpler dataset here 

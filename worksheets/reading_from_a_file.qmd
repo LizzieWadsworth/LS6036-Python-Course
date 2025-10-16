@@ -1,1 +1,12 @@
+---
+format: html
+---
+
 # Reading from a file
+
+Now we know how to use loops, we can use this to read from a file. 
+
+Download the following file, and add that to the folder where you have your python files: 
+
+Example_file.txt
+
