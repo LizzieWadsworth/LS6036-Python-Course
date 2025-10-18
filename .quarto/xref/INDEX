@@ -179,5 +179,11 @@
   },
   "worksheets/reading_a_fasta_file.qmd": {
     "reading_a_fasta_file.html": "5a716c58"
+  },
+  "worksheets/matplotlib_xy_limits.qmd": {
+    "matplotlib_xy_limits.html": "d0ca787a"
+  },
+  "worksheets/crab_activity.qmd": {
+    "crab_activity.html": "5dfd6e37"
   }
 }

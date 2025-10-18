@@ -2,6 +2,8 @@
 
 We can add a title to our graphs, and labels to our x and y axis, so that anyone can see what our graphs are showing.
 
+We can add a title with `plt.title()` and x and y axis labels with `plt.xlabel()` and `plt.ylabel()`. 
+
 ```{python}
 # Import the plotting library from matplotlib 
 import matplotlib.pyplot as plt

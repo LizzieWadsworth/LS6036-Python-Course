@@ -1,0 +1,107 @@
+# Crab activity
+
+The following CSV file contains data about crabs caught by the US Governmental Organisation [NOAA Fisheries](https://www.fisheries.noaa.gov/) during their annual Bottom Trawl Surveys from 1975 - 2018. 
+
+This is a shortened subsample of the [full dataset](https://www.fisheries.noaa.gov/inport/item/17108) - the dataset is so large that it cannot be fully opened in Excel! 
+
+<!--
+In case I forget, this is how I changed the dataset: 
+1. Using grep and head, extracted 20 records for a range of species
+2. Added species names and codes from https://www.fisheries.noaa.gov/resource/document/groundfish-survey-species-code-manual-and-data-codes-manual 
+3. Sex: 1 is Male and 2 is Female 
+4. Combined Length and Width for one measurement 
+-->
+
+```{=html}
+<a href="../course_files/Crab_data.csv" 
+   class="btn btn-lg text-white rounded-pill px-4 py-2" 
+   style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
+   download>
+  📥 Download crab_data.csv
+</a>
+```
+  \
+
+This has some catch data on the following crab species: 
+
+::: {layout-ncol="4"}
+![Horsehair crab](/images/horsehair_crab.jpg){group="my-gallery"}
+
+![Dungeness crab](/images/DungenessCrab.jpg){group="my-gallery"}
+
+![Grooved Tanner crab](/images/groovedtannercrab.jpg){group="my-gallery"}
+
+![Scarlet King crab](/images/scarletkingcrab.jpeg){group="my-gallery"}
+
+:::
+
+This dataset contains the following information:
+
+| Column        | Data                                            |
+|---------------|-------------------------------------------------|
+| Crab ID  | Unique number for every crab                 |
+| Common Name     | Common name for the crab species                   |
+| Species name    | Latin species name for the crab species             |
+| Sex    | Whether the crab was male or female |
+| Shell condition | Score for the condition of the shell, with 0 for pre-moult or moulting and 5 for a very old shell  |
+| Carapace measurement      | Length or width of the crab carapace                    |
+
+## Give it a go
+
+See if you can extract the data from the CSV file and use that to create a plot in matplotlib. There are many different ways you could plot this data! 
+
+::: { .callout-note collapse="true" title="Example: Size and shell condition"}
+
+The below graph plots size on the x axis and shell condition on the y axis, with a colour code for species.
+
+::: { .callout-warning collapse="false" title="999 values"}
+It looks like there are two outliers much larger than the other crabs **however** in this dataset, a crab that wasn't or couldn't be measured is listed as 999! 
+:::
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt 
+
+with open("../course_files/crab_data.csv") as f: 
+    lines = f.readlines() 
+
+All_data = {}
+
+for line in lines[1:]:
+    crab_info = line.strip().split(',')
+    commonname = crab_info[1]
+    if commonname in All_data.keys(): 
+        All_data[commonname]["Sex"].append(crab_info[3])
+        All_data[commonname]["Shell_condition"].append( int(crab_info[4]))
+        All_data[commonname]["Size"].append( int(crab_info[5]))
+    else: 
+        All_data[commonname] = {}
+        All_data[commonname]["Sex"] = [crab_info[3]]
+        All_data[commonname]["Shell_condition"] = [int(crab_info[4])]
+        All_data[commonname]["Size"] = [int(crab_info[5])]
+
+colours = {
+    "Horsehair crab": "gold",
+    "Dungeness crab": "b", 
+    "Scarlet King crab": "g", 
+    "Grooved Tanner crab": "crimson"
+}
+
+
+for crab in All_data: 
+    crab_dict = All_data[crab]
+    plt.scatter(crab_dict["Size"], crab_dict["Shell_condition"], color=colours[crab], label=crab)
+
+
+plt.title("Size and shell condition")
+plt.xlabel("Size of crab shell (mm)")
+plt.ylabel("Shell condition (0-5)")
+plt.ylim(0, 5)
+
+plt.legend()
+plt.show()
+
+
+```
+
+:::

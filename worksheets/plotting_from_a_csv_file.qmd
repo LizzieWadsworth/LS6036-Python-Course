@@ -1,0 +1,157 @@
+# Plotting from a csv file
+
+Once we have our csv file, and we've split the lines using `.split(",")`, we can then collect our data for the x and y axes into lists to use with matplotlib. 
+
+This is the same example as the [previous page](reading_a_csv_file.qmd): 
+
+```{=html}
+<a href="../course_files/Screen_time_and_sleep.csv" 
+   class="btn btn-lg text-white rounded-pill px-4 py-2" 
+   style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
+   download>
+  📥 Download Screen_time_and_sleep.csv
+</a>
+```
+  \
+
+If I just try to plot this data, something strange happens. The numbers aren't in order, and the first line (column titles) are also included as points... 
+
+```{python}
+#| eval: false
+# import matplotlib
+import matplotlib.pyplot as plt 
+
+# Use with to open the file
+with open("Screen_time_and_sleep.csv") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+# set X and Y lists
+screentime = []
+sleep_hours = []
+
+# loop through every line in the list 
+for line in lines: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split(",")
+    screentime.append(items[1])
+    sleep_hours.append(items[2])
+
+# plot as a scatter graph 
+plt.scatter(screentime, sleep_hours)
+
+# show the plot 
+plt.show()
+```
+
+```{python}
+#| echo: false
+# import matplotlib
+import matplotlib.pyplot as plt 
+
+# Use with to open the file
+with open("../course_files/Screen_time_and_sleep.csv") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+# set X and Y lists
+screentime = []
+sleep_hours = []
+
+# loop through every line in the list 
+for line in lines: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split(",")
+    screentime.append(items[1])
+    sleep_hours.append(items[2])
+
+# plot as a scatter graph 
+plt.scatter(screentime, sleep_hours)
+
+# show the plot 
+plt.show()
+```
+
+
+This is because the X and Y axis values are **strings** so we want to [convert them to integers](UserInput_DataTypes.qmd) in the same way we've done before: 
+
+`screentime.append( int(items[1]) )`
+
+But we also need to skip that header line, or else we'll get the error: 
+
+```{python}
+#| echo: false
+#| error: true
+# import matplotlib
+import matplotlib.pyplot as plt 
+
+# Use with to open the file
+with open("../course_files/Screen_time_and_sleep.csv") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+# set X and Y lists
+screentime = []
+sleep_hours = []
+
+# loop through every line in the list 
+for line in lines: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split(",")
+    screentime.append( int(items[1]) )
+    sleep_hours.append( int(items[2]) )
+
+# plot as a scatter graph 
+plt.scatter(screentime, sleep_hours)
+
+# show the plot 
+plt.show()
+```
+
+Which we can do using [list slicing](List_slicing.qmd), skipping line 0 and going through every other line in our for loop: 
+
+`for line in lines[1:]:` 
+
+Which can then generate the graph we want: 
+
+
+```{python}
+#| echo: false
+# import matplotlib
+import matplotlib.pyplot as plt 
+
+# Use with to open the file
+with open("../course_files/Screen_time_and_sleep.csv") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+# set X and Y lists
+screentime = []
+sleep_hours = []
+
+# loop through every line in the list 
+for line in lines[1:]: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split(",")
+    screentime.append( int(items[1]) )
+    sleep_hours.append( int(items[2]) )
+
+# plot as a scatter graph 
+plt.scatter(screentime, sleep_hours, marker="+")
+
+# Add titles 
+plt.title("Screen time and sleep")
+plt.xlabel("Screen time")
+plt.ylabel("Hours of sleep")
+
+# Set axis limits 
+plt.xlim(0, 20)
+plt.ylim(0, 15)
+
+# show the plot 
+plt.show()
+```

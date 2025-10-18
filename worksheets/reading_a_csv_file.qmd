@@ -1,0 +1,70 @@
+# Reading from a csv file
+
+We've already read a file and split lines by spaces in the [Reading from a file](reading_from_a_file.qmd) section. 
+
+Now we're going to look at a CSV file (comma separated variables). 
+
+```{=html}
+<a href="../course_files/Screen_time_and_sleep.csv" 
+   class="btn btn-lg text-white rounded-pill px-4 py-2" 
+   style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
+   download>
+  📥 Download Screen_time_and_sleep.csv
+</a>
+```
+  \
+
+This is esentially a table of information, stored as text separated by commas. 
+
+The following table of information:
+
+| Name | Screen time (hours) | Sleep (hours) |
+| --- | --- | --- |
+| Jaydev | 12 | 5 | 
+| Lizzie | 14 | 10 | 
+| Tharshan | 8 | 9 | 
+| Sagar | 5 | 8 | 
+| Saitama | 15 | 4 | 
+
+In a csv file would look like: 
+
+```
+Name,Screen time (hours),Sleep (hours)
+Jaydev,12,5 
+Lizzie,14,10 
+Tharshan,8,9 
+Sagar,5,8 
+Saitama,15,4 
+```
+
+We can read this file in python, and split every line by the comma. Instead of `.strip().split()` we can specify that we want to split on a comma (instead of a space) by using  `.strip().split(",")`
+
+```{python}
+#| eval: false
+# Use with to open the file
+with open("Screen_time_and_sleep.csv") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+# loop through every line in the list 
+for line in lines: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split(",")
+    print(items)
+```
+
+```{python}
+#| echo: false
+# Use with to open the file
+with open("../course_files/Screen_time_and_sleep.csv") as f: 
+    # read the lines using readlines() and save to a list
+    lines = f.readlines()
+
+# loop through every line in the list 
+for line in lines: 
+    # .strip() removes the \n character 
+    # .split() splits the line into a list at each space
+    items = line.strip().split(",")
+    print(items)
+```

@@ -1,0 +1,25 @@
+# Matplotlib xy limits 
+
+Matplotlib automatically detects what values are plotted, and draws axis that displays all the points. 
+
+However, sometimes we may want to force the x and y axis plot a certain region - e.g. 0-100% on a y axis. 
+
+We can do this by setting `plt.xlim()` or `plt.ylim()`. 
+
+```{python}
+# Import matplotlib
+import matplotlib.pyplot as plt 
+
+# Define lists 
+species = ["Voles", "Frogs", "Otters", "Nematodes", "Eels"]
+percent_survival = [10, 39, 1, 22, 5]
+
+# plot as a bar chart 
+plt.bar(species, percent_survival)
+
+# set ylim to between 0 and 100
+plt.ylim(0,100)
+
+# show graph 
+plt.show()
+```

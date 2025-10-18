@@ -1,2 +1,71 @@
 # Matplotlib bar charts and histograms 
 
+With matplotlib, we can also use: 
+
+-  `plt.bar()` to make bar charts 
+-  `plt.barh()` to make _horizontal_ bar charts 
+-  `plt.hist()` to calculate and make histograms 
+
+::: {.panel-tabset}
+
+## Bar chart example 
+
+Bar chart of number of species in an area, using a list of species and a list of values. 
+
+```{python}
+# Import matplotlib
+import matplotlib.pyplot as plt 
+
+# Define lists 
+species = ["Voles", "Frogs", "Otters", "Nematodes", "Eels"]
+counts = [10, 39, 1, 22, 5]
+
+# plot as a bar chart 
+plt.bar(species, counts)
+
+# show graph 
+plt.show()
+```
+
+## Horizontal bar chart 
+
+Same example, but oriented differently!
+
+```{python}
+# Import matplotlib
+import matplotlib.pyplot as plt 
+
+# Define lists 
+species = ["Voles", "Frogs", "Otters", "Nematodes", "Eels"]
+counts = [10, 39, 1, 22, 5]
+
+# plot as a bar chart 
+plt.barh(species, counts)
+
+# show graph 
+plt.show()
+```
+
+## Histogram 
+
+If we have a set of values, for example number of puppies in a litter, and we want to plot a histogram we can also do that. 
+
+`plt.hist()` will take the values we put in an separate them into categories (0-2, 2-4, 4-6) and then count how many litters fit in each category. 
+
+_What happens if you change the number of bins?_
+
+```{python}
+# Import matplotlib
+import matplotlib.pyplot as plt 
+
+# Define initial data
+puppies_per_litter = [5, 2, 6, 1, 3, 4, 4, 3, 2, 5, 6, 6, 6, 8, 7, 7, 6, 6, 7, 6, 5, 5, 5, 4, 8, 8, 7, 6, 6, 5, 4, 5, 2, 1, 8, 6]
+
+# plot as a histogram 
+plt.hist(puppies_per_litter, bins=8)
+
+# show graph 
+plt.show()
+```
+
+![German Shepard with 5 puppies](/images/puppies-german-shepherd.webp)

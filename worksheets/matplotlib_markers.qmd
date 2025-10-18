@@ -10,8 +10,15 @@ import matplotlib.pyplot as plt
 x = [0, 1, 2]
 y = [10, 5, 8]
 
-# Plotting x values against y values 
-plt.scatter(x, y, marker="*", s=200)
+# Plotting first point with a star
+plt.scatter(x[0], y[0], marker="*", s=200)
+
+# Plotting second point with a triangle
+plt.scatter(x[1], y[1], marker="^", s=200)
+
+# Plotting third point with a plus
+plt.scatter(x[2], y[2], marker="x", s=200)
+
 
 # View the created graph
 plt.show()

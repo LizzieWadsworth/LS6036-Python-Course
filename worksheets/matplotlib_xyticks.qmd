@@ -1,1 +1,81 @@
 # Matplotlib xy ticks
+
+In all the examples so far, matplotlib has estimated what it wants the x and y _ticks_ to be. These are the marks on the x and y axis (0, 10, 20 etc.). 
+
+For numerical values this is automatic, but sometimes we might want to change them. 
+
+With `plt.xticks()` or `plt.yticks()` you can give a list of values (where you want the ticks to be drawn), and also a list of labls (what you want the ticks to be labelled as). 
+
+See below examples: 
+
+::: {.panel-tabset}
+
+## Choose ticks
+
+In this example, only three values on the x axis are chosen to be displayed on the graph. 
+
+```{python}
+# Import the plotting library from matplotlib 
+import matplotlib.pyplot as plt
+
+# Make a list of x values and y values
+x = [0, 1, 2]
+y = [10, 5, 8]
+
+# Plotting x values against y values 
+plt.plot(x, y)
+
+# Only mark 0, 0.5 and 1 on the X axis
+plt.xticks([0, 0.5, 1])
+
+# View the created graph
+plt.show()
+```
+
+## Relabel ticks
+
+In this example, the y axis is relabelled to spell "Hello!". 
+
+```{python}
+# Import the plotting library from matplotlib 
+import matplotlib.pyplot as plt
+
+# Make a list of x values and y values
+x = [0, 1, 2]
+y = [10, 5, 8]
+
+# Plotting x values against y values 
+plt.plot(x, y)
+
+# Change the yticks to say "Hello"
+range_of_ticks = range(10, 4, -1)
+labels_of_ticks = ["H", "e", "l", "l", "o", "!"]
+plt.yticks(range_of_ticks, labels = labels_of_ticks)
+
+# View the created graph
+plt.show()
+```
+
+## Strings as ticks
+
+If you have strings, such as dates, these will _all_ plot by default which will look really busy. So using x or y ticks, you can choose which ones you want to plot and also rename them as necessary. 
+
+```{python}
+# Import the plotting library from matplotlib 
+import matplotlib.pyplot as plt
+
+# Make a list of x values and y values
+dates = ["01/01/25", "10/01/25", "20/01/25", "01/02/25", "10/02/25", "31/02/25", "01/03/25", "10/03/25", "20/03/25", "01/04/25"]
+cakes_eaten = [5, 8, 10, 4, 7, 9, 3, 14, 8, 12]
+
+# Plotting x values against y values 
+plt.plot(dates, cakes_eaten)
+
+# Change the yticks to say "Hello"
+list_of_ticks = ["01/01/25", "01/02/25", "01/03/25", "01/04/25"]
+labels_of_ticks = ["January", "February", "March", "April"]
+plt.xticks(list_of_ticks, labels = labels_of_ticks)
+
+# View the created graph
+plt.show()
+```

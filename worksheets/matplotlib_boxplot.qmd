@@ -1,1 +1,39 @@
 # Matplotlib boxplot
+
+::: {.panel-tabset}
+
+## Single boxplot 
+
+We can make a single boxplot using `plt.boxplot()`
+
+```{python}
+import matplotlib.pyplot as plt
+
+drug_1 = [98, 100, 97, 89, 92, 75]
+
+survival_rates = [drug_1]
+
+plt.boxplot(survival_rates)
+
+plt.show()
+```
+
+## Multiple boxplots
+
+We can plot multiple boxplots together by using a list of lists. 
+
+```{python}
+import matplotlib.pyplot as plt
+
+drug_1 = [98, 100, 97, 89, 92, 75]
+drug_2 = [76, 75, 88, 72, 67, 64]
+drug_3 = [75, 88, 82, 69, 98, 54]
+
+survival_rates = [drug_1, drug_2, drug_3]
+
+plt.boxplot(survival_rates)
+
+plt.show()
+```
+
+:::

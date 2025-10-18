@@ -4,16 +4,148 @@ Now that you've got an idea of matplotlib, try to plot the following:
 
 ::: {.panel-tabset}
 
-## Example 1 
+## Exponential growth 
 
-Add example 
+_You might have done this exercise in the while loop section_ 
 
-## Example 2 
+_E. coli_ doubles every 20 minutes. 
 
-Add example 
+Plot the growth of bacteria in an experiment: 
 
-## Example 3 
+- Starting with 1 bacterium, and a time of 0 
+- Calculate the growth over 400 minutes 
+- Plot time on the x axis, and bacteria on the y axis 
 
-Add example 
+::: { .callout-tip collapse="true" title="Example output"}
+
+
+```{python}
+#| echo: false
+# Import matplotlib 
+import matplotlib.pyplot as plt 
+
+# Set initial values 
+bacteria = 1
+time = 0
+
+# Create lists to collect values 
+bacteria_list = []
+time_list = []
+
+# Use a for loop for 400 minutes, incrementing by 20 minutes 
+for i in range(0, 400, 20): 
+    # double number of bacteria 
+    bacteria = bacteria * 2
+
+    # add 20 minutes to time 
+    time = time + 20 
+
+    # add values to lists
+    bacteria_list.append(bacteria)
+    time_list.append(time)
+
+# Plot the data 
+plt.plot(time_list, bacteria_list)
+plt.show()
+```
+
+:::
+
+## Temperature and enzyme activity
+
+Take the following two lists, of temperatures and corresponding enzyme activities, and plot them on a scatter graph. 
+
+```{python}
+# Temperature in degrees Celsius 
+temperature = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 55, 60, 65, 70]
+
+# Simulated enzyme activity (U/mL)
+enzyme_activity = [4, 6, 9, 12, 16, 20, 25, 30, 35, 40, 45, 48, 50, 52, 53, 54, 52, 48, 40, 30, 20, 12, 6, 3, 1]
+```
+
+::: { .callout-tip collapse="true" title="Example output"}
+
+
+```{python}
+#| echo: false
+#| warning: false
+# Import matplotlib 
+import matplotlib.pyplot as plt 
+
+# Temperature in degrees Celsius 
+temperature = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 55, 60, 65, 70]
+
+# Simulated enzyme activity (U/mL)
+enzyme_activity = [4, 6, 9, 12, 16, 20, 25, 30, 35, 40, 45, 48, 50, 52, 53, 54, 52, 48, 40, 30, 20, 12, 6, 3, 1]
+
+plt.scatter(temperature, enzyme_activity)
+
+plt.show()
+```
+
+:::
+
+## Covid and candles
+
+In an experiment, people were:
+
+-  Tested for an active Covid-19 infection
+-  Asked to rate how strongly they could smell a scented candle 
+
+The results can be found below: 
+
+| Covid result | Scented candle strength | 
+| --- | --- | 
+| Positive | 3, 3, 2, 1, 4, 3, 3, 5, 3, 2, 1, 2 |
+| Negative | 5, 4, 5, 5, 5, 4, 4, 2, 4, 5, 4, 3 | 
+
+Plot the results as either: 
+
+-  Bar chart of the average candle rating for each category 
+-  Box plot of results for each category 
+
+::: { .callout-note collapse="true" title="Example barchart"}
+
+
+```{python}
+#| echo: false
+# Import matplotlib 
+import matplotlib.pyplot as plt 
+
+Positives = [3, 3, 2, 1, 4, 3, 3, 5, 3, 2, 1, 2]
+Negative  = [5, 4, 5, 5, 5, 4, 4, 2, 4, 5, 4, 3]
+
+def calculate_average(listname):
+    sum = 0
+    for num in listname:
+        sum += num
+    average = sum/len(listname)
+    return average
+
+plt.bar(["Positives", "Negatives"], [calculate_average(Positives), calculate_average(Negative)])
+
+plt.show()
+```
+
+:::
+
+::: { .callout-tip collapse="true" title="Example boxplot"}
+
+
+```{python}
+#| echo: false
+#| warning: false
+# Import matplotlib 
+import matplotlib.pyplot as plt 
+
+Positives = [3, 3, 2, 1, 4, 3, 3, 5, 3, 2, 1, 2]
+Negative  = [5, 4, 5, 5, 5, 4, 4, 2, 4, 5, 4, 3]
+
+plt.boxplot([Positives, Negative], labels = ["Positives", "Negatives"])
+
+plt.show()
+```
+
+:::
 
 :::

@@ -112,6 +112,7 @@ body.quarto-dark .quarto-color-scheme-toggle > .bi::before {
 }
 
 .navbar {
-    background-color: #14532d;
+    /* background-color: #14532d; */
+    background-color: #cf4f00;
     color: rgb(253.26, 253.63, 253.98);
 }

@@ -1,1 +1,64 @@
 # Matplotlib Pie Charts
+
+We can also create pie charts in matplotlib. 
+
+::: {.panel-tabset}
+
+## Simple pie chart
+
+This is a simple pie chart - we have a list of proportions, and use `plt.pie()` to create a pie chart. 
+
+```{python}
+# import matplotlib
+import matplotlib.pyplot as plt
+
+# each size is out of 100, 
+# for what proportion of the pie chart each slice takes
+sizes_list = [15, 30, 45, 10] 
+
+plt.pie(sizes_list)
+
+plt.show()
+```
+
+
+##  Pie chart with labels
+
+We can also add a list of labels using `labels=`
+
+```{python}
+# import matplotlib
+import matplotlib.pyplot as plt
+
+# labels to go with the pie chart sizes
+labels_list = ["Frogs", "Hogs", "Dogs", "Logs"]
+sizes_list = [15, 30, 45, 10]
+
+plt.pie(sizes_list, labels=labels_list)
+
+plt.show()
+```
+
+## Pie chart with explode
+
+We've changed two things here:
+
+1.  We've added an explode list using `explode=` - what has this done to the pie chart? 
+
+2.  We've changed the start angle using `startangle=` - what has this done to the pie chart?
+
+```{python}
+# import matplotlib
+import matplotlib.pyplot as plt
+
+labels_list = ["Frogs", "Hogs", "Dogs", "Logs"]
+sizes_list = [15, 30, 45, 10]
+# What does explode value do?
+explode_list = [0, 0.1, 0, 0]
+
+# We've also added startangle=90
+plt.pie(sizes_list, explode=explode_list, labels=labels_list, startangle=90)
+
+# What does this line do? 
+plt.show()
+```
