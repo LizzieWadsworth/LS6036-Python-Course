@@ -172,8 +172,6 @@ Loop through every protein in the dictionary, and for each protein print the mea
 Your answer may look something like this: 
 ```{python}
 #| echo: false
-# import numpy library for mean function
-import numpy as np
 # Expression dictionary
 genes_expression_dict = {
     "SHH": [10.0, 14.2, 12.3, 9.4, 8.7],
@@ -186,7 +184,7 @@ for gene in genes_expression_dict.keys():
     # Extract the list of expression values 
     expression_values = genes_expression_dict[gene]
     # Calculate the mean, min and max 
-    mean_expression = np.mean(expression_values)
+    mean_expression = sum(expression_values)/len(expression_values)
     min_expression = min(expression_values)
     max_expression = max(expression_values)
 
@@ -200,8 +198,6 @@ for gene in genes_expression_dict.keys():
 There are multiple ways to do this, one example answer is: 
 ```{python}
 #| eval: false
-# import numpy library for mean function
-import numpy as np
 # Expression dictionary
 genes_expression_dict = {
     "SHH": [10.0, 14.2, 12.3, 9.4, 8.7],
@@ -214,7 +210,7 @@ for gene in genes_expression_dict.keys():
     # Extract the list of expression values 
     expression_values = genes_expression_dict[gene]
     # Calculate the mean, min and max 
-    mean_expression = np.mean(expression_values)
+    mean_expression = sum(expression_values)/len(expression_values)
     min_expression = min(expression_values)
     max_expression = max(expression_values)
 
