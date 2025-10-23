@@ -837,7 +837,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><a href="../Logo/Logo_with_diya_and_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../Logo/Logo_with_diya_and_text.png" class="img-fluid"></a></p>
+<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
 </div></div>
         
     </div>
@@ -877,7 +877,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>“none” - objects that don’t exist in the land of Zog.</li>
 </ul>
 <p>We can read this file in python using the following code:</p>
-<div id="6749dfc6" class="cell" data-execution_count="1">
+<div id="6f734f00" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use with to open the file</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"Land_of_zog.txt"</span>) <span class="im">as</span> f: </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># read the lines using readlines() and save to a list</span></span>
@@ -886,14 +886,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first 5 lines of the list</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lines[<span class="dv">0</span>:<span class="dv">5</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="2a33a6de" class="cell" data-execution_count="2">
+<div id="d97ff84b" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>['door exist\n', 'ball none\n', 'broom exist\n', 'mirror none\n', 'floor exist\n']</code></pre>
 </div>
 </div>
 <p>This creates a list where every line in the file is an item in the list. Notice how every line ends with <code>\n</code> - this is a newline character, which marks where each line ends.</p>
 <p>We can then use a for loop to go through each line of the file:</p>
-<div id="8c2cb641" class="cell" data-execution_count="3">
+<div id="15d01da4" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loop through every line in the list </span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> lines: </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># .strip() removes the \n character </span></span>
@@ -901,7 +901,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    items <span class="op">=</span> line.strip().split()</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(items)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="7cc3dabd" class="cell" data-execution_count="4">
+<div id="0da7c750" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>['door', 'exist']
 ['ball', 'none']
@@ -931,7 +931,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We can use an if statement to collect a list of things that exist and list of things that don’t, and print these out.</p>
-<div id="2d0b7341" class="cell" data-execution_count="5">
+<div id="504f37ec" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use with to open the file</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"Land_of_zog.txt"</span>) <span class="im">as</span> f: </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># read the lines using readlines() and save to a list</span></span>
@@ -958,7 +958,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Items that exist: </span><span class="sc">{</span>exist_list<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Items that do not exist: </span><span class="sc">{</span>none_list<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="6f727e10" class="cell" data-execution_count="6">
+<div id="b7c6bab0" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Items that exist: ['door', 'broom', 'floor', 'book', 'roof', 'toothbrush', 'boot', 'balloon', 'stool', 'toothpaste', 'room', 'spoon', 'doorbell', 'hook', 'foot', 'moon', 'loop', 'floorboard', 'bookcase', 'doorway', 'broomstick']
 Items that do not exist: ['ball', 'mirror', 'plate', 'bucket', 'lamp', 'cushion', 'drawer', 'table', 'cup', 'window', 'desk', 'chair', 'wall', 'coat', 'fork', 'pillow', 'bottle', 'cabinet', 'blanket', 'curtain', 'comb', 'carpet', 'shelf', 'brush', 'sofa', 'bag', 'frame']</code></pre>

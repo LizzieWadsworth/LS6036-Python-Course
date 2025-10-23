@@ -1,0 +1,31 @@
+# Local and global variables 
+
+Up until now, everytime we've made a variable (such as a string, list, integer, dictionary) it has been a **global** variable. That means it is accessible everywhere in the code after we've defined it. 
+
+However, when we create a new variable inside a function it is a **local** variable. This is a temporary variable, that only exists while we're running the function and is then deleted. 
+
+**Variables are local within a function**
+
+This means variables you create inside a function **cannot** be used outside of the function. 
+
+What's the error with the below code?
+
+```{python}
+#| error: true
+
+# define a function to print a string
+def print_string():
+    # create and print local variable my_string
+    my_string = 'hello'
+    print(my_string)
+
+# run the function
+print_string()
+
+# Try to print variable defined in the function
+print(my_string)
+```
+
+This is actually useful - if we're creating a function we want to use many times, we don't neccessarily want save every intermediate step of the calculation. 
+
+We can get around this using arguments and return. 

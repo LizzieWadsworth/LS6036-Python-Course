@@ -185,5 +185,14 @@
   },
   "worksheets/crab_activity.qmd": {
     "crab_activity.html": "5dfd6e37"
+  },
+  "worksheets/define_a_function.qmd": {
+    "define_a_function.html": "a8387316"
+  },
+  "worksheets/local_and_global_variables.qmd": {
+    "local_and_global_variables.html": "1e5de436"
+  },
+  "worksheets/function_arguments.qmd": {
+    "function_arguments.html": "235fa8b9"
   }
 }

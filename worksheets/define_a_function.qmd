@@ -1,0 +1,31 @@
+# Defining a function
+
+You have seen builtin functions, like `print()`, `int()`, `type()`, and functions from packages, like `matplotlib.pyplot()`. 
+
+In Python, you can also define functions yourself. This is useful when you need to do the same thing (or something very similar) again and again.
+
+You can define a function using the format: 
+
+> def function_name(): 
+
+And then add your contents *after an indent* just like you would with a loop. 
+
+However - this does not do anything on it's own! We also need to *call it* for it to run. 
+
+Which print statement will print first, 1 or 2? Why?
+
+```{python}
+#| eval: false
+# Run this - what happens? 
+
+# defining a function:
+def our_new_function():
+    # print statement inside the function
+    print('1: yay! We have done a function')
+
+# print statement outside the function
+print('2: Are we still in our function?')
+
+# call the function
+our_new_function()
+```

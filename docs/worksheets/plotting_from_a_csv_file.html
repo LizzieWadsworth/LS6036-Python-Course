@@ -837,7 +837,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><a href="../Logo/Logo_with_diya_and_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="../Logo/Logo_with_diya_and_text.png" class="img-fluid"></a></p>
+<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
 </div></div>
         
     </div>
@@ -872,7 +872,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br>
 </p>
 <p>If I just try to plot this data, something strange happens. The numbers aren’t in order, and the first line (column titles) are also included as points…</p>
-<div id="c941b0ef" class="cell" data-execution_count="1">
+<div id="9930a633" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import matplotlib</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -899,7 +899,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># show the plot </span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="4255b8b7" class="cell" data-execution_count="2">
+<div id="e941bc78" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -911,7 +911,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This is because the X and Y axis values are <strong>strings</strong> so we want to <a href="../worksheets/UserInput_DataTypes.html">convert them to integers</a> in the same way we’ve done before:</p>
 <p><code>screentime.append( int(items[1]) )</code></p>
 <p>But we also need to skip that header line, or else we’ll get the error:</p>
-<div id="e156861b" class="cell" data-execution_count="3">
+<div id="2c3fcad4" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -932,7 +932,7 @@ Cell <span class="ansi-green-fg">In[2], line 18</span>
 <p>Which we can do using <a href="../worksheets/List_slicing.html">list slicing</a>, skipping line 0 and going through every other line in our for loop:</p>
 <p><code>for line in lines[1:]:</code></p>
 <p>Which can then generate the graph we want:</p>
-<div id="c90ce227" class="cell" data-execution_count="4">
+<div id="5b26fc59" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

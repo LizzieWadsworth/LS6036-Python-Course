@@ -108,6 +108,13 @@ website:
                   - href: worksheets/reading_a_csv_file.qmd
                   - href: worksheets/plotting_from_a_csv_file.qmd 
                   - href: worksheets/crab_activity.qmd
+        # - section: "**Functions**"
+        #   contents:
+        #     - section: "Defining functions"
+        #       contents: 
+        #           - href: worksheets/define_a_function.qmd
+
+
                   
 
   favicon: /Logo/LS6036_face.png
@@ -127,7 +134,8 @@ engine: jupyter
 lightbox: true
 
 margin-header: |
-  ![](/Logo/Logo_with_diya_and_text.png)
+  ![](/Logo/LS6036_with_text.png)
+#  ![](/Logo/Logo_with_diya_and_text.png) # Diwali logo
 
 filters:
   - /Users/lizzie/Documents/Kingston/Year_2526/LS6036/LS6036 Python Course/filters/tools_tabset_python.lua
