@@ -1,0 +1,124 @@
+# Mutable and Immutable values 
+
+A variable is **mutable** if it can be changed, for example lists and dictionaries can be changed by adding new values or changing a value. 
+
+However, strings and integers are **immutable** which means they cannot be changed. They can only be overwritten. 
+
+::: {.panel-tabset}
+
+## Changing list value
+
+It's possible to change, remove or add values to a list. When you do this, this will change the change the list for the rest of the program. 
+
+```{python}
+# Create a list of club members
+club_members = ["Shrek", "Fiona", "Ginger", "Pinnochio", "Dragon"]
+# Change member 2 from "Ginger" to "Donkey"
+club_members[2] = "Donkey"
+# Print final list 
+print(club_members)
+```
+
+## Changing string values
+
+However, with a string, any changes you make to it _create a new string_ and do not change the original string. 
+
+In this example, we replace the letter T with U but the variable my_DNA_seq remains unchanged. 
+
+```{python}
+# Create a string of DNA 
+my_DNA_seq = "ATCTGCATGCTACGTTGGGCCCTTA"
+
+# Replace T with Us - but doesn't change original my_DNA_seq
+my_DNA_seq.replace("T", "U")
+
+# Print variable my_DNA_seq
+print(my_DNA_seq)
+```
+
+## Overwriting string values
+
+To actually change the value of a string variable, you need to overwrite the variable with the new value. 
+
+```{python}
+# Create a string of DNA 
+my_DNA_seq = "ATCTGCATGCTACGTTGGGCCCTTA"
+
+# Replace T with Us - and OVERWRITE the variable my_DNA_seq
+my_DNA_seq = my_DNA_seq.replace("T", "U")
+
+# Print variable my_DNA_seq
+print(my_DNA_seq)
+```
+
+:::
+
+This also applies to functions - if you pass a `list` or `dict` to a function you can change the value inside the function, but you can't do the same with a `str`, `int` or `float`. 
+
+::: {.panel-tabset}
+
+## Lists inside functions
+
+It's possible to change, remove or add values to a list inside a function. 
+When you do this, this will change the change the list for the rest of the program. 
+
+```{python}
+# Define a function to add a new member to a club 
+def add_club_member(new_member, club_list): 
+    # use append to add the club member 
+    club_list.append(new_member)
+
+# Create a list of club members
+club_members = ["Shrek", "Fiona", "Ginger", "Pinnochio", "Dragon"]
+
+# Add Donkey to the list 
+add_club_member("Donkey", club_members)
+
+# Print final list 
+print(club_members)
+```
+
+## Strings inside functions
+
+However, with a string, any changes you make to it _create a new string_ and do not change the original string. 
+
+In this example, we replace the letter T with U but the variable my_DNA_seq remains unchanged. 
+
+```{python}
+# Define a function to replace Ts with Us
+def DNA_T_to_U(dna_seq):
+    # Use replace function to change Ts with Us
+    dna_seq = dna_seq.replace("T","U")
+
+# Create a string of DNA 
+my_DNA_seq = "ATCTGCATGCTACGTTGGGCCCTTA"
+
+# Replace T with Us using function - but doesn't change original my_DNA_seq
+DNA_T_to_U(my_DNA_seq)
+
+# Print variable my_DNA_seq
+print(my_DNA_seq)
+```
+
+## Overwriting strings from functions
+
+To actually change the value of a string variable, you need to overwrite the variable with the new value. 
+
+```{python}
+# Define a function to replace Ts with Us
+def DNA_T_to_U(dna_seq):
+    # Use replace function to change Ts with Us
+    dna_seq = dna_seq.replace("T","U")
+    # Return the new string
+    return dna_seq
+
+# Create a string of DNA 
+my_DNA_seq = "ATCTGCATGCTACGTTGGGCCCTTA"
+
+# Replace T with Us using function - and OVERWRITE the variable my_DNA_seq
+my_DNA_seq = DNA_T_to_U(my_DNA_seq)
+
+# Print variable my_DNA_seq
+print(my_DNA_seq)
+```
+:::

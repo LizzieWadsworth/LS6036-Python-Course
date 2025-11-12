@@ -2,7 +2,7 @@
 
 Functions are a great way to _reuse_ code you've used previously but on a different piece of data. 
 
-We can give a function *arguments* inside the round brackets `()` - these can be any variables (strings, ints, lists, dictionaries....)
+We can give a function *arguments* inside the round brackets `()` - these can be any variables (strings, integers, floats, lists, dictionaries....)
 
 _It's good practice to name the arguments that the function uses different to the variables used in the rest of the program: This makes it really clear what each argument is referring to_
 
@@ -10,15 +10,15 @@ You can add as many function arguments as you need.
 
 ```{python}
 #| eval: false
-# string function takes two arguments - string and number
+# print_string function takes two arguments - our_string and our_number
 def print_string(our_string, our_number):
     print(our_number, our_string)
 
-# we can run the function using different strings and numbers
+# we can run the function using different strings and numbers - first with "Hello" and 25
 print("Function attempt 1:")
 print_string("Hello", 25)
 
-# Call the function again with different values
+# Call the function again with different values - "World" and -32
 print("Function attempt 2:")
 print_string("World", -32)
 ```
@@ -35,16 +35,16 @@ def upper_and_lower_count(chosen_string):
     # create totals for upper and lower case characters
     upper = 0
     lower = 0
-    # loop through every letter in chosen_string
+    # for loop through to go through every letter in chosen_string
     for letter in chosen_string:
         # if letter is upper case, add one to upper
         if letter.isupper():
             upper += 1
         # elif letter is lower case, add one to lower
-        # why did we not use else? Would else give the same answer?
+        # Why did we not use else here? Would else give the same answer?
         elif letter.islower():
             lower += 1
-    # print the results
+    # Print the results after the for loop
     print("The string", chosen_string, "has", upper, "upper case characters")
     print("The string", chosen_string, "has", lower, "lower case characters")
 

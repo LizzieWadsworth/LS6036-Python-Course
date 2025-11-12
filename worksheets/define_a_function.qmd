@@ -1,8 +1,8 @@
 # Defining a function
 
-You have seen builtin functions, like `print()`, `int()`, `type()`, and functions from packages, like `matplotlib.pyplot()`. 
+You have seen built-in functions, like `print()`, `int()`, `type()`, and functions from packages, like `matplotlib.pyplot()`. 
 
-In Python, you can also define functions yourself. This is useful when you need to do the same thing (or something very similar) again and again.
+In Python, you can also define functions yourself. This is useful when you need to do the same thing (or something very similar) several times.
 
 You can define a function using the format: 
 

@@ -1,0 +1,241 @@
+# Functions practice I
+
+::: {.panel-tabset}
+
+## Snail in a bucket 
+
+A snail fell into a bucket and wanted to crawl out. 
+The snail will: 
+
+- Climb 5 cm per minute
+- Climb for 10 minutes continuously and then need to rest for 5 minutes
+- Slide back down 15 cm while it is resting.
+
+How many minutes will it take for a snail to crawl out at different depths?
+
+Create a function that takes a number of the bucket depth (the unit is cm) as an argument and returns the minutes required for the snail to crawl out.
+
+::: { .callout-note collapse="true" title="Show hint"}
+Write this first using just one depth (e.g. 50 cm) _without using functions_ and then rewrite this into a function. 
+
+Once in a function, you can use different depths.
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+
+```{python}
+# Define function which takes bucket height as an argument, and returns the time 
+
+def time_to_escape(bucket_height):
+    # Set initial values, time and snail location
+    total_time = 0 
+    time_since_rest = 0
+    snail_location = 0
+
+    # Use a while loop to calculate the time to escape the bucket
+    # Once snail location is equal to bucket height, the snail has escaped 
+    while snail_location < bucket_height:
+        # Snail climbs 5 cm in one minute
+        snail_location += 5
+        total_time += 1
+        time_since_rest += 1
+
+        # Snail rests every 30 minutes
+        if time_since_rest == 10: 
+            # Rest for 10 minutes 
+            total_time += 5 
+            # Slide down 30 cm 
+            snail_location -= 15
+            # Reset time since rest 
+            time_since_rest = 0
+    
+    # Outside of while loop - when snail location has reached bucket height 
+    # Return the total time 
+    return total_time
+
+# Run function with different heights 
+heights = [10, 17, 39, 59, 100]
+
+# Loop through heights
+for height in heights:
+    # Calculate snail escape time
+    snail_escape_time = time_to_escape(height)
+    # Print result
+    print("Snail escapes bucket with height", height, "in", snail_escape_time, "minutes")
+```
+
+:::
+
+## Find a pangram
+
+Write a function that checks whether a string is a pangram (word or sentence containing every letter of the alphabet at least once) or not.
+
+An example of a pangram is:
+
+> The quick brown fox jumps over the lazy dog
+
+::: { .callout-note collapse="true" title="Show hint"}
+You could use a **for loop** to loop through every letter of the alphabet and check if it is in your string. 
+
+If _any_ of the letters is **not** in your string then your string is **not** a pangram. 
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+One approach to solving this is to set a variable to `True` and then change this to `False` if _any_ letter is missing from the string. 
+
+This way, the varible is only `True` if every single letter of the alphabet was present. 
+
+```{python}
+# Define function to check for a pangram 
+def is_a_pangram(chosen_string): 
+    # Step 1: define the alphabet, and set a boolean variable to True 
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    pangram = True
+    # Step 2: Loop through every letter of the alphabet
+    for letter in alphabet: 
+        # check if letter is missing from string 
+        if letter not in chosen_string:
+            # If missing, is not a pangram
+            pangram = False
+    
+    # Return true or false value
+    return pangram
+
+# check if function works with known pangram
+known_pangram = "The quick brown fox jumps over the lazy dog"
+print(is_a_pangram(known_pangram), known_pangram)
+
+# check if function works with string that ISN'T a pangram 
+not_pangram = "fox"
+print(is_a_pangram(not_pangram), not_pangram)
+```
+:::
+
+## Path of a robot
+
+A robot starts at co-ordinates (0,0). It can move up, down, right or left.
+
+Write a program to ask the user to input directions (as many as desired) for the robot to move. Eg:
+
+> Right 2, Left 5, Up 3, Right 6….
+
+Calculate the movement and plot the path travelled by the robot on a graph with matplotlib. 
+
+::: { .callout-note collapse="true" title="Show hint"}
+You could keep a list of all the x coordinates, and a list of all the y coordinates. 
+  
+- Starting values are 0 for both lists 
+- Use .append() to add a new coordinate to the list
+- Use [-1] to get the most recent item from the list
+
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+One approach to solving this is to use a list for x values and a list for y values. 
+
+```{python}
+#| eval: false
+# Import matplotlib
+import matplotlib.pyplot as plt 
+
+# Starting values are 0 
+# Create lists with the first value as 0
+x_coords = [0]
+y_coords = [0]
+
+# Define a function to add a direction
+def move_robot(x_values, y_values): 
+    # Use input to get new direction
+    movement = input("Please input the direction and value in the format 'Right 6':\n")
+    # Split the direction and value 
+    movement = movement.split()
+    # Extract direction and make lower case 
+    direction = movement[0].lower()
+    # Extract distance and turn into an integer
+    distance = int(movement[1])
+
+    # Determine movement 
+    if "right" in direction: 
+        # Get current x value 
+        location = x_values[-1]
+        # Move right (positive on x direction)
+        new_location = location + distance 
+        # Add new location to x list list 
+        x_values.append(new_location)
+        # Y location stays the same, readd this value 
+        y_values.append(y_values[-1])
+    elif "left" in direction: 
+        # Get current x value 
+        location = x_values[-1]
+        # Move right (negative on x direction)
+        new_location = location - distance 
+        # Add new location to list 
+        x_values.append(new_location)
+        # Y location stays the same, readd this value 
+        y_values.append(y_values[-1])
+    elif "up" in direction: 
+        # Get current y value 
+        location = y_values[-1]
+        # Move up (positive on y direction)
+        new_location = location + distance 
+        # Add new location to list 
+        y_values.append(new_location)
+        # X location stays the same, readd this value 
+        x_values.append(x_values[-1])
+
+    elif "down" in direction: 
+        # Get current y value 
+        location = y_values[-1]
+        # Move down (negative on y direction)
+        new_location = location + distance 
+        # Add new location to list 
+        y_values.append(new_location)
+        # X location stays the same, readd this value 
+        x_values.append(x_values[-1])
+    else: 
+        # Error if none of the above
+        print("Direction was not up, down, left or right")
+    # End function
+    return 
+
+# Use a while loop to keep putting in directions
+keep_going = True
+
+while keep_going:
+
+    # Make a movement
+    move_robot(x_coords, y_coords)
+    # Option to stop: 
+    user_option = input("Would you like to keep going? N or No to stop")
+
+    if "n" in user_option.lower(): 
+        keep_going = False
+
+
+# Plot the path
+
+plt.plot(x_coords, y_coords)
+plt.title("Path of a robot")
+plt.show()
+
+```
+
+```{python}
+#| echo: false
+# Import matplotlib
+import matplotlib.pyplot as plt 
+
+# Starting values are 0 
+# Create lists with the first value as 0
+x_coords = [0, 6, 6, 3, 3, -3, -3, -1, -1, -2, -2, 7, 7, 9, 9, 4]
+y_coords = [0, 0, 1, 1, 6, 6, 10, 10, 17, 17, 24, 24, 26, 26, 34, 34]
+
+plt.plot(x_coords, y_coords)
+plt.title("Path of a robot")
+plt.show()
+
+```
+:::
+
+
+:::

@@ -1,0 +1,108 @@
+# Return a value 
+
+We just mentioned that variables created inside a function aren't available outside of the function (local variables) - so once you've calculated your result, how do you extract the answer? 
+
+We can use the **return** keyword - this will **exit the function**. 
+We can return variables that we want to use elsewhere in our code. 
+By default, any function will return the value `None` 
+
+::: {.panel-tabset}
+
+## Default - function returns None
+
+If we don't give a variable after return, or we don't use return at all, the result of the function will be `None`. 
+
+Any lines we add after return will never run. 
+
+```{python}
+
+# Define a simple function
+def my_function_no_return():
+    print("My function has run")
+    # result will be the same whether we include return or not
+    return # function will end here
+
+    # Any lines after return will never run, because return ends the function
+    print("This line will never run")
+
+# Run the function AND save the value in a new variable 
+my_function_result = my_function_no_return() 
+
+# print this result
+print(my_function_result)
+```
+
+## Return one variable 
+
+If we return one variable in the function, we can save this in a new variable. 
+
+```{python}
+
+# Define a simple function
+def double_my_number(chosen_number):
+    # Simple calculation - doubling input number
+    chosen_number_doubled = chosen_number * 2
+    # Reutrning the result 
+    return chosen_number_doubled
+
+# Run the function with the number 7 and save the result in a new variable 
+my_number_doubled = double_my_number(7)
+
+# Print the result
+print(my_number_doubled)
+```
+
+## Return multiple variables 
+
+We can also return multiple variables, and the result will be returned as a `tuple` (similar to a list)
+
+```{python}
+
+# Define a simple function
+def evaluate_my_number(chosen_number):
+    # Simple calculation - doubling input number
+    chosen_number_doubled = chosen_number * 2
+    # Check if number is even 
+    if chosen_number % 2 == 0:
+        chosen_number_even = True
+    else:
+        chosen_number_even = False
+    # Reutrning the result 
+    return chosen_number_doubled, chosen_number_even
+
+# Run the function with the number 7 and save the result in a new variable 
+my_number_information = evaluate_my_number(7)
+
+# Print the resulting tuple
+print(my_number_information, type(my_number_information))
+
+# Print the individual variables returned
+# Using indexing - same as for lists
+print(my_number_information[0])
+print(my_number_information[1])
+```
+
+## Return True/False
+
+If we return a True or False (boolean variable) from the function, we can also use this directly in another if/else statement.  
+
+```{python}
+# Define a function to check club membership
+def part_of_club(name, member_list):
+    # Check if name is in member_list 
+    if name in member_list:
+        return True
+    else:
+        return False
+
+# create a list of club members
+club_members = ["Shrek", "Fiona", "Ginger", "Pinnochio", "Dragon"]
+
+# Check if member in club 
+if part_of_club("Donkey", club_members):
+    print("Club entry permitted")
+else:
+    print("Club entry denied")
+```
+
+:::

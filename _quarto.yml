@@ -113,6 +113,18 @@ website:
         #     - section: "Defining functions"
         #       contents: 
         #           - href: worksheets/define_a_function.qmd
+        #           - href: worksheets/local_and_global_variables.qmd
+        #           - href: worksheets/function_arguments.qmd
+        #           - href: worksheets/function_return.qmd
+        #           - href: worksheets/function_immutable_mutable.qmd
+        #           - href: worksheets/functions_within_functions.qmd
+        #     - section: "Functions practice"
+        #       contents: 
+        #           - href: worksheets/functions_practice_1.qmd
+        #     - section: "VCF files"
+        #       contents: 
+        #           - href: worksheets/define_a_function.qmd
+
 
 
                   

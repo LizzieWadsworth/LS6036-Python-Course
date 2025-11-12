@@ -375,11 +375,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Up until now, everytime we’ve made a variable (such as a string, list, integer, dictionary) it has been a <strong>global</strong> variable. That means it is accessible everywhere in the code after we’ve defined it.</p>
-<p>However, when we create a new variable inside a function it is a <strong>local</strong> variable. This is a temporary variable, that only exists while we’re running the function and is then deleted.</p>
+<p>However, when we create a new variable inside a function it is a <strong>local</strong> variable. This is a <em>temporary</em> variable, that only exists while we’re running the function and is then deleted.</p>
 <p><strong>Variables are local within a function</strong></p>
 <p>This means variables you create inside a function <strong>cannot</strong> be used outside of the function.</p>
 <p>What’s the error with the below code?</p>
-<div id="e1fb0f2b" class="cell" data-execution_count="1">
+<div id="3e0ab04f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define a function to print a string</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_string():</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create and print local variable my_string</span></span>

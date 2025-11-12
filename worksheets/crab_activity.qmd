@@ -13,7 +13,7 @@ In case I forget, this is how I changed the dataset:
 -->
 
 ```{=html}
-<a href="../course_files/Crab_data.csv" 
+<a href="../course_files/crab_data.csv" 
    class="btn btn-lg text-white rounded-pill px-4 py-2" 
    style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
    download>

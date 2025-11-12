@@ -1,0 +1,28 @@
+# Functions inside functions 
+
+We can also use functions within other functions. 
+
+This can be useful if you have a program with many different steps. 
+
+```{python, eval = FALSE}
+# Function within a function example 
+# importing the random package to get a random number
+import random 
+
+# function to double a number
+def double_a_number(chosen_number):
+    doubled_number = chosen_number*2
+    return doubled_number
+
+# function to get a user input and convert to an integer
+def get_random_number(min_number, max_number):
+    my_random_number = random.randint(min_number, max_number)
+    return my_random_number
+
+# Run first function to get random number between 1 and 50
+num = get_random_number(0, 50)
+# Run second number to double this first number
+numx2 = double_a_number(num)
+# Print the results
+print(f'{num} doubled is {numx2}')
+```

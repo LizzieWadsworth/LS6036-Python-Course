@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>userinput – LS6036 Python programming</title>
+<title>functions_practice_1 – LS6036 Python programming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../worksheets/UserInput_DataTypes.html" rel="next">
-<link href="../worksheets/OxygenInBlood.html" rel="prev">
 <link href="..//Logo/LS6036_face.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -122,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -313,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Why Python</span></a>
   </li>  
   <li class="nav-item">
@@ -343,501 +341,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">User input</h1>
-        </a>     
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text"><strong>Python introduction: basics</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Python essentials</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../learn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hello World</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Comments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Comments</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Variables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/FormatStrings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Format Strings</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/DataTypes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Types</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Maths.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maths</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/OxygenInBlood.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Oxygen in blood exercise</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Inputs, ifs and elses</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/UserInput.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">User input</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/UserInput_DataTypes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Input data types</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/ifelse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">If and else</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/ifelse_conditions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">If and else conditions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/ifelse_fixerrors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fix the errors activity</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/ifelifelse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">If, elif and else</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/ifmuseumdiscount.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Museum discount activity</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Lists and dictionaries</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Lists.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lists</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/List_index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">List index</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/List_slicing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">List slicing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/List_methods.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">List methods</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Dictionaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dictionaries</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Dictionaries_II.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dictionaries II</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/nested_lists_and_dictionaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nested lists and dictionaries</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Species_ages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lifespan activity</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text"><strong>Logic and Loops</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Logic</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Logic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Logic</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/String_methods.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">String methods, indexing and slicing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Adding_number_string.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Adding to numbers and strings</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/random.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The random package</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">for loops</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/forloops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The for loop</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/Range.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ranges</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/for_iterables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What can we use for with?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/forloop_practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">for loop practice activities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/FizzBuzz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FizzBuzz Activity</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">while loops</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/while_loop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The while loop</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/whileloop_neverending.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Neverending while loop</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/while_practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">While loop practice</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
- <span class="menu-text">Reading from a file</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/reading_from_a_file.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reading from a file</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/writing_to_a_file.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Writing to a file</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/reading_a_fasta_file.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reading a fasta file</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/premature_stop_codon.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Premature stop codon activity</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
- <span class="menu-text"><strong>Matplotlib</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Plotting graphs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib line graph</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_scatter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib scatter</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_barchart.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib bar charts and histograms</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_piechart.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib Pie Charts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_boxplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib boxplot</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib practice</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Styling graphs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_colors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib colours</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_linestyle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib linestyle</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_markers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib markers</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_titles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib titles</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_legend.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib legends</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_xyticks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib xy ticks</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/matplotlib_xy_limits.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matplotlib xy limits</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
- <span class="menu-text">Plotting from a CSV file</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/reading_a_csv_file.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reading from a csv file</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/plotting_from_a_csv_file.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Plotting from a csv file</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../worksheets/crab_activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Crab activity</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
+<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
 </div></div>
         
     </div>
@@ -847,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">User input</h1>
+<h1 class="title">Functions practice I</h1>
 </div>
 
 
@@ -864,35 +374,303 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Python allows for user input, using the function <code>input()</code>.</p>
-<p>This means we can write a program which asks the <em>user</em> (whoever is running the program) to input some data which we will then use in our code.</p>
-<p>Like with <code>print()</code>, anything we put <em>inside</em> the brackets <code>()</code> will be printed as a message in the <strong>output</strong>.</p>
-<p>However, the code will then <strong>stop running</strong> until the user has entered some data and pressed the enter key on their keyboard.</p>
-<p>The data the user enters is then <strong>returned</strong> from the input function. This means we can save it in a variable.</p>
-<p>Try the below example:</p>
-<div id="ac3434c7" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ask for user's name </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your name? "</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Your name is"</span>, user_name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>You type in your input in the output region:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Visual Studio Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Google Colab</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Snail in a bucket</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Find a pangram</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Path of a robot</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../GIFs/Userinput.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="VSCode User Input Screencast"><img src="../GIFs/Userinput.gif" class="img-fluid figure-img" alt="VSCode User Input Screencast"></a></p>
-<figcaption>VSCode User Input Screencast</figcaption>
-</figure>
+<p>A snail fell into a bucket and wanted to crawl out. The snail will:</p>
+<ul>
+<li>Climb 5 cm per minute</li>
+<li>Climb for 10 minutes continuously and then need to rest for 5 minutes</li>
+<li>Slide back down 15 cm while it is resting.</li>
+</ul>
+<p>How many minutes will it take for a snail to crawl out at different depths?</p>
+<p>Create a function that takes a number of the bucket depth (the unit is cm) as an argument and returns the minutes required for the snail to crawl out.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Show hint">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Show hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Write this first using just one depth (e.g.&nbsp;50 cm) <em>without using functions</em> and then rewrite this into a function.</p>
+<p>Once in a function, you can use different depths.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Show answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Show answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="4ade0d8e" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define function which takes bucket height as an argument, and returns the time </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> time_to_escape(bucket_height):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set initial values, time and snail location</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    total_time <span class="op">=</span> <span class="dv">0</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    time_since_rest <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    snail_location <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use a while loop to calculate the time to escape the bucket</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Once snail location is equal to bucket height, the snail has escaped </span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> snail_location <span class="op">&lt;</span> bucket_height:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Snail climbs 5 cm in one minute</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        snail_location <span class="op">+=</span> <span class="dv">5</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        total_time <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        time_since_rest <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Snail rests every 30 minutes</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> time_since_rest <span class="op">==</span> <span class="dv">10</span>: </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Rest for 10 minutes </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            total_time <span class="op">+=</span> <span class="dv">5</span> </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="co">#&nbsp;Slide down 30 cm </span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>            snail_location <span class="op">-=</span> <span class="dv">15</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Reset time since rest </span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            time_since_rest <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Outside of while loop - when snail location has reached bucket height </span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return the total time </span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_time</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Run function with different heights </span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>heights <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">17</span>, <span class="dv">39</span>, <span class="dv">59</span>, <span class="dv">100</span>]</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through heights</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> height <span class="kw">in</span> heights:</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate snail escape time</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    snail_escape_time <span class="op">=</span> time_to_escape(height)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print result</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Snail escapes bucket with height"</span>, height, <span class="st">"in"</span>, snail_escape_time, <span class="st">"minutes"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Snail escapes bucket with height 10 in 2 minutes
+Snail escapes bucket with height 17 in 4 minutes
+Snail escapes bucket with height 39 in 8 minutes
+Snail escapes bucket with height 59 in 20 minutes
+Snail escapes bucket with height 100 in 36 minutes</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="quarto-figure quarto-figure-center">
+<p>Write a function that checks whether a string is a pangram (word or sentence containing every letter of the alphabet at least once) or not.</p>
+<p>An example of a pangram is:</p>
+<blockquote class="blockquote">
+<p>The quick brown fox jumps over the lazy dog</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Show hint">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Show hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You could use a <strong>for loop</strong> to loop through every letter of the alphabet and check if it is in your string.</p>
+<p>If <em>any</em> of the letters is <strong>not</strong> in your string then your string is <strong>not</strong> a pangram.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Show answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Show answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>One approach to solving this is to set a variable to <code>True</code> and then change this to <code>False</code> if <em>any</em> letter is missing from the string.</p>
+<p>This way, the varible is only <code>True</code> if every single letter of the alphabet was present.</p>
+<div id="92b08680" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define function to check for a pangram </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_a_pangram(chosen_string): </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Step 1: define the alphabet, and set a boolean variable to True </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    alphabet <span class="op">=</span> <span class="st">"abcdefghijklmnopqrstuvwxyz"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    pangram <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Step 2: Loop through every letter of the alphabet</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> letter <span class="kw">in</span> alphabet: </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># check if letter is missing from string </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> letter <span class="kw">not</span> <span class="kw">in</span> chosen_string:</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            <span class="co"># If missing, is not a pangram</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            pangram <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return true or false value</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pangram</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># check if function works with known pangram</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>known_pangram <span class="op">=</span> <span class="st">"The quick brown fox jumps over the lazy dog"</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_a_pangram(known_pangram), known_pangram)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># check if function works with string that ISN'T a pangram </span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>not_pangram <span class="op">=</span> <span class="st">"fox"</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_a_pangram(not_pangram), not_pangram)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True The quick brown fox jumps over the lazy dog
+False fox</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>A robot starts at co-ordinates (0,0). It can move up, down, right or left.</p>
+<p>Write a program to ask the user to input directions (as many as desired) for the robot to move. Eg:</p>
+<blockquote class="blockquote">
+<p>Right 2, Left 5, Up 3, Right 6….</p>
+</blockquote>
+<p>Calculate the movement and plot the path travelled by the robot on a graph with matplotlib.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Show hint">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Show hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You could keep a list of all the x coordinates, and a list of all the y coordinates.</p>
+<ul>
+<li>Starting values are 0 for both lists</li>
+<li>Use .append() to add a new coordinate to the list</li>
+<li>Use [-1] to get the most recent item from the list</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Show answer">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Show answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>One approach to solving this is to use a list for x values and a list for y values.</p>
+<div id="e15bd10b" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import matplotlib</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Starting values are 0 </span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create lists with the first value as 0</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>x_coords <span class="op">=</span> [<span class="dv">0</span>]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>y_coords <span class="op">=</span> [<span class="dv">0</span>]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function to add a direction</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> move_robot(x_values, y_values): </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use input to get new direction</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    movement <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Please input the direction and value in the format 'Right 6':</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Split the direction and value </span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    movement <span class="op">=</span> movement.split()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract direction and make lower case </span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    direction <span class="op">=</span> movement[<span class="dv">0</span>].lower()</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">#&nbsp;Extract distance and turn into an integer</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    distance <span class="op">=</span> <span class="bu">int</span>(movement[<span class="dv">1</span>])</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Determine movement </span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"right"</span> <span class="kw">in</span> direction: </span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Get current x value </span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        location <span class="op">=</span> x_values[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="co">#&nbsp;Move right (positive on x direction)</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        new_location <span class="op">=</span> location <span class="op">+</span> distance </span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add new location to x list list </span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        x_values.append(new_location)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        <span class="co">#&nbsp;Y location stays the same, readd this value </span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        y_values.append(y_values[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="st">"left"</span> <span class="kw">in</span> direction: </span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Get current x value </span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        location <span class="op">=</span> x_values[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        <span class="co">#&nbsp;Move right (negative on x direction)</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>        new_location <span class="op">=</span> location <span class="op">-</span> distance </span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add new location to list </span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        x_values.append(new_location)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>        <span class="co">#&nbsp;Y location stays the same, readd this value </span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        y_values.append(y_values[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="st">"up"</span> <span class="kw">in</span> direction: </span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Get current y value </span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>        location <span class="op">=</span> y_values[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>        <span class="co">#&nbsp;Move up (positive on y direction)</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>        new_location <span class="op">=</span> location <span class="op">+</span> distance </span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add new location to list </span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>        y_values.append(new_location)</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>        <span class="co">#&nbsp;X location stays the same, readd this value </span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>        x_values.append(x_values[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="st">"down"</span> <span class="kw">in</span> direction: </span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Get current y value </span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>        location <span class="op">=</span> y_values[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>        <span class="co">#&nbsp;Move down (negative on y direction)</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>        new_location <span class="op">=</span> location <span class="op">+</span> distance </span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add new location to list </span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>        y_values.append(new_location)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>        <span class="co">#&nbsp;X location stays the same, readd this value </span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>        x_values.append(x_values[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>: </span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Error if none of the above</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Direction was not up, down, left or right"</span>)</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    <span class="co"># End function</span></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> </span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Use a while loop to keep putting in directions</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>keep_going <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> keep_going:</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make a movement</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    move_robot(x_coords, y_coords)</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Option to stop: </span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>    user_option <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Would you like to keep going? N or No to stop"</span>)</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"n"</span> <span class="kw">in</span> user_option.lower(): </span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>        keep_going <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the path</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>plt.plot(x_coords, y_coords)</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Path of a robot"</span>)</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="20f55b6a" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
 <figure class="figure">
-<p><a href="../GIFs/Userinput_Colab.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Colab User Input Screencast"><img src="../GIFs/Userinput_Colab.gif" class="img-fluid figure-img" alt="Colab User Input Screencast"></a></p>
-<figcaption>Colab User Input Screencast</figcaption>
+<p><a href="functions_practice_1_files/figure-html/cell-5-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="functions_practice_1_files/figure-html/cell-5-output-1.png" width="566" height="431" class="figure-img"></a></p>
 </figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1339,18 +1117,6 @@ window._ojs.runtime.interpretFromScriptTags();
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../worksheets/OxygenInBlood.html" class="pagination-link" aria-label="Oxygen in blood exercise">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Oxygen in blood exercise</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../worksheets/UserInput_DataTypes.html" class="pagination-link" aria-label="Input data types">
-        <span class="nav-page-text">Input data types</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
