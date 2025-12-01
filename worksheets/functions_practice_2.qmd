@@ -1,0 +1,265 @@
+# Functions practice II
+
+::: {.panel-tabset}
+
+## Gaming inventory
+
+You're on a quest, and have the below inventory _stored as a dictionary_.
+
+```{python, eval = FALSE}
+# Your starting inventory 
+
+player_inventory = {
+    'gold' : 500,
+    'pouch' : ['flint', 'twine', 'gemstone'],
+    'backpack' : ['xylophone','dagger', 'bedroll','bread loaf'],
+    'pocket' : ['seashell', 'strange berry', 'lint']
+}
+```
+
+Write functions which can: 
+
+1. Collect coins, and add them to the gold number. 
+2. Check if an item is in the inventory.
+3. Remove an item from the pouch, backpack or pocket.
+4. Add an item to the pouch, backpack or pocket **if** there is space. 
+There can only be 3 items in the pouch or pocket, or 5 in the backpack. 
+
+<center>
+
+![GIF the legend of Zelda](https://media.giphy.com/media/qLhxN7Rp3PI8E/giphy.gif)
+
+</center>
+
+::: { .callout-note collapse="true" title="Show hint"}
+Dictionaries are _mutable_ which means you can pass them to a function as an argument, and change the values inside the function. 
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+
+```{python}
+import random # Random used in find coins function
+
+# Your starting inventory as a dictionary
+player_inventory = {
+    'gold' : 500,
+    'pouch' : ['flint', 'twine', 'gemstone'],
+    'backpack' : ['xylophone','dagger', 'bedroll','bread loaf'],
+    'pocket' : ['seashell', 'strange berry', 'lint']
+}
+
+# Function for collecting coins
+def collect_coins(inventory):
+    # Using random to choose number of coins found
+    coins_found = random.randint(0,5)
+    # Adding found coins to gold
+    inventory['gold'] += coins_found
+    # Printing result
+    print(f"You found {coins_found} coins, and now have {inventory['gold']} gold")
+
+def check_for_item(item, inventory): 
+    # Use a for loop to check each location
+    locations = ['pouch', 'backpack', 'pocket']
+    for loc in locations: 
+        if item in inventory[loc]:
+            print(f'{item} found in {loc}')
+            # Return location if item found
+            return loc
+    # Print statement for if item not found
+    print(f'{item} not found')
+
+def take_out_item(item, inventory):
+    # Use the check_for_item function to get the location of the item (return from check_for_item)
+    location = check_for_item(item, inventory)
+    # If location is not None, then the item was found 
+    if location: 
+        # Remove item from location
+        inventory[location].remove(item)
+        print(f"{item} removed from {location}")
+    else:
+        print(f"{item} not found")
+
+def add_item(item, location, inventory):
+    # Define size limits for locations
+    limits = {
+        'pouch': 3,
+        'backpack': 5,
+        'pocket': 3
+    }
+    # Only add item to location if the location is not full (length is less than limit)
+    if len(inventory[location]) < limits[location]:
+        inventory[location].append(item)
+    else:
+        print(f"Cannot store {item} as {location} is full")
+
+# Run functions 
+collect_coins(player_inventory)
+take_out_item("dagger", player_inventory)
+add_item("Bubble tea", "pouch", player_inventory)
+```
+
+:::
+
+## Morse code
+
+The file morse_code.txt contains 2 columns **separated by a space**. The first column contains each letter of the alphabet and the second column with the morse code for that letter. 
+
+```{=html}
+<a href="../course_files/morse_code.txt" 
+   class="btn btn-lg text-white rounded-pill px-4 py-2" 
+   style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
+   download>
+  📥 Download morse_code.txt
+</a>
+```
+  \
+
+In morse code - letters are separated with three spaces and words by seven spaces; you will need to use this
+
+Your job is to decipher and reply to the question:
+
+```{python}
+#| eval: false
+.--   ....   .-   -       ..   ...       -   ....   .       --   .   .-   -.   ..   -.   --.       ---   ..-.       .-..   ..   ..-.   .
+```
+
+_While you could do this with lists - it would be more efficient here to use a dictionary_
+
+Once you've got this to work you should:
+
+1.  Write a function to translate English to Morse code
+2.  Write a function to translate Morse code to English
+3.  Make a program that takes user input, detects whether it's English or Morse code, translates it (using your functions) and prints the result to the screen
+
+
+::: { .callout-note collapse="true" title="Show hint"}
+Each word is separated by 7 spaces and each letter by 3 spaces - can you `split` the line based on words, and then `split` the word into each letter? 
+
+Can you store the information from morse_code.txt in a dictionary? You can then use this to translate each letter. 
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+The `.split()` function comes in handy here as you can split by a set number of spaces. 
+
+
+```{python}
+with open("morse_code.txt") as f: 
+    lines = f.readlines() 
+
+morse_to_abc = {}
+
+for line in lines: 
+    information = line.split()
+    morse_to_abc[information[1]] = information[0]
+
+sequence_to_translate = ".--   ....   .-   -       ..   ...       -   ....   .       --   .   .-   -.   ..   -.   --.       ---   ..-.       .-..   ..   ..-.   ."
+
+def translate_morse_to_abc(sequence, morse_to_abc):
+    final_translation = ""
+    words = sequence.split("       ")
+    for word in words: 
+        letters = word.split("   ")
+        for letter in letters: 
+            final_translation += morse_to_abc[letter]
+        final_translation += " "
+    print(final_translation)
+
+translate_morse_to_abc(sequence_to_translate, morse_to_abc)
+
+```
+
+![The meaning of life is 42](/images/meaning_of_life.webp)
+
+:::
+
+## Hangman 
+
+Using functions, make a hangman game.
+
+You should have a separate file with a list of common words, and choose a random one with python
+
+After each guess you should display the word with the correctly guessed letters filled in.
+
+```_ _ _ _ _ _ _```
+
+```_ _ Y S I _ S```
+
+```P H Y S I C S```
+
+
+::: { .callout-note collapse="true" title="Show hint"}
+You might want to use a `while` loop for continuous guessing. 
+
+Make sure you keep track of which letters have already been guessed!
+:::
+
+::: { .callout-tip collapse="true" title="Show answer"}
+Solution shown for just one word - this is just one of many ways of completing this task. 
+
+```{python}
+#| eval: false
+guessing_word = "bioinformatics"
+
+# Function to print how many letters have been found
+def print_found_letters(chosen_word, guessed_letters): 
+    # Start empty string for word
+    output_string = ""
+    # Boolean for if all letters found or not 
+    game_complete = True
+    # Loop through every letter 
+    for letter in chosen_word: 
+        # if statement to tell if letter is guessed yet
+        if letter in guessed_letters:
+            # Add space either side of guessed letter
+            letter_and_spaces = " " + letter + " " 
+            # Add letter with spaces to output string
+            output_string += letter_and_spaces
+        else:
+            # Letter not found - add underscore to output string
+            output_string += " _ "
+            # One letter not found yet so game_complete = False
+            game_complete = False
+    # Print the result string of letters and underscores
+    print(output_string)
+    # Return boolean of whether game is complete yet
+    return game_complete
+
+# Boolean for while loop
+game_over = False
+# List to keep guessed letters in
+guessed_letters = []
+# Print starting point (e.g. " _ _ _ _ _ ")
+print_found_letters(guessing_word, guessed_letters)
+# Set a limit for number of incorrect guesses
+guesses_remaining = 5
+
+# Start while loop for guesses
+while not game_over:
+    # User selects a letter - convert to lower case
+    user_letter = input("Please guess a letter: ").lower()
+    # Add letter to list guessed_letters
+    guessed_letters.append(user_letter)
+    # If letter is correct, print word filled in with letter
+    if user_letter in guessing_word: 
+        game_complete = print_found_letters(guessing_word, guessed_letters)
+        # Check if all letters have been found
+        if game_complete: 
+            print("Congratulations! You have guessed all letters")
+            game_over = True
+    # Guessed letter not in word
+    else: 
+        # Remove 1 from guesses_remaining
+        guesses_remaining -= 1
+        if guesses_remaining > 0: 
+            # Print how many guesses left
+            print(f"Incorrect. You have {guesses_remaining} guesses left")
+        else: 
+            # If guesses_remaining = 0, game over
+            print("Game over")
+            game_over = True
+    print(f"You have guessed {guessed_letters}")
+```
+:::
+
+
+:::

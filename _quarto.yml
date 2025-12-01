@@ -108,26 +108,29 @@ website:
                   - href: worksheets/reading_a_csv_file.qmd
                   - href: worksheets/plotting_from_a_csv_file.qmd 
                   - href: worksheets/crab_activity.qmd
-        # - section: "**Functions**"
-        #   contents:
-        #     - section: "Defining functions"
-        #       contents: 
-        #           - href: worksheets/define_a_function.qmd
-        #           - href: worksheets/local_and_global_variables.qmd
-        #           - href: worksheets/function_arguments.qmd
-        #           - href: worksheets/function_return.qmd
-        #           - href: worksheets/function_immutable_mutable.qmd
-        #           - href: worksheets/functions_within_functions.qmd
-        #     - section: "Functions practice"
-        #       contents: 
-        #           - href: worksheets/functions_practice_1.qmd
-        #     - section: "VCF files"
-        #       contents: 
-        #           - href: worksheets/define_a_function.qmd
-
-
-
-                  
+        - section: "**Functions**"
+          contents:
+            - section: "Defining functions"
+              contents: 
+                  - href: worksheets/define_a_function.qmd
+                  - href: worksheets/local_and_global_variables.qmd
+                  - href: worksheets/function_arguments.qmd
+                  - href: worksheets/function_return.qmd
+                  - href: worksheets/function_immutable_mutable.qmd
+                  - href: worksheets/functions_within_functions.qmd
+            - section: "Functions practice"
+              contents: 
+                  - href: worksheets/functions_practice_1.qmd
+                  - href: worksheets/functions_practice_2.qmd
+                 # - href: worksheets/functions_practice_3.qmd
+            # - section: "VCF files"
+            #   contents: 
+            #       - href: worksheets/define_a_function.qmd
+        - section: "**Advent of Code**"
+          contents:
+            - section: "Advent of Code 2025"
+              contents: 
+                  - href: worksheets/Advent_of_Code_2025.qmd
 
   favicon: /Logo/LS6036_face.png
     

@@ -206,5 +206,14 @@
   },
   "worksheets/functions_practice_1.qmd": {
     "functions_practice_1.html": "18e027e5"
+  },
+  "worksheets/functions_practice_2.qmd": {
+    "functions_practice_2.html": "37c7eec9"
+  },
+  "worksheets/Advent_of_Code_2025.qmd": {
+    "Advent_of_Code_2025.html": "9d6afd19"
+  },
+  "worksheets/functions_practice_3.qmd": {
+    "functions_practice_3.html": "b3529fb3"
   }
 }

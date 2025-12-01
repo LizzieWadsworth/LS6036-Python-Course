@@ -4,25 +4,35 @@ We can also use functions within other functions.
 
 This can be useful if you have a program with many different steps. 
 
-```{python, eval = FALSE}
+```{python}
+#| eval: false
 # Function within a function example 
-# importing the random package to get a random number
-import random 
 
 # function to double a number
-def double_a_number(chosen_number):
-    doubled_number = chosen_number*2
-    return doubled_number
+def double_a_number(any_number):
+    doubled = any_number*2
+    return doubled
+    print('This will never be printed - as we have already returned')
 
 # function to get a user input and convert to an integer
-def get_random_number(min_number, max_number):
-    my_random_number = random.randint(min_number, max_number)
-    return my_random_number
+def get_an_input():
+    number = int(input('Please input a number'))
+    return number
 
-# Run first function to get random number between 1 and 50
-num = get_random_number(0, 50)
-# Run second number to double this first number
-numx2 = double_a_number(num)
-# Print the results
-print(f'{num} doubled is {numx2}')
+
+# this function calls both of the previous functions
+def do_both():
+    num = get_an_input()
+    numx2 = double_a_number(num)
+    print(f'{num} doubled is {numx2}')
+
+
+
+# Now we only need to execute the do_both() function, and it's going to run both of the previous functions
+do_both()
+```
+```{python}
+#| echo: false
+print("Please input a number 21")
+print("21 doubled is 42")
 ```
