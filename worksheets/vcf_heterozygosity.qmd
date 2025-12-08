@@ -1,0 +1,82 @@
+# Heterozygosity 
+
+The package `allel` also has some built in functions to help us calculate heterozygosity - the number of heterozygous locations (different alleles on maternal and paternal chromosomes). 
+
+First we want to remind ourselves of our samples and what order they are in. 
+
+```{python}
+#| eval: false 
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+# Extract samples
+samples = mosq_vcf_file['samples']
+print("Samples:", samples) # print samples
+```
+
+```{python}
+#| echo: false 
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("../course_files/mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+# Extract samples
+samples = mosq_vcf_file['samples']
+print("Samples:", samples) # print samples
+```
+
+Next we can use the `GenotypeArray()` function to extract the genotypes from the dataset. We can use list slicing to extract the data for just the sample we want. 
+We can pick the sample by it's index - is it in position 0, or 1, or 2, or 3? 
+
+```{python}
+# Use GenotypeArray to extract genotypes
+all_genotypes = allel.GenotypeArray(mosq_vcf_file['calldata/GT'])   # (variants, samples, ploidy)
+
+chosen_sample = 0 # First sample is index 0 
+sample_genotype = all_genotypes[:, chosen_sample] # Extract sample result
+print(sample_genotype[5:15]) # Print a subsection of the result  
+```
+
+For each position this gives us the genotype for the sample we have chosen. 
+
+-  `./.` means the data is missing - this is where there are not enough sequencing reads to determine the genotype at this position. 
+
+-  `0/0` homozygous for the reference allele 
+
+-  `0/1` heterozygous 
+
+-  `1/1` heterozygous for the alternate allele 
+
+If there are multiple alternative alleles (such as G in the reference and T or A as alleles) then the first alternative is `1` and the second is `2` so you might get genotypes like `0/2`, `1/2` or `2/2` as well. 
+
+Finally, we can use in built functions to determine how many sites are heterozygous. 
+
+```{python}
+# Extract heterozygous alleles using is_het()
+is_het = sample_genotype.is_het()
+# Count heterozygous alleles using sum()
+het_count = is_het.sum()
+# Count total number of alleles using len()
+total_sites = len(sample_genotype)
+
+# Calculate percentage heterozygosity by dividing heterozygous alleles by total alleles and multiply by 100
+heterozygosity = (het_count / total_sites) * 100
+print(f"Heterozygosity: {heterozygosity}%")
+```
+
+
+## Genotype classification functions
+
+Like `.is_het()` we also have functions to collect all homozygous, missing or called alleles. 
+
+| Function         | Meaning                                                                                |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| **is_het()**     | True for genotypes that are **heterozygous** (two different alleles, e.g., `0/1`).     |
+| **is_hom()**     | True for genotypes that are **homozygous**, regardless of allele (e.g., `0/0`, `1/1`). |
+| **is_hom_ref()** | True for genotypes that are **homozygous reference** (`0/0`).                          |
+| **is_hom_alt()** | True for genotypes that are **homozygous alternate** (`1/1`, `2/2`).                   |
+| **is_missing()** | True where genotype is **missing/no call** (`./.`).                                    |
+| **is_called()**  | True where a genotype is **present/called**, meaning it is not missing.                |
+
+## Give it a go: 
+
+Can you plot the % heterozygositity for both samples on a bar chart? 

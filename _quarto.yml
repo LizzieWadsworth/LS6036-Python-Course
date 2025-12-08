@@ -123,9 +123,14 @@ website:
                   - href: worksheets/functions_practice_1.qmd
                   - href: worksheets/functions_practice_2.qmd
                  # - href: worksheets/functions_practice_3.qmd
-            # - section: "VCF files"
-            #   contents: 
-            #       - href: worksheets/define_a_function.qmd
+            - section: "VCF files"
+              contents: 
+                  - href: worksheets/download_scikit_allel.qmd
+                  - href: worksheets/vcf_file_read.qmd
+                  - href: worksheets/vcf_view_all_data.qmd
+                  - href: worksheets/vcf_data_2.qmd
+                  - href: worksheets/vcf_count_positions_in_window.qmd
+                  - href: worksheets/vcf_heterozygosity.qmd
         - section: "**Advent of Code**"
           contents:
             - section: "Advent of Code 2025"

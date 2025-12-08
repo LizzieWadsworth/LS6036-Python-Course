@@ -1,0 +1,97 @@
+# Extract values from VCF 
+
+Viewing all the data will give a really large table, so it can be useful to instead extract just some of the data we need. 
+
+For instance, we can print just the samples found, count the number of positions or make a list of all the chromosomes. 
+
+::: {.panel-tabset}
+
+## Samples 
+
+The key `"samples"` will already give us a list of samples: 
+
+```{python}
+#| eval: false 
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+# Extract samples
+samples = mosq_vcf_file['samples']
+print("Samples:", samples) # print samples
+```
+
+```{python}
+#| echo: false 
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("../course_files/mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+# Extract samples
+samples = mosq_vcf_file['samples']
+print("Samples:", samples) # print samples
+```
+
+## Positions 
+
+The key `"POS"` will give us a list of all positions where there is a variant. 
+We can get the total number of positions with `len()` 
+
+```{python}
+#| eval: false 
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+# Extract positions
+pos = mosq_vcf_file['variants/POS']
+print("Number of variants:", len(pos))
+```
+```{python}
+#| echo: false 
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("../course_files/mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+# Extract positions
+pos = mosq_vcf_file['variants/POS']
+print("Number of variants:", len(pos))
+```
+
+## Chromosomes 
+
+The key `"CHROM"` will give us the chromosome _for **each position** of each variant_. 
+This means the same chromosome will appear multiple times. 
+
+To get unique chromosomes, we can create a list of chromosomes and then loop through the full list - only adding chromosomes to our list that we haven't already added. 
+
+```{python}
+#| eval: false 
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+# Extract chromosomes
+chromes = mosq_vcf_file["variants/CHROM"]
+chrom_list = [] # create an empty list 
+for i in chromes: 
+    # Loop through every chromosome in chromes
+    if i not in chrom_list: 
+        # Check if it is not already in our list, and if so add it
+        chrom_list.append(i)
+# print the final list
+print(chrom_list)
+```
+```{python}
+#| echo: false 
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("../course_files/mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+chromes = mosq_vcf_file["variants/CHROM"]
+chrom_list = []
+for i in chromes: 
+    if i not in chrom_list:
+        chrom_list.append(i)
+
+print(chrom_list)
+```
+
+This matches what we expect - mosquitos have three chromosomes which can be separated into left (L) and right (R) arms. 
+
+![Mosquito karyotype with X, 2 and 3 annotated. CC = chromocenter. From [Artemov _et al._, 2021](https://doi.org/10.3390/insects12090835)](/images/mosquito_chromosomes.png)
+:::

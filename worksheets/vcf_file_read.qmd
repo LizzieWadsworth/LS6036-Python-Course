@@ -1,0 +1,53 @@
+# Read a VCF file
+
+For this section we're going to use a VCF - Variant Call Format - file with the alleles of two mosquito samples. 
+
+This is from the [Ag1000G project](https://www.malariagen.net/project/ag1000g/), which sequenced the genomes of 765 _Anopheles gambiae_ mosquitos from 8 countries: the species capable of transmitting malaria. 
+
+```{=html}
+<a href="../course_files/mosquito_samples.vcf.gz" 
+   class="btn btn-lg text-white rounded-pill px-4 py-2" 
+   style="background: linear-gradient(90deg, #89b413, #14532d); box-shadow: 0 4px 6px rgba(0,0,0,0.1);" 
+   download>
+  📥 Download mosquito_samples.vcf.gz
+</a>
+```
+  \
+
+We can then use the sci-kit allel package to read the data: 
+
+```{python}
+#| eval: false
+import allel # import sci-kit allel
+
+# Read vcf file and set up 
+mosq_vcf_file = allel.read_vcf("mosquito_samples.vcf.gz" )
+
+# Result is contained in a dictionary - we can see the categories using .keys()
+print(mosq_vcf_file.keys())
+```
+
+```{python}
+#| echo: false
+import allel # import sci-kit allel
+
+# Read vcf file and set up 
+mosq_vcf_file = allel.read_vcf("../course_files/mosquito_samples.vcf.gz" )
+
+# Result is contained in a dictionary - we can see the categories using .keys()
+print(mosq_vcf_file.keys())
+```
+
+Find an explanation of each of these categories below:
+
+| Key name                 | Level              | Description                                                                                                                          |
+| ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **samples**              | Sample metadata    | List of sample names in the VCF file. One name per individual or isolate.                                                            |
+| **calldata/GT**          | Genotype data      | Genotype calls for each sample at each variant. |
+| **variants/ALT**         | Variant annotation | Alternate (non-reference) allele(s) observed at each variant position. May contain multiple alleles.                                 |
+| **variants/CHROM**       | Variant annotation | Chromosome identifier where the variant occurs (e.g., `chr2`, `2L`, `X`).                                                            |
+| **variants/FILTER_PASS** | Variant annotation | Boolean flag indicating whether the variant passed VCF filtering (`True` = passed all filters).                                        |
+| **variants/ID**          | Variant annotation | Variant identifier field from the VCF                                                 |
+| **variants/POS**         | Variant annotation | 1-based genomic coordinate of the variant on the chromosome.                                                                         |
+| **variants/QUAL**        | Variant annotation | Variant quality score                                                    |
+| **variants/REF**         | Variant annotation | Reference allele observed in the reference genome at that position.                                                                  |

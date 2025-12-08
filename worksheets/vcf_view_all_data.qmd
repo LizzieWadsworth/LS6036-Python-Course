@@ -1,0 +1,55 @@
+# View all VCF data 
+
+We can extract and print the information for each variant using a for loop: 
+
+```{python}
+#| eval: false
+import allel # import sci-kit allel
+# Read vcf file and set up 
+mosq_vcf_file = allel.read_vcf("mosquito_samples.vcf.gz")
+
+# Extract chromosomes, positions, reference and alternate alleles into separate lists
+chrom = mosq_vcf_file["variants/CHROM"]
+pos   = mosq_vcf_file["variants/POS"]
+ref   = mosq_vcf_file["variants/REF"]
+alt   = mosq_vcf_file["variants/ALT"]
+
+# Print a tab separated heading
+print("Chromosome \t Position \t Reference \t Alternate")
+
+# Use len(chrom) to get the number of variants, then use a range to go through each one
+for i in range(len(chrom)):
+    # At every position i, print the chromosome, position, reference and alternate alleles
+    print(chrom[i], end="\t") # end = "\t" ends on a tab instead of a newline
+    print(pos[i], end="\t")
+    print(ref[i], end="\t")
+    print(alt[i], end="\n") # Last element ends with a newline "\n"
+```
+
+```{python}
+#| echo: false
+import allel # import sci-kit allel
+# Read vcf file and set up 
+mosq_vcf_file = allel.read_vcf("../course_files/mosquito_samples.vcf.gz" )
+
+# Extract chromosomes, positions, reference and alternate alleles into separate lists
+chrom = mosq_vcf_file["variants/CHROM"]
+pos   = mosq_vcf_file["variants/POS"]
+ref   = mosq_vcf_file["variants/REF"]
+alt   = mosq_vcf_file["variants/ALT"]
+
+# Print a tab separated heading
+print("Chromosome \t Position \t Reference \t Alternate")
+
+# Use len(chrom) to get the number of variants, then use a range to go through each one
+for i in range(len(chrom))[:10]:
+    # At every position i, print the chromosome, position, reference and alternate alleles
+    print(chrom[i], end="\t\t\t") # end = "\t" ends on a tab instead of a newline
+    print(pos[i], end="\t\t\t")
+    print(ref[i], end="\t\t\t")
+    print(alt[i], end="\n") # Last element ends with a newline "\n"
+```
+
+The chromosome and position give the exact co-ordinate of the variant. 
+
+The reference allele is the allele in the reference genome, and the alternate alleles are any other alleles detected at each position. 

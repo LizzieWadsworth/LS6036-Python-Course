@@ -1,0 +1,59 @@
+# Download scikit allel 
+
+For reading VCF files, we're going to use the sci-kit allel package. 
+
+To install this, follow the instructions: 
+
+::: {.panel-tabset group="tools-tabset"}
+
+### University Computer 
+
+To install the package onto the university computer - after you've set up VSCode and python - add this into a python file and run it:
+
+```{python}
+#| eval: false
+import subprocess
+import sys
+
+try:
+    import allel
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-allel"])
+    import allel
+```
+
+This should check if the package is already installed, and install if it if not. 
+
+### Online Cloud
+
+On Google Colab, you can install a package by using `!pip`: 
+
+```{python}
+#| eval: false
+!pip install scikit-allel
+```
+
+Once this is installed, you can import the package and run your code: 
+
+```{python}
+#| eval: false
+import allel
+```
+
+![Import allel on Colab](/images/colab_allel.png)
+
+### Own Device
+
+To install the package on your own device, go to the terminal in VSCode and type in: 
+
+For _Windows_ computers: 
+
+`python -m pip install scikit-allel`
+
+For _Mac_ computers: 
+
+`python3 -m pip install scikit-allel`
+
+This is the preferred way of installing packages. However, if it doesn't work, you can use the same technique as used for the "University Computer" option. 
+
+:::

@@ -1,0 +1,82 @@
+# Counting positions in a window 
+
+The `allel` library has some useful built-in functions we can use to get a clearer picture of our data. For example, we can use `windowed_count` to get a count of all the variant positions for the first n base pairs, and then the next n base pairs... 
+
+To do this, first we need our positions numbers and which chromosomes they belong to:
+
+```{python}
+#| eval: false
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+# Extract positions and chromosomes
+pos   = mosq_vcf_file['variants/POS']
+chrom = mosq_vcf_file['variants/CHROM']
+```
+
+Next, we want to look at just one chromosome at a time. We can do this by creating a list of all of the positions which correspond to the chromosome we want, using: 
+  
+-  A `for` loop to loop through every position 
+-  An `if` statement to check if that position is on the chromosome we want
+
+
+```{python}
+#| eval: false
+chrom_name = "2L" # Select chromosome of interest 
+window_size = 50000 # Scan every 50,000 base pairs
+chosen_positions = [] # Empty list to contain all of the positions for our chromosome
+
+# for loop to go from 0 to length of position list 
+for i in range(len(pos)): 
+    # if statement to check if chromosome matches our chosen chromosome
+    if chrom[i] == chrom_name:
+        # If true, add positions to list
+        chosen_positions.append(pos[i])
+```
+
+Finally, we can use the `allel.windowed_count()` function to count how many variant positions there are in the first 50,000 base pairs, and then the second 50,000 base pairs, and so on. 
+
+```{python}
+#| eval: false
+# Function allel.windowed_count takes a list of positions and a window size as arguments
+# Returns the counts and locations for each window 
+counts, locations = allel.windowed_count(chosen_positions, size=window_size)
+
+# Loop through the results from 0 to length of counts
+for i in range(len(counts)):
+    # Extract number of variants, start and stop positions from results
+    variants = counts[i]
+    start_position = locations[i][0]
+    stop_position = locations[i][1]
+    # Print the results
+    print(f"{variants} varients found between {start_position} and {stop_position}")
+```
+```{python}
+#| echo: false
+import allel # import sci-kit allel
+mosq_vcf_file = allel.read_vcf("../course_files/mosquito_samples.vcf.gz" ) # Read vcf file and set up 
+
+pos   = mosq_vcf_file['variants/POS']
+chrom = mosq_vcf_file['variants/CHROM']
+
+chrom_name = "2L"
+window_size = 50000
+chrom_pos = []
+
+for i in range(len(pos)): 
+    if chrom[i] == chrom_name:
+        chrom_pos.append(pos[i])
+
+counts, locations = allel.windowed_count(chrom_pos, size=window_size)
+
+for i in range(len(counts)):
+    variants = counts[i]
+    start_position = locations[i][0]
+    stop_position = locations[i][1]
+    print(f"{variants} varients found between {start_position} and {stop_position}")
+
+
+```
+
+## Give it a go: 
+
+Can you plot the number of variants in each window on a graph? 

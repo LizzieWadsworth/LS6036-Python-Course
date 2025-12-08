@@ -215,5 +215,23 @@
   },
   "worksheets/functions_practice_3.qmd": {
     "functions_practice_3.html": "b3529fb3"
+  },
+  "worksheets/download_scikit_allel.qmd": {
+    "download_scikit_allel.html": "3e54c3a1"
+  },
+  "worksheets/vcf_file_read.qmd": {
+    "vcf_file_read.html": "34a26324"
+  },
+  "worksheets/vcf_view_all_data.qmd": {
+    "vcf_view_all_data.html": "fe0c46a8"
+  },
+  "worksheets/vcf_data_2.qmd": {
+    "vcf_data_2.html": "7a51e2f1"
+  },
+  "worksheets/vcf_count_positions_in_window.qmd": {
+    "vcf_count_positions_in_window.html": "af50db7b"
+  },
+  "worksheets/vcf_heterozygosity.qmd": {
+    "vcf_heterozygosity.html": "b9fd38d1"
   }
 }
