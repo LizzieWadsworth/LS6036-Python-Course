@@ -40,11 +40,11 @@ def time_to_escape(bucket_height):
         total_time += 1
         time_since_rest += 1
 
-        # Snail rests every 30 minutes
+        # Snail rests every 10 minutes
         if time_since_rest == 10: 
-            # Rest for 10 minutes 
+            # Rest for 5 minutes 
             total_time += 5 
-            # Slide down 30 cm 
+            # Slide down 15 cm 
             snail_location -= 15
             # Reset time since rest 
             time_since_rest = 0
