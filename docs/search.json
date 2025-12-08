@@ -37,5 +37,31 @@
       "VCF files",
       "Extract values from VCF"
     ]
+  },
+  {
+    "objectID": "worksheets/download_scikit_allel.html",
+    "href": "worksheets/download_scikit_allel.html",
+    "title": "Download scikit allel",
+    "section": "",
+    "text": "For reading VCF files, we’re going to use the sci-kit allel package.\nTo install this, follow the instructions:\n\nUniversity ComputerOnline CloudOwn Device\n\n\nTo install the package onto the university computer - after you’ve set up VSCode and python - add this into a python file and run it:\n\nimport subprocess\nimport sys\n\ntry:\n    import allel\nexcept ImportError:\n    subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", \"scikit-allel\"])\n    import allel\n\nThis should check if the package is already installed, and install if it if not.\n\n\nOn Google Colab, you can install a package by using !pip:\n\n!pip install scikit-allel\n\nOnce this is installed, you can import the package and run your code:\n\nimport allel\n\n\n\n\nImport allel on Colab\n\n\n\n\nTo install the package on your own device, go to the terminal in VSCode and type in:\nFor Windows computers:\npython -m pip install scikit-allel\nFor Mac computers:\npython3 -m pip install scikit-allel\nThis is the preferred way of installing packages. However, if it doesn’t work, you can use the same technique as used for the “University Computer” option.",
+    "crumbs": [
+      "Learn",
+      "**Functions**",
+      "VCF files",
+      "Download scikit allel"
+    ]
+  },
+  {
+    "objectID": "worksheets/vcf_view_all_data.html",
+    "href": "worksheets/vcf_view_all_data.html",
+    "title": "View all VCF data",
+    "section": "",
+    "text": "We can extract and print the information for each variant using a for loop:\n\nimport allel # import sci-kit allel\n# Read vcf file and set up \nmosq_vcf_file = allel.read_vcf(\"mosquito_samples.vcf.gz\")\n\n# Extract chromosomes, positions, reference and alternate alleles into separate lists\nchrom = mosq_vcf_file[\"variants/CHROM\"]\npos   = mosq_vcf_file[\"variants/POS\"]\nref   = mosq_vcf_file[\"variants/REF\"]\nalt   = mosq_vcf_file[\"variants/ALT\"]\n\n# Print a tab separated heading\nprint(\"Chromosome \\t Position \\t Reference \\t Alternate\")\n\n# Use len(chrom) to get the number of variants, then use a range to go through each one\nfor i in range(len(chrom)):\n    # At every position i, print the chromosome, position, reference and alternate alleles\n    print(chrom[i], end=\"\\t\") # end = \"\\t\" ends on a tab instead of a newline\n    print(pos[i], end=\"\\t\")\n    print(ref[i], end=\"\\t\")\n    print(alt[i], end=\"\\n\") # Last element ends with a newline \"\\n\"\n\n\n\nChromosome   Position    Reference   Alternate\n2L          163         G           ['A' '' '']\n2L          560         T           ['C' '' '']\n2L          959         C           ['G' '' '']\n2L          962         A           ['C' '' '']\n2L          998         C           ['T' '' '']\n2L          1241            C           ['A' '' '']\n2L          1359            T           ['G' '' '']\n2L          1377            G           ['A' '' '']\n2L          1399            C           ['G' '' '']\n2L          1402            G           ['T' '' '']\n\n\nThe chromosome and position give the exact co-ordinate of the variant.\nThe reference allele is the allele in the reference genome, and the alternate alleles are any other alleles detected at each position.",
+    "crumbs": [
+      "Learn",
+      "**Functions**",
+      "VCF files",
+      "View all VCF data"
+    ]
   }
 ]
