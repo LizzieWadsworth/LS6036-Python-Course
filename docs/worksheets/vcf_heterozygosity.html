@@ -993,7 +993,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
+<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
 </div></div>
         
     </div>
@@ -1022,7 +1022,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>The package <code>allel</code> also has some built in functions to help us calculate heterozygosity - the number of heterozygous locations (different alleles on maternal and paternal chromosomes).</p>
 <p>First we want to remind ourselves of our samples and what order they are in.</p>
-<div id="f107cf15" class="cell" data-execution_count="1">
+<div id="178b9ec1" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> allel <span class="co">#&nbsp;import sci-kit allel</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>mosq_vcf_file <span class="op">=</span> allel.read_vcf(<span class="st">"mosquito_samples.vcf.gz"</span> ) <span class="co"># Read vcf file and set up </span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1030,13 +1030,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>samples <span class="op">=</span> mosq_vcf_file[<span class="st">'samples'</span>]</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Samples:"</span>, samples) <span class="co"># print samples</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="02d34a11" class="cell" data-execution_count="2">
+<div id="ed718a92" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Samples: ['AC0090-C' 'AR0047-C']</code></pre>
 </div>
 </div>
 <p>Next we can use the <code>GenotypeArray()</code> function to extract the genotypes from the dataset. We can use list slicing to extract the data for just the sample we want. We can pick the sample by it’s index - is it in position 0, or 1, or 2, or 3?</p>
-<div id="7838ce98" class="cell" data-execution_count="3">
+<div id="779bfa58" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use GenotypeArray to extract genotypes</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>all_genotypes <span class="op">=</span> allel.GenotypeArray(mosq_vcf_file[<span class="st">'calldata/GT'</span>])   <span class="co"># (variants, samples, ploidy)</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1056,7 +1056,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>If there are multiple alternative alleles (such as G in the reference and T or A as alleles) then the first alternative is <code>1</code> and the second is <code>2</code> so you might get genotypes like <code>0/2</code>, <code>1/2</code> or <code>2/2</code> as well.</p>
 <p>Finally, we can use in built functions to determine how many sites are heterozygous.</p>
-<div id="f8e3b64d" class="cell" data-execution_count="4">
+<div id="8a68a464" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract heterozygous alleles using is_het()</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>is_het <span class="op">=</span> sample_genotype.is_het()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Count heterozygous alleles using sum()</span></span>
@@ -1115,7 +1115,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="give-it-a-go" class="level2">
 <h2 class="anchored" data-anchor-id="give-it-a-go">Give it a go:</h2>
-<p>Can you plot the % heterozygositity for both samples on a bar chart?</p>
+<p>Can you plot the percent (%) heterozygositity for both samples on a bar chart?</p>
+<div id="ff6514c2" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="vcf_heterozygosity_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="vcf_heterozygosity_files/figure-html/cell-6-output-1.png" width="593" height="449" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 <script type="ojs-module-contents">

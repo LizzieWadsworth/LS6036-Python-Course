@@ -1022,14 +1022,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>The returned result of <code>input()</code> will always be a string…</p>
 <p>Try the below example - it should give you an error!</p>
-<div id="47630fd7" class="cell" data-execution_count="1">
+<div id="2267f541" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate users age in 10 years</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>user_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your age? "</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>future_age <span class="op">=</span> user_age <span class="op">+</span> <span class="dv">10</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"In ten years you will be "</span>, future_age)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>You should get the error:</p>
-<div id="5c4f3d7a" class="cell" data-execution_count="3">
+<div id="575b2bf9" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -1044,7 +1044,7 @@ Cell <span class="ansi-green-fg">In[2], line 1</span>
 <p>This is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the <code>input()</code> function as a string.</p>
 <p>To change a string to a numerical value, so that we can do things like addition, we need to use the <code>int()</code> or <code>float()</code> functions.</p>
 <p>Examples of different functions to use data types is found below:</p>
-<div id="93f1f101" class="cell" data-execution_count="4">
+<div id="7d5bae4d" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change from a string to an integer using str()</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"10"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>my_int <span class="op">=</span> <span class="bu">int</span>(my_string)</span>
@@ -1080,7 +1080,7 @@ Cell <span class="ansi-green-fg">In[2], line 1</span>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="09010cd5" class="cell" data-execution_count="5">
+<div id="85f33329" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get user birth year using input()</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>user_birth_year <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What year were you born?"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>

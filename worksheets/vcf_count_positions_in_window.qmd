@@ -80,3 +80,44 @@ for i in range(len(counts)):
 ## Give it a go: 
 
 Can you plot the number of variants in each window on a graph? 
+
+Below I've used a 500 bp window to illustrate what this can look like - as we only have a small section of the actual dataset! 
+
+I've plotted the number of variants against the middle point (between start and stop position) for each window.  
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+pos   = mosq_vcf_file['variants/POS']
+chrom = mosq_vcf_file['variants/CHROM']
+
+chrom_name = "2L"
+window_size = 500
+chrom_pos = []
+
+for i in range(len(pos)): 
+    if chrom[i] == chrom_name:
+        chrom_pos.append(pos[i])
+
+counts, locations = allel.windowed_count(chrom_pos, size=window_size)
+
+midpoints = []
+variant_list = []
+
+for i in range(len(counts)):
+    variants = counts[i]
+    start_position = locations[i][0]
+    stop_position = locations[i][1]
+    midpoint = start_position + (window_size/2)
+    midpoints.append(midpoint)
+    variant_list.append(variants)
+    #print(f"{variants} varients found between {start_position} and {stop_position}")
+
+plt.plot(midpoints, variant_list)
+plt.xlim(0,max(midpoints)+(window_size/2))
+plt.xlabel("Position on chromosome")
+plt.ylabel("Number of variants")
+plt.title("Number of variants per 500 bp window on chromosome 2L")
+plt.show()
+
+```

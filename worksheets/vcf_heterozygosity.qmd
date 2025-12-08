@@ -79,4 +79,43 @@ Like `.is_het()` we also have functions to collect all homozygous, missing or ca
 
 ## Give it a go: 
 
-Can you plot the % heterozygositity for both samples on a bar chart? 
+Can you plot the percent (%) heterozygositity for both samples on a bar chart? 
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+
+samples = mosq_vcf_file['samples']
+
+chosen_sample = 0 # First sample is index 0 
+sample_genotype = all_genotypes[:, chosen_sample] # Extract sample result
+
+# Extract heterozygous alleles using is_het()
+is_het = sample_genotype.is_het()
+# Count heterozygous alleles using sum()
+het_count = is_het.sum()
+# Count total number of alleles using len()
+total_sites = len(sample_genotype)
+
+# Calculate percentage heterozygosity by dividing heterozygous alleles by total alleles and multiply by 100
+sample1_heterozygosity = (het_count / total_sites) * 100
+
+chosen_sample = 1 # Second sample is index 1
+sample_genotype = all_genotypes[:, chosen_sample] # Extract sample result
+
+is_het = sample_genotype.is_het()
+# Count heterozygous alleles using sum()
+het_count = is_het.sum()
+
+sample2_heterozygosity = (het_count / total_sites) * 100
+
+plt.bar([samples[0], samples[1]], [sample1_heterozygosity, sample2_heterozygosity], color = ['orchid', 'seagreen'])
+plt.ylim(0,100)
+plt.ylabel("Percent heterozygosity")
+plt.xlabel("Sample")
+plt.title("Heterozygosity of samples")
+plt.show()
+
+
+
+```

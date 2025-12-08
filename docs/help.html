@@ -381,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="nameerror" class="level2">
 <h2 class="anchored" data-anchor-id="nameerror">1. NameError</h2>
 <p>Happens when you use a variable or function name that Python doesn’t know.</p>
-<div id="edcb2a70" class="cell" data-execution_count="1">
+<div id="fd5b47b2" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unknown_variable)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -413,7 +413,7 @@ Tip
 <h2 class="anchored" data-anchor-id="typeerror">2. TypeError</h2>
 <p>Occurs when an operation is applied to the wrong type of object.</p>
 <p>We can add two numbers together, or two words together, but we can’t add a number to a word - python doesn’t know what to do!</p>
-<div id="6dc12813" class="cell" data-execution_count="2">
+<div id="ecc9c317" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"Age: "</span> <span class="op">+</span> <span class="dv">42</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -432,7 +432,7 @@ Cell <span class="ansi-green-fg">In[2], line 1</span>
 <h2 class="anchored" data-anchor-id="valueerror">3. ValueError</h2>
 <p>Raised when a function receives the right type but an invalid value.</p>
 <p><em>What is wrong with the below example?</em></p>
-<div id="32898cc6" class="cell" data-execution_count="3">
+<div id="4060177d" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(<span class="st">"forty-two"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -450,7 +450,7 @@ Cell <span class="ansi-green-fg">In[3], line 1</span>
 <section id="indexerror" class="level2">
 <h2 class="anchored" data-anchor-id="indexerror">4. IndexError</h2>
 <p>Happens when you try to access a list index that doesn’t exist.</p>
-<div id="7408c68d" class="cell" data-execution_count="4">
+<div id="81cd49b8" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> [<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters[<span class="dv">5</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
@@ -483,7 +483,7 @@ Caution
 <section id="keyerror" class="level2">
 <h2 class="anchored" data-anchor-id="keyerror">5. KeyError</h2>
 <p>Occurs when you look up a missing key in a dictionary.</p>
-<div id="a608bce8" class="cell" data-execution_count="5">
+<div id="56e4fe23" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bases <span class="op">=</span> {<span class="st">"A"</span>: <span class="dv">1</span>, <span class="st">"C"</span>: <span class="dv">2</span>}</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bases[<span class="st">"T"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
@@ -516,7 +516,7 @@ Tip
 <section id="attributeerror" class="level2">
 <h2 class="anchored" data-anchor-id="attributeerror">6. AttributeError</h2>
 <p>Happens when you try to call a method that doesn’t exist for an object.</p>
-<div id="c0e8cc5b" class="cell" data-execution_count="6">
+<div id="d592bbf3" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> <span class="dv">42</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>num.append(<span class="dv">99</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
@@ -537,7 +537,7 @@ Cell <span class="ansi-green-fg">In[6], line 2</span>
 <section id="zerodivisionerror" class="level2">
 <h2 class="anchored" data-anchor-id="zerodivisionerror">7. ZeroDivisionError</h2>
 <p>Raised when you divide by zero.</p>
-<div id="251c3417" class="cell" data-execution_count="7">
+<div id="1b2a959e" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="op">/</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -557,7 +557,7 @@ Cell <span class="ansi-green-fg">In[7], line 1</span>
 <section id="importerror-modulenotfounderror" class="level2">
 <h2 class="anchored" data-anchor-id="importerror-modulenotfounderror">8. ImportError / ModuleNotFoundError</h2>
 <p>Occurs when you try to import something that doesn’t exist.</p>
-<div id="5f145ef3" class="cell" data-execution_count="8">
+<div id="48862080" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> not_a_real_module</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -588,7 +588,7 @@ Tip
 <section id="indentationerror" class="level2">
 <h2 class="anchored" data-anchor-id="indentationerror">9. IndentationError</h2>
 <p>Happens when code isn’t indented properly.</p>
-<div id="d5cd0d31" class="cell" data-execution_count="9">
+<div id="03de235e" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello():</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hi"</span>)   <span class="co"># wrong indentation</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
@@ -612,7 +612,7 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>An indent is typically four spaces.</p>
-<div id="41d03815" class="cell" data-execution_count="10">
+<div id="61d9e6b0" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># not indented line</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">#indented line</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -625,7 +625,7 @@ Tip
 <h2 class="anchored" data-anchor-id="syntaxerror">10. SyntaxError</h2>
 <p>General error for code that breaks Python’s rules.</p>
 <p>Usually a problem with the grammar - are you missing a <code>:</code>, do you have an extra <code>,</code>, have you kept the right format?</p>
-<div id="3fed0763" class="cell" data-execution_count="11">
+<div id="72c6fb1c" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello"</span>) <span class="bu">print</span>(<span class="st">"World"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
