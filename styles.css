@@ -112,9 +112,41 @@ body.quarto-dark .quarto-color-scheme-toggle > .bi::before {
 }
 
 .navbar {
-    background-color: #14532d;
-    color: rgb(253.26, 253.63, 253.98);
-    /* Diwali theme 
-    background-color: #cf4f00;
-    */
+    /* color: rgb(253.26, 253.63, 253.98); */
+    /* Normal theme */
+    /* background-color: #14532d; */
+    /* Diwali theme  */
+    /* background-color: #cf4f00; */
+    /* Christmas theme */
+        /* 1) Solid red background for the main center area */
+    background-color: #ca0a11;
+
+    /* 2) Two repeating stripe backgrounds (top & bottom) */
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            white 0px,
+            white 20px,
+            #ca0a11 20px,
+            #ca0a11 40px
+        ),
+        repeating-linear-gradient(
+            45deg,
+            white 0px,
+            white 20px,
+            #ca0a11 20px,
+            #ca0a11 40px
+        );
+
+    /* Position first gradient at the top, second at the bottom */
+    background-position: top, bottom;
+
+    /* Make them full width, but only tall enough to look like borders */
+    background-repeat: repeat-x;
+    background-size: 100% 20px, 100% 20px; /* top strip = 20px tall, bottom strip = 20px tall */
+
+    /* Optional padding for spacing */
+    padding-top: 30px;
+    padding-bottom: 30px;
+
 }

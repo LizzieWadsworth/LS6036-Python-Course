@@ -993,7 +993,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
+<p><a href="../Logo/Logo_with_christmas_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../Logo/Logo_with_christmas_text.png" class="img-fluid"></a></p>
 </div></div>
         
     </div>
@@ -1022,7 +1022,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>The <code>allel</code> library has some useful built-in functions we can use to get a clearer picture of our data. For example, we can use <code>windowed_count</code> to get a count of all the variant positions for the first n base pairs, and then the next n base pairs…</p>
 <p>To do this, first we need our positions numbers and which chromosomes they belong to:</p>
-<div id="f0668908" class="cell" data-execution_count="1">
+<div id="63b59e21" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> allel <span class="co">#&nbsp;import sci-kit allel</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>mosq_vcf_file <span class="op">=</span> allel.read_vcf(<span class="st">"mosquito_samples.vcf.gz"</span> ) <span class="co"># Read vcf file and set up </span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract positions and chromosomes</span></span>
@@ -1034,7 +1034,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>A <code>for</code> loop to loop through every position</li>
 <li>An <code>if</code> statement to check if that position is on the chromosome we want</li>
 </ul>
-<div id="4fbb9b15" class="cell" data-execution_count="2">
+<div id="ab6c5419" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>chrom_name <span class="op">=</span> <span class="st">"2L"</span> <span class="co"># Select chromosome of interest </span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>window_size <span class="op">=</span> <span class="dv">50000</span> <span class="co">#&nbsp;Scan every 50,000 base pairs</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>chosen_positions <span class="op">=</span> [] <span class="co"># Empty list to contain all of the positions for our chromosome</span></span>
@@ -1047,7 +1047,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        chosen_positions.append(pos[i])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Finally, we can use the <code>allel.windowed_count()</code> function to count how many variant positions there are in the first 50,000 base pairs, and then the second 50,000 base pairs, and so on.</p>
-<div id="51eaf110" class="cell" data-execution_count="3">
+<div id="cccccddb" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function allel.windowed_count takes a list of positions and a window size as arguments</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns the counts and locations for each window </span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>counts, locations <span class="op">=</span> allel.windowed_count(chosen_positions, size<span class="op">=</span>window_size)</span>
@@ -1061,7 +1061,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print the results</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>variants<span class="sc">}</span><span class="ss"> varients found between </span><span class="sc">{</span>start_position<span class="sc">}</span><span class="ss"> and </span><span class="sc">{</span>stop_position<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="4c76c704" class="cell" data-execution_count="4">
+<div id="505a9517" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>554 varients found between 163 and 50162
 1288 varients found between 50163 and 100162
@@ -1074,7 +1074,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Can you plot the number of variants in each window on a graph?</p>
 <p>Below I’ve used a 500 bp window to illustrate what this can look like - as we only have a small section of the actual dataset!</p>
 <p>I’ve plotted the number of variants against the middle point (between start and stop position) for each window.</p>
-<div id="7a89c574" class="cell" data-execution_count="5">
+<div id="815593f1" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

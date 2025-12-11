@@ -993,7 +993,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
+<p><a href="../Logo/Logo_with_christmas_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="../Logo/Logo_with_christmas_text.png" class="img-fluid"></a></p>
 </div></div>
         
     </div>
@@ -1025,7 +1025,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>You’re on a quest, and have the below inventory <em>stored as a dictionary</em>.</p>
-<div id="c4b0e509" class="cell" data-execution_count="1">
+<div id="5e7cfa90" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your starting inventory </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>player_inventory <span class="op">=</span> {</span>
@@ -1078,7 +1078,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="0fb2e4e3" class="cell" data-execution_count="2">
+<div id="02505313" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random <span class="co"># Random used in find coins function</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Your starting inventory as a dictionary</span></span>
@@ -1138,7 +1138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>take_out_item(<span class="st">"dagger"</span>, player_inventory)</span>
 <span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>add_item(<span class="st">"Bubble tea"</span>, <span class="st">"pouch"</span>, player_inventory)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>You found 3 coins, and now have 503 gold
+<pre><code>You found 0 coins, and now have 500 gold
 dagger found in backpack
 dagger removed from backpack
 Cannot store Bubble tea as pouch is full</code></pre>
@@ -1157,7 +1157,7 @@ Cannot store Bubble tea as pouch is full</code></pre>
 </p>
 <p>In morse code - letters are separated with three spaces and words by seven spaces; you will need to use this</p>
 <p>Your job is to decipher and reply to the question:</p>
-<div id="27ca2d66" class="cell" data-execution_count="3">
+<div id="fcc26d80" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>.<span class="op">--</span>   ....   .<span class="op">-</span>   <span class="op">-</span>       ..   ...       <span class="op">-</span>   ....   .       <span class="op">--</span>   .   .<span class="op">-</span>   <span class="op">-</span>.   ..   <span class="op">-</span>.   <span class="op">--</span>.       <span class="op">---</span>   ..<span class="op">-</span>.       .<span class="op">-</span>..   ..   ..<span class="op">-</span>.   .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><em>While you could do this with lists - it would be more efficient here to use a dictionary</em></p>
@@ -1197,7 +1197,7 @@ Cannot store Bubble tea as pouch is full</code></pre>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The <code>.split()</code> function comes in handy here as you can split by a set number of spaces.</p>
-<div id="7aaa6a8f" class="cell" data-execution_count="4">
+<div id="61adc58f" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"morse_code.txt"</span>) <span class="im">as</span> f: </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> f.readlines() </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1271,7 +1271,7 @@ Cannot store Bubble tea as pouch is full</code></pre>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Solution shown for just one word - this is just one of many ways of completing this task.</p>
-<div id="abf95e1b" class="cell" data-execution_count="5">
+<div id="eb3ef0fc" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>guessing_word <span class="op">=</span> <span class="st">"bioinformatics"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&nbsp;Function to print how many letters have been found</span></span>
