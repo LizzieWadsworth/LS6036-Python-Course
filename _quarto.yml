@@ -154,9 +154,10 @@ engine: jupyter
 lightbox: true
 
 margin-header: |
-  ![](/Logo/Logo_with_christmas_text.png)
+  ![](/Logo/LS6036_with_text.png)
 #  ![](/Logo/LS6036_with_text.png)
 #  ![](/Logo/Logo_with_diya_and_text.png) # Diwali logo
+#  ![](/Logo/Logo_with_christmas_text.png)
 
 
 filters:

@@ -42,6 +42,12 @@ import allel
 
 ![Import allel on Colab](/images/colab_allel.png)
 
+To upload a file, you can click the files tab and upload from your computer. 
+
+_This is temporary storage, you'll need to reupload the file for every session_ 
+
+![Import file on Colab](/images/Files-colab.png)
+
 ### Own Device
 
 To install the package on your own device, go to the terminal in VSCode and type in: 
