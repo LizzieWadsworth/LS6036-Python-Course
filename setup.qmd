@@ -10,13 +10,11 @@ Click below to see the set up instructions for each:
 
 To get set up, follow the below steps. **Click each step** for detailed instructions.
 
-::: {.callout-note collapse="false" title="Step 1: Launch Visual Studio Code from AppsAnywhere" icon="false"}
+::: {.callout-note collapse="false" title="Step 1: Launch Pycharm from AppsAnywhere" icon="false"}
 1.  Type in AppsAnywhere to the windows bar. This will open in a web browser
 2.  Open the following two applications by typing the name in and clicking launch: 
     i.  Python
-    ii. Visual Studio Code
-
-![GIF of Opening VSCode](GIFs/UniComp_AppsAnywhere.gif)
+    ii. Pycharm
 :::
 
 ::: {.callout-caution collapse="false" title="Step 2: Navigate to your OneDrive folder" icon="false"}
@@ -25,27 +23,24 @@ To get set up, follow the below steps. **Click each step** for detailed instruct
 2.  Find your OneDrive folder. You should be able to recognise the files and folders listed, from what you have saved here in your other classes.
 
 3.  Create a new folder for this python course, and open this folder. 
-
-![GIF of Opening OneDrive folder](GIFs/UniComp_OneDrive.gif)
-
 :::
 
-::: {.callout-tip collapse="false" title="Step 3: Install the python extension" icon="false"}
+<!-- ::: {.callout-tip collapse="false" title="Step 3: Install the python extension" icon="false"}
 
 1.  Click the extensions tab
 
 2.  Search and install python
 
 ![GIF of Making a Folder](GIFs/UniComp_InstallPython.gif)
-:::
+::: -->
 
 ::::: {.callout-caution collapse="false" title="Step 4: Create and run a Python file" icon="false"}
 You're now ready to run some Python code!
 
-1.  Go back to your folder 
-2.  Click the "New file" button
-3.  Give your file a name ending .py (e.g. "Test.py" )
-4.  Add the following line to your file 
+1.  Click the "New file" button and click "Python file"
+2.  Give your file a name (_it will automatically add a .py - e.g. test.py_)
+3.  Drag your new file to the right-hand panel of Pycharm to open it
+3.  Add the following line to your file 
 
 ```{python}
 #| eval: false
@@ -56,8 +51,6 @@ print("Hello World")
 
 And that's it - you're all set up! 
 
-![GIF of making a python File](GIFs/UniComp_RunPython.gif)
-
 ::: {.callout-warning icon="false" collapse="false"}
 Make sure you can find your file in file explorer. Always **back up your work** such as saving in OneDrive or emailing to yourself so that you don't lose your progress.
 :::
@@ -65,7 +58,7 @@ Make sure you can find your file in file explorer. Always **back up your work** 
 
 ### Online Cloud
 
-[Google Colab](https://posit.cloud/plans/free) is a **free** tool for running python on a browser - from a file saved in your Google Drive. 
+[Google Colab](https://colab.research.google.com/#scrollTo=GJBs_flRovLc) is a **free** tool for running python on a browser - from a file saved in your Google Drive. 
 
 :::{.callout-caution collapse="false" title="Caution" icon="true"}
 You shouldn't need a paid account for this course. If your work becomes too large, then I suggest downloading and running Python and Visual Studio Code on your device. 
