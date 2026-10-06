@@ -12,34 +12,28 @@ To get set up, follow the below steps. **Click each step** for detailed instruct
 
 ::: {.callout-note collapse="false" title="Step 1: Launch Pycharm from AppsAnywhere" icon="false"}
 1.  Type in AppsAnywhere to the windows bar. This will open in a web browser
-2.  Open the following two applications by typing the name in and clicking launch: 
-    i.  Python
-    ii. Pycharm
+2.  Open the following applications by typing the name in and clicking launch: 
+    i.  Pycharm
+_This will automatically install python as well_
+
+![GIF of opening PyCharm](GIFs/UniComp_Pycharm_AppsAnywhere.gif)
 :::
 
 ::: {.callout-caution collapse="false" title="Step 2: Navigate to your OneDrive folder" icon="false"}
 1.  Click "Open Folder" on the loading screen
 
-2.  Find your OneDrive folder. You should be able to recognise the files and folders listed, from what you have saved here in your other classes.
+2.  Scroll to the bottom to find "`O:`" - this is your OneDrive folder. You should click this, and your OneDrive folders should load. 
 
 3.  Create a new folder for this python course, and open this folder. 
+
+![GIF of opening OneDrive Folder](GIFs/UniComp_Pycharm_OneDrive.gif)
 :::
-
-<!-- ::: {.callout-tip collapse="false" title="Step 3: Install the python extension" icon="false"}
-
-1.  Click the extensions tab
-
-2.  Search and install python
-
-![GIF of Making a Folder](GIFs/UniComp_InstallPython.gif)
-::: -->
 
 ::::: {.callout-caution collapse="false" title="Step 4: Create and run a Python file" icon="false"}
 You're now ready to run some Python code!
 
-1.  Click the "New file" button and click "Python file"
-2.  Give your file a name (_it will automatically add a .py - e.g. test.py_)
-3.  Drag your new file to the right-hand panel of Pycharm to open it
+1.  Right click your folder and click New Python File
+2.  Give your file a name (_it should automatically add a .py - e.g. test.py_)
 3.  Add the following line to your file 
 
 ```{python}
@@ -47,9 +41,11 @@ You're now ready to run some Python code!
 print("Hello World")
 ```
 
-5.  Press the run button
+4.  Press the run button
 
 And that's it - you're all set up! 
+
+![GIF of running python file](GIFs/UniComp_Pycharm_PythonFile.gif)
 
 ::: {.callout-warning icon="false" collapse="false"}
 Make sure you can find your file in file explorer. Always **back up your work** such as saving in OneDrive or emailing to yourself so that you don't lose your progress.

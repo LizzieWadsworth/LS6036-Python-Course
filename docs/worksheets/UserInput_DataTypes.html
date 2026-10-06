@@ -1020,46 +1020,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The returned result of <code>input()</code> will always be a string…</p>
-<p>Try the below example - it should give you an error!</p>
-<div id="72523f88" class="cell" data-execution_count="1">
+<p>When you use a function like <code>input()</code>, python doesn’t know if you’re going to enter:</p>
+<ul>
+<li>a string (a word or mix of letters and numbers, <code>str</code>)</li>
+<li>a whole number (integer, <code>int</code>)</li>
+<li>a number with decimal points (floating point number, <code>float</code>)</li>
+</ul>
+<p>To get around this - it assumes the input is <strong>always</strong> treated as a string (or word)</p>
+<p>Try the below example - it doesn’t behave how you might expect!</p>
+<div id="8224bd1b" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate users age in 10 years</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>user_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your age? "</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>future_age <span class="op">=</span> user_age <span class="op">+</span> <span class="dv">10</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"In ten years you will be "</span>, future_age)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>double_age <span class="op">=</span> user_age <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Double your age is "</span>, double_age)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>You should get the error:</p>
-<div id="575b0845" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[2], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> future_age <span style="color:rgb(98,98,98)">=</span> user_age <span style="color:rgb(98,98,98)">+</span> <span style="color:rgb(98,98,98)">10</span>
-
-<span class="ansi-red-fg">TypeError</span>: can only concatenate str (not "int") to str</pre>
+<p>This is the result for a user who is 19 years old:</p>
+<div id="b41ad9b3" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>Double your age is  1919</code></pre>
 </div>
 </div>
+<p>Now that’s not quite what we want! So we need to <strong>convert</strong> the string (word) to a whole number (integer). To do this, we can use the <code>int()</code> function.</p>
+<div id="fa9ab8c8" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate users age in 10 years</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>user_age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your age? "</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use int() to convert the input to a number</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Overwrite user_age variable with the result from int(user_age)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>user_age <span class="op">=</span> <span class="bu">int</span>(user_age) </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>double_age <span class="op">=</span> user_age <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Double your age is "</span>, double_age)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>This is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the <code>input()</code> function as a string.</p>
-<p>To change a string to a numerical value, so that we can do things like addition, we need to use the <code>int()</code> or <code>float()</code> functions.</p>
+<p>Now that is giving the answer we actually wanted!</p>
 <p>Examples of different functions to use data types is found below:</p>
-<div id="f6810d14" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change from a string to an integer using str()</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"10"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>my_int <span class="op">=</span> <span class="bu">int</span>(my_string)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (my_int, <span class="st">"is of type"</span>, <span class="bu">type</span> ( my_int ))</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Change from a string to a floating point number using float()</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">"10.5"</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>my_float <span class="op">=</span> <span class="bu">float</span>(my_string)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (my_float, <span class="st">"is of type"</span>, <span class="bu">type</span> ( my_float ))</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Change from an integer to a string using str()</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>my_int <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="bu">str</span>(my_int)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (my_string, <span class="st">"is of type"</span>, <span class="bu">type</span> ( my_string ))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Conversion</th>
+<th>Function</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>To integer</td>
+<td><code>int()</code></td>
+<td><code>user_age = int(user_age)</code></td>
+</tr>
+<tr class="even">
+<td>To floating point number</td>
+<td><code>float()</code></td>
+<td><code>weight = float(weight)</code></td>
+</tr>
+<tr class="odd">
+<td>To string</td>
+<td><code>str()</code></td>
+<td><code>age_as_word = str(user_age)</code></td>
+</tr>
+</tbody>
+</table>
 <section id="give-it-a-go" class="level2">
 <h2 class="anchored" data-anchor-id="give-it-a-go">Give it a go:</h2>
 <p>Write a python program which:</p>
@@ -1080,18 +1098,18 @@ Cell <span class="ansi-green-fg">In[2], line 1</span>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="04c9b750" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get user birth year using input()</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>user_birth_year <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What year were you born?"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert birth year to integer</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>user_birth_year <span class="op">=</span> <span class="bu">int</span>(user_birth_year)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate age in the Year 3000</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>user_year_3000_age <span class="op">=</span> <span class="dv">3000</span> <span class="op">-</span> user_birth_year </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print result</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"In the year 3000 you will be: "</span>, user_year_3000_age)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="52b97db3" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get user birth year using input()</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>user_birth_year <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What year were you born?"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert birth year to integer</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>user_birth_year <span class="op">=</span> <span class="bu">int</span>(user_birth_year)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate age in the Year 3000</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>user_year_3000_age <span class="op">=</span> <span class="dv">3000</span> <span class="op">-</span> user_birth_year </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print result</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"In the year 3000 you will be: "</span>, user_year_3000_age)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>

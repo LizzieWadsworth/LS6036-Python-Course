@@ -1,55 +1,55 @@
 # Input data types
 
-The returned result of ```input()``` will always be a string... 
+When you use a function like `input()`, python doesn't know if you're going to enter: 
+  
+-  a string (a word or mix of letters and numbers, `str`)
+-  a whole number (integer, `int`)
+-  a number with decimal points (floating point number, `float`)
 
-Try the below example - it should give you an error! 
+To get around this - it assumes the input is **always** treated as a string (or word) 
+
+Try the below example - it doesn't behave how you might expect! 
 
 ```{python}
 #| eval: false
 # Calculate users age in 10 years
 user_age = input("What is your age? ")
-future_age = user_age + 10
-print("In ten years you will be ", future_age)
+double_age = user_age * 2
+print("Double your age is ", double_age)
 ```
 
-You should get the error: 
+This is the result for a user who is 19 years old: 
 
 ```{python}
 #| echo: false
-user_age = "hello"
+# Calculate users age in 10 years
+user_age = "19"
+double_age = user_age * 2
+print("Double your age is ", double_age)
 ```
 
-```{python}
-#| echo: false
-#| error: true
-future_age = user_age + 10
-```
-
-This is because the age the user types in - although the user probably used digits, such as 32, - is read into python by the ```input()``` function as a string. 
-
-To change a string to a numerical value, so that we can do things like addition, we need to use the ```int()``` or ```float()``` functions. 
-
-Examples of different functions to use data types is found below:
+Now that's not quite what we want! So we need to **convert** the string (word) to a whole number (integer). To do this, we can use the `int()` function. 
 
 ```{python}
 #| eval: false
-
-# Change from a string to an integer using str()
-my_string = "10"
-my_int = int(my_string)
-print (my_int, "is of type", type ( my_int ))
-
-# Change from a string to a floating point number using float()
-my_string = "10.5"
-my_float = float(my_string)
-print (my_float, "is of type", type ( my_float ))
-
-# Change from an integer to a string using str()
-my_int = 10
-my_string = str(my_int)
-print (my_string, "is of type", type ( my_string ))
-
+# Calculate users age in 10 years
+user_age = input("What is your age? ")
+# Use int() to convert the input to a number
+# Overwrite user_age variable with the result from int(user_age)
+user_age = int(user_age) 
+double_age = user_age * 2
+print("Double your age is ", double_age)
 ```
+
+Now that is giving the answer we actually wanted! 
+
+Examples of different functions to use data types is found below:
+
+| Conversion | Function | Example | 
+| -- | -- | -- | 
+| To integer | `int()` | `user_age = int(user_age)` | 
+| To floating point number | `float()` | `weight = float(weight)` | 
+| To string | `str()` | `age_as_word = str(user_age)` | 
 
 ## Give it a go: 
 
