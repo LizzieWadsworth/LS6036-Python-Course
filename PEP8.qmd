@@ -1,0 +1,157 @@
+# PEP-8 and DRY principals
+
+> A guide of how to follow PEP-8 and DRY principals when writing code. 
+
+## What is PEP-8 and DRY 
+
+Guido van Rossum, the creator of the python programming language, developed a style guide for how to write good, readable code. This is called PEP-8 (Python Enhancement Protocol 8)
+
+DRY is the _Don't Repeat Yourself_ principle. The idea is to have any information only entered in one place (e.g. a constant value) so if there's any issues you only need to change the code in that one place. 
+
+## PEP-8 Style Guide
+
+A full [PEP-8 Style Guide is available online](https://peps.python.org/pep-0008/), and the guide below highlights some key examples which are useful for this course. 
+
+### Indentation 
+
+Indentation is the spaces that show whether the next line of code is _inside_ or _outside_ the `if` statement, `for` loop, or function. 
+
+Indentation should always be **four** spaces `"    "`
+
+Code editing tools like PyCharm, Google Colab and Visual Studio code do this automatically (even when you use the tab key - they insert spaces!)
+
+**Google Colab**, automatically uses 2 spaces instead of 4. You can change this in Tools -> Settings -> Editor --> Indentation width in spaces
+
+![Google Colab screenshot of indentation](/images/Colab_indentation.png)
+
+### Maximum line length 
+
+Limit each line to **79 characters** 
+
+You can split a long line into several shorter lines using parenthesis `()` or when entering items into a list or dictionary `[]`
+
+::: {.panel-tabset}
+
+## List example 
+
+Split a list over several lines: 
+
+```{python}
+#| eval: false
+# A long list wrapped across multiple lines using implicit continuation
+shopping_list = [
+    "organic apples",
+    "artisan sourdough bread",
+    "extra virgin olive oil",
+    "parmigiano reggiano cheese",
+    "fresh basil leaves",
+    "balsamic vinegar of modena",
+]
+```
+
+## If else example
+
+You can split your `if` statements using `and` using brackets: 
+
+```{python}
+#| eval: false
+# A complex conditional statement wrapped using parentheses
+user_age = 25
+has_permission = True
+is_premium_member = False
+account_status = "active"
+
+# Use brackets so that each condition can go on a new line
+if (
+    user_age >= 18
+    and has_permission
+    and (is_premium_member or account_status == "active")
+):
+    print("Access granted to premium features.")
+else:
+    print("Access denied. Please check your account status.")
+```
+
+:::
+
+### Imports 
+
+When you use `import` to import a package or a library, you should: 
+
+1.  Put all imports at the top of the file 
+2.  Put each import on a new line 
+
+```{python}
+#| eval: false
+# Import all packages at the top 
+import matplotlib.pyplot as plt 
+import numpy as np 
+
+# Rest of code goes below 
+```
+
+### String quotes 
+
+In python, quotes `'` and double quotes `"` are the same. 
+It doesn't matter which one you use, but be consistent. 
+
+You can use both if you want to (for example) include quotes in your printed code. 
+
+```{python}
+# In this example, single quotes ' are used to define the start and end of the string 
+# The double quote " is then included in the printed result
+print('She said "I love capybaras too" to the crocodile')
+```
+
+### Whitespace in Expressions and Statements 
+
+Avoid extra whitespace where it's not needed:
+
+```{python}
+#| eval: false
+# Correct:
+spam(ham[1], {eggs: 2})
+
+# Wrong:
+spam( ham[ 1 ], { eggs: 2 } )
+
+# Correct:
+print(spam)
+
+# Wrong:
+print ( spam ) 
+
+# Correct:
+x = 1
+y = 2
+long_variable = 3
+
+# Wrong:
+x             = 1
+y             = 2
+long_variable = 3
+```
+
+
+### Comments 
+
+Comments should be complete sentences. The first word should be capitalized. 
+
+Ensure that your comments are clear and easily understandable to other speakers of the language you are writing in.
+
+Comments that contradict the code are worse than no comments. Always make a priority of keeping the comments up-to-date when the code changes!
+
+Block comments generally apply to some (or all) code that follows them, and are indented to the same level as that code. Each line of a block comment starts with a # and a single space (unless it is indented text inside the comment). 
+
+### Naming 
+
+Never use the characters ‘l’ (lowercase letter el), ‘O’ (uppercase letter oh), or ‘I’ (uppercase letter eye) as single character variable names. In some fonts, these characters are indistinguishable from the numerals one and zero. When tempted to use ‘l’, use ‘L’ instead. (I would also avoid any single character variables where possible!)
+
+Variables and Function names should be lowercase, with words separated by underscores as necessary to improve readability.
+
+Constants (e.g. DNA mutation rate) are usually at the top of the program or function, and written in all capital letters with underscores separating words. Examples include MAX_OVERFLOW and TOTAL.
+
+
+
+
+

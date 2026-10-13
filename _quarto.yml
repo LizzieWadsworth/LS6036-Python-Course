@@ -16,6 +16,8 @@ website:
           href: setup.qmd
         - text: "Learn"
           href: learn.qmd
+        - text: "Style Guide"
+          href: PEP8.qmd
         - text: "Careers"
           href: careers.qmd
         - text: "CheatSheet"
@@ -136,6 +138,7 @@ website:
             - section: "Advent of Code 2025"
               contents: 
                   - href: worksheets/Advent_of_Code_2025.qmd
+
 
   favicon: /Logo/LS6036_face.png
     
