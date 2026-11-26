@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>biotite_entrez – LS6036 Python programming</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../worksheets/biotite_feature_map.html" rel="next">
+<link href="../worksheets/introduction_to_biotite.html" rel="prev">
+<link href="..//Logo/LS6036_face.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-fa35314f136b5433caea2d237856fe5f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">LS6036 Python programming</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Why Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../setup.html"> 
+<span class="menu-text">Set Up</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../learn.html"> 
+<span class="menu-text">Learn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../PEP8.html"> 
+<span class="menu-text">Style Guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../careers.html"> 
+<span class="menu-text">Careers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cheatsheet.html"> 
+<span class="menu-text">CheatSheet</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../help.html"> 
+<span class="menu-text">Help, Error!</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Biotite Fetch Genbank from Accession</h1>
+        </a>     
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>Python introduction: basics</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Python essentials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../learn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hello World</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Comments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/FormatStrings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Format Strings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/DataTypes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Maths.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maths</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/OxygenInBlood.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Oxygen in blood exercise</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Inputs, ifs and elses</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/UserInput.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User input</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/UserInput_DataTypes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Input data types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/ifelse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If and else</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/ifelse_conditions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If and else conditions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/ifelse_fixerrors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fix the errors activity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/ifelifelse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">If, elif and else</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/ifmuseumdiscount.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Museum discount activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lists and dictionaries</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Lists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lists</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/List_index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List index</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/List_slicing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List slicing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/List_methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List methods</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Dictionaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dictionaries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Dictionaries_II.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dictionaries II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/nested_lists_and_dictionaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nested lists and dictionaries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Species_ages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lifespan activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>Logic and Loops</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Logic</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Logic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Logic</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/String_methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">String methods, indexing and slicing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Adding_number_string.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Adding to numbers and strings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/random.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The random package</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">for loops</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/forloops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The for loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Range.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ranges</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/for_iterables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What can we use for with?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/forloop_practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">for loop practice activities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/FizzBuzz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FizzBuzz Activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">while loops</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/while_loop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The while loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/whileloop_neverending.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neverending while loop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/while_practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">While loop practice</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reading from a file</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_from_a_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading from a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/writing_to_a_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Writing to a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_a_fasta_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading a fasta file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/premature_stop_codon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Premature stop codon activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>Matplotlib</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Plotting graphs</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib line graph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_scatter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib scatter</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_barchart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib bar charts and histograms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_piechart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib Pie Charts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_boxplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib boxplot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib practice</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">Styling graphs</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_colors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib colours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_linestyle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib linestyle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_markers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib markers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_titles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib titles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_legend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib legends</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_xyticks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib xy ticks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/matplotlib_xy_limits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib xy limits</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">Plotting from a CSV file</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/reading_a_csv_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading from a csv file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/plotting_from_a_csv_file.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plotting from a csv file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/crab_activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Crab activity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>Functions</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+ <span class="menu-text">Defining functions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/define_a_function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Defining a function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/local_and_global_variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Local and global variables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/function_arguments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Function arguments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/function_return.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Return a value</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/function_immutable_mutable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mutable and Immutable values</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/functions_within_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions inside functions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">Functions practice</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/functions_practice_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions practice I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/functions_practice_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions practice II</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true">
+ <span class="menu-text">Biotite</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/introduction_to_biotite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Biotite - multitool for bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/biotite_entrez.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Biotite Fetch Genbank from Accession</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/biotite_feature_map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Biotite Feature Maps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/biotite_search_multiple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Biotite Multiple Sequence Alignment Part I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/biotite_MSA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Biotite Multiple Sequence Alignment Part II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/biotite_sequence_profile.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sequence Conservation Logo</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true">
+ <span class="menu-text"><strong>Extensions</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false">
+ <span class="menu-text">Advent of Code 2025</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/Advent_of_Code_2025.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What is Advent of Code?</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false">
+ <span class="menu-text">VCF Files</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/download_scikit_allel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download scikit allel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/vcf_file_read.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Read a VCF file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/vcf_view_all_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">View all VCF data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/vcf_data_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extract values from VCF</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/vcf_count_positions_in_window.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Counting positions in a window</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../worksheets/vcf_heterozygosity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Heterozygosity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<p><a href="../Logo/LS6036_with_text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../Logo/LS6036_with_text.png" class="img-fluid"></a></p>
+</div></div>
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Biotite Fetch Genbank from Accession</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>We can search for biological sequences using the NCBI databases. You may have done this before via the webpage. In this example, we’re going to look at a plasmid found in <em>Staphylococcus</em> which contains genes that allow the bacteria to become resistant to different drugs - plasmid pSS-01.</p>
+<p>We can use the accession number to ask python (using the biotite library) to fetch the sequence directly from the database.</p>
+<p>First, let’s have a look at the plasmid and gather the accession number using the website. We’ll use <a href="https://www.ncbi.nlm.nih.gov/nucleotide/">NCBI nucleotide</a> and type in “plasmid pSS-01”. There are two records, these are both the same sequence from the same study so we’ll use the first one as the annotation is more detailed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../GIFs/NCBI_plasmid_pSS-01.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="GIF of NCBI nucleotide search for plasmid pSS-01"><img src="../GIFs/NCBI_plasmid_pSS-01.gif" class="img-fluid figure-img" alt="GIF of NCBI nucleotide search for plasmid pSS-01"></a></p>
+<figcaption>GIF of NCBI nucleotide search for plasmid pSS-01</figcaption>
+</figure>
+</div>
+<p>The result we found was:</p>
+<p><strong>Accession number</strong>: <code>JQ041372.1</code></p>
+<p><strong>Study</strong>: <a href="https://doi.org/10.1128/aac.05827-11">Distribution of the multidrug resistance gene cfr in Staphylococcus species isolates from swine farms in China</a></p>
+<p>Now we know the accession - we can use Biotite package <code>biotite.database.entrez</code> to fetch the GenBank file which contains the sequence and locations of all the genes.</p>
+<hr>
+<section id="biotite-setup" class="level2">
+<h2 class="anchored" data-anchor-id="biotite-setup">Biotite Setup</h2>
+<p>You’ll need to use biotite for this section.</p>
+<p>From biotite, we want to import a range of different functions. This include <code>entrez</code> which is used to access the NCBI databases, <code>genbank</code> for dealing with sequence information which is in genbank format, and <code>seq</code> for dealing with sequences.</p>
+<div id="7424fde9" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> biotite.database.entrez <span class="im">as</span> entrez</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> biotite.sequence <span class="im">as</span> seq</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> biotite.sequence.align <span class="im">as</span> align</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> biotite.sequence.graphics <span class="im">as</span> graphics</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> biotite.sequence.io.genbank <span class="im">as</span> genbank</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="fetching-data-from-ncbi-entrez" class="level2">
+<h2 class="anchored" data-anchor-id="fetching-data-from-ncbi-entrez">Fetching Data from NCBI Entrez</h2>
+<p>The <code>entrez.fetch()</code> function allows us to download records from NCBI databases. The nucleotide database is called <code>nuccore</code>.</p>
+<p>By passing our target accession string (<code>JQ041372.1</code>) to <code>entrez.fetch()</code>, Biotite downloads the record and returns the file.</p>
+<p>The genbank file below contains the sequence and all the annotations - details about the sequence, such as the study it came from and the locations of genetic elements such as genes, tRNAs, rRNAs and other genetic elements like transposable elements.</p>
+<div id="3c58e26b" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define target accession for Staphylococcus cohnii strain 2-8 plasmid pSS-01</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ACCESSION <span class="op">=</span> <span class="st">"JQ041372.1"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># print a message before starting the search (as it can take some time, so this helps to show it is running)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Fetching GenBank record for accession: </span><span class="sc">{</span>ACCESSION<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Use entrez.fetch to find the accession, looking in the nucleotide database nuccore, and returning a gb (genbank) file</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>genbank_file_location <span class="op">=</span> entrez.fetch(</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    ACCESSION, <span class="co"># Accession number</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="va">None</span>, <span class="co"># Target path (where to save it on our PC) - we can set to None so it will use a temporary file</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    suffix<span class="op">=</span><span class="st">"gb"</span>, <span class="co"># Will add a suffix .gb to specify that it is a genbank file</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    db_name<span class="op">=</span><span class="st">"nuccore"</span>, <span class="co"># Search the nucleotide database </span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    ret_type<span class="op">=</span><span class="st">"gb"</span> <span class="co"># Retrieve the genbank file </span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the downloaded GenBank file</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>genbank_file <span class="op">=</span> genbank.GenBankFile.read(genbank_file_location)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Open and print the entire raw GenBank file content</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"--- Full GenBank File Content for </span><span class="sc">{</span>ACCESSION<span class="sc">}</span><span class="ss"> ---"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genbank_file)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fetching GenBank record for accession: JQ041372.1
+--- Full GenBank File Content for JQ041372.1 ---
+LOCUS       JQ041372               15702 bp    DNA     linear   BCT 25-JUL-2016
+DEFINITION  Staphylococcus cohnii strain SS-01 plasmid pSS-01 insertion
+            sequence IS256 IS256 transposase (tnp) gene, complete cds; and
+            bifunctional aminoglycoside N-acetyltransferase/aminoglycoside
+            phosphotransferase (aacA), IS256-like transposase (tnp), 23S rRNA
+            methylase (cfr), putative transcriptional regulator, IS256-like
+            transposase (tnp), transposase A (tnpA), transposase B (tnpB),
+            transposase C (tnpC), putative oxidoreductase, and
+            chloramphenicol/florfenicol exporter (fexA) genes, complete cds.
+ACCESSION   JQ041372
+VERSION     JQ041372.1
+KEYWORDS    .
+SOURCE      Staphylococcus cohnii
+  ORGANISM  Staphylococcus cohnii
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Staphylococcaceae; Staphylococcus; Staphylococcus cohnii species
+            complex.
+REFERENCE   1  (bases 1 to 15702)
+  AUTHORS   Wang,Y., Zhang,W., Wang,J., Wu,C., Shen,Z., Fu,X., Yan,Y.,
+            Zhang,Q., Schwarz,S. and Shen,J.
+  TITLE     Distribution of the Multidrug Resistance Gene cfr in Staphylococcus
+            Species Isolates from Swine Farms in China
+  JOURNAL   Antimicrob. Agents Chemother. 56 (3), 1485-1490 (2012)
+   PUBMED   22183168
+REFERENCE   2  (bases 1 to 15702)
+  AUTHORS   Wang,Y., Zhang,W.J., Wu,C.M., Shen,Z.Q., Schwarz,S. and Shen,J.Z.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (18-NOV-2011) Department of Veterinary Pharmacology and
+            Toxicology, College of Veterinary Medicine, China Agricultural
+            University, 2 Yuanmingyuan Western Road, Beijing, Beijing 100193,
+            China
+FEATURES             Location/Qualifiers
+     source          1..15702
+                     /organism="Staphylococcus cohnii"
+                     /mol_type="genomic DNA"
+                     /strain="SS-01"
+                     /db_xref="taxon:29382"
+                     /plasmid="pSS-01"
+     repeat_region   26..33
+                     /note="target site duplication"
+                     /rpt_type=direct
+                     /rpt_unit_seq="tgttcgag"
+     mobile_element  34..1357
+                     /mobile_element_type="insertion sequence:IS256"
+     repeat_region   34..59
+                     /note="imperfect left inverted repeat"
+                     /rpt_type=inverted
+     gene            135..1307
+                     /gene="tnp"
+     CDS             135..1307
+                     /gene="tnp"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="IS256 transposase"
+                     /protein_id="AEX07576.1"
+                     /translation="MTQVHFTLKSEEIQSIIEYSVKDDVSKIILTTVFNQLMENQRTE
+                     YIQAKEYERTENRQSQRNGYYERSFTTRVGTLELKVPRTRDGHFSPTVFERYQRNEKA
+                     LMASMLEMYVSGVSTRKVSKIVEELCGKSVSKSFVSSLTEQLEPMVNEWQNRLLSEKN
+                     YPYLMTDVLYIKVREENRVLSKSCHIAIGITKDGDREIIGFMIQSGESEETWTTFFEY
+                     LKERGLQGTELVISDAHKGLVSAIRKSFTNVSWQRCQVHFLRNIFTTIPKKNSKSFRE
+                     AVKGIFKFTDINLAREAKNRLIHDYIDQPKYSKACASLDDGFEDAFQYTVQGNSHNRL
+                     KSTNLIERLNQEVRRREKIIRIFPNQTSANRLIGAVLMDLHDEWIYSSRKYINFDK"
+     repeat_region   1332..1357
+                     /note="imperfect right inverted repeat"
+                     /rpt_type=inverted
+     gene            complement(1437..2876)
+                     /gene="aacA"
+                     /gene_synonym="aphD"
+     CDS             complement(1437..2876)
+                     /gene="aacA"
+                     /gene_synonym="aphD"
+                     /note="bifunctional ACC/APH"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="bifunctional aminoglycoside
+                     N-acetyltransferase/aminoglycoside phosphotransferase"
+                     /protein_id="AEX07577.1"
+                     /translation="MNIVENEICIRTLIDDDFPLMLKWLTDERVLEFYGGRDKKYTLE
+                     SLKKHYTEPWEDEVFRVIIEYNNVPIGYGQIYKMYDELYTDYHYPKTDEIVYGMDQFI
+                     GEPNYWSKGIGTRYIKLIFEFLKKERNANAVILDPHKNNPRAIRAYQKSGFRIIEDLP
+                     EHELHEGKKEDCYLMEYRYDDNATNVKAMKYLIEHYFDNFKVDSIEIIGSGYDSVAYL
+                     VNNEYIFKTKFSTNKKKGYAKEKAIYNFLNTNLETNVKIPNIEYSYISDELSILGYKE
+                     IKGTFLTPEIYSTMSEEEQNLLKRDIASFLRQMHGLDYTDISECTIDNKQNVLEEYIL
+                     LRETIYNDLTDIEKDYIESFMERLNATTVFEGKKCLCHNDFSCNHLLLDGNNRLTGII
+                     DFGDSGIIDEYCDFIYLLEDSEEEIGTNFGEDILRMYGNIDIEKAKEYQDIVEEYYPI
+                     ETIVYGIKNIKQEFIENGRKEIYKRTYKD"
+     repeat_region   complement(3276..3301)
+                     /note="imperfect right inverted repeat"
+                     /rpt_type=inverted
+     gene            complement(3326..4498)
+                     /gene="tnp"
+     CDS             complement(3326..4498)
+                     /gene="tnp"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="IS256-like transposase"
+                     /protein_id="AEX07578.1"
+                     /translation="MTQVHFTLKSEEIQSIIEYSVKDDVSKNILTTVFNQLMENQRTE
+                     YIQAKEYERTENRQSQRNGYYERSFTTRVGTLELKVPRTRDGEFSPTVFERYQRNEKA
+                     LLASMLEMYVSGVSTRKVSKIVEELCGKSVSKSFVSSLTEQLDPMVNEWQNRSLSGTS
+                     YPYLMTDVLYIKVREDHRVLSKSCHIAIGITEGGDREIIGFMIQNEESDDTWSIFFEY
+                     LKERGLQGTELIISDAHKGLVSAIRKSFTNASWQRFQVHFLRNIFSSIPKKNSKPFRE
+                     AVKAIFKFTDIELARTAKNALVGEYIDQSKYSKACASLDDGFEDAFQYTVQGNSHNRL
+                     KSTNLIERLNQEVRRREKIIRIFPNQTSANRLIGAVLMDLHDEWIYSSRKYINFDK"
+     repeat_region   complement(4574..4599)
+                     /note="imperfect left inverted repeat"
+                     /rpt_type=inverted
+     gene            4967..6016
+                     /gene="cfr"
+     CDS             4967..6016
+                     /gene="cfr"
+                     /note="essential for resistance to chloramphenicol and
+                     florfenicol"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="23S rRNA methylase"
+                     /protein_id="AEX07579.1"
+                     /translation="MNFNNKTKYGKIQEFLRSNNEPDYRIKQITNAIFKQRISRFEDM
+                     KVLPKLLREDLINNFGETVLNIKLLAEQNSEQVTKVLFEVSKNERVETVNMKYKAGWE
+                     SFCISSQCGCNFGCKFCATGDIGLKKNLTVDEITDQVLYFHLLGHQIDSISFMGMGEA
+                     LANRQVFDALDSFTDPNLFALSPRRLSISTIGIIPSIKKITQEYPQVNLTFSLHSPYS
+                     EERSKLMPINDRYPIDEVMNILDEHIRLTSRKVYIAYIMLPGVNDSLEHANEVVSLLK
+                     SRYKSGKLYHVNLIRYNPTISAPEMYGEANEGQVEAFYKVLKSAGIHVTIRSQFGIDI
+                     DAACGQLYGNYQNSQ"
+     CDS             complement(6767..7279)
+                     /note="ORF1"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative transcriptional regulator"
+                     /protein_id="AEX07580.1"
+                     /translation="MVKTLYSILHRSLDLTLINEQQYQIQVEKKRVEEILLMIQKADF
+                     TTYKNIKLKDWMSIGEAAEVAGVNTSAIRHWESEGLVHSERKKENGYRMFSISELRKI
+                     LVISSLRKTVYYIENMKQLLNEIDIPSYEKVEHSFRLALKNLDNKLMNQFKGVTELMN
+                     YINLIQERDC"
+     gene            complement(7282..8454)
+                     /gene="tnp"
+     CDS             complement(7282..8454)
+                     /gene="tnp"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="IS256-like transposase"
+                     /protein_id="AEX07581.1"
+                     /translation="MTQVHFTLKSEEIQSIIEYSVKDDVSKNILTTIFNQLMENQRTE
+                     YIQAKEYERTENRQSQRNGYYERSFTTRVGTLELKVPRTRDGEFSPTVFERYQRNEKA
+                     LLASMLEMYVSGVSTRKVSKIVEELCGKSVSKSFVSSLTEQLDPMVNEWQNRSLSGTS
+                     YPYLMTDVLYIKVREDHRVLSKSCHIAIGITEGGDREIIGFMIQNEESDDTWSIFFEY
+                     LKERGLQGTELIISDAHKGLVSAIRKSFTNASWQRCQVHFLRNIFSSIPKKNSKPFRE
+                     AVKAIFKFTDIELARTAKNALVGEYIDQSKYSKACASLDDGFEDAFQYTVQGNSHNRL
+                     KSTNLIERLNQEVRRREKIIRIFPNQTSANRLIGAVLMDLHDEWIYSSRKYINFDK"
+     repeat_region   complement(8530..8555)
+                     /note="imperfect inverted left repeat"
+                     /rpt_type=inverted
+     repeat_region   8556..8563
+                     /note="target site duplication"
+                     /rpt_type=direct
+                     /rpt_unit_seq="tgttcgag"
+     gene            9779..10864
+                     /gene="tnpA"
+     CDS             9779..10864
+                     /gene="tnpA"
+                     /note="involved in transposition"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="transposase A"
+                     /protein_id="AEX07582.1"
+                     /translation="MKVQKVIVEEKSYPLYILLDKEFEVIEPVKRFIKYLDNTGKAPN
+                     TIKTYCYHLKLFYEFMSQSRIELGDLQFEDLANFVGWLRNPAGHLKVIDIQPKKAKRE
+                     ETSVNSILNAVTSFLEYLNRTENFKAIDMSKEARGRNFKGFLHHISKGRSYKKNILKL
+                     RVKKKLVQVLEHGQVKAIIEACHTKRDKLLIMLMYEGGLRIGEALSLRIEDISTWDNQ
+                     INIRPRDHNENGAYIKLKKERTIDVSKELMALYTDYLVHEYGEDLDHDYIFINLKDSY
+                     FGHPLKYQSVLDLIRRLGKRTGITFTAHILRHTHATELIRSGWDGAYVQKRLGHAHVQ
+                     TTLDTYVHLSDQDMKNEYKKYLQGRET"
+     gene            10861..12780
+                     /gene="tnpB"
+     CDS             10861..12780
+                     /gene="tnpB"
+                     /note="involved in transposition"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="transposase B"
+                     /protein_id="AEX07583.1"
+                     /translation="MTMKFPSVATNRKLIASTEINKKIANMTSVLKGYWAADRWDIRI
+                     CPHPSAIELSKNPSLRNRWVNFDKVENVWLKTELKYFYYLHLNNGAWNAKSVWIRKGT
+                     VISRMMGFLNLKYPNITSITEVPIKKALTEYRTYLTEQKVKTTTTNYKLDVNQQKVTV
+                     HANSYYVTHLKQFMEFYEDFYFDGEEWEKDVWNRRKLSLPEDKVNPTSYEYTINFKGF
+                     KNNYFKEIVKRYCKLMLNTASFSHVVDIASKLKEFFNFMNKNCEGIQRIHQLTRNEIE
+                     QYFNYINLKGLKPSTVTGRISTLDVFFTTIQRYDWKDTPSKILIFQEDYPKVPKALPR
+                     YIDEHILEQLNGKLDKLEPYIATMVMVLQECGMRISELCTLKKGSVITDKEGDCFLKY
+                     YQWKMKKEHIIPISKEIAALILVQEQRVADELDDGCVYVFPRKDCSPLKQDTFRVKLN
+                     ELAYEEKITDSNGEIFRFHAHAFRHTVGTRMINNGVPQHIVQKFLGHESPEMTARYAH
+                     IFDETLKKEFTKFKETLVTNNGSILDLSEENTEADNTDLQWFKKNINAQALPNGYCRL
+                     PVIAGPCPHANACLDCTNFCTSKQFLTEHEEHLERTKEILNRAKQNQWQRQVETNERV
+                     KNRLEQIIHSLKETN"
+     gene            12782..13147
+                     /gene="tnpC"
+     CDS             12782..13147
+                     /gene="tnpC"
+                     /note="involved in transposition"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="transposase C"
+                     /protein_id="AEX07584.1"
+                     /translation="MIRKGNTTAIVQLAKDKSEKTRIRVEKTISEMALKEEKINFNSV
+                     AQKANVSKSWLYKQKDIRTRVETLRGMQISELTPRKPSKSPRSEDVLIKTLKSRIKAL
+                     EEENERLKDQVQKLHGKLF"
+     CDS             complement(13430..13846)
+                     /note="ORF138"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative oxidoreductase"
+                     /protein_id="AEX07585.1"
+                     /translation="MKTLVIVSHPDMPNSRINKVWVEKAASYSNEITIHDLYREYPDF
+                     IMNVKREQELVENHDNIIFQFPLYWYSSPSLLKKWIDEVIIYGWAYGSKGKRIFYNRK
+                     LGLAISAGVKKGEFTSMGKNKHTLTQMLTPFKSLCA"
+     gene            complement(14024..15451)
+                     /gene="fexA"
+     CDS             complement(14024..15451)
+                     /gene="fexA"
+                     /note="essential for resistance to chloramphenicol"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="chloramphenicol/florfenicol exporter"
+                     /protein_id="AEX07586.1"
+                     /translation="MKKDSKSKEMIQSEKRGSTRLLMMVLSLSVLVGAITADLVNPVL
+                     PLISKDLEASKSQVSWIVSGIALVLAIGVPIYGRISDFFELRKLYIFAIMILASGSLL
+                     CAIAPNLPLLVLGRMVQGAGMSAIPVLSVIAISKVFPQGKRGGALGIIAGSIGVGTAA
+                     GPIFGGVVGQYLGWNALFWFTFLLAIMIVIGAYYALPTIKPAESVGSNKNFDFIGGLF
+                     LGLTVGLLLFGITQGETSGFSSFSSLTSLIGSVVALVGFIWRIVTAENPFVPPVLFNN
+                     KDYVNTVIIAFFSMFAYFAVLVFVPLLVVEVNGLSSGQAGMILLPGGVAVAILSPFVG
+                     RLSDRFGDKRLIITGMTLMGLSTLFLSTYASGASPLLVSVGVLGVGIAFAFTNSPANN
+                     AAVSALDADKVGVGMGIFQGALYLGAGTGAGMIGALLSARRDATEPINPLYILDAMSY
+                     SDAFLAATGAILIALIAGLGLKKRG"
+ORIGIN      
+        1 taacgaatta ttgtatttaa tgagttgttc gaggataaag tccgtataat tgtgtaaaag
+       61 taaaaaggcc atataacagt ccttttacgg tacaatgttt ttaacgacaa aaacataccc
+      121 aggaggactt ttacatgacc caagtacatt ttacactgaa aagcgaagag attcaaagca
+      181 ttattgaata ttctgtaaag gatgacgttt ctaaaattat tttaacaacg gtatttaatc
+      241 aactaatgga aaatcaacga acagaatata ttcaagcaaa agaatatgaa cgaacagaaa
+      301 accgacaaag tcaacgaaat ggctattatg agcgcagctt tacgacacgt gtaggcacgc
+      361 tagaattaaa agtacccaga acacgtgatg gccatttttc acccacagtg tttgaacgtt
+      421 atcaacgaaa cgaaaaagcc ctcatggctt caatgttgga aatgtatgta tcaggcgttt
+      481 caactcgtaa agtatcaaaa attgtggaag aactttgtgg taaatccgtc tctaagtcct
+      541 tcgtttctag cttaacagaa cagctagaac ctatggttaa cgagtggcag aatcgtttat
+      601 tatcagaaaa aaattatcct tacttaatga ccgatgtact ctatataaaa gtacgagaag
+      661 aaaatcgagt actctcaaaa agctgtcata tagcgattgg aataaccaaa gatggcgacc
+      721 gtgaaattat cggcttcatg attcaaagtg gcgaaagcga agagacctgg acaacatttt
+      781 ttgaatacct aaaagaacgc ggtttacaag gtacggaact cgttatttct gatgcgcaca
+      841 aaggattagt ctctgccatt agaaaatcct tcaccaacgt aagttggcaa agatgccaag
+      901 ttcacttcct aagaaatatc tttaccacca ttcctaaaaa aaattcaaaa tctttcagag
+      961 aagctgttaa aggaattttt aagttcacag atattaactt agcgcgtgag gctaaaaatc
+     1021 gattgattca tgattatatc gatcaaccaa aatattcaaa agcttgcgca tcattggatg
+     1081 atggattcga agacgccttt caatataccg tacaaggaaa ttcccacaat cgactaaaga
+     1141 gtaccaatct aattgaacga ctgaatcaag aagtacgcag aagagaaaag attattcgca
+     1201 tcttccccaa tcaaacatca gccaatcgct taattggagc cgttcttatg gacctacatg
+     1261 atgaatggat ttattcttca agaaaataca tcaattttga taagtagaaa tggtaaaaac
+     1321 attgtatagc attttacaca ggagtctgga cttgactcac ttcctttatt atttttcatt
+     1381 tttttaaact atttaatact aatgtctttt ataatagctt ttcatatatt atataatcaa
+     1441 tctttataag tccttttata aatttctttt ctaccatttt cgataaattc ctgtttaata
+     1501 tttttaattc cataaacaat agtttcaata ggataatatt cttcaactat atcttgatat
+     1561 tcttttgctt tctcaatatc tatatttcca tacattctta atatatcttc tccaaaattt
+     1621 gttcctattt cttcttcact atcttcaagt aagtatataa aatcacaata ttcatctata
+     1681 attccagaat ctccaaaatc aattattcca gttaatctat tattgccatc taacaataga
+     1741 tgattacaac taaaatcatt atggcataaa cactttttac cctcaaaaac tgttgttgca
+     1801 tttagtcttt ccataaaact ttctatataa tctttttcta tatcagttaa atcattataa
+     1861 atagtttcac gcaacaatat atactcttct aatacatttt gtttattatc aatagtacat
+     1921 tcactaatat ctgtataatc taaaccgtgc atttgtctta aaaaactggc aatatctcgt
+     1981 tttaacaaat tttgttcttc ttctgacata gtagaataaa tttctggtgt taaaaaagtt
+     2041 cctttaattt ctttataacc tagtatagat aattcatcac taatatacga atattcaata
+     2101 ttaggaattt ttacattagt ttctaaattt gtatttaaaa aattatatat tgctttttct
+     2161 tttgcataac cttttttctt attagtacta aattttgttt taaaaatgta ttcattatta
+     2221 actaaatatg ccacactatc ataaccacta ccgattattt caatactatc tactttgaaa
+     2281 ttatcaaagt aatgctcaat taaatatttc attgccttaa catttgtggc attatcatca
+     2341 tatctatatt ccattaaata acaatcttct tttttgccct cgtgtaattc atgttctggc
+     2401 aaatcttcaa taattctaaa accagatttt tggtatgccc ttattgctct tggattattt
+     2461 ttatgagggt ctaaaataac tgcattagca tttctttctt ttttcaaaaa ttcaaaaatc
+     2521 aatttaatat atcttgtacc aattccttta ctccaataat ttggctctcc tataaattga
+     2581 tccataccat agactatctc atcagttttt ggataatgat aatcagtata taactcatca
+     2641 tacattttat atatttgtcc atatccaata ggaacattgt tatattcaat aattactcta
+     2701 aaaacttcat cttcccaagg ctctgtataa tgttttttta atgattctaa tgtatatttt
+     2761 ttatctctac caccataaaa ttctaatact ctttcatcag ttaaccattt taacatcaaa
+     2821 ggaaaatcat catctattaa agttcttata catatttcat tttcaactat attcatttat
+     2881 ttatcacctt tttcataatc atatacatat actatttcat ctttataatc atttttacca
+     2941 cctaattttt catatacatg gcaagctcta ggattacctt tatcagttat taaaaacatt
+     3001 tcagaacaac caatctcttt agaatattcc ttaataaaag ataataattt tgaaccataa
+     3061 cctttgtctt gatagttagg taacattcct attgagtgta aataaaacat tgtttttcca
+     3121 tcaggtctta aaagtgtata gcaatatgca aatcctataa ttttattatt ttctttagct
+     3181 ataaacccaa atgaactggt atcattaaga aatcctttta aattatcaat atcaaaaacc
+     3241 atattatcat caattaaaac ttcttccata aactcagtca agtccagact cctgtgtaaa
+     3301 atgctataca atgtttttac catttctact tatcaaaatt gatgtatttt cttgaagaat
+     3361 aaatccattc atcatgtagg tccataagaa cggctccaat taagcgattg gctgatgttt
+     3421 gattggggaa gatgcgaata atcttttctc ttctgcgtac ttcttgattc agtcgttcaa
+     3481 ttagattggt actctttagt cgattgtggg aatttccttg tacggtatat tgaaaggcgt
+     3541 cttcgaatcc atcatccaat gatgcgcaag cttttgaata tttagactgg tcgatatatt
+     3601 caccgactaa ggcattctta gctgttcgag cgagttcaat atccgtaaac ttaaagatcg
+     3661 cttttactgc ttctctaaac ggttttgaat tcttttttgg aatggaactg aagatgtttc
+     3721 ttaaaaaatg gacctggaat ctctgccaac ttgcgttggt aaatgactta cgaattgcag
+     3781 acactaggcc tttatgggca tcagaaatga tgagttctgt cccctgtaga ccgcgttctt
+     3841 ttaagtattc aaagaagatg gaccatgtgt catcactttc ttcattttgg atcatgaagc
+     3901 caatgatttc acgatcacca ccttctgtta tcccgatcgc aatatggcag cttttagaaa
+     3961 gcactcgatg gtcctcacgg acttttatgt agagaacatc agtcatcaga taaggataac
+     4021 tcgtacctga gagtgaacgg ttctgccatt cgttgaccat cgggtctaac tgctcagtca
+     4081 ggctagaaac aaaagatttc gataccgatt ttccacatag ctcttcaaca atctttgaaa
+     4141 ctttacgtgt cgaaacgcct gaaacataca tctcaagcat tgaagcgagc agtgcctttt
+     4201 catttcgctg ataacgctca aacaccgtcg gtgaaaattc accatcacgt gttctgggta
+     4261 cttttaattc tagcgtgcct acacgtgtcg taaagctgcg ctcataatag ccatttcgtt
+     4321 gactttgtcg gttttctgtt cgttcatatt cttttgcttg aatatattct gttcgttgat
+     4381 tttccattag ttgattaaat accgttgtta aaatattttt agaaacgtca tcctttacag
+     4441 aatattcaat aatgctttga atctcttcgc ttttcagtgt aaaatgtact tgggtcatgt
+     4501 aaaagtcctc ctgggtatgt ttttgtcgtt aaaaacattg taccgtaaaa ggactgttat
+     4561 atggcctttt tacttttaca caattatacg gactttatcg ttgctaactt taatatttac
+     4621 atttgaatat taaaatgtta cagtacaggc taagtatatt aattagtgaa aggaggtaat
+     4681 agctatttta gctattaaag ggaatagtct gtcctttttt aaactaaaca atgatataaa
+     4741 aacagttgcc ggagctttgc ctctactatg gataagttta aaacaagatc atcaacatac
+     4801 ttgttttatg tagtgaaata tgcatatttg tatgttttga ctttcggcac cggtaatttt
+     4861 tatctgtgtt ttttttgtgt gcaaaaagaa attgattctt agggactgct actcctttcc
+     4921 aattattcta attaccacta gagcaaattg tgaaaggatg aaagaaatga attttaataa
+     4981 taaaacaaag tatggtaaaa tacaggaatt tttaagaagt aataatgagc ctgattatag
+     5041 aataaaacaa ataaccaatg cgatttttaa acaaagaatt agtcgatttg aggatatgaa
+     5101 ggttcttcca aaattactta gggaggattt aataaataat tttggagaaa cagttttgaa
+     5161 tatcaagctc ttagcagagc aaaattcaga gcaagttacg aaagtgcttt ttgaagtatc
+     5221 aaagaatgag agagtagaaa cggtaaacat gaagtataaa gcaggttggg agtcattttg
+     5281 tatatcatca caatgcggat gtaattttgg gtgtaaattt tgtgctacag gcgacattgg
+     5341 attgaaaaaa aacctaactg tagatgagat aacagatcaa gttttatact tccatttatt
+     5401 aggtcatcaa attgatagca tttcttttat gggaatgggt gaagctctag ccaaccgtca
+     5461 agtatttgat gctcttgatt cgtttacgga tcctaattta tttgcattaa gtcctcgtag
+     5521 actttctata tcaacgattg gtattatacc tagtatcaaa aaaataaccc aggaatatcc
+     5581 tcaagtaaat cttacatttt cattacactc accttatagt gaggaacgca gcaaattgat
+     5641 gccaataaat gatagatacc caatagatga ggtaatgaat atactcgatg aacatataag
+     5701 attaacttca aggaaagtat atatagctta tatcatgttg cctggtgtaa atgattctct
+     5761 tgagcatgca aacgaagttg ttagccttct taaaagtcgc tataaatcag ggaagttata
+     5821 tcatgtaaat ttgatacgat acaatcctac aataagtgca cctgagatgt atggagaagc
+     5881 aaacgaaggg caggtagaag ccttttacaa agttttgaag tctgctggta tccatgtcac
+     5941 aattagaagt caatttggga ttgatattga cgctgcttgt ggtcaattat atggtaatta
+     6001 tcaaaatagc caatagtagt attgaacaag gtatatagct gatataataa ggtgaatttt
+     6061 taaataatat taatgcaatt aatattattt tgataactca attatgctag tattttcttc
+     6121 aaatatgaat ggactactgg gtggaagata attaactaat ctgtattctt ctaatttgaa
+     6181 atgaataagt ttcaaagtac taagatatag gattagtcat ccattttttt taaatcagtt
+     6241 taactagatg ttttgtttgt cgaatgacaa aaaactctta tttagtataa atgaatagat
+     6301 aatccttcca ataataattg ggaggatttt ttattctccc taaatacaaa tgtaagttaa
+     6361 tgaaatatat acttgaagat gtttatggca ttctaaaaat gtagtctttg gcagttaatt
+     6421 tatgtagtct ctctagagaa caacttgaaa gtattcggga atgcgttcag cttcataaaa
+     6481 ccctcctcaa ttatataatc tgaaaccctc ttgctaagtt cttcttcaac tttttgaaaa
+     6541 ccttttaata tcatttgatt tctcacttta ttagcgttcg taaaagtaca cttttataga
+     6601 caaaaaggaa gaagcttttt ctagctcctt cccttctgat aagtgatcat aatttaacta
+     6661 agcgttctat gagtttagct tccgcattga aaaaccagct gccaattgta tcttctccat
+     6721 tttcattctt caattgctat ctttagatag gcaaaggcgt aacttttcag cagtctcttt
+     6781 cttgaattaa atttatatag ttcatcagtt ctgttacccc tttaaattga ttcattaatt
+     6841 tgttgtccaa gttcttcaaa gcaagccgaa aggaatgttc aactttttca tagcttggta
+     6901 tgtctatttc atttaacagt tgtttcatat tttcaatata ataaacagtt tttcttaaac
+     6961 tgctaatgac cagtatttta cgcaattcgg atatagaaaa catgcggtag ccgttttctt
+     7021 tttttctttc cgaatggact aatccttctg attcccagtg gcgaattgcc gaagtgttta
+     7081 cacctgccac ttcggcagct tctccaatac tcatccagtc ttttaactta atatttttat
+     7141 aggtagtaaa atctgctttc tgaatcataa gaagtatttc ttctactctc tttttttcta
+     7201 cttggatttg atactgttgt tcatttatta gagtcaagtc cagactcctg tgtaaaatgc
+     7261 tatacaatgt ttttaccatt tctacttatc aaaattgatg tattttcttg aagaataaat
+     7321 ccattcatca tgtaggtcca taagaacggc tccaattaag cgattggctg atgtttgatt
+     7381 ggggaagatg cgaataatct tttctcttct gcgtacttct tgattcagtc gttcaattag
+     7441 attggtactc tttagtcgat tgtgggaatt tccttgtacg gtatattgaa aggcgtcttc
+     7501 gaatccatca tccaatgatg cgcaagcttt tgaatattta gactggtcga tatattcacc
+     7561 gactaaggca ttcttagctg ttcgagcgag ttcaatatcc gtaaacttaa agatcgcttt
+     7621 tactgcttct ctaaacggtt ttgaattctt ttttggaatg gaactgaaga tgtttcttaa
+     7681 aaaatggacc tggcatctct gccaacttgc gttggtaaat gacttacgaa ttgcagacac
+     7741 taggccttta tgggcatcag aaatgatgag ttctgtcccc tgtagaccgc gttcttttaa
+     7801 gtattcaaag aagatggacc atgtgtcatc actttcttca ttttggatca tgaagccaat
+     7861 gatttcacga tcaccacctt ctgttatccc gatcgcaata tggcagcttt tagaaagcac
+     7921 tcgatggtcc tcacggactt ttatgtagag aacatcagtc atcagataag gataactcgt
+     7981 acctgagagt gaacggttct gccattcgtt gaccatcggg tctaactgct cagtcaggct
+     8041 agaaacaaaa gatttcgata ccgattttcc acatagctct tcaacaatct ttgaaacttt
+     8101 acgtgtcgaa acgcctgaaa catacatctc aagcattgaa gcgagcagtg ccttttcatt
+     8161 tcgctgataa cgctcaaaca ccgtcggtga aaattcacca tcacgtgttc tgggtacttt
+     8221 taattctagc gtgcctacac gtgtcgtaaa gctgcgctca taatagccat ttcgttgact
+     8281 ttgtcggttt tctgttcgtt catattcttt tgcttgaata tattctgttc gttgattttc
+     8341 cattagttga ttaaatatcg ttgttaaaat atttttagaa acgtcatcct ttacagaata
+     8401 ttcaataatg ctttgaatct cttcgctttt cagtgtaaaa tgtacttggg tcatgtaaaa
+     8461 gtcctcctgg gtatgttttt gtcgttaaaa acattgtacc gtaaaaggac tgttatatgg
+     8521 cctttttact tttacacaat tatacggact ttatctgttc gagtagttta cctggtgctg
+     8581 atagaactat ttgcaatgta ttaattgatg aaatgaaaaa tattatacat gtttatgatg
+     8641 atttaagaca ctgttcaacg tccattttca aagaaataga ccaaacatta attatagaac
+     8701 tgatgtcact tctaggggtt gaatatggcc gatatagaat tgtactttat tatgcaccaa
+     8761 tagttaaaaa accgtttata agagaatatg aattaaaaag tgaaaaatta ataagtgtta
+     8821 atattgaaga ccttaacgaa ttattttata gaaaggcttt gaataatgaa agtttagaaa
+     8881 aaatagatgt ttgtaagcat aaaaatagcc ctgcataagc agggctttaa gtttgtttag
+     8941 cttatgagaa aaccaacaaa ctaaataaaa aggtaattac attataacac aatccgcttc
+     9001 aagtcactat tataaatacc gcttcaatat atatagtcta taaggggttc acggtttcat
+     9061 ctaatttaga acatcaactt ttaaaatcgg gctaaaaata gcaacgcaca attaacatcg
+     9121 tgcttttact aatttttagc ccaattttaa agcttcttta tctaaattag atgaaaccgt
+     9181 gaaccccttt tttaaaaaaa ttacacttta gaaagtgatt acttgtcaaa gtgtaatgaa
+     9241 tttgatataa tgtatttaac gaaaggagga aaccaactga aattgttgta aataatcgca
+     9301 atacaacaac taaataaaaa gggagattta caaatatgaa aaaggaacag tacattttaa
+     9361 aagttttaga tttagttcaa gattatcaag ttatggaaga tgaaaggttt caaatatcac
+     9421 aaccaagcga cgttgttaag ctattaaaaa aagaaatagg aagcttcaca agagaacact
+     9481 ttgttatgat tggcttaaat actaaaaatg aagttacaac gctttataca gtgcatatag
+     9541 gtacgttaga tatgtcaatc atacacccta gagatagttt tcaagttgca atcttaaata
+     9601 attgtaaatc agttattttt gcacataacc acccaagcca agacatctta aacatagtat
+     9661 cctaaactag agtactctaa gtactcgaag tttaggattt tttaattaca gtgctttaac
+     9721 tattaaatat ataagggtat tattaatagt agttaaagta tttaaaggtg gtggaaagat
+     9781 gaaggttcag aaagtaattg tggaggaaaa atcatatccg ttatacatac tgctagataa
+     9841 agaatttgaa gtgatagaac cggttaagcg atttataaag tacttggata atacgggcaa
+     9901 agctccaaat accattaaaa catattgtta tcatctcaag ctgttttatg aatttatgag
+     9961 ccaaagtaga atcgaattag gagatttaca atttgaggat ttagcaaact ttgtaggatg
+    10021 gttaagaaat ccagcagggc atttaaaggt aatagatata caaccaaaga aggctaaaag
+    10081 agaggaaaca tcagttaatt ccatacttaa cgctgtaact agtttcttag agtatttaaa
+    10141 tcgcacagaa aattttaaag ctatagatat gtctaaagaa gcaagaggaa gaaactttaa
+    10201 ggggtttctt caccatattt ctaaaggtag atcctataaa aaaaatattt taaagcttag
+    10261 ggtcaaaaag aaacttgtac aagtattaga acatggacaa gtcaaagcaa taattgaggc
+    10321 atgtcatacc aaaagagata agttacttat tatgcttatg tatgaagggg gacttcggat
+    10381 aggagaagca ttatcccttc gtattgaaga tatttcaaca tgggataacc agattaacat
+    10441 caggccaaga gatcataatg aaaatggagc ttatattaaa cttaaaaaag aaagaactat
+    10501 tgatgtaagt aaggaattaa tggcattata taccgattac ttagtacatg aatatgggga
+    10561 agatttagat catgattata tatttattaa tcttaaagat tcttattttg gccaccctct
+    10621 aaaatatcaa agtgtattag acttaataag aagactagga aaacggacag ggattacttt
+    10681 cactgcccat atattacgtc atacgcatgc cacagagctt attagaagtg gatgggatgg
+    10741 tgcatatgta caaaaaagat tagggcatgc ccatgtacaa acaacacttg atacgtatgt
+    10801 tcatctttct gatcaagata tgaagaatga atataaaaag tatcttcaag ggagagaaac
+    10861 atgacaatga aatttccaag tgtagcaact aatcgaaagc ttatcgctag tacagagatt
+    10921 aataaaaaaa tagctaatat gacaagtgtt ttaaaaggtt attgggcagc agatagatgg
+    10981 gatataagaa tttgtccgca tcctagtgca attgagttaa gtaagaatcc gtcactaaga
+    11041 aatcgttggg taaatttcga taaggtggaa aatgtctggt tgaaaacaga attaaaatat
+    11101 ttttattacc ttcacttgaa taatggagct tggaatgcaa aatccgtttg gattagaaag
+    11161 ggaacagtga taagccggat gatgggattt ttaaatttaa aatatcctaa tattacatcg
+    11221 ataaccgaag tgcctataaa aaaagctttg acagaatacc ggacctactt aacagaacaa
+    11281 aaagtaaaaa ctacgactac taattacaaa cttgatgtaa atcagcagaa agttactgta
+    11341 catgcgaatt cctattacgt tactcatctt aagcagttta tggaattcta tgaggacttc
+    11401 tattttgatg gggaagaatg ggaaaaagat gtttggaatc gaagaaaatt atcattaccg
+    11461 gaagataagg taaacccaac atcctacgaa tatacgatca actttaaggg ttttaagaat
+    11521 aattatttta aagaaatagt taagcgatat tgtaaactaa tgttaaacac agctagcttt
+    11581 tctcacgtag tagatatagc ttcaaaatta aaagaatttt ttaatttcat gaacaaaaat
+    11641 tgtgaaggta tacaaaggat tcatcaatta actagaaatg aaattgagca atattttaat
+    11701 tatattaatt taaaaggttt aaaacccagt actgtaactg gacgaatatc tactttagac
+    11761 gtttttttta ctacaattca aagatatgac tggaaggata caccttctaa gatccttatc
+    11821 tttcaagaag attaccctaa agtgccgaag gcactaccac gttatattga tgaacatata
+    11881 cttgaacaat taaatgggaa attagataaa ttggaacctt atattgctac aatggttatg
+    11941 gtacttcaag aatgcgggat gcgtatcagt gaactttgta cattgaaaaa agggagcgtc
+    12001 ataaccgata aagaagggga ttgcttttta aagtattatc agtggaaaat gaagaaagag
+    12061 catatcattc ctatttctaa agaaattgct gcattgatat tagttcaaga gcaaagggtg
+    12121 gctgatgaac tcgatgatgg atgtgtatat gtgtttcccc gaaaagattg ctcaccattg
+    12181 aaacaagata cctttagggt taaattaaat gaactagctt atgaagaaaa gataacggac
+    12241 agcaacggag aaatttttcg ttttcatgct catgcctttc ggcatacagt tggcactaga
+    12301 atgataaata acggagtgcc acaacatatt gtccagaagt tcttgggtca cgaatcaccg
+    12361 gaaatgacgg caagatatgc acatattttt gatgaaaccc taaagaagga atttacgaaa
+    12421 tttaaggaaa ccttagtaac gaataacggt agcattctgg atttaagtga ggaaaatact
+    12481 gaagctgaca atacagatct tcaatggttt aaaaagaata tcaatgcaca ggcacttcct
+    12541 aatggctatt gtcggttacc agtaattgca ggaccatgtc ctcacgcaaa tgcatgttta
+    12601 gattgtacga atttctgtac aagtaaacaa tttcttactg aacatgaaga gcacttagag
+    12661 cgaactaaag aaatactaaa tagggctaaa caaaaccaat ggcagcgtca ggttgaaacc
+    12721 aatgaacgtg ttaaaaatag attagaacag attattcatt cgttaaagga gacgaattaa
+    12781 aatgattaga aaaggtaaca caactgccat agttcagcta gctaaagaca agtcggagaa
+    12841 aacaagaatt agggttgaaa agacaatttc agagatggca ttgaaagaag agaagattaa
+    12901 ttttaattcc gttgcacaaa aagcaaatgt ttcaaagtca tggctttaca aacaaaaaga
+    12961 tattagaact agagtggaga cattaagagg gatgcagata agtgagttaa ccccccgtaa
+    13021 acctagtaaa agccctcgtt cagaggacgt attaataaaa accttaaaaa gccgtataaa
+    13081 ggcgttagaa gaagagaatg aacggttaaa ggatcaagtt caaaaattac atggcaagct
+    13141 gttttagcag atttgtgttt cttggaattt attgggcact ttgaattggc tacctaaaat
+    13201 gaaatcgcta aaaccttcaa taacttcaat agcccatttc cctaaatgtg ttaaggggaa
+    13261 atgggctttc ttctagtatt gttggcatga tcgcagaagt gttttatgct cttaaataat
+    13321 actttttaat atattgcaaa tactcattag cacttttctg tatctcttcg cccttcatat
+    13381 ccgaattagc accgtaaagt acaaactctg gtacatattc agcatgaatc tatgcacata
+    13441 aagatttgaa tggtgttaac atctgggtta atgtatgctt gtttttaccc atacttgtaa
+    13501 attcaccttt ttttacgcca gctgatatag ctaatcctaa ttttcgatta taaaatattc
+    13561 ttttaccctt tgatccgtaa gcccatccat atataatcac ttcatcgatc cattttttta
+    13621 ataatgaagg agaactatac caatataatg gaaattgaaa aataatatta tcatgatttt
+    13681 caactaattc ctgctctctt tttacattca taataaaatc aggatactct ctataaagat
+    13741 catgaatggt aatttcgttt gaataagacg ctgctttttc tacccaaact ttattgattc
+    13801 gagaatttgg catatctggg tgagaaacga tcaccaatgt tttcattgtt tcatccttaa
+    13861 catactcaac tttcgcacca ataaaacagt gtacgaaagt tgagttactt aaaagtattc
+    13921 tattctaaga aattcaaatt tgcgtgattc ctaagctatt tatttacagc ttaaactata
+    13981 gaagatgaac taaacaataa ctaatcttta cataactaag ttattaccca cgctttttta
+    14041 aacctaatcc agctattaag gcaatgagta ttgcccctgt agctgcaagg aacgcatctg
+    14101 agtaggacat agcgtccaat atatataatg gatttatcgg ctcagtagca tcacgtcgag
+    14161 cggataataa tgctccaatc atacctgctc cagttcctgc tccaaggtac aaagcacctt
+    14221 ggaaaatccc cattccgaca ccaaccttgt ctgcatcgag tgcacttact gcggcgttat
+    14281 ttgcgggaga attcgtgaat gcaaaagcaa tccctactcc gaggaccccc acggaaacta
+    14341 acagaggtga agcaccagat gcataggtgg acaagaataa ggtagacagc cccatcagag
+    14401 tcatcccagt aattatcaga cgtttatccc caaatcgatc agaaagacgg ccaacgaagg
+    14461 gagataagat tgcaacagcc acaccacctg gcaacaatat cattccagcc tgtccagaag
+    14521 agagtccatt cacctcaacg actagtaatg ggacgaacac aagaacagcg aaataagcaa
+    14581 acatcgaaaa aaatgcaatt atgaccgtat tgacataatc cttgttattg aacaggacag
+    14641 gtggtacaaa tggattttct gcggtaacaa ttctccaaat aaatcccacc aaagctacaa
+    14701 cagaaccaat taggctagtt aacgatgaga acgaagaaaa accagaagtt tctccttgag
+    14761 tgatgccaaa aaggagtaat cctactgtga ggccgaggaa taaaccacca atgaaatcaa
+    14821 agttcttatt gcttcctacg gattctgccg gtttaattgt cggtaacgcg tagtaggcac
+    14881 caataacaat cataatggct aacaaaaatg tgaaccaaaa caaggcattc caccctaaat
+    14941 attgaccaac tactccacca aatattggac cagcagcagt tccaacacca atacttcctg
+    15001 cgataattcc caaagctccc ccacgttttc cttgtgggaa aaccttcgaa attgcaatga
+    15061 ctgatagaac tggaattgcg gacatcccag caccctgaac cattcttccc aaaaccaaca
+    15121 atgggaggtt cggggcaatt gcacataaaa gactaccact tgccagaatc ataatggcaa
+    15181 agatatatag ctttcgtaac tcaaaaaagt ctgagattcg accataaatc ggaactccaa
+    15241 tcgcaagaac aagtgcaata ccactaacta tccaactcac ttgagatttc gaagcttcta
+    15301 aatctttgct tattagtgga agtacgggat tgactaaatc agccgtaatt gcacctacaa
+    15361 gtacagatag ggagagtacc atcattaaaa gcctagtaga accccttttt tcagattgaa
+    15421 tcatttcttt agatttacta tcctttttca ttttatttcc tcctaaaata tattgtgatt
+    15481 ttaggaggct aaatccactg ctttcaccat aaacctcacc tcatatctat ttatattgta
+    15541 aaaccaaatc aacgaactca ccatatttct acagcatgat taaagattcg gttctccaaa
+    15601 ctaactgaac tgatcaaaca aaaaaaaggc accagtttaa caaccggtgc ctaatcattc
+    15661 gtatgcattt ttacaaatgc aatagattca taaatttttg cc
+//
+</code></pre>
+</div>
+</div>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../worksheets";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../worksheets/introduction_to_biotite.html" class="pagination-link" aria-label="Biotite - multitool for bioinformatics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Biotite - multitool for bioinformatics</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../worksheets/biotite_feature_map.html" class="pagination-link" aria-label="Biotite Feature Maps">
+        <span class="nav-page-text">Biotite Feature Maps</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

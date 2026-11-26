@@ -236,5 +236,23 @@
   },
   "PEP8.qmd": {
     "PEP8.html": "0e6939a9"
+  },
+  "worksheets/introduction_to_biotite.qmd": {
+    "introduction_to_biotite.html": "b175eae3"
+  },
+  "worksheets/biotite_entrez.qmd": {
+    "biotite_entrez.html": "7c6d9a73"
+  },
+  "worksheets/biotite_feature_map.qmd": {
+    "biotite_feature_map.html": "0b0fb1a8"
+  },
+  "worksheets/biotite_MSA.qmd": {
+    "biotite_MSA.html": "c1227d12"
+  },
+  "worksheets/biotite_search_multiple.qmd": {
+    "biotite_search_multiple.html": "6eb880d7"
+  },
+  "worksheets/biotite_sequence_profile.qmd": {
+    "biotite_sequence_profile.html": "a2b72e17"
   }
 }

@@ -1,0 +1,128 @@
+## Biotite Feature Maps
+
+::: {.callout-warning collapse="true" title="Make sure you have the code from the previous page"}
+
+This is the code to [fetch genbank file from accession](biotite_entrez.qmd) from the previous page. 
+
+Make sure you have this ready as the code on this page follows on from the last one. 
+```{python}
+import biotite.database.entrez as entrez
+import biotite.sequence as seq
+import biotite.sequence.align as align
+import biotite.sequence.graphics as graphics
+import biotite.sequence.io.genbank as genbank
+
+# Define target accession for Staphylococcus cohnii strain 2-8 plasmid pSS-01
+ACCESSION = "JQ041372.1"
+
+# print a message before starting the search (as it can take some time, so this helps to show it is running)
+print(f"Fetching GenBank record for accession: {ACCESSION}")
+
+# Use entrez.fetch to find the accession, looking in the nucleotide database nuccore, and returning a gb (genbank) file
+genbank_file_location = entrez.fetch(
+    ACCESSION, # Accession number
+    None, # Target path - we don't need this so we can set to none
+    suffix="gb", # Looking for a file ending .gb (genbank file)
+    db_name="nuccore", # Search the nucleotide database 
+    ret_type="gb" # Return the genbank file 
+)
+
+# Read the downloaded GenBank file
+genbank_file = genbank.GenBankFile.read(genbank_file_location)
+
+# Open and print the entire raw GenBank file content
+# print(f"--- Full GenBank File Content for {ACCESSION} ---")
+# print(genbank_file)
+```
+
+:::
+
+## Genome Feature Map & Explanations
+
+Now we have our genbank file with our DNA sequence and the locations of all of our genes, we can combine `biotite` with `matplotlib` to generate a map of all of the genes. 
+
+### Step 1: Extracting Organism Metadata
+Our genbank file has a field called `"SOURCE"` which contains some useful information about the organism. 
+
+```{python}
+# Use source to extract organism information
+source = genbank_file.get_fields("SOURCE")
+print(source)
+```
+
+From here we can see that there is a dictionary called `subfields` with a key `"ORGANISM"` - this is a list of the entire taxonomy. 
+
+`"ORGANISM": ['Staphylococcus cohnii', 'Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;', 'Staphylococcaceae; Staphylococcus; Staphylococcus cohnii species', 'complex.']`
+
+To get the species name, we can use the key `"ORGANISM"` to get the above list, and extract the first entry (species) by using the index `[0]`. 
+```{python}
+species = source[0].subfields["ORGANISM"][0]
+print(f"Target Species: {species}")
+```
+
+### Step 2: Filtering Coding Sequences (CDS) & Genes
+GenBank files contain many annotation types (such as `CDS`, `gene`, `tRNA`, `rRNA`). We can filter specifically for gene features while excluding RNA genes to focus purely on protein-coding regions, and use this to build a map of the genes. 
+
+```{python}
+# Extract the annotations using the genbank get_annotation feature
+annotation = genbank.get_annotation(
+     #include only will only include "gene" and not "CDS", "tRNA" etc.
+    genbank_file, include_only=["gene"] 
+)
+
+# Select genes only and filter out tRNAs and rRNAs if present
+# make an empty list
+gene_features = []
+# use a for loop to go through each feature in the annotation 
+for feature in annotation: 
+    # use if/else to check they are genes 
+    # tRNAs and rRNAs will appear as genes as well
+    # Can use an if statement to remove them
+    if (
+        feature.key == "gene" # Check it is a gene 
+        and "trn" not in str(feature) # don't include tRNAs
+        and "rrn" not in str(feature) # don't include rRNAs
+        ):
+        # add to the list 
+        gene_features.append(feature) 
+```
+
+### Step 3: Plotting the Linear Feature Map
+Finally, we set up a Matplotlib figure axis and call `graphics.plot_feature_map()` to render the positions of the extracted genes along the plasmid sequence.
+
+Once you have the plot - look up the gene names. How many antimicrobial resistance genes are there? What are the other elements? 
+
+```{python}
+# Import matplotlib
+import matplotlib.pyplot as plt
+
+# Create a figure with the dimensions 15x2 
+# This will be an empty plot that biotite can add to 
+plt.figure(figsize=(15, 2))
+
+# Use biotite plot_feature_map function to plot the map with the gene locations
+graphics.plot_feature_map(
+    plt.gca(), #gca() is get current axes - will get the figure we made above 
+    seq.Annotation(gene_features), # Add the chosen annotations
+    multi_line=False, # This is a small plasmid so we want it on one line
+    show_line_position=True # This will show the locations (DNA base pair numbers) at the bottom 
+)
+
+# Adding a title for the map
+plt.title(
+    f"Genome map - {species} ({ACCESSION})"
+)
+
+# Show the plot
+plt.show()
+```
+
+### Try it yourself: 
+
+We've looked at accession JQ041372.1. Can you find accessions for and run the same code with: 
+
+-  Staphylococcus aureus plasmid pUB110 
+-  Bacillus thuringiensis plasmid pGI1 
+-  Salmonella enterica Typhimurium plasmid pSC101 
+
+Could you reformat the code into a function, so that you can easily execute all of the above? 

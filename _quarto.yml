@@ -125,7 +125,20 @@ website:
                   - href: worksheets/functions_practice_1.qmd
                   - href: worksheets/functions_practice_2.qmd
                  # - href: worksheets/functions_practice_3.qmd
-            - section: "VCF files"
+            - section: "Biotite"
+              contents: 
+                  - href: worksheets/introduction_to_biotite.qmd
+                  - href: worksheets/biotite_entrez.qmd
+                  - href: worksheets/biotite_feature_map.qmd
+                  - href: worksheets/biotite_search_multiple.qmd
+                  - href: worksheets/biotite_MSA.qmd
+                  - href: worksheets/biotite_sequence_profile.qmd
+        - section: "**Extensions**"
+          contents:
+            - section: "Advent of Code 2025"
+              contents: 
+                  - href: worksheets/Advent_of_Code_2025.qmd
+            - section: "VCF Files"
               contents: 
                   - href: worksheets/download_scikit_allel.qmd
                   - href: worksheets/vcf_file_read.qmd
@@ -133,16 +146,9 @@ website:
                   - href: worksheets/vcf_data_2.qmd
                   - href: worksheets/vcf_count_positions_in_window.qmd
                   - href: worksheets/vcf_heterozygosity.qmd
-        - section: "**Advent of Code**"
-          contents:
-            - section: "Advent of Code 2025"
-              contents: 
-                  - href: worksheets/Advent_of_Code_2025.qmd
-
 
   favicon: /Logo/LS6036_face.png
     
-
 format:
   live-html:
     theme:

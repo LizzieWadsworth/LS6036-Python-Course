@@ -1,0 +1,18 @@
+# Biotite - multitool for bioinformatics
+
+![Biotite logo](/images/biotite_logo.svg)
+
+Biotite is a python library designed specifically for common tasks in bioinformatics, including: 
+  
+- Homology and alignment 
+- Building sequence profiles 
+- Annotating features on sequences 
+- Identification of open reading frames
+- Protein structure visualisation 
+
+This package bundles popular tasks in computational molecular biology into a uniform and fast Python library.
+
+Find out more [on the biotite webpage](https://www.biotite-python.org/latest/index.html)
+
+
+
