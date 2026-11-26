@@ -1,0 +1,182 @@
+## Sequence Conservation Logo
+
+::: {.callout-warning collapse="true" title="Make sure you have the code from the previous page"}
+
+This is the code to [extract and run the multiple sequence alignment](biotite_entrez.qmd) from the previous page. 
+
+Make sure you have this ready as the code on this page follows on from the last one. 
+```{python}
+#| output: false
+import matplotlib.pyplot as plt
+import biotite.database.entrez as entrez
+import biotite.sequence as seq
+import biotite.sequence.align as align
+import biotite.sequence.graphics as graphics
+import biotite.sequence.io.genbank as genbank
+
+# Target Taxon and Nuclear Gene
+# Making them constants at the top makes them easy to change for different searches
+TAXON = "Carnivora"
+GENE = "MC1R"
+
+# Query NCBI Nucleotide database 
+query = (
+    # Add search for taxon in "Organism" category
+    entrez.SimpleQuery(TAXON, "Organism") 
+    # & adds AND to search query - both must be present for the result 
+    # | would add OR to the search query instead 
+    # search for the gene of interest
+    & entrez.SimpleQuery(GENE)
+)
+
+# Search NCBI nucleotide database (pulling 50 records)
+search_results = entrez.search(query, db_name="nuccore", number=50)
+print("Number of records found:", len(search_results))
+
+# Fetching GenBank data from NCBI (using the first 30 records)
+genbank_data = entrez.fetch_single_file(
+    search_results[:30], # [:30] - stops after the 30th entry 
+    None, # Don't specify a file path to save result to 
+    db_name="nuccore", # Search the nucleotide database
+    ret_type="gb" # Retrieve genbank file
+)
+
+# Collect all of the GenBank records together using MultiFile
+genbank_multi_files = genbank.MultiFile.read(genbank_data)
+
+# Make an empty dictionary to store each protein sequence
+gene_sequences = {}
+
+# Loop through the 30 collected sequences
+for genbank_file in genbank_multi_files:
+    # Extract the sequence as in the previous example
+    organism_field = genbank_file.get_fields("SOURCE")
+    species = organism_field[0].subfields["ORGANISM"][0]
+    # Change spaces to underscores in species ID name
+    species_id = species.replace(" ", "_")
+
+    # Get annotated sequence - use try/except in case it is empty
+    try:
+        sequence_annotations = genbank.get_annotated_sequence(genbank_file)
+    except:
+        print("No sequence annotation found, skipping")
+        # use continue to move to the next genbank_file in for loop
+        continue
+
+    # Find GENE CDS (Coding sequences)
+    for feature in sequence_annotations.annotation:
+            # Searching for a CDS record in the gene (contains the annotation and the sequence)
+            # Checking that the feature is the gene of interest
+            # Convert feature to string for a string comparison
+            # .upper() to ensure the case is in upper case
+        if (
+            feature.key == "CDS"
+            and GENE in str(feature).upper()
+            ):
+
+            print(f"Found {GENE}: {feature}")
+
+            # Extract sequence corresponding to the feature
+            # Should be gene of interest, CDS record
+            gene_nt = sequence_annotations[feature]
+
+            # Convert to an biotite specific DNA sequence
+            gene_nt = seq.NucleotideSequence(gene_nt)
+
+            # Translate using biotite translate function
+            # Complete=True will translate the whole sequence
+            # as one open reading frame (ORF)
+            gene_protein = gene_nt.translate(complete=True)
+
+            # Remove stop symbols
+            gene_protein = gene_protein.remove_stops()
+
+            # Convert to biotite proteinsequence 
+            gene_protein = seq.ProteinSequence(gene_protein)
+
+            # Make an id for the species and gene 
+            seq_id = f"{species_id}_{GENE}"
+            
+            # add protein sequences to dictionary
+            gene_sequences[seq_id] = gene_protein
+# Choose 6 genes to plot on multiple sequence alignment
+# Make a new dictionary
+genes_to_plot = {} 
+# Counter variable to count to 6 
+counter = 0
+# Use a loop to go through each sequence in the dictionary by the key
+for seq_id in gene_sequences.keys():
+    # Only add the sequence to the dictionary if there is less than 6 entries
+    if counter < 6:
+        genes_to_plot[seq_id] = gene_sequences[seq_id]
+    counter += 1
+# Use align_multiple function from biotite align
+# This returns four items, alignment, order, guide_tree, distance_matrix
+# alignment is our aligned sequences 
+# order is a suggested order, which groups closest related proteins together 
+alignment, order, guide_tree, distance_matrix = align.align_multiple(
+        # Provide the genes to plot as a list of sequences 
+        list(genes_to_plot.values()),
+        # Choose the matrix for the alignment 
+        # Here it is the standard protein matrix 
+        matrix=align.SubstitutionMatrix.std_protein_matrix(),
+        # Gap penalty is how much a gap (e.g. insertion/deletion)
+        # affects the final alignment 
+        gap_penalty=-5,
+)
+```
+
+:::
+
+## Generate a sequence conservation logo
+
+Finally, we can choose a section of 15 bases of our alignment to build a sequence profile and plot a sequence logo.
+
+This is a nice way to highlight the conserved residues against residues where there are polymorphisms. 
+
+```{python}
+# Sequence profile
+start = 1
+end = 15
+
+# Choose a section, here from 1-15, and extract that from the alignments
+motif_alignment = alignment[start-1:end, :] 
+
+# Create a sequence profile using biotite SequenceProfile function
+profile = seq.SequenceProfile.from_alignment(
+    motif_alignment
+)
+
+# Plot the sequence profile using matplotlib
+# Create a figure
+plt.figure()
+# Plot a sequence logo
+graphics.plot_sequence_logo(
+    # Get current figure axes 
+    plt.gca(),
+    # Use profile from earlier
+    profile, 
+    # Style options
+    scheme="flower"
+)
+
+# Add a title and plot
+plt.title(f"{GENE} alignment positions {start}-{end}")
+plt.show()
+```
+
+## Give it a go
+
+Now you've run through the tutorial, can you: 
+
+- Choose a different region for the sequence profile? 
+- Select proteins from different sequences for the multiple sequence alignment? 
+- Repeat the process with a different gene of interest and taxonomic group? 
+
+_You may need to check the [NCBI nucleotide database](https://www.ncbi.nlm.nih.gov/nucleotide/) when choosing what to search for, to make sure your search has enough entries!_
+
+The search terms in this example were `("Carnivora"[Organism]) AND MC1R[All Fields]`
+
+Other examples to try: 
+  
+- Apicomplexa [Organism] + RPS29 Gene 

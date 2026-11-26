@@ -1,0 +1,131 @@
+## Biotite Multiple Sequence Alignment Part I
+
+In this tutorial, we use Biotite's Entrez database module to search for multiple records across the taxonomic group **Carnivora**, extract the **MC1R** gene coding sequences, translate them into proteins, perform a Multiple Sequence Alignment (MSA), and visualize the results with a sequence logo—all using a simplified, linear script structure.
+
+## 1. Searching and Fetching Records from NCBI
+
+First, we define our search query for *Carnivora* and *MC1R*, search the nucleotide database, and fetch the first 30 records in bulk using `entrez.fetch_single_file()`.
+
+```{python}
+# Import biotite modules
+import biotite.database.entrez as entrez
+import biotite.sequence as seq
+import biotite.sequence.align as align
+import biotite.sequence.graphics as graphics
+import biotite.sequence.io.genbank as genbank
+
+# Target Taxon and Nuclear Gene
+# Making them constants at the top makes them easy to change for different searches
+TAXON = "Carnivora"
+GENE = "MC1R"
+
+# Query NCBI Nucleotide database 
+query = (
+    # Add search for taxon in "Organism" category
+    entrez.SimpleQuery(TAXON, "Organism") 
+    # & adds AND to search query - both must be present for the result 
+    # | would add OR to the search query instead 
+    # search for the gene of interest
+    & entrez.SimpleQuery(GENE)
+)
+
+# Search NCBI nucleotide database (pulling 50 records)
+search_results = entrez.search(query, db_name="nuccore", number=50)
+print("Number of records found:", len(search_results))
+
+# Fetching GenBank data from NCBI (using the first 30 records)
+genbank_data = entrez.fetch_single_file(
+    search_results[:30], # [:30] - stops after the 30th entry 
+    None, # Don't specify a file path to save result to 
+    db_name="nuccore", # Search the nucleotide database
+    ret_type="gb" # Retrieve genbank file
+)
+
+# Collect all of the GenBank records together using MultiFile
+genbank_multi_files = genbank.MultiFile.read(genbank_data)
+```
+
+## 2. Extracting and Translating Sequences
+
+Next, we loop directly through the records to find valid CDS (coding sequence) features matching our gene, translate them into protein sequences, and collect up to 6 valid sequences for a Multiple Sequence Alignment.
+
+Not all hits from Genbank will include an annotation of the MCR1 gene, so we can skip those that don't with try/except. 
+
+What we are aiming to do is: 
+  
+1. Loop through every genbank record from our search 
+2. Extract the species, and look for if the annotation is present 
+3. Loop through all of the annotated features and check for our gene of interest
+4. Extract the DNA and translate it to a protein 
+
+```{python}
+# Make an empty dictionary to store each protein sequence
+gene_sequences = {}
+
+# Loop through the 30 collected sequences
+for genbank_file in genbank_multi_files:
+    # Extract the sequence as in the previous example
+    organism_field = genbank_file.get_fields("SOURCE")
+    species = organism_field[0].subfields["ORGANISM"][0]
+    # Change spaces to underscores in species ID name
+    species_id = species.replace(" ", "_")
+
+    # Get annotated sequence - use try/except in case it is empty
+    try:
+        sequence_annotations = genbank.get_annotated_sequence(genbank_file)
+    except:
+        print("No sequence annotation found, skipping")
+        # use continue to move to the next genbank_file in for loop
+        continue
+
+    # Find GENE CDS (Coding sequences)
+    for feature in sequence_annotations.annotation:
+            # Searching for a CDS record in the gene (contains the annotation and the sequence)
+            # Checking that the feature is the gene of interest
+            # Convert feature to string for a string comparison
+            # .upper() to ensure the case is in upper case
+        if (
+            feature.key == "CDS"
+            and GENE in str(feature).upper()
+            ):
+
+            print(f"Found {GENE}: {feature}")
+
+            # Extract sequence corresponding to the feature
+            # Should be gene of interest, CDS record
+            gene_nt = sequence_annotations[feature]
+
+            # Convert to an biotite specific DNA sequence
+            gene_nt = seq.NucleotideSequence(gene_nt)
+
+            # Translate using biotite translate function
+            # Complete=True will translate the whole sequence
+            # as one open reading frame (ORF)
+            gene_protein = gene_nt.translate(complete=True)
+
+            # Remove stop symbols
+            gene_protein = gene_protein.remove_stops()
+
+            # Convert to biotite proteinsequence 
+            gene_protein = seq.ProteinSequence(gene_protein)
+
+            # Make an id for the species and gene 
+            seq_id = f"{species_id}_{GENE}"
+            
+            # add protein sequences to dictionary
+            gene_sequences[seq_id] = gene_protein
+```
+
+## 3. Check how many protein sequences we have 
+
+Now is a good point to check we have protein sequences - if not there may be an issue with our search terms. 
+
+```{python}
+# Print the total length of the gene sequences
+print(f"We have {len(gene_sequences)} genes")
+
+# Loop through the sequences and print the ID and protein length
+for sequence_ID in gene_sequences.keys(): 
+    protein_length = len(gene_sequences[sequence_ID])
+    print(f"{sequence_ID} is a protein of length {protein_length}")
+```
